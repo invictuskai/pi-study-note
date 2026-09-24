@@ -1,10 +1,14 @@
+# pi-study-note
 
+Pi 源码解读和二次开发实战笔记，基于[冬瓜的 dg-ai-notes](https://github.com/buchidonggua/dg-ai-notes) 修订，保留原作者署名及许可证。
 
-> Pi源码解读和二次开发实战
+**在线阅读**：[invictuskai.github.io/pi-study-note](https://invictuskai.github.io/pi-study-note/) —— 双轨教程 · 沉浸式阅读 · 深浅色主题
 
-> 🌐 **在线阅读**：[dg-ai-notes.pages.dev](https://dg-ai-notes.pages.dev) —— 双轨教程 · 沉浸式阅读 · 深浅色主题
->
-> [![在线电子书首页](./assets/web-home.png)](https://dg-ai-notes.pages.dev)
+[![在线电子书首页](./assets/web-home.png)](https://invictuskai.github.io/pi-study-note/)
+
+本仓库推送 `main` 后通过 GitHub Actions 自动部署。配置与本地验证见 [web/README.md](./pi-agent/web/README.md)。源码核验仍在进行中：第 3、4 章已修订，其余范围见 [SOURCE-AUDIT.md](./pi-agent/SOURCE-AUDIT.md)，不代表整本书已经对齐当前 pi。
+
+[原作者在线版本](https://dg-ai-notes.pages.dev) · [原作者 PDF Releases](https://github.com/buchidonggua/dg-ai-notes/releases)
 
 ---
 
@@ -22,13 +26,13 @@
 
 不是贴代码加注释，而是每章回答「是什么 / 怎么做 / 为什么」：从三层架构、Agent Loop 一路讲到上下文工程、会话管理，把 Pi 的设计取舍讲透。**TypeScript + Python 双版本**对照，30+ 配图，还配了一个可单步运行、随便改参数的 [Agent Loop 实验场](./pi-agent/notebooks/agent-loop.ipynb)。
 
-**怎么读**：[TS 版目录](./pi-agent/pi_source_dive/typescript/) · [Python 版目录](./pi-agent/pi_source_dive/python/) · [在线版](https://dg-ai-notes.pages.dev) · [PDF 下载](../../releases)
+**怎么读**：[TS 版目录](./pi-agent/pi_source_dive/typescript/) · [Python 版目录](./pi-agent/pi_source_dive/python/) · [在线版](https://invictuskai.github.io/pi-study-note/) · [原作者 PDF 下载](https://github.com/buchidonggua/dg-ai-notes/releases)
 
 ### 🚀 实战案例 · 7 章搭一个能上线的 Agent
 
 拿真实场景（企业数据分析助手 DataAgent）从零开始：环境部署 → 模型接入评估 → 系统提示词 → 定义工具 → 事件监听 → 封装成服务。讲的是「改哪一层、为什么这样接」，7 组配套代码（L01–L07）`npm install` 即跑——跟着敲完，你手里就有一个能部署的垂直 Agent。
 
-**怎么学**：[教程目录](./pi-agent/pi_sdk_learn/docs/) · [配套代码](./pi-agent/pi_sdk_learn/code/) · [在线版](https://dg-ai-notes.pages.dev)
+**怎么学**：[教程目录](./pi-agent/pi_sdk_learn/docs/) · [配套代码](./pi-agent/pi_sdk_learn/code/) · [在线版](https://invictuskai.github.io/pi-study-note/)
 
 ### 🧩 Skill 应用 · 让你的 AI 助手秒懂 pi-agent
 
@@ -64,9 +68,9 @@ skill 里还沉淀了作者踩过的坑与最佳实践（比如工具报错时�
 
 | 方式 | 入口 | 适合场景 |
 |------|------|----------|
-| 🌐 **Web 在线版**（推荐） | https://dg-ai-notes.pages.dev | PC 端沉浸式阅读，双轨切换 + 深浅色主题 |
+| 🌐 **Web 在线版**（推荐） | https://invictuskai.github.io/pi-study-note/ | PC 端沉浸式阅读，双轨切换 + 深浅色主题 |
 | 📥 **Markdown 下载版** | [pi-agent/](./pi-agent/) 目录下两系列 | 下载到本地，配合 AI 边读边问、对照源码 |
-| 📕 **PDF 版** | [Releases](../../releases) | 离线阅读、打印、长期存档（源码精读篇） |
+| 📕 **PDF 版** | [原作者 Releases](https://github.com/buchidonggua/dg-ai-notes/releases) | 离线阅读、打印、长期存档（源码精读篇） |
 
 ---
 

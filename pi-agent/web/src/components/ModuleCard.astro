@@ -3,6 +3,7 @@
 // 目录行：章节列表中的一行（编辑型目录风格）。
 // 精简结构：序号 + 标题 + 字数。整行可点。
 import { getVariantUrl, getModuleStats } from '../utils/collection';
+import { withBase } from '../utils/paths';
 import type { GroupedChapter } from '../utils/collection';
 
 interface Props { chapter: GroupedChapter; }
@@ -10,7 +11,7 @@ const { chapter } = Astro.props;
 
 const primary = chapter.tsEntry ?? chapter.pythonEntry;
 if (!primary) {
-  return Astro.redirect('/404');
+  return Astro.redirect(withBase('/404'));
 }
 const { data } = primary;
 const stats = getModuleStats(primary);
@@ -18,7 +19,7 @@ const stats = getModuleStats(primary);
 const tsUrl = chapter.tsEntry ? getVariantUrl(chapter.tsEntry) : null;
 const pyUrl = chapter.pythonEntry ? getVariantUrl(chapter.pythonEntry) : null;
 const isPractice = chapter.book === 'practice';
-const readUrl = tsUrl ?? pyUrl ?? '/404';
+const readUrl = tsUrl ?? pyUrl ?? withBase('/404');
 const wordCount = stats.wordCount;
 ---
 

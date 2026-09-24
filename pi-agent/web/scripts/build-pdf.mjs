@@ -14,7 +14,8 @@
 //   4  pdf-lib 合并失败
 
 import { chromium } from 'playwright';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument, PDFName, PDFNumber, PDFString, PDFArray, PDFNull } from 'pdf-lib';
+import { base } from '../site.config.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { spawn } from 'node:child_process';
@@ -86,11 +87,11 @@ async function ensureServer() {
     if (await probePort(port)) {
       // 进一步验证是 pi-agent-book：检查首页含 Pi Agent Book
       try {
-        const res = await fetch(`http://localhost:${port}/`);
+        const res = await fetch(`http://localhost:${port}${base}/`);
         const text = await res.text();
         if (text.includes('Pi Agent') || text.includes('pi-agent')) {
           console.log(`✓ 复用已有 astro 服务: http://localhost:${port}`);
-          return { baseUrl: `http://localhost:${port}`, child: null };
+          return { baseUrl: `http://localhost:${port}${base}`, child: null };
         }
       } catch {
         // 端口被占但不是 HTTP，继续找
@@ -101,8 +102,8 @@ async function ensureServer() {
   // 自启 astro preview
   console.log('→ 启动 astro preview...');
   const child = spawn(
-    process.platform === 'win32' ? 'npx.cmd' : 'npx',
-    ['astro', 'preview'],
+    process.execPath,
+    [path.join(BOOK_ROOT, 'node_modules/astro/astro.js'), 'preview'],
     { cwd: BOOK_ROOT, stdio: ['ignore', 'pipe', 'pipe'], shell: false },
   );
 
@@ -111,7 +112,7 @@ async function ensureServer() {
     await new Promise(r => setTimeout(r, 500));
     if (await probePort(4321)) {
       console.log(`✓ astro preview ready: http://localhost:4321`);
-      return { baseUrl: 'http://localhost:4321', child };
+      return { baseUrl: `http://localhost:4321${base}`, child };
     }
   }
 
@@ -200,7 +201,6 @@ async function mergeWithOutline(parts, outPath) {
 
   // outline 书签（用 pdf-lib 低级 API 手写 Outlines 字典）
   try {
-    const { PDFName, PDFNumber, PDFString, PDFArray, PDFNull } = await import('pdf-lib');
     const context = merged.context;
 
     // 先注册所有 outline 节点（拿到 indirect ref）

@@ -2,6 +2,7 @@
 // S5 — Interactive knowledge graph showing M01-M12 module dependencies.
 // Reads static data from module-graph.ts; hydrates lazily via client:visible.
 import { useState, useEffect, useRef, type CSSProperties } from 'react';
+import { withBase } from '../../utils/paths';
 import { moduleNodes, moduleEdges, type ModuleNode } from '../../data/module-graph';
 
 const NODE_R = 28;
@@ -143,7 +144,7 @@ export default function KnowledgeGraph() {
 
   const navigateTo = (node: ModuleNode) => {
     if (node.status === 'published') {
-      window.location.href = `/modules/${node.slug}`;
+      window.location.href = withBase(`/modules/${node.slug}/`);
     }
   };
 

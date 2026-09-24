@@ -2,7 +2,9 @@
 // src/components/chapter/ChapterFooter.astro
 // Renders keyPoints + furtherReading + simulator slot from frontmatter.
 import SimulatorSlot from './SimulatorSlot.astro';
-interface Props { entry: any; }
+import type { ModuleEntry } from '../../utils/collection';
+import { withBase } from '../../utils/paths';
+interface Props { entry: ModuleEntry; }
 const { entry } = Astro.props;
 const { keyPoints, furtherReading, simulator } = entry.data;
 ---
@@ -20,12 +22,12 @@ const { keyPoints, furtherReading, simulator } = entry.data;
   <section class="chapter-section further-reading">
     <h2>扩展阅读</h2>
     <ul>
-      {furtherReading.map((f: any) => (
+      {furtherReading.map((f) => (
         <li>
           {f.url
             ? <a href={f.url} target="_blank" rel="noopener">{f.label} ↗</a>
             : f.module
-              ? <a href={`/modules/${f.module}`}>{f.label}</a>
+              ? <a href={withBase(`/modules/${f.module}/`)}>{f.label}</a>
               : <span>{f.label}</span>}
         </li>
       ))}

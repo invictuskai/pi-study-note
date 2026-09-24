@@ -4,11 +4,12 @@
 // Task 9 FIX: replaced client fetch('/modules/<slug>/python/') with
 //   server-side data attributes. The 404 console noise for TS-only modules
 //   is eliminated because we know counterpart existence at build time.
-import { getAdjacentModules, type ModuleEntry } from '../utils/collection';
+import { getAdjacentModules, getVariantUrl, type ModuleEntry } from '../utils/collection';
+import { withBase } from '../utils/paths';
 
 interface Props { entry: ModuleEntry; }
 const { entry } = Astro.props;
-const { prev, next } = await getAdjacentModules(entry.data.displayOrder, entry.data.book);
+const { prev, next } = await getAdjacentModules(entry.data.displayOrder, entry.data.book, entry.data.variant);
 
 // Pre-compute Python variant URLs server-side from counterpart frontmatter.
 // Empty string means "no Python variant" — the client script skips those.
@@ -16,9 +17,8 @@ function pyUrl(e: ModuleEntry | undefined): string {
   if (!e || !e.data.counterpart) return '';
   // counterpart points at the paired entry's slug; render its variant URL
   const base = `/modules/${e.data.counterpart.replace(/\.python$/, '')}`;
-  // If the entry itself is TS, its counterpart is the Python variant
-  // (the counterpart field on a TS entry points to the .python slug)
-  return e.data.variant === 'ts' ? `${base}/python` : base;
+  // Both paired entries use the same base slug; the Python route ends in /python/.
+  return withBase(`${base}/python/`);
 }
 
 const prevPyUrl = pyUrl(prev);
@@ -29,7 +29,7 @@ const nextPyUrl = pyUrl(next);
   {prev && (
     <a
       class="prev-card"
-      href={`/modules/${prev.slug}`}
+      href={getVariantUrl(prev)}
       data-py-url={prevPyUrl}
     >
       <span class="label">← 上一章 · {prev.data.module}</span>
@@ -40,7 +40,7 @@ const nextPyUrl = pyUrl(next);
   {next && (
     <a
       class="next-card"
-      href={`/modules/${next.slug}`}
+      href={getVariantUrl(next)}
       data-py-url={nextPyUrl}
     >
       <span class="label">{next.data.module} · 下一章 →</span>

@@ -10,6 +10,8 @@
 //
 // lightbox 行为、SVG 内联注入、S2 联动初始化
 // 统一由 DiagramLightbox.astro 全局负责（在 ModuleLayout 中挂载一次）。
+import { withBase } from '../utils/paths';
+
 interface Props {
   file: string;       // /assets/xxx.svg
   caption?: string;
@@ -27,7 +29,7 @@ const strategy = darkMode || 'invert';
   role="figure"
   aria-label={caption || undefined}
 >
-  <img src={file} alt={caption || ''} loading="lazy" />
+  <img src={withBase(file)} alt={caption || ''} loading="lazy" />
   {caption && <figcaption>{caption}</figcaption>}
 </figure>
 

@@ -39,7 +39,7 @@
 <div class="container">
   <p class="eyebrow">PI-AGENT · 第 3 章 · NESTED LAYERS</p>
   <h1>Agent Loop：内核与叠加</h1>
-  <p class="subtitle">最简 Loop 只要十几行就能跑——这是所有 Agent 的通用法则。Pi 的 coding-agent 在内核之上叠加了 steering、followUp、prepareNextTurn/shouldStopAfterTurn 等产品功能。做自己的 Agent 时先搭内核，再按场景加叠加。</p>
+  <p class="subtitle">最简工具往返是教学起点，不是完整生产实现。pi-agent-core 提供 steering、followUp、prepareNextTurn、prepareRequest 和 finishTurn；调用方按场景配置。</p>
 
   <div class="frame">
   <svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg">
@@ -81,11 +81,11 @@
     <text x="360" y="298" fill="#57534e" font-size="10" font-family="'Geist Mono', monospace"
           text-anchor="middle">while (hasMoreToolCalls)</text>
     <text x="360" y="316" fill="#57534e" font-size="9" font-family="'Geist', sans-serif"
-          text-anchor="middle">调模型 → 检查 stopReason</text>
+          text-anchor="middle">调模型 → 检查错误与工具块</text>
     <text x="360" y="332" fill="#57534e" font-size="9" font-family="'Geist', sans-serif"
           text-anchor="middle">→ 执行工具 → 再调模型</text>
     <text x="360" y="364" fill="#b5523a" font-size="9" font-family="'Geist', sans-serif"
-          text-anchor="middle" font-style="italic">所有 Agent 都需要的内核</text>
+          text-anchor="middle" font-style="italic">工具型 Agent 的简化模型</text>
 
     <!-- Right side: explanations -->
     <line x1="700" y1="100" x2="700" y2="500" stroke="rgba(28,25,23,0.10)" stroke-width="0.8"/>
@@ -95,8 +95,8 @@
       <rect x="0" y="0" width="14" height="14" rx="2" fill="rgba(181,82,58,0.10)" stroke="#b5523a" stroke-width="1"/>
       <text x="22" y="12" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif">内核</text>
       <text x="0" y="32" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">最简 Loop：调模型 +</text>
-      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">执行工具 + stopReason</text>
-      <text x="0" y="62" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">通用法则，所有 Agent 都需要</text>
+      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">处理工具 + 续跑判断</text>
+      <text x="0" y="62" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">还需错误、权限和资源限制</text>
     </g>
 
     <g transform="translate(720, 200)">
@@ -111,7 +111,7 @@
       <rect x="0" y="0" width="14" height="14" rx="2" fill="rgba(28,25,23,0.03)" stroke="rgba(28,25,23,0.25)" stroke-width="1"/>
       <text x="22" y="12" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif">+ followUp</text>
       <text x="0" y="32" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">任务追加续命，</text>
-      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">Agent 完成后顺势追加</text>
+      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">内层自然退出后读取</text>
       <text x="0" y="62" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">同一个 Trace 内继续跑</text>
     </g>
 
@@ -119,8 +119,8 @@
       <rect x="0" y="0" width="14" height="14" rx="2" fill="rgba(28,25,23,0.02)" stroke="rgba(28,25,23,0.20)" stroke-width="1"/>
       <text x="22" y="12" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif">+ 钩子</text>
       <text x="0" y="32" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">prepareNextTurn（切模型）</text>
-      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">shouldStopAfterTurn（安全阀）</text>
-      <text x="0" y="62" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">外部扩展点，按需注入</text>
+      <text x="0" y="46" fill="#57534e" font-size="10" font-family="'Geist', sans-serif">finishTurn（结束或继续）</text>
+      <text x="0" y="62" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">另有 prepareRequest 请求准备</text>
     </g>
 
     <!-- Bottom insight -->
@@ -128,7 +128,7 @@
     <text x="40" y="586" fill="#57534e" font-size="10" font-family="'Geist Mono', monospace"
           letter-spacing="0.14em">INSIGHT</text>
     <text x="120" y="586" fill="#1c1917" font-size="10" font-family="'Geist', sans-serif" font-style="italic">
-      剥掉所有叠加层，最简 Loop 仍能正常工作。这是判断"内核是否被污染"的试金石。</text>
+      分层帮助理解，不代表可以省略生产所需的错误、取消、权限及预算控制。</text>
   </svg>
   </div>
 

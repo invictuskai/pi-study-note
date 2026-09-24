@@ -1,5 +1,6 @@
 ---
 // src/layouts/BaseLayout.astro
+import { withBase } from '../utils/paths';
 import '../styles/base.css';
 import '../styles/prose.css';
 import '../styles/print.css';
@@ -38,6 +39,6 @@ const { title, description = 'Pi Agent 源码精读笔记' } = Astro.props;
 </head>
 <body>
   <slot />
-  <script src="/js/diagram-linker.js" defer></script>
+  <script is:inline src={withBase('/js/diagram-linker.js')} defer></script>
 </body>
 </html>

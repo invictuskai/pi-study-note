@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>ThinkingLevel：五级思考刻度</title>
+<title>思考级别：能力与预算</title>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root { --paper: #faf7f2; --ink: #1c1917; --muted: #57534e; --soft: #a8a29e;
@@ -29,7 +29,7 @@
 <div class="container">
   <p class="eyebrow">PI-AGENT · 第 4 章 · NUMBER LINE</p>
   <h1>ThinkingLevel：统一思考刻度</h1>
-  <p class="subtitle">不同 Provider 对"让模型深度思考"的参数完全不同——Anthropic 给 token 预算、OpenAI 给努力程度、Google 用 thinkingConfig。Pi 定义了一套统一的 6 级枚举，让上层只说 reasoning: "high"，翻译器自己查表翻译。</p>
+  <p class="subtitle">pi-ai 的 ThinkingLevel 有六种非 off 级别；ModelThinkingLevel 和 Agent 层再加 off。预算表只适用于 token 预算路径，不是所有模型的固定上限。</p>
 
   <div class="frame">
   <svg viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg">
@@ -37,7 +37,7 @@
 
     <!-- Pi unified axis -->
     <text x="40" y="60" fill="#b5523a" font-size="10" font-family="'Geist Mono', monospace"
-          letter-spacing="0.14em">PI UNIFIED · ThinkingLevel</text>
+          letter-spacing="0.14em">PI · off / minimal / low / medium / high / xhigh / max</text>
 
     <line x1="60" y1="120" x2="900" y2="120" stroke="#1c1917" stroke-width="1.2"/>
 
@@ -75,8 +75,8 @@
     <g>
       <line x1="860" y1="116" x2="860" y2="124" stroke="#1c1917" stroke-width="1"/>
       <circle cx="860" cy="120" r="4" fill="#b5523a"/>
-      <text x="860" y="100" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">xhigh</text>
-      <text x="860" y="148" fill="#57534e" font-size="9" font-family="'Geist', sans-serif" text-anchor="middle">模型最大值</text>
+      <text x="860" y="100" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">xhigh / max</text>
+      <text x="860" y="148" fill="#57534e" font-size="9" font-family="'Geist', sans-serif" text-anchor="middle">按模型显式支持</text>
     </g>
 
     <!-- Translation arrows down -->
@@ -95,7 +95,7 @@
     <g>
       <rect x="60" y="224" width="280" height="120" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1"/>
       <rect x="60" y="224" width="280" height="24" rx="6" fill="rgba(28,25,23,0.05)"/>
-      <text x="200" y="240" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Anthropic</text>
+      <text x="200" y="240" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Anthropic 预算模式示例</text>
 
       <text x="76" y="270" fill="#57534e" font-size="9" font-family="'Geist', sans-serif">"high" 对应参数：</text>
       <rect x="76" y="280" width="248" height="50" rx="4" fill="rgba(28,25,23,0.03)" stroke="rgba(28,25,23,0.15)" stroke-width="0.6"/>
@@ -108,7 +108,7 @@
     <g>
       <rect x="340" y="224" width="280" height="120" rx="6" fill="#ffffff" stroke="#1c1917" stroke-width="1"/>
       <rect x="340" y="224" width="280" height="24" rx="6" fill="rgba(28,25,23,0.05)"/>
-      <text x="480" y="240" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">OpenAI</text>
+      <text x="480" y="240" fill="#1c1917" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Chat Completions 示例</text>
 
       <text x="356" y="270" fill="#57534e" font-size="9" font-family="'Geist', sans-serif">"high" 对应参数：</text>
       <rect x="356" y="280" width="248" height="50" rx="4" fill="rgba(28,25,23,0.03)" stroke="rgba(28,25,23,0.15)" stroke-width="0.6"/>
@@ -163,10 +163,10 @@
     </g>
 
     <text x="40" y="514" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">
-      思考更多通常比思考更少安全——所以先向上找。这是 clampThinkingLevel() 的策略。
+      clampThinkingLevel 先向上再向下寻找可用级别；这不代表更高思考级别更安全。
     </text>
     <text x="40" y="530" fill="#a8a29e" font-size="9" font-family="'Geist', sans-serif" font-style="italic">
-      每个 Model 对象自带 thinkingLevelMap（翻译表），声明"我这台模型每个级别对应什么参数"。
+      thinkingLevelMap 可选；token 预算默认表中 xhigh/max 按 high 处理，自适应 effort 不同。
     </text>
   </svg>
   </div>

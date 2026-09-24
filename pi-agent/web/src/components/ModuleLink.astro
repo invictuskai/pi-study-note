@@ -10,6 +10,8 @@
 // Note: unlike PrevNextNav (where the prev/next entries are known server-side
 // and their counterpart info is passed as a data attribute), ModuleLink targets
 // arbitrary slugs that the current page cannot resolve — hence the HEAD probe.
+import { withBase } from '../utils/paths';
+
 interface Props {
   slug: string;        // TS variant slug, without .python suffix
   label?: string;
@@ -17,11 +19,13 @@ interface Props {
 const { slug, label } = Astro.props;
 ---
 
-<a href={`/modules/${slug}`} class="module-link" data-target-slug={slug}>
+<a href={withBase(`/modules/${slug}/`)} class="module-link" data-target-slug={slug}>
   <slot>{label || slug}</slot>
 </a>
 
 <script>
+  import { withBase } from '../utils/paths';
+
   // Rewrite href to Python variant if reader prefers Python AND variant exists.
   const STORAGE_KEY = 'pi-agent-book:lang';
   let pref: string | null = null;
@@ -34,10 +38,10 @@ const { slug, label } = Astro.props;
       try {
         // HEAD probe — silent. 404s are expected for TS-only modules and
         // do not indicate an error; we simply leave the TS href in place.
-        const res = await fetch(`/modules/${slug}/python/`, { method: 'HEAD' })
+        const res = await fetch(withBase(`/modules/${slug}/python/`), { method: 'HEAD' })
           .catch(() => null);
         if (res && res.ok) {
-          a.setAttribute('href', `/modules/${slug}/python`);
+          a.setAttribute('href', withBase(`/modules/${slug}/python/`));
         }
       } catch { /* noop */ }
     });

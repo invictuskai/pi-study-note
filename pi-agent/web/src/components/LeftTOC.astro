@@ -2,7 +2,7 @@
 // src/components/LeftTOC.astro
 // Shows all TS-variant modules in the left sidebar; highlights current.
 // 标题可点击收起/展开，状态记到 localStorage（key: pi-agent-book:toc-collapsed）。
-import { getAllModules, SERIES_META, type ModuleEntry } from '../utils/collection';
+import { getAllModules, getVariantUrl, SERIES_META, type ModuleEntry } from '../utils/collection';
 
 interface Props { currentEntry: ModuleEntry; }
 const { currentEntry } = Astro.props;
@@ -31,7 +31,7 @@ const seriesLabel = SERIES_META[currentEntry.data.book].label;
       const isCurrent = m.slug === currentBaseSlug;
       return (
         <li class={`toc-item ${isCurrent ? 'is-current' : ''}`}>
-          <a href={`/modules/${m.slug}`}>
+          <a href={getVariantUrl(m)}>
             <span class="toc-num">{m.data.module}</span>
             <span class="toc-title">{m.data.title}</span>
           </a>

@@ -14,18 +14,49 @@
 - **实战上手篇**：用一个真实场景（企业数据分析助手）搭一个能上线的垂直 Agent。无语言切换，每章一张卡、一个「阅读 →」按钮。
 - **源码精读篇**：系统拆解 SDK 源码设计。每章 TS + Python 双版本，顶栏一键切换。
 
-> 🌐 在线版本：https://dg-ai-notes.pages.dev
+> 本仓库站点：https://invictuskai.github.io/pi-study-note/
+>
+> 原作者站点：https://dg-ai-notes.pages.dev （保留原作者署名与许可证）
+
+## GitHub Pages 自动发布
+
+GitHub 仓库：`https://github.com/invictuskai/pi-study-note`。
+
+1. 仓库 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。
+2. 推送 `main` 后，`.github/workflows/pages.yml` 自动安装锁定依赖、检查、构建并部署。
+3. 在仓库 **Actions → Deploy GitHub Pages** 查看结果；也可手动 Run workflow。
+
+站点域名与子路径统一配置于 `site.config.mjs`，当前为：
+
+```js
+export const site = 'https://invictuskai.github.io';
+export const base = '/pi-study-note';
+```
+
+组件与浏览器导航使用 `withBase`，Markdown 链接通过 remark 插件补齐前缀；代码示例中的 URL 不改写。构建产物仍在 `dist/`，不要额外创建 `dist/pi-study-note/`。不需要提交 dist 或单独维护 gh-pages 分支。
+
+发布前本地验证（建议 Node.js 22.22.0，与 CI 一致）：
+
+```bash
+npm ci --ignore-scripts --registry=https://registry.npmmirror.com
+npm run check
+npm run build
+npm run check:pages
+```
+
+registry 参数匹配现有锁文件的下载来源，不修改全局 npm 配置，也不启用 remote/git 来源或安装生命周期脚本。`check:pages` 检查生成页面中的本地链接、配图、脚本及 Python 路由；不会执行文章中的 SDK 示例或调用模型。构建通过不代表全书内容已经完成源码核验，进度见 `../SOURCE-AUDIT.md`。
 
 ---
 
 ## 快速开始
 
 ```bash
-# 安装依赖（首次）
-npm install
+# 安装锁定依赖（首次，不执行安装脚本）
+npm ci --ignore-scripts --registry=https://registry.npmmirror.com
 
 # 开发模式（热重载，http://localhost:4321）
 npm run dev
+# 打开 http://localhost:4321/pi-study-note/
 
 # 生产构建（输出到 dist/）
 npm run build
@@ -34,7 +65,7 @@ npm run build
 npm run preview
 ```
 
-**环境要求**：Node.js ≥ 20，任意现代浏览器。
+**环境要求**：完整检查流程使用 Node.js 22.22.0 或更新的兼容版本，任意现代浏览器。
 
 ---
 
@@ -45,8 +76,9 @@ npm run preview
 ### 方式一：本地起站点（推荐，离线可用）
 
 ```bash
-npm install && npm run dev
-# 浏览器打开 http://localhost:4321
+npm ci --ignore-scripts --registry=https://registry.npmmirror.com
+npm run dev
+# 浏览器打开 http://localhost:4321/pi-study-note/
 ```
 
 ### 方式二：直接读源 md 文件
@@ -115,7 +147,9 @@ displayOrder: <number>        # 系列内排序（两系列各自从 1 起）
 ## 构建/校验命令
 
 ```bash
-npm run build              # 生产构建（当前 30 页全绿）
+npm run check              # 文档同步、双版本元数据和 URL 回归测试
+npm run build              # 生产构建（30 页）
+npm run check:pages        # 验证构建产物的子路径与本地链接
 npm run check:counterpart  # 校验源码精读篇 TS/Python frontmatter 一致性
 npm run build:pdf          # 导出源码精读篇 PDF（TS + Python）
 ```

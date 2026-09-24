@@ -7,6 +7,8 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "check": "npm run check:sync && npm run check:counterpart && node --test test/paths.test.mjs",
+    "check:pages": "node scripts/check-pages.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "prebuild": "node scripts/check-counterpart.mjs",

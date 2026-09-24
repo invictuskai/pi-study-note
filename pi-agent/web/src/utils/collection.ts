@@ -2,6 +2,7 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
+import { withBase } from './paths';
 
 export type ModuleEntry = CollectionEntry<'modules'>;
 
@@ -139,8 +140,8 @@ export async function getModuleBySlug(slug: string): Promise<ModuleEntry | undef
  * 同一系列内的相邻章节（prev/next）。
  * 系列隔离：源码精读篇与实战上手篇互不串台。
  */
-export async function getAdjacentModules(currentOrder: number, book: 'internals' | 'practice') {
-  const all = await getPublishedModules(book);
+export async function getAdjacentModules(currentOrder: number, book: 'internals' | 'practice', variant: 'ts' | 'python' = 'ts') {
+  const all = (await getPublishedModules(book)).filter(m => m.data.variant === variant);
   const prev = all.filter(m => m.data.displayOrder < currentOrder).pop();
   const next = all.filter(m => m.data.displayOrder > currentOrder).shift();
   return { prev, next };
@@ -148,7 +149,7 @@ export async function getAdjacentModules(currentOrder: number, book: 'internals'
 
 export function getVariantUrl(entry: ModuleEntry): string {
   const base = `/modules/${entry.slug.replace(/\.python$/, '')}`;
-  return entry.data.variant === 'python' ? `${base}/python` : base;
+  return withBase(entry.data.variant === 'python' ? `${base}/python/` : `${base}/`);
 }
 
 export function getCounterpartUrl(entry: ModuleEntry): string | null {
@@ -156,5 +157,5 @@ export function getCounterpartUrl(entry: ModuleEntry): string | null {
   // counterpart 字段值是 slug（含或不含 .python 后缀）
   const isPy = entry.data.variant === 'ts';
   const base = `/modules/${entry.data.counterpart.replace(/\.python$/, '')}`;
-  return isPy ? `${base}/python` : base;
+  return withBase(isPy ? `${base}/python/` : `${base}/`);
 }

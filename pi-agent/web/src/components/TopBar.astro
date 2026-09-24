@@ -1,6 +1,7 @@
 ---
 // src/components/TopBar.astro
 import ThemeToggle from './ThemeToggle.astro';
+import { withBase } from '../utils/paths';
 import type { ModuleEntry } from '../utils/collection';
 
 interface Props { entry?: ModuleEntry; }
@@ -15,15 +16,15 @@ const author = {
   bio: '热衷于拆解 AI 工程的博主',
   repo: 'https://github.com/buchidonggua/dg-ai-notes',
   repoDisplay: 'github.com/buchidonggua/dg-ai-notes',
-  douyinQr: '/assets/donghua-douyin-qr.png',
-  bilibiliQr: '/assets/donghua-bilibili-qr.jpg',
+  douyinQr: withBase('/assets/donghua-douyin-qr.png'),
+  bilibiliQr: withBase('/assets/donghua-bilibili-qr.jpg'),
 };
 ---
 
 <header class="topbar">
   <div class="left-cluster">
     <button class="hamburger" aria-label="打开目录" aria-expanded="false">☰</button>
-    <a href="/" class="brand">Pi Agent <span class="brand-accent">·</span> Book</a>
+    <a href={withBase('/')} class="brand">Pi Agent <span class="brand-accent">·</span> Book</a>
   </div>
   <nav class="crumb" aria-label="breadcrumb">{title}</nav>
   <div class="actions">

@@ -2,6 +2,7 @@
 // src/layouts/ModuleLayout.astro
 // Composes: ProgressRail + TopBar + LeftTOC + main content + RightOutline
 import BaseLayout from './BaseLayout.astro';
+import { withBase } from '../utils/paths';
 import TopBar from '../components/TopBar.astro';
 import LeftTOC from '../components/LeftTOC.astro';
 import RightOutline from '../components/RightOutline.astro';
@@ -58,7 +59,7 @@ const tsCounterpartUrl = isPython ? getCounterpartUrl(entry) : null;
           )}
         />
       )}
-      <script is:inline src="/assets/js/diagram-linker.js" defer></script>
+      <script is:inline src={withBase('/assets/js/diagram-linker.js')} defer></script>
 
       <article id="module-content">
         {isPython && (
