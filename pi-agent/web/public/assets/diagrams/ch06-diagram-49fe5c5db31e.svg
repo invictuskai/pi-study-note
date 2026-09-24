@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="806" height="552" viewBox="0 0 806 552" role="img" aria-labelledby="ch06-diagram-49fe5c5db31e-title ch06-diagram-49fe5c5db31e-description">
+<title id="ch06-diagram-49fe5c5db31e-title">翻译发生在什么时候？</title>
+<desc id="ch06-diagram-49fe5c5db31e-description">每次 LLM 调用前的消息处理管道：
+context.messages: AgentMessage[]
+Agent 内部的消息（最多 7 种类型）
+[1] transformContext (可选)
+AgentMessage[]
+AgentMessage[]
+裁剪旧消息、注入外部上下文
+[2] convertToLlm (必须)
+AgentMessage[]
+Message[]
+自定义消息翻译成标准格式
+llmContext.messages: Message[]
+LLM 看到的消息（只有 3 种类型）
+streamFunction(model, llmContext, ...)
+调用 LLM（第4章讲过）</desc>
+<rect x="1" y="1" width="804" height="550" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">翻译发生在什么时候？</text>
+<path d="M28,58 H778" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="40" data-glyph="←" d="M428,149 H438 M432,145 L428,149 L432,153"/>
+<path data-row="3" data-column="8" data-glyph="│" d="M113,179 L113,164 M113,179 L113,194"/>
+<path data-row="4" data-column="8" data-glyph="▼" d="M113,194 V224 M109,218 L113,224 L117,218"/>
+<path data-row="5" data-column="40" data-glyph="←" d="M428,239 H438 M432,235 L428,239 L432,243"/>
+<path data-row="5" data-column="57" data-glyph="→" d="M598,239 H608 M604,235 L608,239 L604,243"/>
+<path data-row="6" data-column="8" data-glyph="│" d="M113,269 L113,254 M113,269 L113,284"/>
+<path data-row="7" data-column="8" data-glyph="▼" d="M113,284 V314 M109,308 L113,314 L117,308"/>
+<path data-row="8" data-column="40" data-glyph="←" d="M428,329 H438 M432,325 L428,329 L432,333"/>
+<path data-row="8" data-column="57" data-glyph="→" d="M598,329 H608 M604,325 L608,329 L604,333"/>
+<path data-row="9" data-column="8" data-glyph="│" d="M113,359 L113,344 M113,359 L113,374"/>
+<path data-row="10" data-column="8" data-glyph="▼" d="M113,374 V404 M109,398 L113,404 L117,398"/>
+<path data-row="11" data-column="40" data-glyph="←" d="M428,419 H438 M432,415 L428,419 L432,423"/>
+<path data-row="12" data-column="8" data-glyph="│" d="M113,449 L113,434 M113,449 L113,464"/>
+<path data-row="13" data-column="8" data-glyph="▼" d="M113,464 V494 M109,488 L113,494 L117,488"/>
+<path data-row="14" data-column="40" data-glyph="←" d="M428,509 H438 M432,505 L428,509 L432,513"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">每次 LLM 调用前的消息处理管道：</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">context.messages: AgentMessage[]</text>
+<text data-row="2" data-column="42" x="448" y="149" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 内部的消息（最多 7 种类型）</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[1] transformContext (可选)</text>
+<text data-row="5" data-column="42" x="448" y="239" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentMessage[]</text>
+<text data-row="5" data-column="59" x="618" y="239" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentMessage[]</text>
+<text data-row="6" data-column="43" x="458" y="269" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">裁剪旧消息、注入外部上下文</text>
+<text data-row="8" data-column="0" x="28" y="329" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[2] convertToLlm (必须)</text>
+<text data-row="8" data-column="42" x="448" y="329" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentMessage[]</text>
+<text data-row="8" data-column="59" x="618" y="329" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Message[]</text>
+<text data-row="9" data-column="43" x="458" y="359" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">自定义消息翻译成标准格式</text>
+<text data-row="11" data-column="0" x="28" y="419" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">llmContext.messages: Message[]</text>
+<text data-row="11" data-column="42" x="448" y="419" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 看到的消息（只有 3 种类型）</text>
+<text data-row="14" data-column="0" x="28" y="509" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">streamFunction(model, llmContext, ...)</text>
+<text data-row="14" data-column="42" x="448" y="509" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调用 LLM（第4章讲过）</text>
+</g>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="886" height="462" viewBox="0 0 886 462" role="img" aria-labelledby="ch07-diagram-97c1f6191079-title ch07-diagram-97c1f6191079-description">
+<title id="ch07-diagram-97c1f6191079-title">2.2 两条管道：subscribe 与扩展 pi.on</title>
+<desc id="ch07-diagram-97c1f6191079-description">LLM 决定调一个工具
+管道 B：tool_call（执行前）
+扩展可以 return { block: true } 拦掉它；一旦 block，下面都不发生
+注意：tool_call 不是 2.1 那 10 种之一，是 SDK 在执行前主动触发的扩展独占事件
+（没被拦）tool.execute() 开跑
+管道 A + B 都收到：tool_execution_start（已开跑，拦不住了）
+这是 2.1 那 10 种之一，由 Agent 内核发出，两条管道都收
+tool_execution_end</desc>
+<rect x="1" y="1" width="884" height="460" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.2 两条管道：subscribe 与扩展 pi.on</text>
+<path d="M28,58 H858" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="3" data-glyph="│" d="M63,119 L63,104 M63,119 L63,134"/>
+<path data-row="2" data-column="3" data-glyph="▼" d="M63,134 V164 M59,158 L63,164 L67,158"/>
+<path data-row="3" data-column="3" data-glyph="│" d="M63,179 L63,164 M63,179 L63,194"/>
+<path data-row="4" data-column="3" data-glyph="│" d="M63,209 L63,194 M63,209 L63,224"/>
+<path data-row="5" data-column="3" data-glyph="│" d="M63,239 L63,224 M63,239 L63,254"/>
+<path data-row="6" data-column="3" data-glyph="▼" d="M63,254 V284 M59,278 L63,284 L67,278"/>
+<path data-row="7" data-column="3" data-glyph="│" d="M63,299 L63,284 M63,299 L63,314"/>
+<path data-row="8" data-column="3" data-glyph="▼" d="M63,314 V344 M59,338 L63,344 L67,338"/>
+<path data-row="9" data-column="3" data-glyph="│" d="M63,359 L63,344 M63,359 L63,374"/>
+<path data-row="10" data-column="3" data-glyph="│" d="M63,389 L63,374 M63,389 L63,404"/>
+<path data-row="11" data-column="3" data-glyph="▼" d="M63,404 V434 M59,428 L63,434 L67,428"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 决定调一个工具</text>
+<text data-row="2" data-column="6" x="88" y="149" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">管道 B：tool_call（执行前）</text>
+<text data-row="3" data-column="7" x="98" y="179" textLength="640" lengthAdjust="spacingAndGlyphs" style="white-space:pre">扩展可以 return { block: true } 拦掉它；一旦 block，下面都不发生</text>
+<text data-row="4" data-column="7" x="98" y="209" textLength="760" lengthAdjust="spacingAndGlyphs" style="white-space:pre">注意：tool_call 不是 2.1 那 10 种之一，是 SDK 在执行前主动触发的扩展独占事件</text>
+<text data-row="6" data-column="6" x="88" y="269" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">（没被拦）tool.execute() 开跑</text>
+<text data-row="8" data-column="6" x="88" y="329" textLength="590" lengthAdjust="spacingAndGlyphs" style="white-space:pre">管道 A + B 都收到：tool_execution_start（已开跑，拦不住了）</text>
+<text data-row="9" data-column="7" x="98" y="359" textLength="540" lengthAdjust="spacingAndGlyphs" style="white-space:pre">这是 2.1 那 10 种之一，由 Agent 内核发出，两条管道都收</text>
+<text data-row="11" data-column="6" x="88" y="419" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tool_execution_end</text>
+</g>
+</svg>

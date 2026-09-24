@@ -1,0 +1,391 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="596" height="912" viewBox="0 0 596 912" role="img" aria-labelledby="ch05-diagram-df27f1c27dec-title ch05-diagram-df27f1c27dec-description">
+<title id="ch05-diagram-df27f1c27dec-title">Pi 的答案：五步管道</title>
+<desc id="ch05-diagram-df27f1c27dec-description">LLM 输出 ToolCall
+第 1 步：prepareArguments（参数预处理）
+处理 LLM 的参数怪癖
+如：把字符串化的数组解析回真正的数组
+第 2 步：validateToolArguments（Schema 验证）
+用 TypeBox Schema 做运行时类型检查
+如：path 是 string，不是 number
+第 3 步：beforeToolCall（前置钩子）
+产品层的权限拦截，可以阻止执行
+返回 { block: true, reason: &quot;危险命令&quot;}
+第 4 步：tool.execute（实际执行）
+调用工具的 execute 函数
+支持 onUpdate 流式进度回调
+第 5 步：afterToolCall（后置钩子）
+产品层的结果后处理，可以修改返回值
+可以替换 content、details、isError
+ToolResultMessage</desc>
+<rect x="1" y="1" width="594" height="910" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">Pi 的答案：五步管道</text>
+<path d="M28,58 H568" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="4" data-glyph="│" d="M73,119 L73,104 M73,119 L73,134"/>
+<path data-row="2" data-column="4" data-glyph="▼" d="M73,134 V164 M69,158 L73,164 L77,158"/>
+<path data-row="3" data-column="0" data-glyph="┌" d="M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="3" data-column="3" data-glyph="─" d="M63,179 L68,179 M63,179 L58,179"/>
+<path data-row="3" data-column="4" data-glyph="─" d="M73,179 L78,179 M73,179 L68,179"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="3" data-column="7" data-glyph="─" d="M103,179 L108,179 M103,179 L98,179"/>
+<path data-row="3" data-column="8" data-glyph="─" d="M113,179 L118,179 M113,179 L108,179"/>
+<path data-row="3" data-column="9" data-glyph="─" d="M123,179 L128,179 M123,179 L118,179"/>
+<path data-row="3" data-column="10" data-glyph="─" d="M133,179 L138,179 M133,179 L128,179"/>
+<path data-row="3" data-column="11" data-glyph="─" d="M143,179 L148,179 M143,179 L138,179"/>
+<path data-row="3" data-column="12" data-glyph="─" d="M153,179 L158,179 M153,179 L148,179"/>
+<path data-row="3" data-column="13" data-glyph="─" d="M163,179 L168,179 M163,179 L158,179"/>
+<path data-row="3" data-column="14" data-glyph="─" d="M173,179 L178,179 M173,179 L168,179"/>
+<path data-row="3" data-column="15" data-glyph="─" d="M183,179 L188,179 M183,179 L178,179"/>
+<path data-row="3" data-column="16" data-glyph="─" d="M193,179 L198,179 M193,179 L188,179"/>
+<path data-row="3" data-column="17" data-glyph="─" d="M203,179 L208,179 M203,179 L198,179"/>
+<path data-row="3" data-column="18" data-glyph="─" d="M213,179 L218,179 M213,179 L208,179"/>
+<path data-row="3" data-column="19" data-glyph="─" d="M223,179 L228,179 M223,179 L218,179"/>
+<path data-row="3" data-column="20" data-glyph="─" d="M233,179 L238,179 M233,179 L228,179"/>
+<path data-row="3" data-column="21" data-glyph="─" d="M243,179 L248,179 M243,179 L238,179"/>
+<path data-row="3" data-column="22" data-glyph="─" d="M253,179 L258,179 M253,179 L248,179"/>
+<path data-row="3" data-column="23" data-glyph="─" d="M263,179 L268,179 M263,179 L258,179"/>
+<path data-row="3" data-column="24" data-glyph="─" d="M273,179 L278,179 M273,179 L268,179"/>
+<path data-row="3" data-column="25" data-glyph="─" d="M283,179 L288,179 M283,179 L278,179"/>
+<path data-row="3" data-column="26" data-glyph="─" d="M293,179 L298,179 M293,179 L288,179"/>
+<path data-row="3" data-column="27" data-glyph="─" d="M303,179 L308,179 M303,179 L298,179"/>
+<path data-row="3" data-column="28" data-glyph="─" d="M313,179 L318,179 M313,179 L308,179"/>
+<path data-row="3" data-column="29" data-glyph="─" d="M323,179 L328,179 M323,179 L318,179"/>
+<path data-row="3" data-column="30" data-glyph="─" d="M333,179 L338,179 M333,179 L328,179"/>
+<path data-row="3" data-column="31" data-glyph="─" d="M343,179 L348,179 M343,179 L338,179"/>
+<path data-row="3" data-column="32" data-glyph="─" d="M353,179 L358,179 M353,179 L348,179"/>
+<path data-row="3" data-column="33" data-glyph="─" d="M363,179 L368,179 M363,179 L358,179"/>
+<path data-row="3" data-column="34" data-glyph="─" d="M373,179 L378,179 M373,179 L368,179"/>
+<path data-row="3" data-column="35" data-glyph="─" d="M383,179 L388,179 M383,179 L378,179"/>
+<path data-row="3" data-column="36" data-glyph="─" d="M393,179 L398,179 M393,179 L388,179"/>
+<path data-row="3" data-column="37" data-glyph="─" d="M403,179 L408,179 M403,179 L398,179"/>
+<path data-row="3" data-column="38" data-glyph="─" d="M413,179 L418,179 M413,179 L408,179"/>
+<path data-row="3" data-column="39" data-glyph="─" d="M423,179 L428,179 M423,179 L418,179"/>
+<path data-row="3" data-column="40" data-glyph="─" d="M433,179 L438,179 M433,179 L428,179"/>
+<path data-row="3" data-column="41" data-glyph="─" d="M443,179 L448,179 M443,179 L438,179"/>
+<path data-row="3" data-column="42" data-glyph="─" d="M453,179 L458,179 M453,179 L448,179"/>
+<path data-row="3" data-column="43" data-glyph="─" d="M463,179 L468,179 M463,179 L458,179"/>
+<path data-row="3" data-column="44" data-glyph="─" d="M473,179 L478,179 M473,179 L468,179"/>
+<path data-row="3" data-column="45" data-glyph="─" d="M483,179 L488,179 M483,179 L478,179"/>
+<path data-row="3" data-column="46" data-glyph="─" d="M493,179 L498,179 M493,179 L488,179"/>
+<path data-row="3" data-column="47" data-glyph="─" d="M503,179 L508,179 M503,179 L498,179"/>
+<path data-row="3" data-column="48" data-glyph="─" d="M513,179 L518,179 M513,179 L508,179"/>
+<path data-row="3" data-column="49" data-glyph="─" d="M523,179 L528,179 M523,179 L518,179"/>
+<path data-row="3" data-column="50" data-glyph="─" d="M533,179 L538,179 M533,179 L528,179"/>
+<path data-row="3" data-column="51" data-glyph="┐" d="M563,179 L538,179 M563,179 L563,194"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="4" data-column="52" data-glyph="│" d="M563,209 L563,194 M563,209 L563,224"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="5" data-column="51" data-glyph="│" d="M563,239 L563,224 M563,239 L563,254"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="53" data-glyph="│" d="M563,269 L563,254 M563,269 L563,284"/>
+<path data-row="7" data-column="0" data-glyph="├" d="M33,299 L33,284 M33,299 L38,299 M33,299 L33,314"/>
+<path data-row="7" data-column="1" data-glyph="─" d="M43,299 L48,299 M43,299 L38,299"/>
+<path data-row="7" data-column="2" data-glyph="─" d="M53,299 L58,299 M53,299 L48,299"/>
+<path data-row="7" data-column="3" data-glyph="─" d="M63,299 L68,299 M63,299 L58,299"/>
+<path data-row="7" data-column="4" data-glyph="─" d="M73,299 L78,299 M73,299 L68,299"/>
+<path data-row="7" data-column="5" data-glyph="─" d="M83,299 L88,299 M83,299 L78,299"/>
+<path data-row="7" data-column="6" data-glyph="─" d="M93,299 L98,299 M93,299 L88,299"/>
+<path data-row="7" data-column="7" data-glyph="─" d="M103,299 L108,299 M103,299 L98,299"/>
+<path data-row="7" data-column="8" data-glyph="─" d="M113,299 L118,299 M113,299 L108,299"/>
+<path data-row="7" data-column="9" data-glyph="─" d="M123,299 L128,299 M123,299 L118,299"/>
+<path data-row="7" data-column="10" data-glyph="─" d="M133,299 L138,299 M133,299 L128,299"/>
+<path data-row="7" data-column="11" data-glyph="─" d="M143,299 L148,299 M143,299 L138,299"/>
+<path data-row="7" data-column="12" data-glyph="─" d="M153,299 L158,299 M153,299 L148,299"/>
+<path data-row="7" data-column="13" data-glyph="─" d="M163,299 L168,299 M163,299 L158,299"/>
+<path data-row="7" data-column="14" data-glyph="─" d="M173,299 L178,299 M173,299 L168,299"/>
+<path data-row="7" data-column="15" data-glyph="─" d="M183,299 L188,299 M183,299 L178,299"/>
+<path data-row="7" data-column="16" data-glyph="─" d="M193,299 L198,299 M193,299 L188,299"/>
+<path data-row="7" data-column="17" data-glyph="─" d="M203,299 L208,299 M203,299 L198,299"/>
+<path data-row="7" data-column="18" data-glyph="─" d="M213,299 L218,299 M213,299 L208,299"/>
+<path data-row="7" data-column="19" data-glyph="─" d="M223,299 L228,299 M223,299 L218,299"/>
+<path data-row="7" data-column="20" data-glyph="─" d="M233,299 L238,299 M233,299 L228,299"/>
+<path data-row="7" data-column="21" data-glyph="─" d="M243,299 L248,299 M243,299 L238,299"/>
+<path data-row="7" data-column="22" data-glyph="─" d="M253,299 L258,299 M253,299 L248,299"/>
+<path data-row="7" data-column="23" data-glyph="─" d="M263,299 L268,299 M263,299 L258,299"/>
+<path data-row="7" data-column="24" data-glyph="─" d="M273,299 L278,299 M273,299 L268,299"/>
+<path data-row="7" data-column="25" data-glyph="─" d="M283,299 L288,299 M283,299 L278,299"/>
+<path data-row="7" data-column="26" data-glyph="─" d="M293,299 L298,299 M293,299 L288,299"/>
+<path data-row="7" data-column="27" data-glyph="─" d="M303,299 L308,299 M303,299 L298,299"/>
+<path data-row="7" data-column="28" data-glyph="─" d="M313,299 L318,299 M313,299 L308,299"/>
+<path data-row="7" data-column="29" data-glyph="─" d="M323,299 L328,299 M323,299 L318,299"/>
+<path data-row="7" data-column="30" data-glyph="─" d="M333,299 L338,299 M333,299 L328,299"/>
+<path data-row="7" data-column="31" data-glyph="─" d="M343,299 L348,299 M343,299 L338,299"/>
+<path data-row="7" data-column="32" data-glyph="─" d="M353,299 L358,299 M353,299 L348,299"/>
+<path data-row="7" data-column="33" data-glyph="─" d="M363,299 L368,299 M363,299 L358,299"/>
+<path data-row="7" data-column="34" data-glyph="─" d="M373,299 L378,299 M373,299 L368,299"/>
+<path data-row="7" data-column="35" data-glyph="─" d="M383,299 L388,299 M383,299 L378,299"/>
+<path data-row="7" data-column="36" data-glyph="─" d="M393,299 L398,299 M393,299 L388,299"/>
+<path data-row="7" data-column="37" data-glyph="─" d="M403,299 L408,299 M403,299 L398,299"/>
+<path data-row="7" data-column="38" data-glyph="─" d="M413,299 L418,299 M413,299 L408,299"/>
+<path data-row="7" data-column="39" data-glyph="─" d="M423,299 L428,299 M423,299 L418,299"/>
+<path data-row="7" data-column="40" data-glyph="─" d="M433,299 L438,299 M433,299 L428,299"/>
+<path data-row="7" data-column="41" data-glyph="─" d="M443,299 L448,299 M443,299 L438,299"/>
+<path data-row="7" data-column="42" data-glyph="─" d="M453,299 L458,299 M453,299 L448,299"/>
+<path data-row="7" data-column="43" data-glyph="─" d="M463,299 L468,299 M463,299 L458,299"/>
+<path data-row="7" data-column="44" data-glyph="─" d="M473,299 L478,299 M473,299 L468,299"/>
+<path data-row="7" data-column="45" data-glyph="─" d="M483,299 L488,299 M483,299 L478,299"/>
+<path data-row="7" data-column="46" data-glyph="─" d="M493,299 L498,299 M493,299 L488,299"/>
+<path data-row="7" data-column="47" data-glyph="─" d="M503,299 L508,299 M503,299 L498,299"/>
+<path data-row="7" data-column="48" data-glyph="─" d="M513,299 L518,299 M513,299 L508,299"/>
+<path data-row="7" data-column="49" data-glyph="─" d="M523,299 L528,299 M523,299 L518,299"/>
+<path data-row="7" data-column="50" data-glyph="─" d="M533,299 L538,299 M533,299 L528,299"/>
+<path data-row="7" data-column="51" data-glyph="┤" d="M563,299 L563,284 M563,299 L538,299 M563,299 L563,314"/>
+<path data-row="8" data-column="0" data-glyph="│" d="M33,329 L33,314 M33,329 L33,344"/>
+<path data-row="8" data-column="52" data-glyph="│" d="M563,329 L563,314 M563,329 L563,344"/>
+<path data-row="9" data-column="0" data-glyph="│" d="M33,359 L33,344 M33,359 L33,374"/>
+<path data-row="9" data-column="52" data-glyph="│" d="M563,359 L563,344 M563,359 L563,374"/>
+<path data-row="10" data-column="0" data-glyph="│" d="M33,389 L33,374 M33,389 L33,404"/>
+<path data-row="10" data-column="51" data-glyph="│" d="M563,389 L563,374 M563,389 L563,404"/>
+<path data-row="11" data-column="0" data-glyph="├" d="M33,419 L33,404 M33,419 L38,419 M33,419 L33,434"/>
+<path data-row="11" data-column="1" data-glyph="─" d="M43,419 L48,419 M43,419 L38,419"/>
+<path data-row="11" data-column="2" data-glyph="─" d="M53,419 L58,419 M53,419 L48,419"/>
+<path data-row="11" data-column="3" data-glyph="─" d="M63,419 L68,419 M63,419 L58,419"/>
+<path data-row="11" data-column="4" data-glyph="─" d="M73,419 L78,419 M73,419 L68,419"/>
+<path data-row="11" data-column="5" data-glyph="─" d="M83,419 L88,419 M83,419 L78,419"/>
+<path data-row="11" data-column="6" data-glyph="─" d="M93,419 L98,419 M93,419 L88,419"/>
+<path data-row="11" data-column="7" data-glyph="─" d="M103,419 L108,419 M103,419 L98,419"/>
+<path data-row="11" data-column="8" data-glyph="─" d="M113,419 L118,419 M113,419 L108,419"/>
+<path data-row="11" data-column="9" data-glyph="─" d="M123,419 L128,419 M123,419 L118,419"/>
+<path data-row="11" data-column="10" data-glyph="─" d="M133,419 L138,419 M133,419 L128,419"/>
+<path data-row="11" data-column="11" data-glyph="─" d="M143,419 L148,419 M143,419 L138,419"/>
+<path data-row="11" data-column="12" data-glyph="─" d="M153,419 L158,419 M153,419 L148,419"/>
+<path data-row="11" data-column="13" data-glyph="─" d="M163,419 L168,419 M163,419 L158,419"/>
+<path data-row="11" data-column="14" data-glyph="─" d="M173,419 L178,419 M173,419 L168,419"/>
+<path data-row="11" data-column="15" data-glyph="─" d="M183,419 L188,419 M183,419 L178,419"/>
+<path data-row="11" data-column="16" data-glyph="─" d="M193,419 L198,419 M193,419 L188,419"/>
+<path data-row="11" data-column="17" data-glyph="─" d="M203,419 L208,419 M203,419 L198,419"/>
+<path data-row="11" data-column="18" data-glyph="─" d="M213,419 L218,419 M213,419 L208,419"/>
+<path data-row="11" data-column="19" data-glyph="─" d="M223,419 L228,419 M223,419 L218,419"/>
+<path data-row="11" data-column="20" data-glyph="─" d="M233,419 L238,419 M233,419 L228,419"/>
+<path data-row="11" data-column="21" data-glyph="─" d="M243,419 L248,419 M243,419 L238,419"/>
+<path data-row="11" data-column="22" data-glyph="─" d="M253,419 L258,419 M253,419 L248,419"/>
+<path data-row="11" data-column="23" data-glyph="─" d="M263,419 L268,419 M263,419 L258,419"/>
+<path data-row="11" data-column="24" data-glyph="─" d="M273,419 L278,419 M273,419 L268,419"/>
+<path data-row="11" data-column="25" data-glyph="─" d="M283,419 L288,419 M283,419 L278,419"/>
+<path data-row="11" data-column="26" data-glyph="─" d="M293,419 L298,419 M293,419 L288,419"/>
+<path data-row="11" data-column="27" data-glyph="─" d="M303,419 L308,419 M303,419 L298,419"/>
+<path data-row="11" data-column="28" data-glyph="─" d="M313,419 L318,419 M313,419 L308,419"/>
+<path data-row="11" data-column="29" data-glyph="─" d="M323,419 L328,419 M323,419 L318,419"/>
+<path data-row="11" data-column="30" data-glyph="─" d="M333,419 L338,419 M333,419 L328,419"/>
+<path data-row="11" data-column="31" data-glyph="─" d="M343,419 L348,419 M343,419 L338,419"/>
+<path data-row="11" data-column="32" data-glyph="─" d="M353,419 L358,419 M353,419 L348,419"/>
+<path data-row="11" data-column="33" data-glyph="─" d="M363,419 L368,419 M363,419 L358,419"/>
+<path data-row="11" data-column="34" data-glyph="─" d="M373,419 L378,419 M373,419 L368,419"/>
+<path data-row="11" data-column="35" data-glyph="─" d="M383,419 L388,419 M383,419 L378,419"/>
+<path data-row="11" data-column="36" data-glyph="─" d="M393,419 L398,419 M393,419 L388,419"/>
+<path data-row="11" data-column="37" data-glyph="─" d="M403,419 L408,419 M403,419 L398,419"/>
+<path data-row="11" data-column="38" data-glyph="─" d="M413,419 L418,419 M413,419 L408,419"/>
+<path data-row="11" data-column="39" data-glyph="─" d="M423,419 L428,419 M423,419 L418,419"/>
+<path data-row="11" data-column="40" data-glyph="─" d="M433,419 L438,419 M433,419 L428,419"/>
+<path data-row="11" data-column="41" data-glyph="─" d="M443,419 L448,419 M443,419 L438,419"/>
+<path data-row="11" data-column="42" data-glyph="─" d="M453,419 L458,419 M453,419 L448,419"/>
+<path data-row="11" data-column="43" data-glyph="─" d="M463,419 L468,419 M463,419 L458,419"/>
+<path data-row="11" data-column="44" data-glyph="─" d="M473,419 L478,419 M473,419 L468,419"/>
+<path data-row="11" data-column="45" data-glyph="─" d="M483,419 L488,419 M483,419 L478,419"/>
+<path data-row="11" data-column="46" data-glyph="─" d="M493,419 L498,419 M493,419 L488,419"/>
+<path data-row="11" data-column="47" data-glyph="─" d="M503,419 L508,419 M503,419 L498,419"/>
+<path data-row="11" data-column="48" data-glyph="─" d="M513,419 L518,419 M513,419 L508,419"/>
+<path data-row="11" data-column="49" data-glyph="─" d="M523,419 L528,419 M523,419 L518,419"/>
+<path data-row="11" data-column="50" data-glyph="─" d="M533,419 L538,419 M533,419 L528,419"/>
+<path data-row="11" data-column="51" data-glyph="┤" d="M563,419 L563,404 M563,419 L538,419 M563,419 L563,434"/>
+<path data-row="12" data-column="0" data-glyph="│" d="M33,449 L33,434 M33,449 L33,464"/>
+<path data-row="12" data-column="51" data-glyph="│" d="M563,449 L563,434 M563,449 L563,464"/>
+<path data-row="13" data-column="0" data-glyph="│" d="M33,479 L33,464 M33,479 L33,494"/>
+<path data-row="13" data-column="53" data-glyph="│" d="M563,479 L563,464 M563,479 L563,494"/>
+<path data-row="14" data-column="0" data-glyph="│" d="M33,509 L33,494 M33,509 L33,524"/>
+<path data-row="14" data-column="52" data-glyph="│" d="M563,509 L563,494 M563,509 L563,524"/>
+<path data-row="15" data-column="0" data-glyph="├" d="M33,539 L33,524 M33,539 L38,539 M33,539 L33,554"/>
+<path data-row="15" data-column="1" data-glyph="─" d="M43,539 L48,539 M43,539 L38,539"/>
+<path data-row="15" data-column="2" data-glyph="─" d="M53,539 L58,539 M53,539 L48,539"/>
+<path data-row="15" data-column="3" data-glyph="─" d="M63,539 L68,539 M63,539 L58,539"/>
+<path data-row="15" data-column="4" data-glyph="─" d="M73,539 L78,539 M73,539 L68,539"/>
+<path data-row="15" data-column="5" data-glyph="─" d="M83,539 L88,539 M83,539 L78,539"/>
+<path data-row="15" data-column="6" data-glyph="─" d="M93,539 L98,539 M93,539 L88,539"/>
+<path data-row="15" data-column="7" data-glyph="─" d="M103,539 L108,539 M103,539 L98,539"/>
+<path data-row="15" data-column="8" data-glyph="─" d="M113,539 L118,539 M113,539 L108,539"/>
+<path data-row="15" data-column="9" data-glyph="─" d="M123,539 L128,539 M123,539 L118,539"/>
+<path data-row="15" data-column="10" data-glyph="─" d="M133,539 L138,539 M133,539 L128,539"/>
+<path data-row="15" data-column="11" data-glyph="─" d="M143,539 L148,539 M143,539 L138,539"/>
+<path data-row="15" data-column="12" data-glyph="─" d="M153,539 L158,539 M153,539 L148,539"/>
+<path data-row="15" data-column="13" data-glyph="─" d="M163,539 L168,539 M163,539 L158,539"/>
+<path data-row="15" data-column="14" data-glyph="─" d="M173,539 L178,539 M173,539 L168,539"/>
+<path data-row="15" data-column="15" data-glyph="─" d="M183,539 L188,539 M183,539 L178,539"/>
+<path data-row="15" data-column="16" data-glyph="─" d="M193,539 L198,539 M193,539 L188,539"/>
+<path data-row="15" data-column="17" data-glyph="─" d="M203,539 L208,539 M203,539 L198,539"/>
+<path data-row="15" data-column="18" data-glyph="─" d="M213,539 L218,539 M213,539 L208,539"/>
+<path data-row="15" data-column="19" data-glyph="─" d="M223,539 L228,539 M223,539 L218,539"/>
+<path data-row="15" data-column="20" data-glyph="─" d="M233,539 L238,539 M233,539 L228,539"/>
+<path data-row="15" data-column="21" data-glyph="─" d="M243,539 L248,539 M243,539 L238,539"/>
+<path data-row="15" data-column="22" data-glyph="─" d="M253,539 L258,539 M253,539 L248,539"/>
+<path data-row="15" data-column="23" data-glyph="─" d="M263,539 L268,539 M263,539 L258,539"/>
+<path data-row="15" data-column="24" data-glyph="─" d="M273,539 L278,539 M273,539 L268,539"/>
+<path data-row="15" data-column="25" data-glyph="─" d="M283,539 L288,539 M283,539 L278,539"/>
+<path data-row="15" data-column="26" data-glyph="─" d="M293,539 L298,539 M293,539 L288,539"/>
+<path data-row="15" data-column="27" data-glyph="─" d="M303,539 L308,539 M303,539 L298,539"/>
+<path data-row="15" data-column="28" data-glyph="─" d="M313,539 L318,539 M313,539 L308,539"/>
+<path data-row="15" data-column="29" data-glyph="─" d="M323,539 L328,539 M323,539 L318,539"/>
+<path data-row="15" data-column="30" data-glyph="─" d="M333,539 L338,539 M333,539 L328,539"/>
+<path data-row="15" data-column="31" data-glyph="─" d="M343,539 L348,539 M343,539 L338,539"/>
+<path data-row="15" data-column="32" data-glyph="─" d="M353,539 L358,539 M353,539 L348,539"/>
+<path data-row="15" data-column="33" data-glyph="─" d="M363,539 L368,539 M363,539 L358,539"/>
+<path data-row="15" data-column="34" data-glyph="─" d="M373,539 L378,539 M373,539 L368,539"/>
+<path data-row="15" data-column="35" data-glyph="─" d="M383,539 L388,539 M383,539 L378,539"/>
+<path data-row="15" data-column="36" data-glyph="─" d="M393,539 L398,539 M393,539 L388,539"/>
+<path data-row="15" data-column="37" data-glyph="─" d="M403,539 L408,539 M403,539 L398,539"/>
+<path data-row="15" data-column="38" data-glyph="─" d="M413,539 L418,539 M413,539 L408,539"/>
+<path data-row="15" data-column="39" data-glyph="─" d="M423,539 L428,539 M423,539 L418,539"/>
+<path data-row="15" data-column="40" data-glyph="─" d="M433,539 L438,539 M433,539 L428,539"/>
+<path data-row="15" data-column="41" data-glyph="─" d="M443,539 L448,539 M443,539 L438,539"/>
+<path data-row="15" data-column="42" data-glyph="─" d="M453,539 L458,539 M453,539 L448,539"/>
+<path data-row="15" data-column="43" data-glyph="─" d="M463,539 L468,539 M463,539 L458,539"/>
+<path data-row="15" data-column="44" data-glyph="─" d="M473,539 L478,539 M473,539 L468,539"/>
+<path data-row="15" data-column="45" data-glyph="─" d="M483,539 L488,539 M483,539 L478,539"/>
+<path data-row="15" data-column="46" data-glyph="─" d="M493,539 L498,539 M493,539 L488,539"/>
+<path data-row="15" data-column="47" data-glyph="─" d="M503,539 L508,539 M503,539 L498,539"/>
+<path data-row="15" data-column="48" data-glyph="─" d="M513,539 L518,539 M513,539 L508,539"/>
+<path data-row="15" data-column="49" data-glyph="─" d="M523,539 L528,539 M523,539 L518,539"/>
+<path data-row="15" data-column="50" data-glyph="─" d="M533,539 L538,539 M533,539 L528,539"/>
+<path data-row="15" data-column="51" data-glyph="┤" d="M563,539 L563,524 M563,539 L538,539 M563,539 L563,554"/>
+<path data-row="16" data-column="0" data-glyph="│" d="M33,569 L33,554 M33,569 L33,584"/>
+<path data-row="16" data-column="52" data-glyph="│" d="M563,569 L563,554 M563,569 L563,584"/>
+<path data-row="17" data-column="0" data-glyph="│" d="M33,599 L33,584 M33,599 L33,614"/>
+<path data-row="17" data-column="52" data-glyph="│" d="M563,599 L563,584 M563,599 L563,614"/>
+<path data-row="18" data-column="0" data-glyph="│" d="M33,629 L33,614 M33,629 L33,644"/>
+<path data-row="18" data-column="52" data-glyph="│" d="M563,629 L563,614 M563,629 L563,644"/>
+<path data-row="19" data-column="0" data-glyph="├" d="M33,659 L33,644 M33,659 L38,659 M33,659 L33,674"/>
+<path data-row="19" data-column="1" data-glyph="─" d="M43,659 L48,659 M43,659 L38,659"/>
+<path data-row="19" data-column="2" data-glyph="─" d="M53,659 L58,659 M53,659 L48,659"/>
+<path data-row="19" data-column="3" data-glyph="─" d="M63,659 L68,659 M63,659 L58,659"/>
+<path data-row="19" data-column="4" data-glyph="─" d="M73,659 L78,659 M73,659 L68,659"/>
+<path data-row="19" data-column="5" data-glyph="─" d="M83,659 L88,659 M83,659 L78,659"/>
+<path data-row="19" data-column="6" data-glyph="─" d="M93,659 L98,659 M93,659 L88,659"/>
+<path data-row="19" data-column="7" data-glyph="─" d="M103,659 L108,659 M103,659 L98,659"/>
+<path data-row="19" data-column="8" data-glyph="─" d="M113,659 L118,659 M113,659 L108,659"/>
+<path data-row="19" data-column="9" data-glyph="─" d="M123,659 L128,659 M123,659 L118,659"/>
+<path data-row="19" data-column="10" data-glyph="─" d="M133,659 L138,659 M133,659 L128,659"/>
+<path data-row="19" data-column="11" data-glyph="─" d="M143,659 L148,659 M143,659 L138,659"/>
+<path data-row="19" data-column="12" data-glyph="─" d="M153,659 L158,659 M153,659 L148,659"/>
+<path data-row="19" data-column="13" data-glyph="─" d="M163,659 L168,659 M163,659 L158,659"/>
+<path data-row="19" data-column="14" data-glyph="─" d="M173,659 L178,659 M173,659 L168,659"/>
+<path data-row="19" data-column="15" data-glyph="─" d="M183,659 L188,659 M183,659 L178,659"/>
+<path data-row="19" data-column="16" data-glyph="─" d="M193,659 L198,659 M193,659 L188,659"/>
+<path data-row="19" data-column="17" data-glyph="─" d="M203,659 L208,659 M203,659 L198,659"/>
+<path data-row="19" data-column="18" data-glyph="─" d="M213,659 L218,659 M213,659 L208,659"/>
+<path data-row="19" data-column="19" data-glyph="─" d="M223,659 L228,659 M223,659 L218,659"/>
+<path data-row="19" data-column="20" data-glyph="─" d="M233,659 L238,659 M233,659 L228,659"/>
+<path data-row="19" data-column="21" data-glyph="─" d="M243,659 L248,659 M243,659 L238,659"/>
+<path data-row="19" data-column="22" data-glyph="─" d="M253,659 L258,659 M253,659 L248,659"/>
+<path data-row="19" data-column="23" data-glyph="─" d="M263,659 L268,659 M263,659 L258,659"/>
+<path data-row="19" data-column="24" data-glyph="─" d="M273,659 L278,659 M273,659 L268,659"/>
+<path data-row="19" data-column="25" data-glyph="─" d="M283,659 L288,659 M283,659 L278,659"/>
+<path data-row="19" data-column="26" data-glyph="─" d="M293,659 L298,659 M293,659 L288,659"/>
+<path data-row="19" data-column="27" data-glyph="─" d="M303,659 L308,659 M303,659 L298,659"/>
+<path data-row="19" data-column="28" data-glyph="─" d="M313,659 L318,659 M313,659 L308,659"/>
+<path data-row="19" data-column="29" data-glyph="─" d="M323,659 L328,659 M323,659 L318,659"/>
+<path data-row="19" data-column="30" data-glyph="─" d="M333,659 L338,659 M333,659 L328,659"/>
+<path data-row="19" data-column="31" data-glyph="─" d="M343,659 L348,659 M343,659 L338,659"/>
+<path data-row="19" data-column="32" data-glyph="─" d="M353,659 L358,659 M353,659 L348,659"/>
+<path data-row="19" data-column="33" data-glyph="─" d="M363,659 L368,659 M363,659 L358,659"/>
+<path data-row="19" data-column="34" data-glyph="─" d="M373,659 L378,659 M373,659 L368,659"/>
+<path data-row="19" data-column="35" data-glyph="─" d="M383,659 L388,659 M383,659 L378,659"/>
+<path data-row="19" data-column="36" data-glyph="─" d="M393,659 L398,659 M393,659 L388,659"/>
+<path data-row="19" data-column="37" data-glyph="─" d="M403,659 L408,659 M403,659 L398,659"/>
+<path data-row="19" data-column="38" data-glyph="─" d="M413,659 L418,659 M413,659 L408,659"/>
+<path data-row="19" data-column="39" data-glyph="─" d="M423,659 L428,659 M423,659 L418,659"/>
+<path data-row="19" data-column="40" data-glyph="─" d="M433,659 L438,659 M433,659 L428,659"/>
+<path data-row="19" data-column="41" data-glyph="─" d="M443,659 L448,659 M443,659 L438,659"/>
+<path data-row="19" data-column="42" data-glyph="─" d="M453,659 L458,659 M453,659 L448,659"/>
+<path data-row="19" data-column="43" data-glyph="─" d="M463,659 L468,659 M463,659 L458,659"/>
+<path data-row="19" data-column="44" data-glyph="─" d="M473,659 L478,659 M473,659 L468,659"/>
+<path data-row="19" data-column="45" data-glyph="─" d="M483,659 L488,659 M483,659 L478,659"/>
+<path data-row="19" data-column="46" data-glyph="─" d="M493,659 L498,659 M493,659 L488,659"/>
+<path data-row="19" data-column="47" data-glyph="─" d="M503,659 L508,659 M503,659 L498,659"/>
+<path data-row="19" data-column="48" data-glyph="─" d="M513,659 L518,659 M513,659 L508,659"/>
+<path data-row="19" data-column="49" data-glyph="─" d="M523,659 L528,659 M523,659 L518,659"/>
+<path data-row="19" data-column="50" data-glyph="─" d="M533,659 L538,659 M533,659 L528,659"/>
+<path data-row="19" data-column="51" data-glyph="┤" d="M563,659 L563,644 M563,659 L538,659 M563,659 L563,674"/>
+<path data-row="20" data-column="0" data-glyph="│" d="M33,689 L33,674 M33,689 L33,704"/>
+<path data-row="20" data-column="51" data-glyph="│" d="M563,689 L563,674 M563,689 L563,704"/>
+<path data-row="21" data-column="0" data-glyph="│" d="M33,719 L33,704 M33,719 L33,734"/>
+<path data-row="21" data-column="53" data-glyph="│" d="M563,719 L563,704 M563,719 L563,734"/>
+<path data-row="22" data-column="0" data-glyph="│" d="M33,749 L33,734 M33,749 L33,764"/>
+<path data-row="22" data-column="52" data-glyph="│" d="M563,749 L563,734 M563,749 L563,764"/>
+<path data-row="23" data-column="0" data-glyph="└" d="M33,779 L38,779 M33,779 L33,764"/>
+<path data-row="23" data-column="1" data-glyph="─" d="M43,779 L48,779 M43,779 L38,779"/>
+<path data-row="23" data-column="2" data-glyph="─" d="M53,779 L58,779 M53,779 L48,779"/>
+<path data-row="23" data-column="3" data-glyph="─" d="M63,779 L68,779 M63,779 L58,779"/>
+<path data-row="23" data-column="4" data-glyph="─" d="M73,779 L78,779 M73,779 L68,779"/>
+<path data-row="23" data-column="5" data-glyph="─" d="M83,779 L88,779 M83,779 L78,779"/>
+<path data-row="23" data-column="6" data-glyph="─" d="M93,779 L98,779 M93,779 L88,779"/>
+<path data-row="23" data-column="7" data-glyph="─" d="M103,779 L108,779 M103,779 L98,779"/>
+<path data-row="23" data-column="8" data-glyph="─" d="M113,779 L118,779 M113,779 L108,779"/>
+<path data-row="23" data-column="9" data-glyph="─" d="M123,779 L128,779 M123,779 L118,779"/>
+<path data-row="23" data-column="10" data-glyph="─" d="M133,779 L138,779 M133,779 L128,779"/>
+<path data-row="23" data-column="11" data-glyph="─" d="M143,779 L148,779 M143,779 L138,779"/>
+<path data-row="23" data-column="12" data-glyph="─" d="M153,779 L158,779 M153,779 L148,779"/>
+<path data-row="23" data-column="13" data-glyph="─" d="M163,779 L168,779 M163,779 L158,779"/>
+<path data-row="23" data-column="14" data-glyph="─" d="M173,779 L178,779 M173,779 L168,779"/>
+<path data-row="23" data-column="15" data-glyph="─" d="M183,779 L188,779 M183,779 L178,779"/>
+<path data-row="23" data-column="16" data-glyph="─" d="M193,779 L198,779 M193,779 L188,779"/>
+<path data-row="23" data-column="17" data-glyph="─" d="M203,779 L208,779 M203,779 L198,779"/>
+<path data-row="23" data-column="18" data-glyph="─" d="M213,779 L218,779 M213,779 L208,779"/>
+<path data-row="23" data-column="19" data-glyph="─" d="M223,779 L228,779 M223,779 L218,779"/>
+<path data-row="23" data-column="20" data-glyph="─" d="M233,779 L238,779 M233,779 L228,779"/>
+<path data-row="23" data-column="21" data-glyph="─" d="M243,779 L248,779 M243,779 L238,779"/>
+<path data-row="23" data-column="22" data-glyph="─" d="M253,779 L258,779 M253,779 L248,779"/>
+<path data-row="23" data-column="23" data-glyph="─" d="M263,779 L268,779 M263,779 L258,779"/>
+<path data-row="23" data-column="24" data-glyph="─" d="M273,779 L278,779 M273,779 L268,779"/>
+<path data-row="23" data-column="25" data-glyph="─" d="M283,779 L288,779 M283,779 L278,779"/>
+<path data-row="23" data-column="26" data-glyph="─" d="M293,779 L298,779 M293,779 L288,779"/>
+<path data-row="23" data-column="27" data-glyph="─" d="M303,779 L308,779 M303,779 L298,779"/>
+<path data-row="23" data-column="28" data-glyph="─" d="M313,779 L318,779 M313,779 L308,779"/>
+<path data-row="23" data-column="29" data-glyph="─" d="M323,779 L328,779 M323,779 L318,779"/>
+<path data-row="23" data-column="30" data-glyph="─" d="M333,779 L338,779 M333,779 L328,779"/>
+<path data-row="23" data-column="31" data-glyph="─" d="M343,779 L348,779 M343,779 L338,779"/>
+<path data-row="23" data-column="32" data-glyph="─" d="M353,779 L358,779 M353,779 L348,779"/>
+<path data-row="23" data-column="33" data-glyph="─" d="M363,779 L368,779 M363,779 L358,779"/>
+<path data-row="23" data-column="34" data-glyph="─" d="M373,779 L378,779 M373,779 L368,779"/>
+<path data-row="23" data-column="35" data-glyph="─" d="M383,779 L388,779 M383,779 L378,779"/>
+<path data-row="23" data-column="36" data-glyph="─" d="M393,779 L398,779 M393,779 L388,779"/>
+<path data-row="23" data-column="37" data-glyph="─" d="M403,779 L408,779 M403,779 L398,779"/>
+<path data-row="23" data-column="38" data-glyph="─" d="M413,779 L418,779 M413,779 L408,779"/>
+<path data-row="23" data-column="39" data-glyph="─" d="M423,779 L428,779 M423,779 L418,779"/>
+<path data-row="23" data-column="40" data-glyph="─" d="M433,779 L438,779 M433,779 L428,779"/>
+<path data-row="23" data-column="41" data-glyph="─" d="M443,779 L448,779 M443,779 L438,779"/>
+<path data-row="23" data-column="42" data-glyph="─" d="M453,779 L458,779 M453,779 L448,779"/>
+<path data-row="23" data-column="43" data-glyph="─" d="M463,779 L468,779 M463,779 L458,779"/>
+<path data-row="23" data-column="44" data-glyph="─" d="M473,779 L478,779 M473,779 L468,779"/>
+<path data-row="23" data-column="45" data-glyph="─" d="M483,779 L488,779 M483,779 L478,779"/>
+<path data-row="23" data-column="46" data-glyph="─" d="M493,779 L498,779 M493,779 L488,779"/>
+<path data-row="23" data-column="47" data-glyph="─" d="M503,779 L508,779 M503,779 L498,779"/>
+<path data-row="23" data-column="48" data-glyph="─" d="M513,779 L518,779 M513,779 L508,779"/>
+<path data-row="23" data-column="49" data-glyph="─" d="M523,779 L528,779 M523,779 L518,779"/>
+<path data-row="23" data-column="50" data-glyph="─" d="M533,779 L538,779 M533,779 L528,779"/>
+<path data-row="23" data-column="51" data-glyph="┘" d="M563,779 L538,779 M563,779 L563,764"/>
+<path data-row="24" data-column="4" data-glyph="│" d="M73,809 L73,794 M73,809 L73,824"/>
+<path data-row="25" data-column="4" data-glyph="▼" d="M73,824 V854 M69,848 L73,854 L77,848"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 输出 ToolCall</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 1 步：prepareArguments（参数预处理）</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">处理 LLM 的参数怪癖</text>
+<text data-row="6" data-column="4" x="68" y="269" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">如：把字符串化的数组解析回真正的数组</text>
+<text data-row="8" data-column="2" x="48" y="329" textLength="450" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 2 步：validateToolArguments（Schema 验证）</text>
+<text data-row="9" data-column="4" x="68" y="359" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用 TypeBox Schema 做运行时类型检查</text>
+<text data-row="10" data-column="4" x="68" y="389" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">如：path 是 string，不是 number</text>
+<text data-row="12" data-column="2" x="48" y="449" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 3 步：beforeToolCall（前置钩子）</text>
+<text data-row="13" data-column="4" x="68" y="479" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">产品层的权限拦截，可以阻止执行</text>
+<text data-row="14" data-column="4" x="68" y="509" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">返回 { block: true, reason: &quot;危险命令&quot;}</text>
+<text data-row="16" data-column="2" x="48" y="569" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 4 步：tool.execute（实际执行）</text>
+<text data-row="17" data-column="4" x="68" y="599" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调用工具的 execute 函数</text>
+<text data-row="18" data-column="4" x="68" y="629" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">支持 onUpdate 流式进度回调</text>
+<text data-row="20" data-column="2" x="48" y="689" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 5 步：afterToolCall（后置钩子）</text>
+<text data-row="21" data-column="4" x="68" y="719" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">产品层的结果后处理，可以修改返回值</text>
+<text data-row="22" data-column="4" x="68" y="749" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">可以替换 content、details、isError</text>
+<text data-row="26" data-column="0" x="28" y="869" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolResultMessage</text>
+</g>
+</svg>

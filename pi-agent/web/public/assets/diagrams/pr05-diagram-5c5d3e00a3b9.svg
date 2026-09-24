@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="936" height="222" viewBox="0 0 936 222" role="img" aria-labelledby="pr05-diagram-5c5d3e00a3b9-title pr05-diagram-5c5d3e00a3b9-description">
+<title id="pr05-diagram-5c5d3e00a3b9-title">onUpdate：给用户报进度</title>
+<desc id="pr05-diagram-5c5d3e00a3b9-description">你的工具调 onUpdate({ content: [{ type: &quot;text&quot;, text: &quot;已处理 50%...&quot; }], details: {} })
+框架发出 tool_execution_update 事件
+谁订阅了 session 的事件流，谁就能拿到这段进度文本
+前端拿到后渲染成「正在处理...已处理 50%...」</desc>
+<rect x="1" y="1" width="934" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">onUpdate：给用户报进度</text>
+<path d="M28,58 H908" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="→" d="M48,119 H58 M54,115 L58,119 L54,123"/>
+<path data-row="2" data-column="2" data-glyph="→" d="M48,149 H58 M54,145 L58,149 L54,153"/>
+<path data-row="3" data-column="2" data-glyph="→" d="M48,179 H58 M54,175 L58,179 L54,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="880" lengthAdjust="spacingAndGlyphs" style="white-space:pre">你的工具调 onUpdate({ content: [{ type: &quot;text&quot;, text: &quot;已处理 50%...&quot; }], details: {} })</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">框架发出 tool_execution_update 事件</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="490" lengthAdjust="spacingAndGlyphs" style="white-space:pre">谁订阅了 session 的事件流，谁就能拿到这段进度文本</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="440" lengthAdjust="spacingAndGlyphs" style="white-space:pre">前端拿到后渲染成「正在处理...已处理 50%...」</text>
+</g>
+</svg>

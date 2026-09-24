@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="696" height="252" viewBox="0 0 696 252" role="img" aria-labelledby="ch03-diagram-115d7522dbd0-title ch03-diagram-115d7522dbd0-description">
+<title id="ch03-diagram-115d7522dbd0-title">Trace（本章指一次完整运行）</title>
+<desc id="ch03-diagram-115d7522dbd0-description">agent_start
+turn_start
+模型请求 read
+执行 read
+finishTurn
+turn_end
+turn_start
+模型请求 edit
+执行 edit
+finishTurn
+turn_end
+turn_start
+模型输出解释
+finishTurn
+turn_end
+agent_end</desc>
+<rect x="1" y="1" width="694" height="250" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">Trace（本章指一次完整运行）</text>
+<path d="M28,58 H668" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="13" data-glyph="→" d="M158,119 H168 M164,115 L168,119 L164,123"/>
+<path data-row="1" data-column="29" data-glyph="→" d="M318,119 H328 M324,115 L328,119 L324,123"/>
+<path data-row="1" data-column="41" data-glyph="→" d="M438,119 H448 M444,115 L448,119 L444,123"/>
+<path data-row="1" data-column="54" data-glyph="→" d="M568,119 H578 M574,115 L578,119 L574,123"/>
+<path data-row="2" data-column="13" data-glyph="→" d="M158,149 H168 M164,145 L168,149 L164,153"/>
+<path data-row="2" data-column="29" data-glyph="→" d="M318,149 H328 M324,145 L328,149 L324,153"/>
+<path data-row="2" data-column="41" data-glyph="→" d="M438,149 H448 M444,145 L448,149 L444,153"/>
+<path data-row="2" data-column="54" data-glyph="→" d="M568,149 H578 M574,145 L578,149 L574,153"/>
+<path data-row="3" data-column="13" data-glyph="→" d="M158,179 H168 M164,175 L168,179 L164,183"/>
+<path data-row="3" data-column="28" data-glyph="→" d="M308,179 H318 M314,175 L318,179 L314,183"/>
+<path data-row="3" data-column="41" data-glyph="→" d="M438,179 H448 M444,175 L448,179 L444,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent_start</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_start</text>
+<text data-row="1" data-column="15" x="178" y="119" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型请求 read</text>
+<text data-row="1" data-column="31" x="338" y="119" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">执行 read</text>
+<text data-row="1" data-column="43" x="458" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="1" data-column="56" x="588" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_start</text>
+<text data-row="2" data-column="15" x="178" y="149" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型请求 edit</text>
+<text data-row="2" data-column="31" x="338" y="149" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">执行 edit</text>
+<text data-row="2" data-column="43" x="458" y="149" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="2" data-column="56" x="588" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_start</text>
+<text data-row="3" data-column="15" x="178" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型输出解释</text>
+<text data-row="3" data-column="30" x="328" y="179" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="3" data-column="43" x="458" y="179" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent_end</text>
+</g>
+</svg>

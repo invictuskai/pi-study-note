@@ -64,19 +64,7 @@ import Diagram from '../../components/Diagram.astro';
 
 ### 四个核心包，各司其职
 
-```
-┌──────────────────────────────────────────┐
-│          pi-coding-agent                 │  ← 完整 CLI 产品 + SDK
-│  系统提示词 · 内置工具 · 会话管理 · 扩展  │
-├──────────────────────────────────────────┤
-│  pi-tui              │  pi-agent-core    │  ← 终端 UI + Agent 引擎
-│  差分渲染 · 组件系统  │  AgentLoop · 工具 │
-│                      │  系统 · 事件流    │
-├──────────────────────┴───────────────────┤
-│              pi-ai                       │  ← 多供应商 LLM 抽象
-│  统一 API · 上下文交接 · 流式 · Token 追踪│
-└──────────────────────────────────────────┘
-```
+<Diagram file="/assets/diagrams/ch01-diagram-c04ad053fc05.svg" caption="四个核心包，各司其职" id="ch01-diagram-c04ad053fc05" layout="preserve" />
 
 这四层里，`pi-ai / pi-agent-core / pi-coding-agent` 构成一条**三层堆栈**（每层可独立使用），`pi-tui` 是一个**正交的 UI 库**，与 Agent 体系完全解耦——你可以只用 `pi-ai` 调模型，也可以用 `pi-agent-core` 在你自己的应用里跑 Agent Loop，完全不需要碰 CLI。这是 Pi 作为 SDK 的核心价值，我们在第五节细讲。
 

@@ -60,7 +60,7 @@
   // 安全：使用 DOMParser 在独立的 XML 文档上下文中解析 SVG，
   //       不触发脚本执行，不污染主 DOM，比 innerHTML 更安全。
   function inlineSvgDiagrams() {
-    const imgs = document.querySelectorAll<HTMLElement>('figure.diagram > img[src$=".svg"]:not([data-inlined])');
+    const imgs = document.querySelectorAll<HTMLElement>('figure.diagram img[src$=".svg"]:not([data-inlined])');
     imgs.forEach(img => {
       const src = (img as HTMLImageElement).src || img.getAttribute('src') || '';
       // 同源才内联（避免跨域）
@@ -142,6 +142,7 @@
       // 2) 点击内联 svg（或其后代）—— 找到最近的 figure.diagram，取 svg data-src
       const figure = t.closest('figure.diagram');
       if (figure) {
+        if (t.closest('a')) return;
         const svg = figure.querySelector('svg[data-src]');
         if (svg) {
           // 但若点击的是带 [data-anchor] 的交互节点，不触发 lightbox（让 S2 处理）

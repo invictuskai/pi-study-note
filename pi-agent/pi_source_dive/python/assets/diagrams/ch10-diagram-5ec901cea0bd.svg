@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="192" viewBox="0 0 400 192" role="img" aria-labelledby="ch10-diagram-5ec901cea0bd-title ch10-diagram-5ec901cea0bd-description">
+<title id="ch10-diagram-5ec901cea0bd-title">第 1 步：切换模型，第一个节点上树</title>
+<desc id="ch10-diagram-5ec901cea0bd-description">e1 (model_change)
+leafId 在这</desc>
+<rect x="1" y="1" width="398" height="190" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第 1 步：切换模型，第一个节点上树</text>
+<path d="M28,58 H372" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="↑" d="M33,104 V134 M29,110 L33,104 L37,110"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (model_change)</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leafId 在这</text>
+</g>
+</svg>

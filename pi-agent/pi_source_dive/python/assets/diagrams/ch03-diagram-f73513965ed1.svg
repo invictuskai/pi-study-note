@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="282" viewBox="0 0 726 282" role="img" aria-labelledby="ch03-diagram-f73513965ed1-title ch03-diagram-f73513965ed1-description">
+<title id="ch03-diagram-f73513965ed1-title">4.6 executeToolCalls()：并行与串行</title>
+<desc id="ch03-diagram-f73513965ed1-description">串行：A 预检
+执行
+after hook
+工具结束及结果消息
+B ...
+并行：
+1. 按调用顺序预检；拦截/校验失败的项当场生成结束结果
+2. 允许执行的项并发执行、运行 after hook、发送 tool_execution_end
+3. 等待本批处理完成，按原始调用顺序发送 toolResult 消息</desc>
+<rect x="1" y="1" width="724" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">4.6 executeToolCalls()：并行与串行</text>
+<path d="M28,58 H698" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="13" data-glyph="→" d="M158,89 H168 M164,85 L168,89 L164,93"/>
+<path data-row="0" data-column="20" data-glyph="→" d="M228,89 H238 M234,85 L238,89 L234,93"/>
+<path data-row="0" data-column="33" data-glyph="→" d="M358,89 H368 M364,85 L368,89 L364,93"/>
+<path data-row="0" data-column="54" data-glyph="→" d="M568,89 H578 M574,85 L578,89 L574,93"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">串行：A 预检</text>
+<text data-row="0" data-column="15" x="178" y="89" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">执行</text>
+<text data-row="0" data-column="22" x="248" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">after hook</text>
+<text data-row="0" data-column="35" x="378" y="89" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具结束及结果消息</text>
+<text data-row="0" data-column="56" x="588" y="89" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">B ...</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">并行：</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="520" lengthAdjust="spacingAndGlyphs" style="white-space:pre">1. 按调用顺序预检；拦截/校验失败的项当场生成结束结果</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="650" lengthAdjust="spacingAndGlyphs" style="white-space:pre">2. 允许执行的项并发执行、运行 after hook、发送 tool_execution_end</text>
+<text data-row="5" data-column="2" x="48" y="239" textLength="550" lengthAdjust="spacingAndGlyphs" style="white-space:pre">3. 等待本批处理完成，按原始调用顺序发送 toolResult 消息</text>
+</g>
+</svg>

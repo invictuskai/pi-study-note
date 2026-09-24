@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="946" height="522" viewBox="0 0 946 522" role="img" aria-labelledby="ch05-diagram-9f124f0b47fd-title ch05-diagram-9f124f0b47fd-description">
+<title id="ch05-diagram-9f124f0b47fd-title">异常 → 消息：编码前后对比</title>
+<desc id="ch05-diagram-9f124f0b47fd-description">工具抛出的原始异常（except 之前）：       编码后的 ToolResultMessage（except 之后）：
+FileNotFoundError: [Errno 2] No such     {
+一路穿透管道                            role: &quot;toolResult&quot;,
+打断 Agent Loop                         toolCallId: &quot;call_abc&quot;,
+事件序列不完整，UI 卡死                  toolName: &quot;read&quot;,
+content: [{
+type: &quot;text&quot;,
+text: &quot;[Errno 2] No such file or directory&quot;
+}],
+isError: True
+唯一标记
+}
+追加到对话历史
+下一轮发给模型
+模型看到后自己决定怎么办</desc>
+<rect x="1" y="1" width="944" height="520" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">异常 → 消息：编码前后对比</text>
+<path d="M28,58 H918" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="2" data-glyph="→" d="M48,149 H58 M54,145 L58,149 L54,153"/>
+<path data-row="3" data-column="2" data-glyph="→" d="M48,179 H58 M54,175 L58,179 L54,183"/>
+<path data-row="4" data-column="2" data-glyph="→" d="M48,209 H58 M54,205 L58,209 L54,213"/>
+<path data-row="9" data-column="60" data-glyph="←" d="M628,359 H638 M632,355 L628,359 L632,363"/>
+<path data-row="11" data-column="42" data-glyph="→" d="M448,419 H458 M454,415 L458,419 L454,423"/>
+<path data-row="12" data-column="42" data-glyph="→" d="M448,449 H458 M454,445 L458,449 L454,453"/>
+<path data-row="13" data-column="42" data-glyph="→" d="M448,479 H458 M454,475 L458,479 L454,483"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="850" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具抛出的原始异常（except 之前）：       编码后的 ToolResultMessage（except 之后）：</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">FileNotFoundError: [Errno 2] No such     {</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="590" lengthAdjust="spacingAndGlyphs" style="white-space:pre">一路穿透管道                            role: &quot;toolResult&quot;,</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="630" lengthAdjust="spacingAndGlyphs" style="white-space:pre">打断 Agent Loop                         toolCallId: &quot;call_abc&quot;,</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="580" lengthAdjust="spacingAndGlyphs" style="white-space:pre">事件序列不完整，UI 卡死                  toolName: &quot;read&quot;,</text>
+<text data-row="5" data-column="44" x="468" y="239" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: [{</text>
+<text data-row="6" data-column="46" x="488" y="269" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">type: &quot;text&quot;,</text>
+<text data-row="7" data-column="46" x="488" y="299" textLength="430" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text: &quot;[Errno 2] No such file or directory&quot;</text>
+<text data-row="8" data-column="44" x="468" y="329" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">}],</text>
+<text data-row="9" data-column="44" x="468" y="359" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">isError: True</text>
+<text data-row="9" data-column="62" x="648" y="359" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">唯一标记</text>
+<text data-row="10" data-column="42" x="448" y="389" textLength="10" lengthAdjust="spacingAndGlyphs" style="white-space:pre">}</text>
+<text data-row="11" data-column="44" x="468" y="419" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">追加到对话历史</text>
+<text data-row="12" data-column="44" x="468" y="449" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">下一轮发给模型</text>
+<text data-row="13" data-column="44" x="468" y="479" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型看到后自己决定怎么办</text>
+</g>
+</svg>

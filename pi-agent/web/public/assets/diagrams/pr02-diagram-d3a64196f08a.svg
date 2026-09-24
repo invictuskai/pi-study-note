@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="496" height="522" viewBox="0 0 496 522" role="img" aria-labelledby="pr02-diagram-d3a64196f08a-title pr02-diagram-d3a64196f08a-description">
+<title id="pr02-diagram-d3a64196f08a-title">四、自己动手：看一眼 Agent 内部</title>
+<desc id="pr02-diagram-d3a64196f08a-description">📋 [agent_start]
+📋 [turn_start]
+📋 [message_start]
+📋 [message_update]
+LLM 决定调 bash
+📋 [tool_execution_start]  工具：bash
+📋 [tool_execution_end]    工具：bash (成功)
+📋 [turn_end]
+📋 [turn_start]
+第 2 轮
+📋 [message_start]
+当前目录下有 package.json、 等文件...
+📋 [turn_end]
+📋 [agent_end]</desc>
+<rect x="1" y="1" width="494" height="520" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">四、自己动手：看一眼 Agent 内部</text>
+<path d="M28,58 H468" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="3" data-column="22" data-glyph="←" d="M248,179 H258 M252,175 L248,179 L252,183"/>
+<path data-row="7" data-column="22" data-glyph="←" d="M248,299 H258 M252,295 L248,299 L252,303"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [agent_start]</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [turn_start]</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [message_start]</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [message_update]</text>
+<text data-row="3" data-column="24" x="268" y="179" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 决定调 bash</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [tool_execution_start]  工具：bash</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="440" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [tool_execution_end]    工具：bash (成功)</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [turn_end]</text>
+<text data-row="7" data-column="0" x="28" y="299" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [turn_start]</text>
+<text data-row="7" data-column="24" x="268" y="299" textLength="70" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 2 轮</text>
+<text data-row="8" data-column="0" x="28" y="329" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [message_start]</text>
+<text data-row="10" data-column="0" x="28" y="389" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">当前目录下有 package.json、 等文件...</text>
+<text data-row="12" data-column="0" x="28" y="449" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [turn_end]</text>
+<text data-row="13" data-column="0" x="28" y="479" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📋 [agent_end]</text>
+</g>
+</svg>

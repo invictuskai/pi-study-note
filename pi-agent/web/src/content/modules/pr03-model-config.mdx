@@ -10,6 +10,8 @@ prev: pr02-architecture
 next: pr04-system-prompt
 ---
 
+import Diagram from '../../components/Diagram.astro';
+
 ## 一、这章到底要解决什么问题
 
 第 1 章你跑通了第一个 Agent，但只配了一个 Provider。真实业务里，你大概率会遇到下面这几种情况之一：
@@ -172,12 +174,7 @@ Ollama 本地服务默认不需要 Key，但 OpenAI SDK 要求 `apiKey` 字段�
 
 **`baseUrl` 路径截断规则**：只填到 `/v1` 这一级，**不要**带 `/chat/completions`——SDK 会自动拼接。这是新手最容易犯的错：
 
-```
-完整端点:      http://localhost:11434/v1/chat/completions
-baseUrl 应为:  http://localhost:11434/v1
-                                       ↑
-                            SDK 自动拼接 /chat/completions
-```
+<Diagram file="/assets/diagrams/pr03-diagram-b783dd257928.svg" caption="4.1 用 models.json 接 OpenAI 兼容服务" id="pr03-diagram-b783dd257928" layout="preserve" />
 
 企业内网接口同理，把 `baseUrl` 改成公司内网地址就行。
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1196" height="222" viewBox="0 0 1196 222" role="img" aria-labelledby="pr06-diagram-1d2db3848299-title pr06-diagram-1d2db3848299-description">
+<title id="pr06-diagram-1d2db3848299-title">2.1 全景图：从有需求到代码接入的完整过程</title>
+<desc id="pr06-diagram-1d2db3848299-description">① 决定盯哪个事件
+② 写处理函数（读 event 数据、return 干预）
+③ 接进 Agent
+接法 A：内联塞进 extensionFactories
+接法 B：独立文件，import 后塞进 extensionFactories
+会话带上 resourceLoader</desc>
+<rect x="1" y="1" width="1194" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.1 全景图：从有需求到代码接入的完整过程</text>
+<path d="M28,58 H1168" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="17" data-glyph="→" d="M198,89 H208 M204,85 L208,89 L204,93"/>
+<path data-row="0" data-column="62" data-glyph="→" d="M648,89 H658 M654,85 L658,89 L654,93"/>
+<path data-row="1" data-column="62" data-glyph="├" d="M653,119 L653,104 M653,119 L658,119 M653,119 L653,134"/>
+<path data-row="2" data-column="62" data-glyph="└" d="M653,149 L658,149 M653,149 L653,134"/>
+<path data-row="3" data-column="74" data-glyph="→" d="M768,179 H778 M774,175 L778,179 L774,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">① 决定盯哪个事件</text>
+<text data-row="0" data-column="19" x="218" y="89" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">② 写处理函数（读 event 数据、return 干预）</text>
+<text data-row="0" data-column="64" x="668" y="89" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">③ 接进 Agent</text>
+<text data-row="1" data-column="64" x="668" y="119" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">接法 A：内联塞进 extensionFactories</text>
+<text data-row="2" data-column="64" x="668" y="149" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">接法 B：独立文件，import 后塞进 extensionFactories</text>
+<text data-row="3" data-column="76" x="788" y="179" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">会话带上 resourceLoader</text>
+</g>
+</svg>

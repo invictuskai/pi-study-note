@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="606" height="252" viewBox="0 0 606 252" role="img" aria-labelledby="ch06-diagram-6c4a38a26c5d-title ch06-diagram-6c4a38a26c5d-description">
+<title id="ch06-diagram-6c4a38a26c5d-title">二、第一层：LLM 认识的消息只有三种</title>
+<desc id="ch06-diagram-6c4a38a26c5d-description">Message 联合类型（LLM 标准格式）
+UserMessage
+用户说的话 / 发的图片
+AssistantMessage
+LLM 的回复（含思考、工具调用）
+ToolResultMessage
+工具执行后的结果</desc>
+<rect x="1" y="1" width="604" height="250" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">二、第一层：LLM 认识的消息只有三种</text>
+<path d="M28,58 H578" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="│" d="M33,119 L33,104 M33,119 L33,134"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="2" data-column="23" data-glyph="←" d="M258,149 H268 M262,145 L258,149 L262,153"/>
+<path data-row="3" data-column="0" data-glyph="├" d="M33,179 L33,164 M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="3" data-column="23" data-glyph="←" d="M258,179 H268 M262,175 L258,179 L262,183"/>
+<path data-row="4" data-column="0" data-glyph="└" d="M33,209 L38,209 M33,209 L33,194"/>
+<path data-row="4" data-column="1" data-glyph="─" d="M43,209 L48,209 M43,209 L38,209"/>
+<path data-row="4" data-column="2" data-glyph="─" d="M53,209 L58,209 M53,209 L48,209"/>
+<path data-row="4" data-column="23" data-glyph="←" d="M258,209 H268 M262,205 L258,209 L262,213"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Message 联合类型（LLM 标准格式）</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">UserMessage</text>
+<text data-row="2" data-column="25" x="278" y="149" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户说的话 / 发的图片</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AssistantMessage</text>
+<text data-row="3" data-column="25" x="278" y="179" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 的回复（含思考、工具调用）</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolResultMessage</text>
+<text data-row="4" data-column="25" x="278" y="209" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具执行后的结果</text>
+</g>
+</svg>

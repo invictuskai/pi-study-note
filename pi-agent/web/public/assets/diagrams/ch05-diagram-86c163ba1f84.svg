@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="736" height="312" viewBox="0 0 736 312" role="img" aria-labelledby="ch05-diagram-86c163ba1f84-title ch05-diagram-86c163ba1f84-description">
+<title id="ch05-diagram-86c163ba1f84-title">解法：工具不直接调系统 API，而是调接口</title>
+<desc id="ch05-diagram-86c163ba1f84-description">直接调 fs（硬编码）：               通过 Operations 接口（可替换）：
+Read 工具
+Read 工具
+fs.readFile(path)
+ops.readFile(path)
+只能读本地文件
+本地 / SSH / Mock
+测试必须创建真实文件
+注入什么就调什么</desc>
+<rect x="1" y="1" width="734" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">解法：工具不直接调系统 API，而是调接口</text>
+<path d="M28,58 H708" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="┌" d="M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="1" data-column="4" data-glyph="─" d="M73,119 L78,119 M73,119 L68,119"/>
+<path data-row="1" data-column="5" data-glyph="─" d="M83,119 L88,119 M83,119 L78,119"/>
+<path data-row="1" data-column="6" data-glyph="─" d="M93,119 L98,119 M93,119 L88,119"/>
+<path data-row="1" data-column="7" data-glyph="─" d="M103,119 L108,119 M103,119 L98,119"/>
+<path data-row="1" data-column="8" data-glyph="─" d="M113,119 L118,119 M113,119 L108,119"/>
+<path data-row="1" data-column="9" data-glyph="─" d="M123,119 L128,119 M123,119 L118,119"/>
+<path data-row="1" data-column="10" data-glyph="─" d="M133,119 L138,119 M133,119 L128,119"/>
+<path data-row="1" data-column="11" data-glyph="─" d="M143,119 L148,119 M143,119 L138,119"/>
+<path data-row="1" data-column="12" data-glyph="─" d="M153,119 L158,119 M153,119 L148,119"/>
+<path data-row="1" data-column="13" data-glyph="─" d="M163,119 L168,119 M163,119 L158,119"/>
+<path data-row="1" data-column="14" data-glyph="─" d="M173,119 L178,119 M173,119 L168,119"/>
+<path data-row="1" data-column="15" data-glyph="─" d="M183,119 L188,119 M183,119 L178,119"/>
+<path data-row="1" data-column="16" data-glyph="─" d="M193,119 L198,119 M193,119 L188,119"/>
+<path data-row="1" data-column="17" data-glyph="─" d="M203,119 L208,119 M203,119 L198,119"/>
+<path data-row="1" data-column="18" data-glyph="─" d="M213,119 L218,119 M213,119 L208,119"/>
+<path data-row="1" data-column="19" data-glyph="─" d="M223,119 L228,119 M223,119 L218,119"/>
+<path data-row="1" data-column="20" data-glyph="─" d="M233,119 L238,119 M233,119 L228,119"/>
+<path data-row="1" data-column="21" data-glyph="─" d="M243,119 L248,119 M243,119 L238,119"/>
+<path data-row="1" data-column="22" data-glyph="─" d="M253,119 L258,119 M253,119 L248,119"/>
+<path data-row="1" data-column="23" data-glyph="┐" d="M283,119 L258,119 M283,119 L283,134"/>
+<path data-row="1" data-column="36" data-glyph="┌" d="M413,119 L398,119 M413,119 L413,134"/>
+<path data-row="1" data-column="37" data-glyph="─" d="M403,119 L408,119 M403,119 L398,119"/>
+<path data-row="1" data-column="38" data-glyph="─" d="M413,119 L418,119 M413,119 L408,119"/>
+<path data-row="1" data-column="39" data-glyph="─" d="M423,119 L428,119 M423,119 L418,119"/>
+<path data-row="1" data-column="40" data-glyph="─" d="M433,119 L438,119 M433,119 L428,119"/>
+<path data-row="1" data-column="41" data-glyph="─" d="M443,119 L448,119 M443,119 L438,119"/>
+<path data-row="1" data-column="42" data-glyph="─" d="M453,119 L458,119 M453,119 L448,119"/>
+<path data-row="1" data-column="43" data-glyph="─" d="M463,119 L468,119 M463,119 L458,119"/>
+<path data-row="1" data-column="44" data-glyph="─" d="M473,119 L478,119 M473,119 L468,119"/>
+<path data-row="1" data-column="45" data-glyph="─" d="M483,119 L488,119 M483,119 L478,119"/>
+<path data-row="1" data-column="46" data-glyph="─" d="M493,119 L498,119 M493,119 L488,119"/>
+<path data-row="1" data-column="47" data-glyph="─" d="M503,119 L508,119 M503,119 L498,119"/>
+<path data-row="1" data-column="48" data-glyph="─" d="M513,119 L518,119 M513,119 L508,119"/>
+<path data-row="1" data-column="49" data-glyph="─" d="M523,119 L528,119 M523,119 L518,119"/>
+<path data-row="1" data-column="50" data-glyph="─" d="M533,119 L538,119 M533,119 L528,119"/>
+<path data-row="1" data-column="51" data-glyph="─" d="M543,119 L548,119 M543,119 L538,119"/>
+<path data-row="1" data-column="52" data-glyph="─" d="M553,119 L558,119 M553,119 L548,119"/>
+<path data-row="1" data-column="53" data-glyph="─" d="M563,119 L568,119 M563,119 L558,119"/>
+<path data-row="1" data-column="54" data-glyph="─" d="M573,119 L578,119 M573,119 L568,119"/>
+<path data-row="1" data-column="55" data-glyph="─" d="M583,119 L588,119 M583,119 L578,119"/>
+<path data-row="1" data-column="56" data-glyph="─" d="M593,119 L598,119 M593,119 L588,119"/>
+<path data-row="1" data-column="57" data-glyph="─" d="M603,119 L608,119 M603,119 L598,119"/>
+<path data-row="1" data-column="58" data-glyph="─" d="M613,119 L618,119 M613,119 L608,119"/>
+<path data-row="1" data-column="59" data-glyph="┐" d="M643,119 L618,119 M643,119 L643,134"/>
+<path data-row="2" data-column="0" data-glyph="│" d="M33,149 L33,134 M33,149 L33,164"/>
+<path data-row="2" data-column="24" data-glyph="│" d="M283,149 L283,134 M283,149 L283,164"/>
+<path data-row="2" data-column="37" data-glyph="│" d="M413,149 L413,134 M413,149 L413,164"/>
+<path data-row="2" data-column="61" data-glyph="│" d="M643,149 L643,134 M643,149 L643,164"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="3" data-column="23" data-glyph="│" d="M283,179 L283,164 M283,179 L283,194"/>
+<path data-row="3" data-column="36" data-glyph="│" d="M413,179 L413,164 M413,179 L413,194"/>
+<path data-row="3" data-column="59" data-glyph="│" d="M643,179 L643,164 M643,179 L643,194"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="4" data-column="24" data-glyph="│" d="M283,209 L283,194 M283,209 L283,224"/>
+<path data-row="4" data-column="37" data-glyph="│" d="M413,209 L413,194 M413,209 L413,224"/>
+<path data-row="4" data-column="61" data-glyph="│" d="M643,209 L643,194 M643,209 L643,224"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="5" data-column="25" data-glyph="│" d="M283,239 L283,224 M283,239 L283,254"/>
+<path data-row="5" data-column="38" data-glyph="│" d="M413,239 L413,224 M413,239 L413,254"/>
+<path data-row="5" data-column="62" data-glyph="│" d="M653,239 L653,224 M653,239 L653,254"/>
+<path data-row="6" data-column="0" data-glyph="└" d="M33,269 L38,269 M33,269 L33,254"/>
+<path data-row="6" data-column="1" data-glyph="─" d="M43,269 L48,269 M43,269 L38,269"/>
+<path data-row="6" data-column="2" data-glyph="─" d="M53,269 L58,269 M53,269 L48,269"/>
+<path data-row="6" data-column="3" data-glyph="─" d="M63,269 L68,269 M63,269 L58,269"/>
+<path data-row="6" data-column="4" data-glyph="─" d="M73,269 L78,269 M73,269 L68,269"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="6" data-column="6" data-glyph="─" d="M93,269 L98,269 M93,269 L88,269"/>
+<path data-row="6" data-column="7" data-glyph="─" d="M103,269 L108,269 M103,269 L98,269"/>
+<path data-row="6" data-column="8" data-glyph="─" d="M113,269 L118,269 M113,269 L108,269"/>
+<path data-row="6" data-column="9" data-glyph="─" d="M123,269 L128,269 M123,269 L118,269"/>
+<path data-row="6" data-column="10" data-glyph="─" d="M133,269 L138,269 M133,269 L128,269"/>
+<path data-row="6" data-column="11" data-glyph="─" d="M143,269 L148,269 M143,269 L138,269"/>
+<path data-row="6" data-column="12" data-glyph="─" d="M153,269 L158,269 M153,269 L148,269"/>
+<path data-row="6" data-column="13" data-glyph="─" d="M163,269 L168,269 M163,269 L158,269"/>
+<path data-row="6" data-column="14" data-glyph="─" d="M173,269 L178,269 M173,269 L168,269"/>
+<path data-row="6" data-column="15" data-glyph="─" d="M183,269 L188,269 M183,269 L178,269"/>
+<path data-row="6" data-column="16" data-glyph="─" d="M193,269 L198,269 M193,269 L188,269"/>
+<path data-row="6" data-column="17" data-glyph="─" d="M203,269 L208,269 M203,269 L198,269"/>
+<path data-row="6" data-column="18" data-glyph="─" d="M213,269 L218,269 M213,269 L208,269"/>
+<path data-row="6" data-column="19" data-glyph="─" d="M223,269 L228,269 M223,269 L218,269"/>
+<path data-row="6" data-column="20" data-glyph="─" d="M233,269 L238,269 M233,269 L228,269"/>
+<path data-row="6" data-column="21" data-glyph="─" d="M243,269 L248,269 M243,269 L238,269"/>
+<path data-row="6" data-column="22" data-glyph="─" d="M253,269 L258,269 M253,269 L248,269"/>
+<path data-row="6" data-column="23" data-glyph="┘" d="M283,269 L258,269 M283,269 L283,254"/>
+<path data-row="6" data-column="36" data-glyph="└" d="M413,269 L398,269 M413,269 L413,254"/>
+<path data-row="6" data-column="37" data-glyph="─" d="M403,269 L408,269 M403,269 L398,269"/>
+<path data-row="6" data-column="38" data-glyph="─" d="M413,269 L418,269 M413,269 L408,269"/>
+<path data-row="6" data-column="39" data-glyph="─" d="M423,269 L428,269 M423,269 L418,269"/>
+<path data-row="6" data-column="40" data-glyph="─" d="M433,269 L438,269 M433,269 L428,269"/>
+<path data-row="6" data-column="41" data-glyph="─" d="M443,269 L448,269 M443,269 L438,269"/>
+<path data-row="6" data-column="42" data-glyph="─" d="M453,269 L458,269 M453,269 L448,269"/>
+<path data-row="6" data-column="43" data-glyph="─" d="M463,269 L468,269 M463,269 L458,269"/>
+<path data-row="6" data-column="44" data-glyph="─" d="M473,269 L478,269 M473,269 L468,269"/>
+<path data-row="6" data-column="45" data-glyph="─" d="M483,269 L488,269 M483,269 L478,269"/>
+<path data-row="6" data-column="46" data-glyph="─" d="M493,269 L498,269 M493,269 L488,269"/>
+<path data-row="6" data-column="47" data-glyph="─" d="M503,269 L508,269 M503,269 L498,269"/>
+<path data-row="6" data-column="48" data-glyph="─" d="M513,269 L518,269 M513,269 L508,269"/>
+<path data-row="6" data-column="49" data-glyph="─" d="M523,269 L528,269 M523,269 L518,269"/>
+<path data-row="6" data-column="50" data-glyph="─" d="M533,269 L538,269 M533,269 L528,269"/>
+<path data-row="6" data-column="51" data-glyph="─" d="M543,269 L548,269 M543,269 L538,269"/>
+<path data-row="6" data-column="52" data-glyph="─" d="M553,269 L558,269 M553,269 L548,269"/>
+<path data-row="6" data-column="53" data-glyph="─" d="M563,269 L568,269 M563,269 L558,269"/>
+<path data-row="6" data-column="54" data-glyph="─" d="M573,269 L578,269 M573,269 L568,269"/>
+<path data-row="6" data-column="55" data-glyph="─" d="M583,269 L588,269 M583,269 L578,269"/>
+<path data-row="6" data-column="56" data-glyph="─" d="M593,269 L598,269 M593,269 L588,269"/>
+<path data-row="6" data-column="57" data-glyph="─" d="M603,269 L608,269 M603,269 L598,269"/>
+<path data-row="6" data-column="58" data-glyph="─" d="M613,269 L618,269 M613,269 L608,269"/>
+<path data-row="6" data-column="59" data-glyph="┘" d="M643,269 L618,269 M643,269 L643,254"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="680" lengthAdjust="spacingAndGlyphs" style="white-space:pre">直接调 fs（硬编码）：               通过 Operations 接口（可替换）：</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Read 工具</text>
+<text data-row="2" data-column="39" x="418" y="149" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Read 工具</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">fs.readFile(path)</text>
+<text data-row="3" data-column="38" x="408" y="179" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ops.readFile(path)</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">只能读本地文件</text>
+<text data-row="4" data-column="39" x="418" y="209" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">本地 / SSH / Mock</text>
+<text data-row="5" data-column="2" x="48" y="239" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">测试必须创建真实文件</text>
+<text data-row="5" data-column="40" x="428" y="239" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">注入什么就调什么</text>
+</g>
+</svg>

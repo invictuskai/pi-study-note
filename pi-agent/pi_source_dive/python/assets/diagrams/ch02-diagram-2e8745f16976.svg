@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="402" viewBox="0 0 536 402" role="img" aria-labelledby="ch02-diagram-2e8745f16976-title ch02-diagram-2e8745f16976-description">
+<title id="ch02-diagram-2e8745f16976-title">那分层的规则到底是什么？</title>
+<desc id="ch02-diagram-2e8745f16976-description">pi-ai（底层）
+pi-agent-core（中间层）
+pi-coding-agent（顶层）
+pi-orchestrator（实验性外围编排层，可选）</desc>
+<rect x="1" y="1" width="534" height="400" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">那分层的规则到底是什么？</text>
+<path d="M28,58 H508" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="↑" d="M53,104 V134 M49,110 L53,104 L57,110"/>
+<path data-row="1" data-column="12" data-glyph="↑" d="M153,104 V134 M149,110 L153,104 L157,110"/>
+<path data-row="2" data-column="2" data-glyph="│" d="M53,149 L53,134 M53,149 L53,164"/>
+<path data-row="2" data-column="12" data-glyph="│" d="M153,149 L153,134 M153,149 L153,164"/>
+<path data-row="3" data-column="2" data-glyph="│" d="M53,179 L53,164 M53,179 L53,194"/>
+<path data-row="4" data-column="2" data-glyph="│" d="M53,209 L53,194 M53,209 L53,224"/>
+<path data-row="4" data-column="12" data-glyph="↑" d="M153,194 V224 M149,200 L153,194 L157,200"/>
+<path data-row="5" data-column="2" data-glyph="│" d="M53,239 L53,224 M53,239 L53,254"/>
+<path data-row="5" data-column="12" data-glyph="│" d="M153,239 L153,224 M153,239 L153,254"/>
+<path data-row="6" data-column="2" data-glyph="└" d="M53,269 L58,269 M53,269 L53,254"/>
+<path data-row="6" data-column="3" data-glyph="─" d="M63,269 L68,269 M63,269 L58,269"/>
+<path data-row="6" data-column="4" data-glyph="─" d="M73,269 L78,269 M73,269 L68,269"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="7" data-column="12" data-glyph="↑" d="M153,284 V314 M149,290 L153,284 L157,290"/>
+<path data-row="8" data-column="12" data-glyph="│" d="M153,329 L153,314 M153,329 L153,344"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">pi-ai（底层）</text>
+<text data-row="3" data-column="7" x="98" y="179" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">pi-agent-core（中间层）</text>
+<text data-row="6" data-column="7" x="98" y="269" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">pi-coding-agent（顶层）</text>
+<text data-row="9" data-column="7" x="98" y="359" textLength="410" lengthAdjust="spacingAndGlyphs" style="white-space:pre">pi-orchestrator（实验性外围编排层，可选）</text>
+</g>
+</svg>

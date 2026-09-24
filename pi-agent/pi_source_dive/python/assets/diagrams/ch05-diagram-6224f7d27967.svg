@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="756" height="492" viewBox="0 0 756 492" role="img" aria-labelledby="ch05-diagram-6224f7d27967-title ch05-diagram-6224f7d27967-description">
+<title id="ch05-diagram-6224f7d27967-title">七、收尾</title>
+<desc id="ch05-diagram-6224f7d27967-description">模型输出 ToolCall { name: &quot;read&quot;, arguments: { path: &quot;src/main.ts&quot; } }
+第 1 步：prepareArguments 处理模型怪癖
+第 2 步：validateToolArguments 做 Schema 验证
+第 3 步：beforeToolCall 检查权限
+第 4 步：tool.execute 通过 Operations 接口读文件
+ops.readFile()
+不直接调 fs
+第 5 步：afterToolCall 做结果后处理
+ToolResultMessage { content: 文件内容, isError: false }
+追加到对话历史，下一轮发给模型</desc>
+<rect x="1" y="1" width="754" height="490" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">七、收尾</text>
+<path d="M28,58 H728" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="4" data-glyph="│" d="M73,119 L73,104 M73,119 L73,134"/>
+<path data-row="2" data-column="4" data-glyph="├" d="M73,149 L73,134 M73,149 L78,149 M73,149 L73,164"/>
+<path data-row="2" data-column="5" data-glyph="─" d="M83,149 L88,149 M83,149 L78,149"/>
+<path data-row="2" data-column="6" data-glyph="─" d="M93,149 L98,149 M93,149 L88,149"/>
+<path data-row="3" data-column="4" data-glyph="├" d="M73,179 L73,164 M73,179 L78,179 M73,179 L73,194"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="4" data-column="4" data-glyph="├" d="M73,209 L73,194 M73,209 L78,209 M73,209 L73,224"/>
+<path data-row="4" data-column="5" data-glyph="─" d="M83,209 L88,209 M83,209 L78,209"/>
+<path data-row="4" data-column="6" data-glyph="─" d="M93,209 L98,209 M93,209 L88,209"/>
+<path data-row="5" data-column="4" data-glyph="├" d="M73,239 L73,224 M73,239 L78,239 M73,239 L73,254"/>
+<path data-row="5" data-column="5" data-glyph="─" d="M83,239 L88,239 M83,239 L78,239"/>
+<path data-row="5" data-column="6" data-glyph="─" d="M93,239 L98,239 M93,239 L88,239"/>
+<path data-row="6" data-column="4" data-glyph="│" d="M73,269 L73,254 M73,269 L73,284"/>
+<path data-row="6" data-column="19" data-glyph="└" d="M223,269 L228,269 M223,269 L223,254"/>
+<path data-row="6" data-column="20" data-glyph="─" d="M233,269 L238,269 M233,269 L228,269"/>
+<path data-row="6" data-column="21" data-glyph="─" d="M243,269 L248,269 M243,269 L238,269"/>
+<path data-row="6" data-column="38" data-glyph="→" d="M408,269 H418 M414,265 L418,269 L414,273"/>
+<path data-row="7" data-column="4" data-glyph="└" d="M73,299 L78,299 M73,299 L73,284"/>
+<path data-row="7" data-column="5" data-glyph="─" d="M83,299 L88,299 M83,299 L78,299"/>
+<path data-row="7" data-column="6" data-glyph="─" d="M93,299 L98,299 M93,299 L88,299"/>
+<path data-row="8" data-column="4" data-glyph="│" d="M73,329 L73,314 M73,329 L73,344"/>
+<path data-row="9" data-column="4" data-glyph="▼" d="M73,344 V374 M69,368 L73,374 L77,368"/>
+<path data-row="11" data-column="4" data-glyph="│" d="M73,419 L73,404 M73,419 L73,434"/>
+<path data-row="12" data-column="4" data-glyph="▼" d="M73,434 V464 M69,458 L73,464 L77,458"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="700" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型输出 ToolCall { name: &quot;read&quot;, arguments: { path: &quot;src/main.ts&quot; } }</text>
+<text data-row="2" data-column="8" x="108" y="149" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 1 步：prepareArguments 处理模型怪癖</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="450" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 2 步：validateToolArguments 做 Schema 验证</text>
+<text data-row="4" data-column="8" x="108" y="209" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 3 步：beforeToolCall 检查权限</text>
+<text data-row="5" data-column="8" x="108" y="239" textLength="480" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 4 步：tool.execute 通过 Operations 接口读文件</text>
+<text data-row="6" data-column="23" x="258" y="269" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ops.readFile()</text>
+<text data-row="6" data-column="40" x="428" y="269" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">不直接调 fs</text>
+<text data-row="7" data-column="8" x="108" y="299" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第 5 步：afterToolCall 做结果后处理</text>
+<text data-row="10" data-column="0" x="28" y="389" textLength="550" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolResultMessage { content: 文件内容, isError: false }</text>
+<text data-row="12" data-column="6" x="88" y="449" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">追加到对话历史，下一轮发给模型</text>
+</g>
+</svg>

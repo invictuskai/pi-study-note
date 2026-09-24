@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="676" height="462" viewBox="0 0 676 462" role="img" aria-labelledby="ch09-diagram-9be2e4b90702-title ch09-diagram-9be2e4b90702-description">
+<title id="ch09-diagram-9be2e4b90702-title">自动压缩的集成</title>
+<desc id="ch09-diagram-9be2e4b90702-description">Agent 运行结束（agent_end 事件）
+检查 shouldCompact()？
+不需要
+结束
+需要
+执行压缩
+findCutPoint
+找切割点
+序列化 + LLM 调用
+生成摘要
+追加 CompactionEntry 到 Session Tree
+下次运行时 buildSessionContext 使用压缩后的上下文</desc>
+<rect x="1" y="1" width="674" height="460" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">自动压缩的集成</text>
+<path d="M28,58 H648" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="4" data-glyph="│" d="M73,119 L73,104 M73,119 L73,134"/>
+<path data-row="2" data-column="4" data-glyph="▼" d="M73,134 V164 M69,158 L73,164 L77,158"/>
+<path data-row="4" data-column="4" data-glyph="│" d="M73,209 L73,194 M73,209 L73,224"/>
+<path data-row="5" data-column="4" data-glyph="├" d="M73,239 L73,224 M73,239 L78,239 M73,239 L73,254"/>
+<path data-row="5" data-column="5" data-glyph="─" d="M83,239 L88,239 M83,239 L78,239"/>
+<path data-row="5" data-column="6" data-glyph="─" d="M93,239 L98,239 M93,239 L88,239"/>
+<path data-row="5" data-column="15" data-glyph="→" d="M178,239 H188 M184,235 L188,239 L184,243"/>
+<path data-row="6" data-column="4" data-glyph="│" d="M73,269 L73,254 M73,269 L73,284"/>
+<path data-row="7" data-column="4" data-glyph="└" d="M73,299 L78,299 M73,299 L73,284"/>
+<path data-row="7" data-column="5" data-glyph="─" d="M83,299 L88,299 M83,299 L78,299"/>
+<path data-row="7" data-column="6" data-glyph="─" d="M93,299 L98,299 M93,299 L88,299"/>
+<path data-row="7" data-column="13" data-glyph="→" d="M158,299 H168 M164,295 L168,299 L164,303"/>
+<path data-row="8" data-column="9" data-glyph="├" d="M123,329 L123,314 M123,329 L128,329 M123,329 L123,344"/>
+<path data-row="8" data-column="10" data-glyph="─" d="M133,329 L138,329 M133,329 L128,329"/>
+<path data-row="8" data-column="11" data-glyph="─" d="M143,329 L148,329 M143,329 L138,329"/>
+<path data-row="8" data-column="26" data-glyph="→" d="M288,329 H298 M294,325 L298,329 L294,333"/>
+<path data-row="9" data-column="9" data-glyph="├" d="M123,359 L123,344 M123,359 L128,359 M123,359 L123,374"/>
+<path data-row="9" data-column="10" data-glyph="─" d="M133,359 L138,359 M133,359 L128,359"/>
+<path data-row="9" data-column="11" data-glyph="─" d="M143,359 L148,359 M143,359 L138,359"/>
+<path data-row="9" data-column="31" data-glyph="→" d="M338,359 H348 M344,355 L348,359 L344,363"/>
+<path data-row="10" data-column="9" data-glyph="├" d="M123,389 L123,374 M123,389 L128,389 M123,389 L123,404"/>
+<path data-row="10" data-column="10" data-glyph="─" d="M133,389 L138,389 M133,389 L128,389"/>
+<path data-row="10" data-column="11" data-glyph="─" d="M143,389 L148,389 M143,389 L138,389"/>
+<path data-row="11" data-column="9" data-glyph="└" d="M123,419 L128,419 M123,419 L123,404"/>
+<path data-row="11" data-column="10" data-glyph="─" d="M133,419 L138,419 M133,419 L128,419"/>
+<path data-row="11" data-column="11" data-glyph="─" d="M143,419 L148,419 M143,419 L138,419"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 运行结束（agent_end 事件）</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">检查 shouldCompact()？</text>
+<text data-row="5" data-column="8" x="108" y="239" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">不需要</text>
+<text data-row="5" data-column="17" x="198" y="239" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">结束</text>
+<text data-row="7" data-column="8" x="108" y="299" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">需要</text>
+<text data-row="7" data-column="15" x="178" y="299" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">执行压缩</text>
+<text data-row="8" data-column="13" x="158" y="329" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">findCutPoint</text>
+<text data-row="8" data-column="28" x="308" y="329" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">找切割点</text>
+<text data-row="9" data-column="13" x="158" y="359" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">序列化 + LLM 调用</text>
+<text data-row="9" data-column="33" x="358" y="359" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">生成摘要</text>
+<text data-row="10" data-column="13" x="158" y="389" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">追加 CompactionEntry 到 Session Tree</text>
+<text data-row="11" data-column="13" x="158" y="419" textLength="490" lengthAdjust="spacingAndGlyphs" style="white-space:pre">下次运行时 buildSessionContext 使用压缩后的上下文</text>
+</g>
+</svg>

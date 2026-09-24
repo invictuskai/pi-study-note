@@ -17,8 +17,9 @@ interface Props {
   caption?: string;
   id?: string;        // 用于 S2 联动的图 id
   darkMode?: 'invert' | 'native' | 'none';  // 单图深色策略覆盖
+  layout?: 'fit' | 'preserve';
 }
-const { file, caption, id, darkMode } = Astro.props;
+const { file, caption, id, darkMode, layout = 'fit' } = Astro.props;
 const strategy = darkMode || 'invert';
 ---
 
@@ -26,11 +27,15 @@ const strategy = darkMode || 'invert';
   class="diagram"
   data-diagram-id={id}
   data-dark-mode={strategy}
+  data-layout={layout}
   role="figure"
   aria-label={caption || undefined}
 >
-  <img src={withBase(file)} alt={caption || ''} loading="lazy" />
+  <div class="diagram-viewport" tabindex={layout === 'preserve' ? 0 : undefined} aria-label={layout === 'preserve' ? `${caption || '图示'}，可横向滚动` : undefined}>
+    <img src={withBase(file)} alt={caption || ''} loading="lazy" />
+  </div>
   {caption && <figcaption>{caption}</figcaption>}
+  {layout === 'preserve' && <div class="diagram-hint">宽图可横向滚动 · <a class="diagram-original" href={withBase(file)} target="_blank" rel="noopener">查看原图</a></div>}
 </figure>
 
 <style>
@@ -48,6 +53,24 @@ const strategy = darkMode || 'invert';
   transition: transform var(--dur-base) var(--ease);
 }
 .diagram:hover img { transform: scale(1.01); }
+.diagram-viewport { max-width: 100%; overflow-x: auto; border-radius: var(--radius-md); }
+.diagram-viewport:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.diagram[data-layout="preserve"] .diagram-viewport :global(img),
+.diagram[data-layout="preserve"] .diagram-viewport :global(svg) {
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  max-width: none;
+  max-height: none;
+  display: block;
+}
+.diagram-hint { margin-top: var(--space-2); font-size: var(--fs-small); color: var(--soft); }
+.diagram-original { display: inline-block; }
+@media print {
+  .diagram[data-layout="preserve"] .diagram-viewport :global(img),
+  .diagram[data-layout="preserve"] .diagram-viewport :global(svg) { width: 100%; min-width: 0; max-width: 100%; }
+  .diagram-hint { display: none; }
+}
 .diagram figcaption {
   margin-top: var(--space-3);
   font-size: var(--fs-small);

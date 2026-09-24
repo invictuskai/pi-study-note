@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="506" height="1782" viewBox="0 0 506 1782" role="img" aria-labelledby="ch08-diagram-1929c322d433-title ch08-diagram-1929c322d433-description">
+<title id="ch08-diagram-1929c322d433-title">七、全景链路：一次工具调用经过的所有上下文处理</title>
+<desc id="ch08-diagram-1929c322d433-description">用户输入 &quot;修复 auth.ts 的 bug&quot;
+[1] 系统提示词组装（§四）
+buildSystemPrompt()
+找 CLAUDE.md（向上递归 + agentDir）
+加载 Skills 清单（懒加载）
+拼接工具列表 + guidelines
+末尾加 Current date / cwd
+[2] 用户消息进入 context.messages（第6章）
+[3] Agent Loop 开始（第3章五步管道）
+[4] LLM 返回 toolCall: read(&quot;auth.ts&quot;)
+[5] 执行工具 —— read auth.ts
+[6] 工具输出截断（§三）
+truncateHead（read 用 head）
+2000 行 / 50KB 双限制
+UTF-8 边界安全
+超限返回 firstLineExceedsLimit 标志
+[7] 工具结果进入 context.messages（第5章）
+...循环...
+[8] agent_end 事件触发（第7章）
+[9] 检查 shouldCompact？（§五 / 第9章）
+否
+等下一轮
+是
+执行 Compaction
+findCutPoint
+generateSummary（LLM 调用）
+生成 CompactionSummaryMessage
+写入 Session Tree
+用户切换分支？
+[10] Branch Summarization（§六）
+collectEntriesForBranchSummary（LCA）
+generateBranchSummary（LLM 调用）
+生成 BranchSummaryMessage</desc>
+<rect x="1" y="1" width="504" height="1780" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">七、全景链路：一次工具调用经过的所有上下文处理</text>
+<path d="M28,58 H478" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="4" data-glyph="│" d="M73,119 L73,104 M73,119 L73,134"/>
+<path data-row="2" data-column="4" data-glyph="▼" d="M73,134 V164 M69,158 L73,164 L77,158"/>
+<path data-row="5" data-column="4" data-glyph="├" d="M73,239 L73,224 M73,239 L78,239 M73,239 L73,254"/>
+<path data-row="5" data-column="5" data-glyph="─" d="M83,239 L88,239 M83,239 L78,239"/>
+<path data-row="6" data-column="4" data-glyph="├" d="M73,269 L73,254 M73,269 L78,269 M73,269 L73,284"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="7" data-column="4" data-glyph="├" d="M73,299 L73,284 M73,299 L78,299 M73,299 L73,314"/>
+<path data-row="7" data-column="5" data-glyph="─" d="M83,299 L88,299 M83,299 L78,299"/>
+<path data-row="8" data-column="4" data-glyph="└" d="M73,329 L78,329 M73,329 L73,314"/>
+<path data-row="8" data-column="5" data-glyph="─" d="M83,329 L88,329 M83,329 L78,329"/>
+<path data-row="9" data-column="4" data-glyph="│" d="M73,359 L73,344 M73,359 L73,374"/>
+<path data-row="10" data-column="4" data-glyph="▼" d="M73,374 V404 M69,398 L73,404 L77,398"/>
+<path data-row="12" data-column="4" data-glyph="│" d="M73,449 L73,434 M73,449 L73,464"/>
+<path data-row="13" data-column="4" data-glyph="▼" d="M73,464 V494 M69,488 L73,494 L77,488"/>
+<path data-row="15" data-column="4" data-glyph="│" d="M73,539 L73,524 M73,539 L73,554"/>
+<path data-row="16" data-column="4" data-glyph="▼" d="M73,554 V584 M69,578 L73,584 L77,578"/>
+<path data-row="18" data-column="4" data-glyph="│" d="M73,629 L73,614 M73,629 L73,644"/>
+<path data-row="19" data-column="4" data-glyph="▼" d="M73,644 V674 M69,668 L73,674 L77,668"/>
+<path data-row="21" data-column="4" data-glyph="│" d="M73,719 L73,704 M73,719 L73,734"/>
+<path data-row="22" data-column="4" data-glyph="▼" d="M73,734 V764 M69,758 L73,764 L77,758"/>
+<path data-row="24" data-column="4" data-glyph="├" d="M73,809 L73,794 M73,809 L78,809 M73,809 L73,824"/>
+<path data-row="24" data-column="5" data-glyph="─" d="M83,809 L88,809 M83,809 L78,809"/>
+<path data-row="25" data-column="4" data-glyph="│" d="M73,839 L73,824 M73,839 L73,854"/>
+<path data-row="25" data-column="8" data-glyph="└" d="M113,839 L118,839 M113,839 L113,824"/>
+<path data-row="25" data-column="9" data-glyph="─" d="M123,839 L128,839 M123,839 L118,839"/>
+<path data-row="26" data-column="4" data-glyph="├" d="M73,869 L73,854 M73,869 L78,869 M73,869 L73,884"/>
+<path data-row="26" data-column="5" data-glyph="─" d="M83,869 L88,869 M83,869 L78,869"/>
+<path data-row="27" data-column="4" data-glyph="└" d="M73,899 L78,899 M73,899 L73,884"/>
+<path data-row="27" data-column="5" data-glyph="─" d="M83,899 L88,899 M83,899 L78,899"/>
+<path data-row="28" data-column="4" data-glyph="│" d="M73,929 L73,914 M73,929 L73,944"/>
+<path data-row="29" data-column="4" data-glyph="▼" d="M73,944 V974 M69,968 L73,974 L77,968"/>
+<path data-row="31" data-column="4" data-glyph="│" d="M73,1019 L73,1004 M73,1019 L73,1034"/>
+<path data-row="32" data-column="4" data-glyph="▼" d="M73,1034 V1064 M69,1058 L73,1064 L77,1058"/>
+<path data-row="34" data-column="4" data-glyph="│" d="M73,1109 L73,1094 M73,1109 L73,1124"/>
+<path data-row="35" data-column="4" data-glyph="▼" d="M73,1124 V1154 M69,1148 L73,1154 L77,1148"/>
+<path data-row="37" data-column="4" data-glyph="│" d="M73,1199 L73,1184 M73,1199 L73,1214"/>
+<path data-row="38" data-column="4" data-glyph="▼" d="M73,1214 V1244 M69,1238 L73,1244 L77,1238"/>
+<path data-row="40" data-column="4" data-glyph="│" d="M73,1289 L73,1274 M73,1289 L73,1304"/>
+<path data-row="41" data-column="4" data-glyph="├" d="M73,1319 L73,1304 M73,1319 L78,1319 M73,1319 L73,1334"/>
+<path data-row="41" data-column="5" data-glyph="─" d="M83,1319 L88,1319 M83,1319 L78,1319"/>
+<path data-row="41" data-column="6" data-glyph="─" d="M93,1319 L98,1319 M93,1319 L88,1319"/>
+<path data-row="41" data-column="11" data-glyph="→" d="M138,1319 H148 M144,1315 L148,1319 L144,1323"/>
+<path data-row="42" data-column="4" data-glyph="│" d="M73,1349 L73,1334 M73,1349 L73,1364"/>
+<path data-row="43" data-column="4" data-glyph="└" d="M73,1379 L78,1379 M73,1379 L73,1364"/>
+<path data-row="43" data-column="5" data-glyph="─" d="M83,1379 L88,1379 M83,1379 L78,1379"/>
+<path data-row="43" data-column="6" data-glyph="─" d="M93,1379 L98,1379 M93,1379 L88,1379"/>
+<path data-row="43" data-column="11" data-glyph="→" d="M138,1379 H148 M144,1375 L148,1379 L144,1383"/>
+<path data-row="44" data-column="9" data-glyph="├" d="M123,1409 L123,1394 M123,1409 L128,1409 M123,1409 L123,1424"/>
+<path data-row="44" data-column="10" data-glyph="─" d="M133,1409 L138,1409 M133,1409 L128,1409"/>
+<path data-row="45" data-column="9" data-glyph="├" d="M123,1439 L123,1424 M123,1439 L128,1439 M123,1439 L123,1454"/>
+<path data-row="45" data-column="10" data-glyph="─" d="M133,1439 L138,1439 M133,1439 L128,1439"/>
+<path data-row="46" data-column="9" data-glyph="├" d="M123,1469 L123,1454 M123,1469 L128,1469 M123,1469 L123,1484"/>
+<path data-row="46" data-column="10" data-glyph="─" d="M133,1469 L138,1469 M133,1469 L128,1469"/>
+<path data-row="47" data-column="9" data-glyph="└" d="M123,1499 L128,1499 M123,1499 L123,1484"/>
+<path data-row="47" data-column="10" data-glyph="─" d="M133,1499 L138,1499 M133,1499 L128,1499"/>
+<path data-row="50" data-column="9" data-glyph="│" d="M123,1589 L123,1574 M123,1589 L123,1604"/>
+<path data-row="51" data-column="9" data-glyph="▼" d="M123,1604 V1634 M119,1628 L123,1634 L127,1628"/>
+<path data-row="53" data-column="5" data-glyph="├" d="M83,1679 L83,1664 M83,1679 L88,1679 M83,1679 L83,1694"/>
+<path data-row="53" data-column="6" data-glyph="─" d="M93,1679 L98,1679 M93,1679 L88,1679"/>
+<path data-row="54" data-column="5" data-glyph="├" d="M83,1709 L83,1694 M83,1709 L88,1709 M83,1709 L83,1724"/>
+<path data-row="54" data-column="6" data-glyph="─" d="M93,1709 L98,1709 M93,1709 L88,1709"/>
+<path data-row="55" data-column="5" data-glyph="└" d="M83,1739 L88,1739 M83,1739 L83,1724"/>
+<path data-row="55" data-column="6" data-glyph="─" d="M93,1739 L98,1739 M93,1739 L88,1739"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户输入 &quot;修复 auth.ts 的 bug&quot;</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[1] 系统提示词组装（§四）</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">buildSystemPrompt()</text>
+<text data-row="5" data-column="7" x="98" y="239" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">找 CLAUDE.md（向上递归 + agentDir）</text>
+<text data-row="6" data-column="7" x="98" y="269" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">加载 Skills 清单（懒加载）</text>
+<text data-row="7" data-column="7" x="98" y="299" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">拼接工具列表 + guidelines</text>
+<text data-row="8" data-column="7" x="98" y="329" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">末尾加 Current date / cwd</text>
+<text data-row="11" data-column="0" x="28" y="419" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[2] 用户消息进入 context.messages（第6章）</text>
+<text data-row="14" data-column="0" x="28" y="509" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[3] Agent Loop 开始（第3章五步管道）</text>
+<text data-row="17" data-column="0" x="28" y="599" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[4] LLM 返回 toolCall: read(&quot;auth.ts&quot;)</text>
+<text data-row="20" data-column="0" x="28" y="689" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[5] 执行工具 —— read auth.ts</text>
+<text data-row="23" data-column="0" x="28" y="779" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[6] 工具输出截断（§三）</text>
+<text data-row="24" data-column="7" x="98" y="809" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">truncateHead（read 用 head）</text>
+<text data-row="25" data-column="11" x="138" y="839" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">2000 行 / 50KB 双限制</text>
+<text data-row="26" data-column="7" x="98" y="869" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">UTF-8 边界安全</text>
+<text data-row="27" data-column="7" x="98" y="899" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">超限返回 firstLineExceedsLimit 标志</text>
+<text data-row="30" data-column="0" x="28" y="989" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[7] 工具结果进入 context.messages（第5章）</text>
+<text data-row="33" data-column="3" x="58" y="1079" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...循环...</text>
+<text data-row="36" data-column="0" x="28" y="1169" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[8] agent_end 事件触发（第7章）</text>
+<text data-row="39" data-column="0" x="28" y="1259" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[9] 检查 shouldCompact？（§五 / 第9章）</text>
+<text data-row="41" data-column="8" x="108" y="1319" textLength="20" lengthAdjust="spacingAndGlyphs" style="white-space:pre">否</text>
+<text data-row="41" data-column="13" x="158" y="1319" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">等下一轮</text>
+<text data-row="43" data-column="8" x="108" y="1379" textLength="20" lengthAdjust="spacingAndGlyphs" style="white-space:pre">是</text>
+<text data-row="43" data-column="13" x="158" y="1379" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">执行 Compaction</text>
+<text data-row="44" data-column="12" x="148" y="1409" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">findCutPoint</text>
+<text data-row="45" data-column="12" x="148" y="1439" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">generateSummary（LLM 调用）</text>
+<text data-row="46" data-column="12" x="148" y="1469" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">生成 CompactionSummaryMessage</text>
+<text data-row="47" data-column="12" x="148" y="1499" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">写入 Session Tree</text>
+<text data-row="49" data-column="4" x="68" y="1559" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户切换分支？</text>
+<text data-row="52" data-column="0" x="28" y="1649" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[10] Branch Summarization（§六）</text>
+<text data-row="53" data-column="8" x="108" y="1679" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">collectEntriesForBranchSummary（LCA）</text>
+<text data-row="54" data-column="8" x="108" y="1709" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">generateBranchSummary（LLM 调用）</text>
+<text data-row="55" data-column="8" x="108" y="1739" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">生成 BranchSummaryMessage</text>
+</g>
+</svg>

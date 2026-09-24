@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="551" height="282" viewBox="0 0 551 282" role="img" aria-labelledby="ch04-diagram-1fda0ef3ed05-title ch04-diagram-1fda0ef3ed05-description">
+<title id="ch04-diagram-1fda0ef3ed05-title">三、统一事件协议：12 种事件，但不是每个事件都有 partial</title>
+<desc id="ch04-diagram-1fda0ef3ed05-description">start
+text_start
+text_delta*
+text_end
+thinking_start
+thinking_delta*
+thinking_end
+toolcall_start
+toolcall_delta*
+toolcall_end
+done(reason: stop / length / toolUse / deferred)
+或 error(reason: error / aborted)</desc>
+<rect x="1" y="1" width="549" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">三、统一事件协议：12 种事件，但不是每个事件都有 partial</text>
+<path d="M28,58 H523" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="11" data-glyph="→" d="M138,119 H148 M144,115 L148,119 L144,123"/>
+<path data-row="1" data-column="25" data-glyph="→" d="M278,119 H288 M284,115 L288,119 L284,123"/>
+<path data-row="2" data-column="15" data-glyph="→" d="M178,149 H188 M184,145 L188,149 L184,153"/>
+<path data-row="2" data-column="33" data-glyph="→" d="M358,149 H368 M364,145 L368,149 L364,153"/>
+<path data-row="3" data-column="15" data-glyph="→" d="M178,179 H188 M184,175 L188,179 L184,183"/>
+<path data-row="3" data-column="33" data-glyph="→" d="M358,179 H368 M364,175 L368,179 L364,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">start</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text_start</text>
+<text data-row="1" data-column="13" x="158" y="119" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text_delta*</text>
+<text data-row="1" data-column="27" x="298" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text_end</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">thinking_start</text>
+<text data-row="2" data-column="17" x="198" y="149" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">thinking_delta*</text>
+<text data-row="2" data-column="35" x="378" y="149" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">thinking_end</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolcall_start</text>
+<text data-row="3" data-column="17" x="198" y="179" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolcall_delta*</text>
+<text data-row="3" data-column="35" x="378" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolcall_end</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="480" lengthAdjust="spacingAndGlyphs" style="white-space:pre">done(reason: stop / length / toolUse / deferred)</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">或 error(reason: error / aborted)</text>
+</g>
+</svg>

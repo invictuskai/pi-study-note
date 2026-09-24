@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="786" height="672" viewBox="0 0 786 672" role="img" aria-labelledby="ch05-diagram-9a8a8afe30e0-title ch05-diagram-9a8a8afe30e0-description">
+<title id="ch05-diagram-9a8a8afe30e0-title">并行执行的三阶段设计</title>
+<desc id="ch05-diagram-9a8a8afe30e0-description">阶段 1 - 准备（顺序执行）：
+ToolCall 1: emit_start
+prepareArguments
+validate
+beforeToolCall
+ToolCall 2: emit_start
+prepareArguments
+validate
+beforeToolCall
+ToolCall 3: emit_start
+prepareArguments
+validate
+beforeToolCall
+// 准备阶段必须顺序，因为 beforeToolCall 可能有副作用（如修改全局状态）
+阶段 2 - 执行（并行）：
+ToolCall 1: execute
+ToolCall 2: execute
+Promise.all
+ToolCall 3: execute
+// 只有 tool.execute() 并行
+阶段 3 - 事件发送（有序）：
+ToolCall 2: emit_end
+先完成的先发 tool_execution_end
+ToolCall 1: emit_end
+ToolCall 3: emit_end
+ToolCall 1: emit_result
+但 ToolResultMessage 按调用顺序发
+ToolCall 2: emit_result
+ToolCall 3: emit_result</desc>
+<rect x="1" y="1" width="784" height="670" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">并行执行的三阶段设计</text>
+<path d="M28,58 H758" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="25" data-glyph="→" d="M278,119 H288 M284,115 L288,119 L284,123"/>
+<path data-row="1" data-column="44" data-glyph="→" d="M468,119 H478 M474,115 L478,119 L474,123"/>
+<path data-row="1" data-column="55" data-glyph="→" d="M578,119 H588 M584,115 L588,119 L584,123"/>
+<path data-row="2" data-column="25" data-glyph="→" d="M278,149 H288 M284,145 L288,149 L284,153"/>
+<path data-row="2" data-column="44" data-glyph="→" d="M468,149 H478 M474,145 L478,149 L474,153"/>
+<path data-row="2" data-column="55" data-glyph="→" d="M578,149 H588 M584,145 L588,149 L584,153"/>
+<path data-row="3" data-column="25" data-glyph="→" d="M278,179 H288 M284,175 L288,179 L284,183"/>
+<path data-row="3" data-column="44" data-glyph="→" d="M468,179 H478 M474,175 L478,179 L474,183"/>
+<path data-row="3" data-column="55" data-glyph="→" d="M578,179 H588 M584,175 L588,179 L584,183"/>
+<path data-row="7" data-column="22" data-glyph="─" d="M253,299 L258,299 M253,299 L248,299"/>
+<path data-row="7" data-column="23" data-glyph="─" d="M263,299 L268,299 M263,299 L258,299"/>
+<path data-row="7" data-column="24" data-glyph="─" d="M273,299 L278,299 M273,299 L268,299"/>
+<path data-row="7" data-column="25" data-glyph="─" d="M283,299 L288,299 M283,299 L278,299"/>
+<path data-row="7" data-column="26" data-glyph="─" d="M293,299 L298,299 M293,299 L288,299"/>
+<path data-row="7" data-column="27" data-glyph="─" d="M303,299 L308,299 M303,299 L298,299"/>
+<path data-row="7" data-column="28" data-glyph="─" d="M313,299 L318,299 M313,299 L308,299"/>
+<path data-row="7" data-column="29" data-glyph="─" d="M323,299 L328,299 M323,299 L318,299"/>
+<path data-row="7" data-column="30" data-glyph="─" d="M333,299 L338,299 M333,299 L328,299"/>
+<path data-row="7" data-column="31" data-glyph="─" d="M343,299 L348,299 M343,299 L338,299"/>
+<path data-row="7" data-column="32" data-glyph="─" d="M353,299 L358,299 M353,299 L348,299"/>
+<path data-row="7" data-column="33" data-glyph="─" d="M363,299 L368,299 M363,299 L358,299"/>
+<path data-row="7" data-column="34" data-glyph="─" d="M373,299 L378,299 M373,299 L368,299"/>
+<path data-row="7" data-column="35" data-glyph="─" d="M383,299 L388,299 M383,299 L378,299"/>
+<path data-row="7" data-column="36" data-glyph="─" d="M393,299 L398,299 M393,299 L388,299"/>
+<path data-row="7" data-column="37" data-glyph="─" d="M403,299 L408,299 M403,299 L398,299"/>
+<path data-row="7" data-column="38" data-glyph="┐" d="M413,299 L408,299 M413,299 L413,314"/>
+<path data-row="8" data-column="22" data-glyph="─" d="M253,329 L258,329 M253,329 L248,329"/>
+<path data-row="8" data-column="23" data-glyph="─" d="M263,329 L268,329 M263,329 L258,329"/>
+<path data-row="8" data-column="24" data-glyph="─" d="M273,329 L278,329 M273,329 L268,329"/>
+<path data-row="8" data-column="25" data-glyph="─" d="M283,329 L288,329 M283,329 L278,329"/>
+<path data-row="8" data-column="26" data-glyph="─" d="M293,329 L298,329 M293,329 L288,329"/>
+<path data-row="8" data-column="27" data-glyph="─" d="M303,329 L308,329 M303,329 L298,329"/>
+<path data-row="8" data-column="28" data-glyph="─" d="M313,329 L318,329 M313,329 L308,329"/>
+<path data-row="8" data-column="29" data-glyph="─" d="M323,329 L328,329 M323,329 L318,329"/>
+<path data-row="8" data-column="30" data-glyph="─" d="M333,329 L338,329 M333,329 L328,329"/>
+<path data-row="8" data-column="31" data-glyph="─" d="M343,329 L348,329 M343,329 L338,329"/>
+<path data-row="8" data-column="32" data-glyph="─" d="M353,329 L358,329 M353,329 L348,329"/>
+<path data-row="8" data-column="33" data-glyph="─" d="M363,329 L368,329 M363,329 L358,329"/>
+<path data-row="8" data-column="34" data-glyph="─" d="M373,329 L378,329 M373,329 L368,329"/>
+<path data-row="8" data-column="35" data-glyph="─" d="M383,329 L388,329 M383,329 L378,329"/>
+<path data-row="8" data-column="36" data-glyph="─" d="M393,329 L398,329 M393,329 L388,329"/>
+<path data-row="8" data-column="37" data-glyph="┤" d="M403,329 L403,314 M403,329 L398,329 M403,329 L403,344"/>
+<path data-row="9" data-column="22" data-glyph="─" d="M253,359 L258,359 M253,359 L248,359"/>
+<path data-row="9" data-column="23" data-glyph="─" d="M263,359 L268,359 M263,359 L258,359"/>
+<path data-row="9" data-column="24" data-glyph="─" d="M273,359 L278,359 M273,359 L268,359"/>
+<path data-row="9" data-column="25" data-glyph="─" d="M283,359 L288,359 M283,359 L278,359"/>
+<path data-row="9" data-column="26" data-glyph="─" d="M293,359 L298,359 M293,359 L288,359"/>
+<path data-row="9" data-column="27" data-glyph="─" d="M303,359 L308,359 M303,359 L298,359"/>
+<path data-row="9" data-column="28" data-glyph="─" d="M313,359 L318,359 M313,359 L308,359"/>
+<path data-row="9" data-column="29" data-glyph="─" d="M323,359 L328,359 M323,359 L318,359"/>
+<path data-row="9" data-column="30" data-glyph="─" d="M333,359 L338,359 M333,359 L328,359"/>
+<path data-row="9" data-column="31" data-glyph="─" d="M343,359 L348,359 M343,359 L338,359"/>
+<path data-row="9" data-column="32" data-glyph="─" d="M353,359 L358,359 M353,359 L348,359"/>
+<path data-row="9" data-column="33" data-glyph="─" d="M363,359 L368,359 M363,359 L358,359"/>
+<path data-row="9" data-column="34" data-glyph="─" d="M373,359 L378,359 M373,359 L368,359"/>
+<path data-row="9" data-column="35" data-glyph="─" d="M383,359 L388,359 M383,359 L378,359"/>
+<path data-row="9" data-column="36" data-glyph="─" d="M393,359 L398,359 M393,359 L388,359"/>
+<path data-row="9" data-column="37" data-glyph="┘" d="M403,359 L398,359 M403,359 L403,344"/>
+<path data-row="13" data-column="26" data-glyph="←" d="M288,479 H298 M292,475 L288,479 L292,483"/>
+<path data-row="16" data-column="26" data-glyph="←" d="M288,569 H298 M292,565 L288,569 L292,573"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">阶段 1 - 准备（顺序执行）：</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1: emit_start</text>
+<text data-row="1" data-column="27" x="298" y="119" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prepareArguments</text>
+<text data-row="1" data-column="46" x="488" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">validate</text>
+<text data-row="1" data-column="57" x="598" y="119" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">beforeToolCall</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 2: emit_start</text>
+<text data-row="2" data-column="27" x="298" y="149" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prepareArguments</text>
+<text data-row="2" data-column="46" x="488" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">validate</text>
+<text data-row="2" data-column="57" x="598" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">beforeToolCall</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 3: emit_start</text>
+<text data-row="3" data-column="27" x="298" y="179" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prepareArguments</text>
+<text data-row="3" data-column="46" x="488" y="179" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">validate</text>
+<text data-row="3" data-column="57" x="598" y="179" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">beforeToolCall</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="710" lengthAdjust="spacingAndGlyphs" style="white-space:pre">// 准备阶段必须顺序，因为 beforeToolCall 可能有副作用（如修改全局状态）</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">阶段 2 - 执行（并行）：</text>
+<text data-row="7" data-column="2" x="48" y="299" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1: execute</text>
+<text data-row="8" data-column="2" x="48" y="329" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 2: execute</text>
+<text data-row="8" data-column="39" x="418" y="329" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Promise.all</text>
+<text data-row="9" data-column="2" x="48" y="359" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 3: execute</text>
+<text data-row="10" data-column="2" x="48" y="389" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">// 只有 tool.execute() 并行</text>
+<text data-row="12" data-column="0" x="28" y="449" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">阶段 3 - 事件发送（有序）：</text>
+<text data-row="13" data-column="2" x="48" y="479" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 2: emit_end</text>
+<text data-row="13" data-column="28" x="308" y="479" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">先完成的先发 tool_execution_end</text>
+<text data-row="14" data-column="2" x="48" y="509" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1: emit_end</text>
+<text data-row="15" data-column="2" x="48" y="539" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 3: emit_end</text>
+<text data-row="16" data-column="2" x="48" y="569" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1: emit_result</text>
+<text data-row="16" data-column="28" x="308" y="569" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">但 ToolResultMessage 按调用顺序发</text>
+<text data-row="17" data-column="2" x="48" y="599" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 2: emit_result</text>
+<text data-row="18" data-column="2" x="48" y="629" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 3: emit_result</text>
+</g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="706" height="312" viewBox="0 0 706 312" role="img" aria-labelledby="ch08-diagram-fa9c9d6a97da-title ch08-diagram-fa9c9d6a97da-description">
+<title id="ch08-diagram-fa9c9d6a97da-title">LCA 算法：找&quot;分叉点&quot;</title>
+<desc id="ch08-diagram-fa9c9d6a97da-description">旧路径：root
+...
+leaf_1
+新路径：root
+...
+leaf_2
+1. 把两条路径都拿出来
+2. 在新路径上从后往前找，第一个也在旧路径里的节点 = LCA（分叉点）
+3. 从 leaf_1 向上爬到 LCA（不含 LCA），沿途收集的内容
+就是&quot;被放弃的分支&quot;</desc>
+<rect x="1" y="1" width="704" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">LCA 算法：找&quot;分叉点&quot;</text>
+<path d="M28,58 H678" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="13" data-glyph="→" d="M158,89 H168 M164,85 L168,89 L164,93"/>
+<path data-row="0" data-column="19" data-glyph="→" d="M218,89 H228 M224,85 L228,89 L224,93"/>
+<path data-row="1" data-column="13" data-glyph="→" d="M158,119 H168 M164,115 L168,119 L164,123"/>
+<path data-row="1" data-column="19" data-glyph="→" d="M218,119 H228 M224,115 L228,119 L224,123"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">旧路径：root</text>
+<text data-row="0" data-column="15" x="178" y="89" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...</text>
+<text data-row="0" data-column="21" x="238" y="89" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leaf_1</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">新路径：root</text>
+<text data-row="1" data-column="15" x="178" y="119" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...</text>
+<text data-row="1" data-column="21" x="238" y="119" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leaf_2</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">1. 把两条路径都拿出来</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="650" lengthAdjust="spacingAndGlyphs" style="white-space:pre">2. 在新路径上从后往前找，第一个也在旧路径里的节点 = LCA（分叉点）</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="530" lengthAdjust="spacingAndGlyphs" style="white-space:pre">3. 从 leaf_1 向上爬到 LCA（不含 LCA），沿途收集的内容</text>
+<text data-row="6" data-column="3" x="58" y="269" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">就是&quot;被放弃的分支&quot;</text>
+</g>
+</svg>

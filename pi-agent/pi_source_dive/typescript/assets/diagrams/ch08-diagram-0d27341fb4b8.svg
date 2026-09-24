@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="372" viewBox="0 0 566 372" role="img" aria-labelledby="ch08-diagram-0d27341fb4b8-title ch08-diagram-0d27341fb4b8-description">
+<title id="ch08-diagram-0d27341fb4b8-title">多级上下文文件：从当前目录向上递归</title>
+<desc id="ch08-diagram-0d27341fb4b8-description">/myorg
+CLAUDE.md
+全组织规范（通用）
+teams
+teamA
+CLAUDE.md
+团队 A 规范（细化）
+projects
+app1
+CLAUDE.md
+项目规范（最具体）
+src/
+cwd 在这里</desc>
+<rect x="1" y="1" width="564" height="370" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">多级上下文文件：从当前目录向上递归</text>
+<path d="M28,58 H538" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="23" data-glyph="←" d="M258,119 H268 M262,115 L258,119 L262,123"/>
+<path data-row="2" data-column="0" data-glyph="└" d="M33,149 L38,149 M33,149 L33,134"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="3" data-column="4" data-glyph="└" d="M73,179 L78,179 M73,179 L73,164"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="4" data-column="8" data-glyph="├" d="M113,209 L113,194 M113,209 L118,209 M113,209 L113,224"/>
+<path data-row="4" data-column="9" data-glyph="─" d="M123,209 L128,209 M123,209 L118,209"/>
+<path data-row="4" data-column="10" data-glyph="─" d="M133,209 L138,209 M133,209 L128,209"/>
+<path data-row="4" data-column="23" data-glyph="←" d="M258,209 H268 M262,205 L258,209 L262,213"/>
+<path data-row="5" data-column="8" data-glyph="└" d="M113,239 L118,239 M113,239 L113,224"/>
+<path data-row="5" data-column="9" data-glyph="─" d="M123,239 L128,239 M123,239 L118,239"/>
+<path data-row="5" data-column="10" data-glyph="─" d="M133,239 L138,239 M133,239 L128,239"/>
+<path data-row="6" data-column="12" data-glyph="└" d="M153,269 L158,269 M153,269 L153,254"/>
+<path data-row="6" data-column="13" data-glyph="─" d="M163,269 L168,269 M163,269 L158,269"/>
+<path data-row="6" data-column="14" data-glyph="─" d="M173,269 L178,269 M173,269 L168,269"/>
+<path data-row="7" data-column="16" data-glyph="├" d="M193,299 L193,284 M193,299 L198,299 M193,299 L193,314"/>
+<path data-row="7" data-column="17" data-glyph="─" d="M203,299 L208,299 M203,299 L198,299"/>
+<path data-row="7" data-column="18" data-glyph="─" d="M213,299 L218,299 M213,299 L208,299"/>
+<path data-row="7" data-column="31" data-glyph="←" d="M338,299 H348 M342,295 L338,299 L342,303"/>
+<path data-row="8" data-column="16" data-glyph="└" d="M193,329 L198,329 M193,329 L193,314"/>
+<path data-row="8" data-column="17" data-glyph="─" d="M203,329 L208,329 M203,329 L198,329"/>
+<path data-row="8" data-column="18" data-glyph="─" d="M213,329 L218,329 M213,329 L208,329"/>
+<path data-row="8" data-column="31" data-glyph="←" d="M338,329 H348 M342,325 L338,329 L342,333"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">/myorg</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CLAUDE.md</text>
+<text data-row="1" data-column="25" x="278" y="119" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">全组织规范（通用）</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">teams</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">teamA</text>
+<text data-row="4" data-column="12" x="148" y="209" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CLAUDE.md</text>
+<text data-row="4" data-column="25" x="278" y="209" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">团队 A 规范（细化）</text>
+<text data-row="5" data-column="12" x="148" y="239" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">projects</text>
+<text data-row="6" data-column="16" x="188" y="269" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">app1</text>
+<text data-row="7" data-column="20" x="228" y="299" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CLAUDE.md</text>
+<text data-row="7" data-column="33" x="358" y="299" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">项目规范（最具体）</text>
+<text data-row="8" data-column="20" x="228" y="329" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">src/</text>
+<text data-row="8" data-column="33" x="358" y="329" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">cwd 在这里</text>
+</g>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="666" height="522" viewBox="0 0 666 522" role="img" aria-labelledby="ch03-diagram-060bb5c17c0a-title ch03-diagram-060bb5c17c0a-description">
+<title id="ch03-diagram-060bb5c17c0a-title">流程全景</title>
+<desc id="ch03-diagram-060bb5c17c0a-description">Turn 1：
+模型输出 content: [{ type: &quot;toolCall&quot;, name: &quot;read&quot;, ... }]
+程序执行 read，追加 toolResult
+工具结果没有 terminate: true
+hasMoreToolCalls = true
+finishTurn
+turn_end
+Turn 2：
+模型看到文件内容，输出解释，没有 toolCall
+hasMoreToolCalls = false
+finishTurn
+turn_end
+没有 steering
+退出内层
+没有 follow-up，也没有显式 continue
+退出外层
+agent_end</desc>
+<rect x="1" y="1" width="664" height="520" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">流程全景</text>
+<path d="M28,58 H638" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="3" data-column="31" data-glyph="→" d="M338,179 H348 M344,175 L348,179 L344,183"/>
+<path data-row="4" data-column="13" data-glyph="→" d="M158,209 H168 M164,205 L168,209 L164,213"/>
+<path data-row="9" data-column="13" data-glyph="→" d="M158,359 H168 M164,355 L168,359 L164,363"/>
+<path data-row="10" data-column="16" data-glyph="→" d="M188,389 H198 M194,385 L198,389 L194,393"/>
+<path data-row="11" data-column="38" data-glyph="→" d="M408,419 H418 M414,415 L418,419 L414,423"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 1：</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="590" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型输出 content: [{ type: &quot;toolCall&quot;, name: &quot;read&quot;, ... }]</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">程序执行 read，追加 toolResult</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具结果没有 terminate: true</text>
+<text data-row="3" data-column="33" x="358" y="179" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">hasMoreToolCalls = true</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="4" data-column="15" x="178" y="209" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 2：</text>
+<text data-row="7" data-column="2" x="48" y="299" textLength="410" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型看到文件内容，输出解释，没有 toolCall</text>
+<text data-row="8" data-column="2" x="48" y="329" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">hasMoreToolCalls = false</text>
+<text data-row="9" data-column="2" x="48" y="359" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="9" data-column="15" x="178" y="359" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="10" data-column="2" x="48" y="389" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">没有 steering</text>
+<text data-row="10" data-column="18" x="208" y="389" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">退出内层</text>
+<text data-row="11" data-column="2" x="48" y="419" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">没有 follow-up，也没有显式 continue</text>
+<text data-row="11" data-column="40" x="428" y="419" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">退出外层</text>
+<text data-row="13" data-column="0" x="28" y="479" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent_end</text>
+</g>
+</svg>

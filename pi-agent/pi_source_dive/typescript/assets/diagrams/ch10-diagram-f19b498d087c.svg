@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="479" height="282" viewBox="0 0 479 282" role="img" aria-labelledby="ch10-diagram-f19b498d087c-title ch10-diagram-f19b498d087c-description">
+<title id="ch10-diagram-f19b498d087c-title">第 4 步：read 工具返回结果，ToolResult 节点上树</title>
+<desc id="ch10-diagram-f19b498d087c-description">e1 (model_change)
+e2 (user)
+e3 (assistant + ToolCall)
+e4 (toolResult)
+leafId</desc>
+<rect x="1" y="1" width="477" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第 4 步：read 工具返回结果，ToolResult 节点上树</text>
+<path d="M28,58 H451" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="1" data-glyph="└" d="M43,119 L48,119 M43,119 L43,104"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="2" data-column="6" data-glyph="└" d="M93,149 L98,149 M93,149 L93,134"/>
+<path data-row="2" data-column="7" data-glyph="─" d="M103,149 L108,149 M103,149 L98,149"/>
+<path data-row="2" data-column="8" data-glyph="─" d="M113,149 L118,149 M113,149 L108,149"/>
+<path data-row="3" data-column="11" data-glyph="└" d="M143,179 L148,179 M143,179 L143,164"/>
+<path data-row="3" data-column="12" data-glyph="─" d="M153,179 L158,179 M153,179 L148,179"/>
+<path data-row="3" data-column="13" data-glyph="─" d="M163,179 L168,179 M163,179 L158,179"/>
+<path data-row="4" data-column="17" data-glyph="↑" d="M203,194 V224 M199,200 L203,194 L207,200"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (model_change)</text>
+<text data-row="1" data-column="5" x="78" y="119" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (user)</text>
+<text data-row="2" data-column="10" x="128" y="149" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e3 (assistant + ToolCall)</text>
+<text data-row="3" data-column="15" x="178" y="179" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e4 (toolResult)</text>
+<text data-row="5" data-column="15" x="178" y="239" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leafId</text>
+</g>
+</svg>

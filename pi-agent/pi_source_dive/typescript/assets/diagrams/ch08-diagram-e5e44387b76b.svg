@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="626" height="402" viewBox="0 0 626 402" role="img" aria-labelledby="ch08-diagram-e5e44387b76b-title ch08-diagram-e5e44387b76b-description">
+<title id="ch08-diagram-e5e44387b76b-title">一、问题：窗口是固定的，对话是增长的</title>
+<desc id="ch08-diagram-e5e44387b76b-description">一次会话送进 LLM 的内容
+系统提示词（工具说明、guidelines、pi 文档路径）
+项目上下文文件（CLAUDE.md / AGENTS.md，可能多层嵌套）
+Skills 列表（每个 skill 一段描述）
+工具定义（每个工具的 JSON schema）
+对话历史（每一轮 user / assistant / toolResult）
+用户输入
+LLM 回复（含 thinking、toolCall）
+工具结果（read 文件、bash 输出、grep 命中……）
+当前轮的新输入</desc>
+<rect x="1" y="1" width="624" height="400" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">一、问题：窗口是固定的，对话是增长的</text>
+<path d="M28,58 H598" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="3" data-column="0" data-glyph="├" d="M33,179 L33,164 M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="4" data-column="0" data-glyph="├" d="M33,209 L33,194 M33,209 L38,209 M33,209 L33,224"/>
+<path data-row="4" data-column="1" data-glyph="─" d="M43,209 L48,209 M43,209 L38,209"/>
+<path data-row="4" data-column="2" data-glyph="─" d="M53,209 L58,209 M53,209 L48,209"/>
+<path data-row="5" data-column="0" data-glyph="├" d="M33,239 L33,224 M33,239 L38,239 M33,239 L33,254"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="4" data-glyph="├" d="M73,269 L73,254 M73,269 L78,269 M73,269 L73,284"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="6" data-column="6" data-glyph="─" d="M93,269 L98,269 M93,269 L88,269"/>
+<path data-row="7" data-column="0" data-glyph="│" d="M33,299 L33,284 M33,299 L33,314"/>
+<path data-row="7" data-column="4" data-glyph="├" d="M73,299 L73,284 M73,299 L78,299 M73,299 L73,314"/>
+<path data-row="7" data-column="5" data-glyph="─" d="M83,299 L88,299 M83,299 L78,299"/>
+<path data-row="7" data-column="6" data-glyph="─" d="M93,299 L98,299 M93,299 L88,299"/>
+<path data-row="8" data-column="0" data-glyph="│" d="M33,329 L33,314 M33,329 L33,344"/>
+<path data-row="8" data-column="4" data-glyph="└" d="M73,329 L78,329 M73,329 L73,314"/>
+<path data-row="8" data-column="5" data-glyph="─" d="M83,329 L88,329 M83,329 L78,329"/>
+<path data-row="8" data-column="6" data-glyph="─" d="M93,329 L98,329 M93,329 L88,329"/>
+<path data-row="9" data-column="0" data-glyph="└" d="M33,359 L38,359 M33,359 L33,344"/>
+<path data-row="9" data-column="1" data-glyph="─" d="M43,359 L48,359 M43,359 L38,359"/>
+<path data-row="9" data-column="2" data-glyph="─" d="M53,359 L58,359 M53,359 L48,359"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">一次会话送进 LLM 的内容</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="470" lengthAdjust="spacingAndGlyphs" style="white-space:pre">系统提示词（工具说明、guidelines、pi 文档路径）</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="530" lengthAdjust="spacingAndGlyphs" style="white-space:pre">项目上下文文件（CLAUDE.md / AGENTS.md，可能多层嵌套）</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Skills 列表（每个 skill 一段描述）</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具定义（每个工具的 JSON schema）</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="480" lengthAdjust="spacingAndGlyphs" style="white-space:pre">对话历史（每一轮 user / assistant / toolResult）</text>
+<text data-row="6" data-column="8" x="108" y="269" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户输入</text>
+<text data-row="7" data-column="8" x="108" y="299" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 回复（含 thinking、toolCall）</text>
+<text data-row="8" data-column="8" x="108" y="329" textLength="450" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具结果（read 文件、bash 输出、grep 命中……）</text>
+<text data-row="9" data-column="4" x="68" y="359" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">当前轮的新输入</text>
+</g>
+</svg>

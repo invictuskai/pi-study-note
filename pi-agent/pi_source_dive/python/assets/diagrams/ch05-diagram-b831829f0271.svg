@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="926" height="222" viewBox="0 0 926 222" role="img" aria-labelledby="ch05-diagram-b831829f0271-title ch05-diagram-b831829f0271-description">
+<title id="ch05-diagram-b831829f0271-title">第三层：ToolDefinition——产品层再加东西</title>
+<desc id="ch05-diagram-b831829f0271-description">AgentTool.execute:     (toolCallId, params, signal, onUpdate) =&gt; ...
+ToolDefinition.execute: (toolCallId, params, signal, onUpdate, ctx) =&gt; ...
+多了 ExtensionContext（会话上下文）</desc>
+<rect x="1" y="1" width="924" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第三层：ToolDefinition——产品层再加东西</text>
+<path d="M28,58 H898" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="67" data-glyph="^" d="M703,134 V164 M699,140 L703,134 L707,140"/>
+<path data-row="2" data-column="68" data-glyph="^" d="M713,134 V164 M709,140 L713,134 L717,140"/>
+<path data-row="2" data-column="69" data-glyph="^" d="M723,134 V164 M719,140 L723,134 L727,140"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="680" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentTool.execute:     (toolCallId, params, signal, onUpdate) =&gt; ...</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="740" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolDefinition.execute: (toolCallId, params, signal, onUpdate, ctx) =&gt; ...</text>
+<text data-row="3" data-column="52" x="548" y="179" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">多了 ExtensionContext（会话上下文）</text>
+</g>
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="696" height="342" viewBox="0 0 696 342" role="img" aria-labelledby="ch05-diagram-6da60485053d-title ch05-diagram-6da60485053d-description">
+<title id="ch05-diagram-6da60485053d-title">Pi 的真实做法：两层错误处理，分层负责</title>
+<desc id="ch05-diagram-6da60485053d-description">第一层（工具内部，主动）：识别已知错误类型，包装成具体可读的描述
+Read/Edit/Bash 都是这样——Bash 甚至把&quot;已输出的内容&quot;附在错误里
+目的：给模型提供&quot;为什么失败、怎么改才对&quot;的具体线索
+第二层（框架兜底，被动）：executePreparedToolCall 的 except
+只在工具没识别出来时生效
+不创造新的错误描述，只把 str(error) 原样透传给模型
+目的：保证任何异常都不会穿透到 Agent Loop</desc>
+<rect x="1" y="1" width="694" height="340" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">Pi 的真实做法：两层错误处理，分层负责</text>
+<path d="M28,58 H668" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="└" d="M33,119 L38,119 M33,119 L33,104"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="0" data-glyph="└" d="M33,149 L38,149 M33,149 L33,134"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="5" data-column="0" data-glyph="└" d="M33,239 L38,239 M33,239 L33,224"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="6" data-column="0" data-glyph="└" d="M33,269 L38,269 M33,269 L33,254"/>
+<path data-row="6" data-column="1" data-glyph="─" d="M43,269 L48,269 M43,269 L38,269"/>
+<path data-row="6" data-column="2" data-glyph="─" d="M53,269 L58,269 M53,269 L48,269"/>
+<path data-row="7" data-column="0" data-glyph="└" d="M33,299 L38,299 M33,299 L33,284"/>
+<path data-row="7" data-column="1" data-glyph="─" d="M43,299 L48,299 M43,299 L38,299"/>
+<path data-row="7" data-column="2" data-glyph="─" d="M53,299 L58,299 M53,299 L48,299"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="640" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第一层（工具内部，主动）：识别已知错误类型，包装成具体可读的描述</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="600" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Read/Edit/Bash 都是这样——Bash 甚至把&quot;已输出的内容&quot;附在错误里</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">目的：给模型提供&quot;为什么失败、怎么改才对&quot;的具体线索</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="590" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第二层（框架兜底，被动）：executePreparedToolCall 的 except</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">只在工具没识别出来时生效</text>
+<text data-row="6" data-column="4" x="68" y="269" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">不创造新的错误描述，只把 str(error) 原样透传给模型</text>
+<text data-row="7" data-column="4" x="68" y="299" textLength="410" lengthAdjust="spacingAndGlyphs" style="white-space:pre">目的：保证任何异常都不会穿透到 Agent Loop</text>
+</g>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="486" height="252" viewBox="0 0 486 252" role="img" aria-labelledby="pr05-diagram-700cc35f014b-title pr05-diagram-700cc35f014b-description">
+<title id="pr05-diagram-700cc35f014b-title">signal：框架给的取消信号</title>
+<desc id="pr05-diagram-700cc35f014b-description">用户点「停止」（前端）
+session.abort()
+框架触发一个取消信号
+作为第三个参数传进 execute(signal)
+你把它透传给 fetch / mysql2，请求立刻断</desc>
+<rect x="1" y="1" width="484" height="250" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">signal：框架给的取消信号</text>
+<path d="M28,58 H458" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="→" d="M48,119 H58 M54,115 L58,119 L54,123"/>
+<path data-row="2" data-column="2" data-glyph="→" d="M48,149 H58 M54,145 L58,149 L54,153"/>
+<path data-row="3" data-column="2" data-glyph="→" d="M48,179 H58 M54,175 L58,179 L54,183"/>
+<path data-row="4" data-column="2" data-glyph="→" d="M48,209 H58 M54,205 L58,209 L54,213"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户点「停止」（前端）</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">session.abort()</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">框架触发一个取消信号</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">作为第三个参数传进 execute(signal)</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">你把它透传给 fetch / mysql2，请求立刻断</text>
+</g>
+</svg>

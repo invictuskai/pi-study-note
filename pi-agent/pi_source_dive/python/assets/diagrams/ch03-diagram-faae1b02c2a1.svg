@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="626" height="192" viewBox="0 0 626 192" role="img" aria-labelledby="ch03-diagram-faae1b02c2a1-title ch03-diagram-faae1b02c2a1-description">
+<title id="ch03-diagram-faae1b02c2a1-title">模式 3：Agent Loop —— &quot;模型，你自己决定怎么做&quot;</title>
+<desc id="ch03-diagram-faae1b02c2a1-description">调模型
+请求 read
+程序读文件
+将结果加入历史
+再调模型
+请求 edit
+程序修改文件
+将结果加入历史
+再调模型
+输出解释，无工具请求
+检查其他续跑条件
+结束</desc>
+<rect x="1" y="1" width="624" height="190" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">模式 3：Agent Loop —— &quot;模型，你自己决定怎么做&quot;</text>
+<path d="M28,58 H598" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="7" data-glyph="→" d="M98,89 H108 M104,85 L108,89 L104,93"/>
+<path data-row="0" data-column="19" data-glyph="→" d="M218,89 H228 M224,85 L228,89 L224,93"/>
+<path data-row="0" data-column="32" data-glyph="→" d="M348,89 H358 M354,85 L358,89 L354,93"/>
+<path data-row="1" data-column="9" data-glyph="→" d="M118,119 H128 M124,115 L128,119 L124,123"/>
+<path data-row="1" data-column="21" data-glyph="→" d="M238,119 H248 M244,115 L248,119 L244,123"/>
+<path data-row="1" data-column="36" data-glyph="→" d="M388,119 H398 M394,115 L398,119 L394,123"/>
+<path data-row="2" data-column="9" data-glyph="→" d="M118,149 H128 M124,145 L128,149 L124,153"/>
+<path data-row="2" data-column="32" data-glyph="→" d="M348,149 H358 M354,145 L358,149 L354,153"/>
+<path data-row="2" data-column="51" data-glyph="→" d="M538,149 H548 M544,145 L548,149 L544,153"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型</text>
+<text data-row="0" data-column="9" x="118" y="89" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">请求 read</text>
+<text data-row="0" data-column="21" x="238" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">程序读文件</text>
+<text data-row="0" data-column="34" x="368" y="89" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">将结果加入历史</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">再调模型</text>
+<text data-row="1" data-column="11" x="138" y="119" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">请求 edit</text>
+<text data-row="1" data-column="23" x="258" y="119" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">程序修改文件</text>
+<text data-row="1" data-column="38" x="408" y="119" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">将结果加入历史</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">再调模型</text>
+<text data-row="2" data-column="11" x="138" y="149" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">输出解释，无工具请求</text>
+<text data-row="2" data-column="34" x="368" y="149" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">检查其他续跑条件</text>
+<text data-row="2" data-column="53" x="558" y="149" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">结束</text>
+</g>
+</svg>

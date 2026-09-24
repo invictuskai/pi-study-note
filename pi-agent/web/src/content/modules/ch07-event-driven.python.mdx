@@ -84,20 +84,7 @@ session.subscribe(listener)
 
 用编程术语说，事件驱动实现的是**发布-订阅模式**。和直接函数调用做个对比：
 
-```
-直接调用（打电话）：
-  Agent ──调用──→ 终端渲染
-       ──调用──→ 文件存储
-       ──调用──→ 日志记录
-  Agent 需要知道所有消费者的存在，每加一个新功能就要改 Agent
-
-发布-订阅（广播）：
-  Agent ──emit事件──→ 📡 事件总线
-                          ├──→ 终端渲染（订阅了）
-                          ├──→ 文件存储（订阅了）
-                          ├──→ 日志记录（订阅了）
-                          └──→ （新功能只需订阅，Agent 不需要知道）
-```
+<Diagram file="/assets/diagrams/ch07-diagram-4ec5139e135f.svg" caption="发布-订阅 vs 直接调用" id="ch07-diagram-4ec5139e135f" layout="preserve" />
 
 一句话：**直接调用是"我亲自找你"；发布-订阅是"我对着空气喊了一声，谁听到算谁的"。** Pi 的事件系统就是发布-订阅——Agent 发出事件，关心它的人各自订阅、各自处理。但 Pi 有一个关键特点：**它有两条订阅管道**，而且两条的能力很不一样。这正是本章要讲的核心，下一节就铺开。
 
@@ -159,29 +146,7 @@ AgentEvent = Union[
 
 10 种看着不少，但规律很清楚——它们是 **4 层嵌套的生命周期**，每层都有"开始→更新→结束"的配对：
 
-```
-Agent 运行
-├── agent_start ───────────────────── Agent 开始
-│
-├── Turn 1（第3章讲过：一次模型调用 + 它触发的工具执行）
-│   ├── turn_start ────────────────── Turn 开始
-│   │
-│   ├── Message（LLM 的响应）
-│   │   ├── message_start
-│   │   ├── message_update ×N ────── 流式增量（逐 token 更新）
-│   │   └── message_end
-│   │
-│   ├── Tool Execution（工具执行）
-│   │   ├── tool_execution_start
-│   │   ├── tool_execution_update ×N  工具进度（如 Bash 的输出）
-│   │   └── tool_execution_end
-│   │
-│   └── turn_end ──────────────────── Turn 结束
-│
-├── Turn 2 ...
-│
-└── agent_end ──────────────────────── Agent 结束
-```
+<Diagram file="/assets/diagrams/ch07-diagram-1628cfa71c51.svg" caption="2.1 事件源：10 种 AgentEvent" id="ch07-diagram-1628cfa71c51" layout="preserve" />
 
 回忆第 3 章的概念：**一个 Turn = 一次模型调用 + 这次调用触发的所有工具执行。** turn_start 到 turn_end 之间，模型被调用了恰好一次。
 
@@ -231,20 +196,7 @@ self._emit(event)                          # subscribe：不等。同步调用�
 
 这两个名字像，但走不同管道、发生在不同时刻：
 
-```
-LLM 决定调一个工具
-   │
-   ▼  管道 B：tool_call（执行前）
-   │   扩展可以 return {"block": True} 拦掉它；一旦 block，下面都不发生
-   │   注意：tool_call 不是 2.1 那 10 种之一，是 SDK 在执行前主动触发的扩展独占事件
-   │
-   ▼  （没被拦）tool.execute() 开跑
-   │
-   ▼  管道 A + B 都收到：tool_execution_start（已开跑，拦不住了）
-   │   这是 2.1 那 10 种之一，由 Agent 内核发出，两条管道都收
-   │
-   ▼  tool_execution_end
-```
+<Diagram file="/assets/diagrams/ch07-diagram-38d80411eab6.svg" caption="2.2 两条管道：subscribe 与扩展 pi.on" id="ch07-diagram-38d80411eab6" layout="preserve" />
 
 `tool_call` 是执行前的安检门（能拦，管道 B 独占），`tool_execution_start` 是开跑后的广播（拦不了，两条管道都收）。管道 A 根本收不到 `tool_call`——你在 `subscribe` 里写 `if event["type"] == "tool_call"` 不会报错，但这个分支永远命中不了。
 

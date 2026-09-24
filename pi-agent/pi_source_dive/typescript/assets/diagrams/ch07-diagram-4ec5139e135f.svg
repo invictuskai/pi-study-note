@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="462" viewBox="0 0 726 462" role="img" aria-labelledby="ch07-diagram-4ec5139e135f-title ch07-diagram-4ec5139e135f-description">
+<title id="ch07-diagram-4ec5139e135f-title">发布-订阅 vs 直接调用</title>
+<desc id="ch07-diagram-4ec5139e135f-description">直接调用（打电话）：
+Agent
+调用
+终端渲染
+调用
+文件存储
+调用
+日志记录
+Agent 需要知道所有消费者的存在，每加一个新功能就要改 Agent
+发布-订阅（广播）：
+Agent
+emit事件
+📡 事件总线
+终端渲染（订阅了）
+文件存储（订阅了）
+日志记录（订阅了）
+（新功能只需订阅，Agent 不需要知道）</desc>
+<rect x="1" y="1" width="724" height="460" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">发布-订阅 vs 直接调用</text>
+<path d="M28,58 H698" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="8" data-glyph="─" d="M113,119 L118,119 M113,119 L108,119"/>
+<path data-row="1" data-column="9" data-glyph="─" d="M123,119 L128,119 M123,119 L118,119"/>
+<path data-row="1" data-column="14" data-glyph="─" d="M173,119 L178,119 M173,119 L168,119"/>
+<path data-row="1" data-column="15" data-glyph="─" d="M183,119 L188,119 M183,119 L178,119"/>
+<path data-row="1" data-column="16" data-glyph="→" d="M188,119 H198 M194,115 L198,119 L194,123"/>
+<path data-row="2" data-column="7" data-glyph="─" d="M103,149 L108,149 M103,149 L98,149"/>
+<path data-row="2" data-column="8" data-glyph="─" d="M113,149 L118,149 M113,149 L108,149"/>
+<path data-row="2" data-column="13" data-glyph="─" d="M163,149 L168,149 M163,149 L158,149"/>
+<path data-row="2" data-column="14" data-glyph="─" d="M173,149 L178,149 M173,149 L168,149"/>
+<path data-row="2" data-column="15" data-glyph="→" d="M178,149 H188 M184,145 L188,149 L184,153"/>
+<path data-row="3" data-column="7" data-glyph="─" d="M103,179 L108,179 M103,179 L98,179"/>
+<path data-row="3" data-column="8" data-glyph="─" d="M113,179 L118,179 M113,179 L108,179"/>
+<path data-row="3" data-column="13" data-glyph="─" d="M163,179 L168,179 M163,179 L158,179"/>
+<path data-row="3" data-column="14" data-glyph="─" d="M173,179 L178,179 M173,179 L168,179"/>
+<path data-row="3" data-column="15" data-glyph="→" d="M178,179 H188 M184,175 L188,179 L184,183"/>
+<path data-row="7" data-column="8" data-glyph="─" d="M113,299 L118,299 M113,299 L108,299"/>
+<path data-row="7" data-column="9" data-glyph="─" d="M123,299 L128,299 M123,299 L118,299"/>
+<path data-row="7" data-column="18" data-glyph="─" d="M213,299 L218,299 M213,299 L208,299"/>
+<path data-row="7" data-column="19" data-glyph="─" d="M223,299 L228,299 M223,299 L218,299"/>
+<path data-row="7" data-column="20" data-glyph="→" d="M228,299 H238 M234,295 L238,299 L234,303"/>
+<path data-row="8" data-column="26" data-glyph="├" d="M293,329 L293,314 M293,329 L298,329 M293,329 L293,344"/>
+<path data-row="8" data-column="27" data-glyph="─" d="M303,329 L308,329 M303,329 L298,329"/>
+<path data-row="8" data-column="28" data-glyph="─" d="M313,329 L318,329 M313,329 L308,329"/>
+<path data-row="8" data-column="29" data-glyph="→" d="M318,329 H328 M324,325 L328,329 L324,333"/>
+<path data-row="9" data-column="26" data-glyph="├" d="M293,359 L293,344 M293,359 L298,359 M293,359 L293,374"/>
+<path data-row="9" data-column="27" data-glyph="─" d="M303,359 L308,359 M303,359 L298,359"/>
+<path data-row="9" data-column="28" data-glyph="─" d="M313,359 L318,359 M313,359 L308,359"/>
+<path data-row="9" data-column="29" data-glyph="→" d="M318,359 H328 M324,355 L328,359 L324,363"/>
+<path data-row="10" data-column="26" data-glyph="├" d="M293,389 L293,374 M293,389 L298,389 M293,389 L293,404"/>
+<path data-row="10" data-column="27" data-glyph="─" d="M303,389 L308,389 M303,389 L298,389"/>
+<path data-row="10" data-column="28" data-glyph="─" d="M313,389 L318,389 M313,389 L308,389"/>
+<path data-row="10" data-column="29" data-glyph="→" d="M318,389 H328 M324,385 L328,389 L324,393"/>
+<path data-row="11" data-column="26" data-glyph="└" d="M293,419 L298,419 M293,419 L293,404"/>
+<path data-row="11" data-column="27" data-glyph="─" d="M303,419 L308,419 M303,419 L298,419"/>
+<path data-row="11" data-column="28" data-glyph="─" d="M313,419 L318,419 M313,419 L308,419"/>
+<path data-row="11" data-column="29" data-glyph="→" d="M318,419 H328 M324,415 L328,419 L324,423"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">直接调用（打电话）：</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent</text>
+<text data-row="1" data-column="10" x="128" y="119" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调用</text>
+<text data-row="1" data-column="18" x="208" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">终端渲染</text>
+<text data-row="2" data-column="9" x="118" y="149" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调用</text>
+<text data-row="2" data-column="17" x="198" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">文件存储</text>
+<text data-row="3" data-column="9" x="118" y="179" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调用</text>
+<text data-row="3" data-column="17" x="198" y="179" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">日志记录</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="580" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 需要知道所有消费者的存在，每加一个新功能就要改 Agent</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">发布-订阅（广播）：</text>
+<text data-row="7" data-column="2" x="48" y="299" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent</text>
+<text data-row="7" data-column="10" x="128" y="299" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">emit事件</text>
+<text data-row="7" data-column="22" x="248" y="299" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">📡 事件总线</text>
+<text data-row="8" data-column="31" x="338" y="329" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">终端渲染（订阅了）</text>
+<text data-row="9" data-column="31" x="338" y="359" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">文件存储（订阅了）</text>
+<text data-row="10" data-column="31" x="338" y="389" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">日志记录（订阅了）</text>
+<text data-row="11" data-column="31" x="338" y="419" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">（新功能只需订阅，Agent 不需要知道）</text>
+</g>
+</svg>

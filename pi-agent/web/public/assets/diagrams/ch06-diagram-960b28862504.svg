@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="402" viewBox="0 0 846 402" role="img" aria-labelledby="ch06-diagram-960b28862504-title ch06-diagram-960b28862504-description">
+<title id="ch06-diagram-960b28862504-title">每种消息的具体数据结构</title>
+<desc id="ch06-diagram-960b28862504-description">AssistantMessage 的 content 内容块
+TextContent
+普通文本
+{ type: &quot;text&quot;, text: &quot;...&quot; }
+ThinkingContent
+思考过程（第3章讲过，模型&quot;在想&quot;但不直接告诉用户的部分）
+{ type: &quot;thinking&quot;, thinking: &quot;...&quot; }
+ToolCall
+工具调用（第5章讲过，触发五步管道的入口）
+{ type: &quot;toolCall&quot;, id: &quot;...&quot;, name: &quot;read&quot;, arguments: { path: &quot;...&quot; } }</desc>
+<rect x="1" y="1" width="844" height="400" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">每种消息的具体数据结构</text>
+<path d="M28,58 H818" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="│" d="M33,119 L33,104 M33,119 L33,134"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="2" data-column="22" data-glyph="←" d="M248,149 H258 M252,145 L248,149 L252,153"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="5" data-column="0" data-glyph="├" d="M33,239 L33,224 M33,239 L38,239 M33,239 L33,254"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="5" data-column="22" data-glyph="←" d="M248,239 H258 M252,235 L248,239 L252,243"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="7" data-column="0" data-glyph="│" d="M33,299 L33,284 M33,299 L33,314"/>
+<path data-row="8" data-column="0" data-glyph="└" d="M33,329 L38,329 M33,329 L33,314"/>
+<path data-row="8" data-column="1" data-glyph="─" d="M43,329 L48,329 M43,329 L38,329"/>
+<path data-row="8" data-column="2" data-glyph="─" d="M53,329 L58,329 M53,329 L48,329"/>
+<path data-row="8" data-column="22" data-glyph="←" d="M248,329 H258 M252,325 L248,329 L252,333"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="340" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AssistantMessage 的 content 内容块</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">TextContent</text>
+<text data-row="2" data-column="24" x="268" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">普通文本</text>
+<text data-row="3" data-column="6" x="88" y="179" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ type: &quot;text&quot;, text: &quot;...&quot; }</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ThinkingContent</text>
+<text data-row="5" data-column="24" x="268" y="239" textLength="550" lengthAdjust="spacingAndGlyphs" style="white-space:pre">思考过程（第3章讲过，模型&quot;在想&quot;但不直接告诉用户的部分）</text>
+<text data-row="6" data-column="6" x="88" y="269" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ type: &quot;thinking&quot;, thinking: &quot;...&quot; }</text>
+<text data-row="8" data-column="4" x="68" y="329" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall</text>
+<text data-row="8" data-column="24" x="268" y="329" textLength="410" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具调用（第5章讲过，触发五步管道的入口）</text>
+<text data-row="9" data-column="6" x="88" y="359" textLength="730" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ type: &quot;toolCall&quot;, id: &quot;...&quot;, name: &quot;read&quot;, arguments: { path: &quot;...&quot; } }</text>
+</g>
+</svg>

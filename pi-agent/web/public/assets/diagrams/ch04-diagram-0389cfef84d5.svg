@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="756" height="312" viewBox="0 0 756 312" role="img" aria-labelledby="ch04-diagram-0389cfef84d5-title ch04-diagram-0389cfef84d5-description">
+<title id="ch04-diagram-0389cfef84d5-title">五步骨架是概念模型，不是每个文件的固定结构</title>
+<desc id="ch04-diagram-0389cfef84d5-description">content_block_start(text)
+text_start
+content_block_delta(text)
+text_delta
+content_block_start(tool_use)
+toolcall_start
+input_json_delta
+toolcall_delta
+content_block_stop
+对应的 *_end
+message_delta
+更新 usage / rawStopReason / stopReason
+响应流完整结束并验证状态
+done，失败则 error</desc>
+<rect x="1" y="1" width="754" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">五步骨架是概念模型，不是每个文件的固定结构</text>
+<path d="M28,58 H728" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="30" data-glyph="→" d="M328,89 H338 M334,85 L338,89 L334,93"/>
+<path data-row="1" data-column="30" data-glyph="→" d="M328,119 H338 M334,115 L338,119 L334,123"/>
+<path data-row="2" data-column="30" data-glyph="→" d="M328,149 H338 M334,145 L338,149 L334,153"/>
+<path data-row="3" data-column="29" data-glyph="→" d="M318,179 H328 M324,175 L328,179 L324,183"/>
+<path data-row="4" data-column="29" data-glyph="→" d="M318,209 H328 M324,205 L328,209 L324,213"/>
+<path data-row="5" data-column="29" data-glyph="→" d="M318,239 H328 M324,235 L328,239 L324,243"/>
+<path data-row="6" data-column="32" data-glyph="→" d="M348,269 H358 M354,265 L358,269 L354,273"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content_block_start(text)</text>
+<text data-row="0" data-column="32" x="348" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text_start</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content_block_delta(text)</text>
+<text data-row="1" data-column="32" x="348" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">text_delta</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content_block_start(tool_use)</text>
+<text data-row="2" data-column="32" x="348" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolcall_start</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">input_json_delta</text>
+<text data-row="3" data-column="31" x="338" y="179" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolcall_delta</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content_block_stop</text>
+<text data-row="4" data-column="31" x="338" y="209" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">对应的 *_end</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">message_delta</text>
+<text data-row="5" data-column="31" x="338" y="239" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">更新 usage / rawStopReason / stopReason</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">响应流完整结束并验证状态</text>
+<text data-row="6" data-column="34" x="368" y="269" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">done，失败则 error</text>
+</g>
+</svg>

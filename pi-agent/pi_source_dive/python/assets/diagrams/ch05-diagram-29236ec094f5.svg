@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="846" height="222" viewBox="0 0 846 222" role="img" aria-labelledby="ch05-diagram-29236ec094f5-title ch05-diagram-29236ec094f5-description">
+<title id="ch05-diagram-29236ec094f5-title">但并行不是无脑 Promise.all</title>
+<desc id="ch05-diagram-29236ec094f5-description">ToolCall 1: edit { path: &quot;app.ts&quot;, oldText: &quot;v1&quot;, newText: &quot;v2&quot; }
+ToolCall 2: edit { path: &quot;app.ts&quot;, oldText: &quot;v3&quot;, newText: &quot;v4&quot; }
+同一个文件！并行执行
+ToolCall 1 的修改被 ToolCall 2 覆盖</desc>
+<rect x="1" y="1" width="844" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">但并行不是无脑 Promise.all</text>
+<path d="M28,58 H818" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="21" data-glyph="^" d="M243,134 V164 M239,140 L243,134 L247,140"/>
+<path data-row="2" data-column="22" data-glyph="^" d="M253,134 V164 M249,140 L253,134 L257,140"/>
+<path data-row="2" data-column="23" data-glyph="^" d="M263,134 V164 M259,140 L263,134 L267,140"/>
+<path data-row="2" data-column="24" data-glyph="^" d="M273,134 V164 M269,140 L273,134 L277,140"/>
+<path data-row="2" data-column="25" data-glyph="^" d="M283,134 V164 M279,140 L283,134 L287,140"/>
+<path data-row="2" data-column="26" data-glyph="^" d="M293,134 V164 M289,140 L293,134 L297,140"/>
+<path data-row="2" data-column="27" data-glyph="^" d="M303,134 V164 M299,140 L303,134 L307,140"/>
+<path data-row="2" data-column="28" data-glyph="^" d="M313,134 V164 M309,140 L313,134 L317,140"/>
+<path data-row="3" data-column="42" data-glyph="→" d="M448,179 H458 M454,175 L458,179 L454,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="650" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1: edit { path: &quot;app.ts&quot;, oldText: &quot;v1&quot;, newText: &quot;v2&quot; }</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="650" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 2: edit { path: &quot;app.ts&quot;, oldText: &quot;v3&quot;, newText: &quot;v4&quot; }</text>
+<text data-row="3" data-column="21" x="238" y="179" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">同一个文件！并行执行</text>
+<text data-row="3" data-column="44" x="468" y="179" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolCall 1 的修改被 ToolCall 2 覆盖</text>
+</g>
+</svg>

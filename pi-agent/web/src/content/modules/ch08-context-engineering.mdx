@@ -36,18 +36,7 @@ import Diagram from '../../components/Diagram.astro';
 
 把一个 coding-agent 一次会话的所有"信息源"列出来，你会意识到问题的严重性：
 
-```
-一次会话送进 LLM 的内容
-├── 系统提示词（工具说明、guidelines、pi 文档路径）
-├── 项目上下文文件（CLAUDE.md / AGENTS.md，可能多层嵌套）
-├── Skills 列表（每个 skill 一段描述）
-├── 工具定义（每个工具的 JSON schema）
-├── 对话历史（每一轮 user / assistant / toolResult）
-│   ├── 用户输入
-│   ├── LLM 回复（含 thinking、toolCall）
-│   └── 工具结果（read 文件、bash 输出、grep 命中……）
-└── 当前轮的新输入
-```
+<Diagram file="/assets/diagrams/ch08-diagram-e5e44387b76b.svg" caption="一、问题：窗口是固定的，对话是增长的" id="ch08-diagram-e5e44387b76b" layout="preserve" />
 
 随便挑一项都可能爆炸：
 
@@ -68,20 +57,7 @@ Pi 在这个环节实现了 **4 种互补的技巧**。这一章我们就挨个�
 
 在钻进每个技巧之前，先建立一张总图。Pi 的上下文工程分布在两个环节：
 
-```
-┌──────────────────────────────────────────────────────────────┐
-│                       输入侧（送进 LLM 之前）                 │
-│  ① 工具输出截断 — bash/read/grep 结果按行/字节裁剪            │
-│  ② 系统提示词组装 — 多层 CLAUDE.md 向上递归 + Skills 懒加载   │
-└──────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌──────────────────────────────────────────────────────────────┐
-│                  历史侧（长对话管理）                         │
-│  ③ Compaction —— 阈值触发，把旧消息变成结构化摘要             │
-│  ④ 分支摘要     —— 切换会话树分支时，给"被放弃的分支"做摘要   │
-└──────────────────────────────────────────────────────────────┘
-```
+<Diagram file="/assets/diagrams/ch08-diagram-2507d3c2445b.svg" caption="二、地图：两层防护" id="ch08-diagram-2507d3c2445b" layout="preserve" />
 
 | 层 | 解决的问题 | 触发频率 |
 |----|-----------|---------|
@@ -226,31 +202,13 @@ Pi 在每个目录下找 `AGENTS.md` 或 `CLAUDE.md`（大小写都试），然�
 
 为什么向上递归？因为现代项目常常是 monorepo 嵌套结构：
 
-```
-/myorg
-├── CLAUDE.md          ← 全组织规范（通用）
-└── teams
-    └── teamA
-        ├── CLAUDE.md  ← 团队 A 规范（细化）
-        └── projects
-            └── app1
-                ├── CLAUDE.md  ← 项目规范（最具体）
-                └── src/       ← cwd 在这里
-```
+<Diagram file="/assets/diagrams/ch08-diagram-0d27341fb4b8.svg" caption="多级上下文文件：从当前目录向上递归" id="ch08-diagram-0d27341fb4b8" layout="preserve" />
 
 在 `src/` 目录启动 Agent，会向上找到 3 个 `CLAUDE.md`，**按"从外到内"的顺序合并**——祖先目录的规范在前面（最通用），项目目录的规范在后面（最具体）。这让 LLM 像读一本分层规范手册，先读总则再读细则。
 
 除了向上递归，还有**全局上下文**——从 `agentDir`（用户主目录下的 `.pi` 配置目录）读取一份。完整的查找顺序：
 
-```
-┌──────────────────────────────────────────────────────┐
-│  系统提示词组装顺序                                   │
-├──────────────────────────────────────────────────────┤
-│  1. agentDir/CLAUDE.md   ← 全局（用户级）            │
-│  2. 祖先目录/CLAUDE.md   ← 从 / 到 cwd 上一层        │
-│  3. cwd/CLAUDE.md        ← 当前项目                  │
-└──────────────────────────────────────────────────────┘
-```
+<Diagram file="/assets/diagrams/ch08-diagram-72f11f4d662c.svg" caption="多级上下文文件：从当前目录向上递归" id="ch08-diagram-72f11f4d662c" layout="preserve" />
 
 源码在 `resource-loader.ts:85-123` 的 `loadProjectContextFiles` 函数。
 
@@ -287,20 +245,7 @@ Skills（项目特定操作指南）有另一个微妙的设计。每个 skill �
 
 Pi 的方案是 `formatSkillsForPrompt`（`skills.ts:335-361`）——**只放轻量清单，全文按需 read**：
 
-```
-传统方式（推模式）              Pi 的方式（拉模式）
-─────────────────────          ─────────────────────
-系统提示词 ←─ 全文塞进           系统提示词 ←─ 只放清单
-                                  │
-                                  ▼
-                               LLM 看清单，判断需要哪个
-                                  │
-                                  ▼
-                               LLM 主动调 read 工具
-                                  │
-                                  ▼
-                               SKILL.md 全文进入后续上下文
-```
+<Diagram file="/assets/diagrams/ch08-diagram-d94d9fdfc601.svg" caption="Skills 懒加载：列表进 prompt，内容按需读" id="ch08-diagram-d94d9fdfc601" layout="preserve" />
 
 最终在系统提示词里长这样：
 
@@ -380,32 +325,7 @@ Compaction 解决的是"线性对话过长"。但 Pi 还有一个独特特性—
 
 举个具体场景：
 
-```
-对话树：
-        root
-         │
-       [探索方案 A]
-         │
-       [A 的实现]
-         │
-        leaf_1 ← 用户当前在这里
-
-用户：从 root 重新分叉探索方案 B
-        root
-         │
-       [探索方案 A]  ← 这部分还在，但被"放弃"了
-         │
-       [A 的实现]
-         │
-        leaf_1（旧叶子）
-
-用户切换到：
-        root
-         │
-       [探索方案 B]  ← 新分支
-         │
-        leaf_2 ← 用户现在在这里
-```
+<Diagram file="/assets/diagrams/ch08-diagram-ed94c98f69e1.svg" caption="问题：分支跳转后，旧分支的内容怎么处理？" id="ch08-diagram-ed94c98f69e1" layout="preserve" />
 
 切换之后，**LLM 看到的上下文是 root → leaf_2 这条路径**——它完全不知道 leaf_1 那条分支上探索过什么。如果那条分支上有重要发现（"试过方案 A 但行不通，因为 X、Y、Z"），LLM 失忆了。
 
@@ -419,15 +339,7 @@ Pi 的解法是 [`branch-summarization.ts`](https://github.com/earendil-works/pi
 
 `collectEntriesForBranchSummary`（`branch-summarization.ts:67-96`）的逻辑用通俗的话讲就三步：
 
-```
-旧路径：root → ... → leaf_1
-新路径：root → ... → leaf_2
-
-1. 把两条路径都拿出来
-2. 在新路径上从后往前找，第一个也在旧路径里的节点 = LCA（分叉点）
-3. 从 leaf_1 向上爬到 LCA（不含 LCA），沿途收集的内容
-   就是"被放弃的分支"
-```
+<Diagram file="/assets/diagrams/ch08-diagram-fa9c9d6a97da.svg" caption="LCA 算法：找&quot;分叉点&quot;" id="ch08-diagram-fa9c9d6a97da" layout="preserve" />
 
 ### 摘要生成：复用 Compaction 的工具
 
@@ -517,64 +429,7 @@ LLM 看到这个，立刻知道"之前试过触发器方案，因为性能问题
 
 **配图说明**：用户提问 → [1] 系统提示词组装（§四加法）→ [2-3] 消息进 context + Agent Loop → [5] 执行 read 工具 → [6] ★ 工具输出截断（§三减法，红色高亮）→ [7] toolResult 进历史 → [8] agent_end → [9] shouldCompact 判定（否→等下一轮 / 是→Compaction）。§三 控制**单条**体积，§四 控制**提示词**内容，§五 控制**长对话**总长，§六 控制**多分支**信息——四层兜底组成完整漏斗。
 
-```
-用户输入 "修复 auth.ts 的 bug"
-    │
-    ▼
-[1] 系统提示词组装（§四）
-    buildSystemPrompt()
-    ├─ 找 CLAUDE.md（向上递归 + agentDir）
-    ├─ 加载 Skills 清单（懒加载）
-    ├─ 拼接工具列表 + guidelines
-    └─ 末尾加 Current date / cwd
-    │
-    ▼
-[2] 用户消息进入 context.messages（第6章）
-    │
-    ▼
-[3] Agent Loop 开始（第3章五步管道）
-    │
-    ▼
-[4] LLM 返回 toolCall: read("auth.ts")
-    │
-    ▼
-[5] 执行工具 —— read auth.ts
-    │
-    ▼
-[6] 工具输出截断（§三）
-    ├─ truncateHead（read 用 head）
-    │   └─ 2000 行 / 50KB 双限制
-    ├─ UTF-8 边界安全
-    └─ 超限返回 firstLineExceedsLimit 标志
-    │
-    ▼
-[7] 工具结果进入 context.messages（第5章）
-    │
-    ▼
-   ...循环...
-    │
-    ▼
-[8] agent_end 事件触发（第7章）
-    │
-    ▼
-[9] 检查 shouldCompact？（§五 / 第9章）
-    │
-    ├── 否 → 等下一轮
-    │
-    └── 是 → 执行 Compaction
-         ├─ findCutPoint
-         ├─ generateSummary（LLM 调用）
-         ├─ 生成 CompactionSummaryMessage
-         └─ 写入 Session Tree
-
-    用户切换分支？
-         │
-         ▼
-[10] Branch Summarization（§六）
-     ├─ collectEntriesForBranchSummary（LCA）
-     ├─ generateBranchSummary（LLM 调用）
-     └─ 生成 BranchSummaryMessage
-```
+<Diagram file="/assets/diagrams/ch08-diagram-1929c322d433.svg" caption="七、全景链路：一次工具调用经过的所有上下文处理" id="ch08-diagram-1929c322d433" layout="preserve" />
 
 **这就是 Pi 上下文工程的完整链路**。每一层都是"对 LLM 看到的东西"的一次塑形：
 

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="596" height="282" viewBox="0 0 596 282" role="img" aria-labelledby="ch04-diagram-e3bcc8a8ad41-title ch04-diagram-e3bcc8a8ad41-description">
+<title id="ch04-diagram-e3bcc8a8ad41-title">六、回到那一行代码</title>
+<desc id="ch04-diagram-e3bcc8a8ad41-description">Agent 的 streamFn（通常绑定 models.streamSimple）
+Models：规范化上下文、按 provider 查找、解析认证
+Provider：选择自己的 API 实现
+API：统一 reasoning 映射、协议转换、请求与流式解析
+AssistantMessageEventStream
+Loop：根据最终消息、工具和队列决定下一步</desc>
+<rect x="1" y="1" width="594" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">六、回到那一行代码</text>
+<path d="M28,58 H568" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="→" d="M48,119 H58 M54,115 L58,119 L54,123"/>
+<path data-row="2" data-column="2" data-glyph="→" d="M48,149 H58 M54,145 L58,149 L54,153"/>
+<path data-row="3" data-column="2" data-glyph="→" d="M48,179 H58 M54,175 L58,179 L54,183"/>
+<path data-row="4" data-column="2" data-glyph="→" d="M48,209 H58 M54,205 L58,209 L54,213"/>
+<path data-row="5" data-column="2" data-glyph="→" d="M48,239 H58 M54,235 L58,239 L54,243"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="490" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 的 streamFn（通常绑定 models.streamSimple）</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="480" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Models：规范化上下文、按 provider 查找、解析认证</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Provider：选择自己的 API 实现</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">API：统一 reasoning 映射、协议转换、请求与流式解析</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AssistantMessageEventStream</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="400" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Loop：根据最终消息、工具和队列决定下一步</text>
+</g>
+</svg>

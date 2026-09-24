@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="676" height="222" viewBox="0 0 676 222" role="img" aria-labelledby="pr05-diagram-2bc0b5e60978-title pr05-diagram-2bc0b5e60978-description">
+<title id="pr05-diagram-2bc0b5e60978-title">首先：框架兜底，不会崩</title>
+<desc id="pr05-diagram-2bc0b5e60978-description">execute 里 throw new Error(&quot;连接超时&quot;)
+框架捕获，转成结果：{ content: &quot;连接超时&quot;, isError: true }
+当作正常的工具结果发给 LLM
+LLM 看到「连接超时」，决定下一步怎么办</desc>
+<rect x="1" y="1" width="674" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">首先：框架兜底，不会崩</text>
+<path d="M28,58 H648" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="→" d="M48,119 H58 M54,115 L58,119 L54,123"/>
+<path data-row="2" data-column="2" data-glyph="→" d="M48,149 H58 M54,145 L58,149 L54,153"/>
+<path data-row="3" data-column="2" data-glyph="→" d="M48,179 H58 M54,175 L58,179 L54,183"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">execute 里 throw new Error(&quot;连接超时&quot;)</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="580" lengthAdjust="spacingAndGlyphs" style="white-space:pre">框架捕获，转成结果：{ content: &quot;连接超时&quot;, isError: true }</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">当作正常的工具结果发给 LLM</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 看到「连接超时」，决定下一步怎么办</text>
+</g>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="626" height="432" viewBox="0 0 626 432" role="img" aria-labelledby="ch09-diagram-e009cf090248-title ch09-diagram-e009cf090248-description">
+<title id="ch09-diagram-e009cf090248-title">上下文重建</title>
+<desc id="ch09-diagram-e009cf090248-description">重建后的上下文：
+CompactionSummaryMessage（role: &quot;compactionSummary&quot;）
+content = 摘要文本
+（第6章讲过：convertToLlm 把它翻译成 UserMessage）
+保留的原始消息（entry 30 之后的消息）
+UserMessage: &quot;继续修复&quot;
+AssistantMessage: ...
+...
+（新的消息会在运行中追加）</desc>
+<rect x="1" y="1" width="624" height="430" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">上下文重建</text>
+<path d="M28,58 H598" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="0" data-glyph="│" d="M33,149 L33,134 M33,149 L33,164"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="5" data-column="0" data-glyph="├" d="M33,239 L33,224 M33,239 L38,239 M33,239 L33,254"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="6" data-glyph="├" d="M93,269 L93,254 M93,269 L98,269 M93,269 L93,284"/>
+<path data-row="6" data-column="7" data-glyph="─" d="M103,269 L108,269 M103,269 L98,269"/>
+<path data-row="6" data-column="8" data-glyph="─" d="M113,269 L118,269 M113,269 L108,269"/>
+<path data-row="7" data-column="0" data-glyph="│" d="M33,299 L33,284 M33,299 L33,314"/>
+<path data-row="7" data-column="6" data-glyph="├" d="M93,299 L93,284 M93,299 L98,299 M93,299 L93,314"/>
+<path data-row="7" data-column="7" data-glyph="─" d="M103,299 L108,299 M103,299 L98,299"/>
+<path data-row="7" data-column="8" data-glyph="─" d="M113,299 L118,299 M113,299 L108,299"/>
+<path data-row="8" data-column="0" data-glyph="│" d="M33,329 L33,314 M33,329 L33,344"/>
+<path data-row="8" data-column="6" data-glyph="└" d="M93,329 L98,329 M93,329 L93,314"/>
+<path data-row="8" data-column="7" data-glyph="─" d="M103,329 L108,329 M103,329 L98,329"/>
+<path data-row="8" data-column="8" data-glyph="─" d="M113,329 L118,329 M113,329 L108,329"/>
+<path data-row="9" data-column="0" data-glyph="│" d="M33,359 L33,344 M33,359 L33,374"/>
+<path data-row="10" data-column="0" data-glyph="└" d="M33,389 L38,389 M33,389 L33,374"/>
+<path data-row="10" data-column="1" data-glyph="─" d="M43,389 L48,389 M43,389 L38,389"/>
+<path data-row="10" data-column="2" data-glyph="─" d="M53,389 L58,389 M53,389 L48,389"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">重建后的上下文：</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="530" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CompactionSummaryMessage（role: &quot;compactionSummary&quot;）</text>
+<text data-row="2" data-column="6" x="88" y="149" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content = 摘要文本</text>
+<text data-row="3" data-column="6" x="88" y="179" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">（第6章讲过：convertToLlm 把它翻译成 UserMessage）</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">保留的原始消息（entry 30 之后的消息）</text>
+<text data-row="6" data-column="10" x="128" y="269" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">UserMessage: &quot;继续修复&quot;</text>
+<text data-row="7" data-column="10" x="128" y="299" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AssistantMessage: ...</text>
+<text data-row="8" data-column="10" x="128" y="329" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...</text>
+<text data-row="10" data-column="4" x="68" y="389" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">（新的消息会在运行中追加）</text>
+</g>
+</svg>

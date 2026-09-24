@@ -9,6 +9,8 @@ summary: 把 Agent 封装成 Web 服务（Express + SSE 流式），从本地脚
 prev: pr06-events
 ---
 
+import Diagram from '../../components/Diagram.astro';
+
 ## 一、pi-agent 怎么用起来：四种接入方式
 
 要把 Agent 用起来，最典型的场景是类似 Chatbox 的网页：用户在输入框输入，Agent 在下方回答。这个场景和普通「一问一答」的接口不同，有两个要求：
@@ -39,13 +41,7 @@ prev: pr06-events
 
 选定进程内嵌后，还有一个问题：这个 Node 服务提供给谁？两种做法——**只服务自家前端**（最简单，全栈 JS 一条链路），或**封装成独立的 Agent 服务对外开放**（任何语言都能通过 HTTP 调用）。本章采用后者，因为它涵盖了前者，并且能讲清楚「怎么把 pi-agent 对外暴露成一个与语言无关的接口」：
 
-```
-┌─────────────────┐   HTTP/SSE    ┌────────────────────┐   HTTP/SSE    ┌──────────────┐
-│  Java 后端       │──────────────▶│  Agent 服务（Node）  │◀─────────────│  浏览器前端    │
-│  Python 后端     │  POST /chat   │  Express 包一层      │  POST /chat  │  fetch       │
-│  Go 后端 …       │◀──────────────│  createAgentSession  │─────────────▶│              │
-└─────────────────┘  SSE 推事件    └────────────────────┘  SSE 推事件   └──────────────┘
-```
+<Diagram file="/assets/diagrams/pr07-diagram-7c2db890ee04.svg" caption="一、pi-agent 怎么用起来：四种接入方式" id="pr07-diagram-7c2db890ee04" layout="preserve" />
 
 对调用方来说，中间的 Agent 服务就是一个普通的后端 API：发送一个 `POST /chat`，响应就是一条流式事件流。Java 用 OkHttp、Python 用 httpx、浏览器用 fetch 都能调用——**完全不需要了解 pi-agent，那些都是服务内部的事**。
 
@@ -57,28 +53,7 @@ prev: pr06-events
 
 先看一张图，建立全貌：
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│  浏览器                                                      │
-│    ┌────────────────────────────────────────────────┐       │
-│    │  对话区：文本气泡（逐字）+ 工具卡片             │       │
-│    └────────────────────────────────────────────────┘       │
-└─────────┬──────────────────────────────────────▲────────────┘
-          │ POST /chat { message }               │ 同一请求的响应体
-          │                                      │ = SSE 事件流
-          ▼                                      │
-┌─────────────────────────────────────────────────┼────────────┐
-│  Node.js + Express                              │            │
-│                                                 │            │
-│   ① session.prompt(msg) ──► Pi Agent 处理       │            │
-│                              │ 不断产生事件      │            │
-│                              ▼                  │            │
-│   ② session.subscribe(event => {                │            │
-│        res.write(translateEvent(event));  ──────┘            │
-│      })                                                       │
-│   ③ finally { res.write(done); res.end(); }                  │
-└───────────────────────────────────────────────────────────────┘
-```
+<Diagram file="/assets/diagrams/pr07-diagram-25324b3291eb.svg" caption="整体流程" id="pr07-diagram-25324b3291eb" layout="preserve" />
 
 整条链路只有一个请求：浏览器 POST 一条消息，Node 服务用 `session` 驱动 Agent 处理，Agent 处理时不断产生事件，服务把这些事件翻译后通过同一条连接推回浏览器。**关键角色是 `session`——它既是驱动 Agent 的把手，也是获取 Agent 过程的入口。**
 

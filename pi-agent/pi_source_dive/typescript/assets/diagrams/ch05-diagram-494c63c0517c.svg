@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="312" viewBox="0 0 1086 312" role="img" aria-labelledby="ch05-diagram-494c63c0517c-title ch05-diagram-494c63c0517c-description">
+<title id="ch05-diagram-494c63c0517c-title">关键细节：错误描述越具体，模型纠错能力越强</title>
+<desc id="ch05-diagram-494c63c0517c-description">模糊错误（不可取）：                      具体 error.message（推荐）：
+{                                        {
+content: [{ text: &quot;Read failed&quot; }]       content: [{
+isError: true                              text: &quot;Offset 200 is beyond end of file (100 lines total)&quot;
+}                                          }]
+isError: true
+}</desc>
+<rect x="1" y="1" width="1084" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">关键细节：错误描述越具体，模型纠错能力越强</text>
+<path d="M28,58 H1058" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="700" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模糊错误（不可取）：                      具体 error.message（推荐）：</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{                                        {</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="520" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: [{ text: &quot;Read failed&quot; }]       content: [{</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="1010" lengthAdjust="spacingAndGlyphs" style="white-space:pre">isError: true                              text: &quot;Offset 200 is beyond end of file (100 lines total)&quot;</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="450" lengthAdjust="spacingAndGlyphs" style="white-space:pre">}                                          }]</text>
+<text data-row="5" data-column="43" x="458" y="239" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">isError: true</text>
+<text data-row="6" data-column="41" x="438" y="269" textLength="10" lengthAdjust="spacingAndGlyphs" style="white-space:pre">}</text>
+</g>
+</svg>

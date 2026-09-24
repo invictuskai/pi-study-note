@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="462" viewBox="0 0 636 462" role="img" aria-labelledby="ch08-diagram-d94d9fdfc601-title ch08-diagram-d94d9fdfc601-description">
+<title id="ch08-diagram-d94d9fdfc601-title">Skills 懒加载：列表进 prompt，内容按需读</title>
+<desc id="ch08-diagram-d94d9fdfc601-description">传统方式（推模式）              Pi 的方式（拉模式）
+系统提示词
+全文塞进           系统提示词
+只放清单
+LLM 看清单，判断需要哪个
+LLM 主动调 read 工具
+SKILL.md 全文进入后续上下文</desc>
+<rect x="1" y="1" width="634" height="460" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">Skills 懒加载：列表进 prompt，内容按需读</text>
+<path d="M28,58 H608" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="─" d="M33,119 L38,119 M33,119 L28,119"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="1" data-column="4" data-glyph="─" d="M73,119 L78,119 M73,119 L68,119"/>
+<path data-row="1" data-column="5" data-glyph="─" d="M83,119 L88,119 M83,119 L78,119"/>
+<path data-row="1" data-column="6" data-glyph="─" d="M93,119 L98,119 M93,119 L88,119"/>
+<path data-row="1" data-column="7" data-glyph="─" d="M103,119 L108,119 M103,119 L98,119"/>
+<path data-row="1" data-column="8" data-glyph="─" d="M113,119 L118,119 M113,119 L108,119"/>
+<path data-row="1" data-column="9" data-glyph="─" d="M123,119 L128,119 M123,119 L118,119"/>
+<path data-row="1" data-column="10" data-glyph="─" d="M133,119 L138,119 M133,119 L128,119"/>
+<path data-row="1" data-column="11" data-glyph="─" d="M143,119 L148,119 M143,119 L138,119"/>
+<path data-row="1" data-column="12" data-glyph="─" d="M153,119 L158,119 M153,119 L148,119"/>
+<path data-row="1" data-column="13" data-glyph="─" d="M163,119 L168,119 M163,119 L158,119"/>
+<path data-row="1" data-column="14" data-glyph="─" d="M173,119 L178,119 M173,119 L168,119"/>
+<path data-row="1" data-column="15" data-glyph="─" d="M183,119 L188,119 M183,119 L178,119"/>
+<path data-row="1" data-column="16" data-glyph="─" d="M193,119 L198,119 M193,119 L188,119"/>
+<path data-row="1" data-column="17" data-glyph="─" d="M203,119 L208,119 M203,119 L198,119"/>
+<path data-row="1" data-column="18" data-glyph="─" d="M213,119 L218,119 M213,119 L208,119"/>
+<path data-row="1" data-column="19" data-glyph="─" d="M223,119 L228,119 M223,119 L218,119"/>
+<path data-row="1" data-column="20" data-glyph="─" d="M233,119 L238,119 M233,119 L228,119"/>
+<path data-row="1" data-column="31" data-glyph="─" d="M343,119 L348,119 M343,119 L338,119"/>
+<path data-row="1" data-column="32" data-glyph="─" d="M353,119 L358,119 M353,119 L348,119"/>
+<path data-row="1" data-column="33" data-glyph="─" d="M363,119 L368,119 M363,119 L358,119"/>
+<path data-row="1" data-column="34" data-glyph="─" d="M373,119 L378,119 M373,119 L368,119"/>
+<path data-row="1" data-column="35" data-glyph="─" d="M383,119 L388,119 M383,119 L378,119"/>
+<path data-row="1" data-column="36" data-glyph="─" d="M393,119 L398,119 M393,119 L388,119"/>
+<path data-row="1" data-column="37" data-glyph="─" d="M403,119 L408,119 M403,119 L398,119"/>
+<path data-row="1" data-column="38" data-glyph="─" d="M413,119 L418,119 M413,119 L408,119"/>
+<path data-row="1" data-column="39" data-glyph="─" d="M423,119 L428,119 M423,119 L418,119"/>
+<path data-row="1" data-column="40" data-glyph="─" d="M433,119 L438,119 M433,119 L428,119"/>
+<path data-row="1" data-column="41" data-glyph="─" d="M443,119 L448,119 M443,119 L438,119"/>
+<path data-row="1" data-column="42" data-glyph="─" d="M453,119 L458,119 M453,119 L448,119"/>
+<path data-row="1" data-column="43" data-glyph="─" d="M463,119 L468,119 M463,119 L458,119"/>
+<path data-row="1" data-column="44" data-glyph="─" d="M473,119 L478,119 M473,119 L468,119"/>
+<path data-row="1" data-column="45" data-glyph="─" d="M483,119 L488,119 M483,119 L478,119"/>
+<path data-row="1" data-column="46" data-glyph="─" d="M493,119 L498,119 M493,119 L488,119"/>
+<path data-row="1" data-column="47" data-glyph="─" d="M503,119 L508,119 M503,119 L498,119"/>
+<path data-row="1" data-column="48" data-glyph="─" d="M513,119 L518,119 M513,119 L508,119"/>
+<path data-row="1" data-column="49" data-glyph="─" d="M523,119 L528,119 M523,119 L518,119"/>
+<path data-row="1" data-column="50" data-glyph="─" d="M533,119 L538,119 M533,119 L528,119"/>
+<path data-row="1" data-column="51" data-glyph="─" d="M543,119 L548,119 M543,119 L538,119"/>
+<path data-row="2" data-column="11" data-glyph="←" d="M138,149 H148 M142,145 L138,149 L142,153"/>
+<path data-row="2" data-column="12" data-glyph="─" d="M153,149 L158,149 M153,149 L148,149"/>
+<path data-row="2" data-column="44" data-glyph="←" d="M468,149 H478 M472,145 L468,149 L472,153"/>
+<path data-row="2" data-column="45" data-glyph="─" d="M483,149 L488,149 M483,149 L478,149"/>
+<path data-row="3" data-column="34" data-glyph="│" d="M373,179 L373,164 M373,179 L373,194"/>
+<path data-row="4" data-column="34" data-glyph="▼" d="M373,194 V224 M369,218 L373,224 L377,218"/>
+<path data-row="6" data-column="34" data-glyph="│" d="M373,269 L373,254 M373,269 L373,284"/>
+<path data-row="7" data-column="34" data-glyph="▼" d="M373,284 V314 M369,308 L373,314 L377,308"/>
+<path data-row="9" data-column="34" data-glyph="│" d="M373,359 L373,344 M373,359 L373,374"/>
+<path data-row="10" data-column="34" data-glyph="▼" d="M373,374 V404 M369,398 L373,404 L377,398"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="510" lengthAdjust="spacingAndGlyphs" style="white-space:pre">传统方式（推模式）              Pi 的方式（拉模式）</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">系统提示词</text>
+<text data-row="2" data-column="14" x="168" y="149" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">全文塞进           系统提示词</text>
+<text data-row="2" data-column="47" x="498" y="149" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">只放清单</text>
+<text data-row="5" data-column="31" x="338" y="239" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 看清单，判断需要哪个</text>
+<text data-row="8" data-column="31" x="338" y="329" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 主动调 read 工具</text>
+<text data-row="11" data-column="31" x="338" y="419" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">SKILL.md 全文进入后续上下文</text>
+</g>
+</svg>

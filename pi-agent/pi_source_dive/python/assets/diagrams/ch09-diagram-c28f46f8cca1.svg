@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="162" viewBox="0 0 536 162" role="img" aria-labelledby="ch09-diagram-c28f46f8cca1-title ch09-diagram-c28f46f8cca1-description">
+<title id="ch09-diagram-c28f46f8cca1-title">向后遍历：保护最重要的东西</title>
+<desc id="ch09-diagram-c28f46f8cca1-description">切割点之前的消息
+messagesToSummarize（被压缩）
+切割点之后的消息
+kept（保留）</desc>
+<rect x="1" y="1" width="534" height="160" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">向后遍历：保护最重要的东西</text>
+<path d="M28,58 H508" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="17" data-glyph="→" d="M198,89 H208 M204,85 L208,89 L204,93"/>
+<path data-row="1" data-column="17" data-glyph="→" d="M198,119 H208 M204,115 L208,119 L204,123"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">切割点之前的消息</text>
+<text data-row="0" data-column="19" x="218" y="89" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">messagesToSummarize（被压缩）</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">切割点之后的消息</text>
+<text data-row="1" data-column="19" x="218" y="119" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">kept（保留）</text>
+</g>
+</svg>

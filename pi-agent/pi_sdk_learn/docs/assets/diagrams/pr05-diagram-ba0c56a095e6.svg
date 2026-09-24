@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="pr05-diagram-ba0c56a095e6-title">
+<title id="pr05-diagram-ba0c56a095e6-title">params：LLM 传来的参数，框架已经帮你校验过了</title>
+<defs><marker id="pr05-diagram-ba0c56a095e6-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10" fill="#a3543e"/></marker></defs>
+<rect x="1" y="1" width="898" height="648" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<text x="28" y="40" fill="#43382f" font-family="system-ui, sans-serif" font-size="17" font-weight="600">params：LLM 传来的参数，框架已经帮你校验过了</text>
+<g fill="none" stroke="#a3543e" stroke-width="2" marker-end="url(#pr05-diagram-ba0c56a095e6-arrow)">
+<path data-edge="A-B" d="M440,165 V225"/>
+<path data-edge="B-C" d="M440,290 V345"/>
+<path data-edge="C-D" d="M330,390 H250 V500"/>
+<path data-edge="C-E" d="M550,390 H695 V500"/>
+<path data-edge="D-A" d="M60,542 H24 V125 H230" stroke-dasharray="6 4"/>
+</g>
+<g font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="17" text-anchor="middle" dominant-baseline="central">
+<g data-node="A" fill="#ffffff" stroke="#b5523a"><rect x="230" y="85" width="420" height="80" rx="10"/><text x="440" y="113" stroke="none" fill="#25201d">LLM 传错参数</text><text x="440" y="137" stroke="none" fill="#25201d">column = 123（应为字符串）</text></g>
+<g data-node="B" fill="#ffffff" stroke="#b5523a"><rect x="230" y="225" width="420" height="65" rx="10"/><text x="440" y="257.5" stroke="none" fill="#25201d">框架用你的 Schema 校验</text></g>
+<g data-node="C" fill="#ffffff" stroke="#b5523a"><path d="M440,345 L550,390 L440,435 L330,390 Z"/><text x="440" y="390" stroke="none" fill="#25201d">合法？</text></g>
+<g data-node="D" fill="#ffffff" stroke="#b5523a"><rect x="60" y="500" width="380" height="85" rx="10"/><text x="250" y="530.5" stroke="none" fill="#25201d">把错误返回给 LLM</text><text x="250" y="554.5" stroke="none" fill="#25201d">不调用你的 execute</text></g>
+<g data-node="E" fill="#ffffff" stroke="#b5523a"><rect x="550" y="500" width="290" height="85" rx="10"/><text x="695" y="542.5" stroke="none" fill="#25201d">调用你的 execute</text></g>
+<g fill="#733d2c"><text x="280" y="415">不合法</text><text x="610" y="415">合法</text><text x="100" y="105">重试</text></g>
+</g></svg>

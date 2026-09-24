@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="666" height="312" viewBox="0 0 666 312" role="img" aria-labelledby="ch02-diagram-cdc10e8e6f5f-title ch02-diagram-cdc10e8e6f5f-description">
+<title id="ch02-diagram-cdc10e8e6f5f-title">2.3 pi-coding-agent：管&quot;具体业务&quot;</title>
+<desc id="ch02-diagram-cdc10e8e6f5f-description">你输入: pi &quot;帮我改个 bug&quot;
+cli.ts
+解析命令行参数
+main.ts
+创建会话、选择运行模式（交互/打印/RPC）
+AgentSession
+组装工具、加载扩展
+Agent
+管理状态、跑循环
+agentLoop()
+核心循环开始</desc>
+<rect x="1" y="1" width="664" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.3 pi-coding-agent：管&quot;具体业务&quot;</text>
+<path d="M28,58 H638" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="│" d="M33,119 L33,104 M33,119 L33,134"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="2" data-column="20" data-glyph="←" d="M228,149 H238 M232,145 L228,149 L232,153"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="3" data-column="4" data-glyph="└" d="M73,179 L78,179 M73,179 L73,164"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="3" data-column="20" data-glyph="←" d="M228,179 H238 M232,175 L228,179 L232,183"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="4" data-column="8" data-glyph="└" d="M113,209 L118,209 M113,209 L113,194"/>
+<path data-row="4" data-column="9" data-glyph="─" d="M123,209 L128,209 M123,209 L118,209"/>
+<path data-row="4" data-column="10" data-glyph="─" d="M133,209 L138,209 M133,209 L128,209"/>
+<path data-row="4" data-column="28" data-glyph="←" d="M308,209 H318 M312,205 L308,209 L312,213"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="5" data-column="12" data-glyph="└" d="M153,239 L158,239 M153,239 L153,224"/>
+<path data-row="5" data-column="13" data-glyph="─" d="M163,239 L168,239 M163,239 L158,239"/>
+<path data-row="5" data-column="14" data-glyph="─" d="M173,239 L178,239 M173,239 L168,239"/>
+<path data-row="5" data-column="28" data-glyph="←" d="M308,239 H318 M312,235 L308,239 L312,243"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="16" data-glyph="└" d="M193,269 L198,269 M193,269 L193,254"/>
+<path data-row="6" data-column="17" data-glyph="─" d="M203,269 L208,269 M203,269 L198,269"/>
+<path data-row="6" data-column="18" data-glyph="─" d="M213,269 L218,269 M213,269 L208,269"/>
+<path data-row="6" data-column="33" data-glyph="←" d="M358,269 H368 M362,265 L358,269 L362,273"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">你输入: pi &quot;帮我改个 bug&quot;</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">cli.ts</text>
+<text data-row="2" data-column="22" x="248" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">解析命令行参数</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="70" lengthAdjust="spacingAndGlyphs" style="white-space:pre">main.ts</text>
+<text data-row="3" data-column="22" x="248" y="179" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">创建会话、选择运行模式（交互/打印/RPC）</text>
+<text data-row="4" data-column="12" x="148" y="209" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentSession</text>
+<text data-row="4" data-column="30" x="328" y="209" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">组装工具、加载扩展</text>
+<text data-row="5" data-column="16" x="188" y="239" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent</text>
+<text data-row="5" data-column="30" x="328" y="239" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">管理状态、跑循环</text>
+<text data-row="6" data-column="20" x="228" y="269" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agentLoop()</text>
+<text data-row="6" data-column="35" x="378" y="269" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">核心循环开始</text>
+</g>
+</svg>

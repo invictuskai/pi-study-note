@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="886" height="372" viewBox="0 0 886 372" role="img" aria-labelledby="ch02-diagram-1d6927c8311d-title ch02-diagram-1d6927c8311d-description">
+<title id="ch02-diagram-1d6927c8311d-title">1. 你打开了一个 Agent 代码库</title>
+<desc id="ch02-diagram-1d6927c8311d-description">repo/
+packages/
+ai/
+@earendil-works/pi-ai
+agent/
+@earendil-works/pi-agent-core
+coding-agent/
+@earendil-works/pi-coding-agent
+orchestrator/
+@earendil-works/pi-orchestrator（实验性，多 Agent 编排）
+tui/
+@earendil-works/pi-tui
+package.json
+根配置，npm workspaces
+tsconfig.json</desc>
+<rect x="1" y="1" width="884" height="370" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">1. 你打开了一个 Agent 代码库</text>
+<path d="M28,58 H858" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="0" data-glyph="│" d="M33,149 L33,134 M33,149 L33,164"/>
+<path data-row="2" data-column="4" data-glyph="├" d="M73,149 L73,134 M73,149 L78,149 M73,149 L73,164"/>
+<path data-row="2" data-column="5" data-glyph="─" d="M83,149 L88,149 M83,149 L78,149"/>
+<path data-row="2" data-column="6" data-glyph="─" d="M93,149 L98,149 M93,149 L88,149"/>
+<path data-row="2" data-column="25" data-glyph="←" d="M278,149 H288 M282,145 L278,149 L282,153"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="3" data-column="4" data-glyph="├" d="M73,179 L73,164 M73,179 L78,179 M73,179 L73,194"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="3" data-column="25" data-glyph="←" d="M278,179 H288 M282,175 L278,179 L282,183"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="4" data-column="4" data-glyph="├" d="M73,209 L73,194 M73,209 L78,209 M73,209 L73,224"/>
+<path data-row="4" data-column="5" data-glyph="─" d="M83,209 L88,209 M83,209 L78,209"/>
+<path data-row="4" data-column="6" data-glyph="─" d="M93,209 L98,209 M93,209 L88,209"/>
+<path data-row="4" data-column="25" data-glyph="←" d="M278,209 H288 M282,205 L278,209 L282,213"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="5" data-column="4" data-glyph="├" d="M73,239 L73,224 M73,239 L78,239 M73,239 L73,254"/>
+<path data-row="5" data-column="5" data-glyph="─" d="M83,239 L88,239 M83,239 L78,239"/>
+<path data-row="5" data-column="6" data-glyph="─" d="M93,239 L98,239 M93,239 L88,239"/>
+<path data-row="5" data-column="25" data-glyph="←" d="M278,239 H288 M282,235 L278,239 L282,243"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="4" data-glyph="└" d="M73,269 L78,269 M73,269 L73,254"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="6" data-column="6" data-glyph="─" d="M93,269 L98,269 M93,269 L88,269"/>
+<path data-row="6" data-column="25" data-glyph="←" d="M278,269 H288 M282,265 L278,269 L282,273"/>
+<path data-row="7" data-column="0" data-glyph="├" d="M33,299 L33,284 M33,299 L38,299 M33,299 L33,314"/>
+<path data-row="7" data-column="1" data-glyph="─" d="M43,299 L48,299 M43,299 L38,299"/>
+<path data-row="7" data-column="2" data-glyph="─" d="M53,299 L58,299 M53,299 L48,299"/>
+<path data-row="7" data-column="25" data-glyph="←" d="M278,299 H288 M282,295 L278,299 L282,303"/>
+<path data-row="8" data-column="0" data-glyph="└" d="M33,329 L38,329 M33,329 L33,314"/>
+<path data-row="8" data-column="1" data-glyph="─" d="M43,329 L48,329 M43,329 L38,329"/>
+<path data-row="8" data-column="2" data-glyph="─" d="M53,329 L58,329 M53,329 L48,329"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="50" lengthAdjust="spacingAndGlyphs" style="white-space:pre">repo/</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">packages/</text>
+<text data-row="2" data-column="8" x="108" y="149" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ai/</text>
+<text data-row="2" data-column="27" x="298" y="149" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">@earendil-works/pi-ai</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent/</text>
+<text data-row="3" data-column="27" x="298" y="179" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">@earendil-works/pi-agent-core</text>
+<text data-row="4" data-column="8" x="108" y="209" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">coding-agent/</text>
+<text data-row="4" data-column="27" x="298" y="209" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">@earendil-works/pi-coding-agent</text>
+<text data-row="5" data-column="8" x="108" y="239" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">orchestrator/</text>
+<text data-row="5" data-column="27" x="298" y="239" textLength="560" lengthAdjust="spacingAndGlyphs" style="white-space:pre">@earendil-works/pi-orchestrator（实验性，多 Agent 编排）</text>
+<text data-row="6" data-column="8" x="108" y="269" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tui/</text>
+<text data-row="6" data-column="27" x="298" y="269" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">@earendil-works/pi-tui</text>
+<text data-row="7" data-column="4" x="68" y="299" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">package.json</text>
+<text data-row="7" data-column="27" x="298" y="299" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">根配置，npm workspaces</text>
+<text data-row="8" data-column="4" x="68" y="329" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tsconfig.json</text>
+</g>
+</svg>

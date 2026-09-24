@@ -159,18 +159,16 @@ async function renderPdf(browser, url, outPath, expectedSvg = 0) {
 }
 
 // ============================================================
-// 用 frontmatter.diagrams 推断每章 SVG 期望计数
+// 按正文中的 Diagram 实例计数，包含新增矢量图
 // ============================================================
 function inferExpectedSvgCount(slug, variant) {
-  // 直接 grep mdx frontmatter 的 diagrams 数组长度
+  // frontmatter 只记录交互锚点，不能作为全部配图数量。
   const isPython = variant === 'python';
   const mdxName = isPython ? `${slug}.python.mdx` : `${slug}.mdx`;
   const mdxPath = path.join(BOOK_ROOT, 'src/content/modules', mdxName);
   if (!fs.existsSync(mdxPath)) return 0;
   const content = fs.readFileSync(mdxPath, 'utf8');
-  const m = content.match(/diagrams:\s*\n((?:\s+-[\s\S]*?)(?=\n[a-zA-Z]|\n---|\n*$))/);
-  if (!m) return 0;
-  return (m[1].match(/^\s+-\s/gm) || []).length;
+  return (content.match(/^<Diagram\s+file=/gm) || []).length;
 }
 
 // ============================================================

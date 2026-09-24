@@ -101,6 +101,7 @@ const tsCounterpartUrl = isPython ? getCounterpartUrl(entry) : null;
   }
 
   .module-main {
+    min-width: 0;
     width: 100%;
     max-width: var(--read-width);
     margin-inline: auto;
@@ -181,13 +182,13 @@ const tsCounterpartUrl = isPython ? getCounterpartUrl(entry) : null;
 
   @media (max-width: 1279px) {
     .page-grid {
-      grid-template-columns: var(--toc-width) 1fr;
+      grid-template-columns: var(--toc-width) minmax(0, 1fr);
     }
     .outline-right { display: none; }
   }
   @media (max-width: 767px) {
     .page-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
     .toc-left { display: none; }
     body.toc-open .toc-left {

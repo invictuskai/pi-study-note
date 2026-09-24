@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="826" height="282" viewBox="0 0 826 282" role="img" aria-labelledby="ch10-diagram-c157a8271893-title ch10-diagram-c157a8271893-description">
+<title id="ch10-diagram-c157a8271893-title">第二步：按类型分派处理</title>
+<desc id="ch10-diagram-c157a8271893-description">e1 (model_change)
+更新状态变量 model = &quot;claude-sonnet-4-6&quot;，不进 messages
+e2 (user message)
+推入 messages 数组
+e6 (user message)
+推入 messages 数组
+e7 (assistant + ToolCall)
+推入 messages 数组
+e8 (toolResult)
+推入 messages 数组
+e9 (assistant)
+推入 messages 数组</desc>
+<rect x="1" y="1" width="824" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第二步：按类型分派处理</text>
+<path d="M28,58 H798" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="20" data-glyph="→" d="M228,89 H238 M234,85 L238,89 L234,93"/>
+<path data-row="1" data-column="20" data-glyph="→" d="M228,119 H238 M234,115 L238,119 L234,123"/>
+<path data-row="2" data-column="20" data-glyph="→" d="M228,149 H238 M234,145 L238,149 L234,153"/>
+<path data-row="3" data-column="26" data-glyph="→" d="M288,179 H298 M294,175 L298,179 L294,183"/>
+<path data-row="4" data-column="20" data-glyph="→" d="M228,209 H238 M234,205 L238,209 L234,213"/>
+<path data-row="5" data-column="20" data-glyph="→" d="M228,239 H238 M234,235 L238,239 L234,243"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (model_change)</text>
+<text data-row="0" data-column="22" x="248" y="89" textLength="550" lengthAdjust="spacingAndGlyphs" style="white-space:pre">更新状态变量 model = &quot;claude-sonnet-4-6&quot;，不进 messages</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (user message)</text>
+<text data-row="1" data-column="22" x="248" y="119" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">推入 messages 数组</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e6 (user message)</text>
+<text data-row="2" data-column="22" x="248" y="149" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">推入 messages 数组</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e7 (assistant + ToolCall)</text>
+<text data-row="3" data-column="28" x="308" y="179" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">推入 messages 数组</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e8 (toolResult)</text>
+<text data-row="4" data-column="22" x="248" y="209" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">推入 messages 数组</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e9 (assistant)</text>
+<text data-row="5" data-column="22" x="248" y="239" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">推入 messages 数组</text>
+</g>
+</svg>

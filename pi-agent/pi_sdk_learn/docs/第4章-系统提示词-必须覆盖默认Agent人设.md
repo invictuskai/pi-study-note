@@ -25,13 +25,7 @@ Pi Agent 默认是个**通用编程助手**——它的系统提示词里，写�
 
 看源码（`buildSystemPrompt()`），pi-agent 最终发给 LLM 的系统提示词，是这么**五段拼装**出来的：
 
-```
-最终提示词 = ① 基础人设        ← 模型的「角色设定」
-           + ② 追加规则        ← 在人设后追加的几段规则
-           + ③ 项目上下文      ← 从 AGENTS.md / CLAUDE.md 读
-           + ④ 技能描述        ← 从 .pi/skills/*/SKILL.md 读
-           + ⑤ 工作目录        ← SDK 固定追加的一行
-```
+![二、先认识：pi-agent 的系统提示词注入机制](assets/diagrams/pr04-diagram-0fee688fbd5c.svg)
 
 逐段看它们从哪来、会不会干扰你：
 
@@ -178,13 +172,7 @@ const loader = new DefaultResourceLoader({
 
 ### 4.1 静态部分：本地文件
 
-```
-prompts/
-└── analyst/
-    ├── persona.md          ← 人设（你是谁）
-    ├── rules.md            ← 业务规则（怎么干活）
-    └── output-format.md    ← 输出格式（怎么回答）
-```
+![4.1 静态部分：本地文件](assets/diagrams/pr04-diagram-bc7799bed0e8.svg)
 
 `prompts/analyst/persona.md`：
 

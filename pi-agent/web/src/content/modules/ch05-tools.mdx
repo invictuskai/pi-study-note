@@ -98,12 +98,7 @@ export interface AgentTool<TParameters, TDetails>
 
 于是出现了第三层 `ToolDefinition`。它的 `execute` 函数比 `AgentTool` 多了一个参数——`ctx: ExtensionContext`，让工具执行时可以访问当前会话状态：
 
-```
-AgentTool.execute:     (toolCallId, params, signal, onUpdate) => ...
-ToolDefinition.execute: (toolCallId, params, signal, onUpdate, ctx) => ...
-                                                                   ^^^
-                                                    多了 ExtensionContext（会话上下文）
-```
+<Diagram file="/assets/diagrams/ch05-diagram-b831829f0271.svg" caption="第三层：ToolDefinition——产品层再加东西" id="ch05-diagram-b831829f0271" layout="preserve" />
 
 ToolDefinition 还新增了 `promptSnippet`（系统提示词片段）、`renderCall`（调用时渲染）、`renderResult`（结果时渲染）等 UI 相关字段。
 
@@ -164,35 +159,7 @@ export function wrapToolDefinition(definition, ctxFactory?) {
 
 ### Pi 的答案：五步管道
 
-```
-LLM 输出 ToolCall
-    │
-    ▼
-┌──────────────────────────────────────────────────┐
-│ 第 1 步：prepareArguments（参数预处理）           │
-│   处理 LLM 的参数怪癖                            │
-│   如：把字符串化的数组解析回真正的数组             │
-├──────────────────────────────────────────────────┤
-│ 第 2 步：validateToolArguments（Schema 验证）     │
-│   用 TypeBox Schema 做运行时类型检查              │
-│   如：path 是 string，不是 number                │
-├──────────────────────────────────────────────────┤
-│ 第 3 步：beforeToolCall（前置钩子）              │
-│   产品层的权限拦截，可以阻止执行                   │
-│   返回 { block: true, reason: "危险命令"}         │
-├──────────────────────────────────────────────────┤
-│ 第 4 步：tool.execute（实际执行）                 │
-│   调用工具的 execute 函数                         │
-│   支持 onUpdate 流式进度回调                      │
-├──────────────────────────────────────────────────┤
-│ 第 5 步：afterToolCall（后置钩子）               │
-│   产品层的结果后处理，可以修改返回值               │
-│   可以替换 content、details、isError              │
-└──────────────────────────────────────────────────┘
-    │
-    ▼
-ToolResultMessage
-```
+<Diagram file="/assets/diagrams/ch05-diagram-df27f1c27dec.svg" caption="Pi 的答案：五步管道" id="ch05-diagram-df27f1c27dec" layout="preserve" />
 
 每一步都有明确的职责和退出机制。前 3 步是"准备工作"——任何一步失败都不会执行工具。第 4 步是"真正干活"。第 5 步是"收尾"。我们逐步展开。
 
@@ -218,10 +185,7 @@ ToolResultMessage
 
 经过预处理后，参数还要过一道 TypeBox 的运行时类型检查。比如 `path` 定义为 string，但模型传了 number：
 
-```
-Before：{ path: 12345 }
-After： 验证失败 → 报错 → 不执行工具
-```
+<Diagram file="/assets/diagrams/ch05-diagram-d257d3799655.svg" caption="第 2 步：validateToolArguments——Schema 验证" id="ch05-diagram-d257d3799655" layout="preserve" />
 
 验证错误会被 `prepareToolCall` 的 try-catch 捕获，生成一个错误 ToolResultMessage。**工具永远不会收到类型错误的参数。**
 
@@ -316,12 +280,7 @@ assistantMessage.content = [
 
 如果三个 ToolCall 中有两个是 edit（修改同一个文件），并行执行就会互相覆盖：
 
-```
-ToolCall 1: edit { path: "app.ts", oldText: "v1", newText: "v2" }
-ToolCall 2: edit { path: "app.ts", oldText: "v3", newText: "v4" }
-                     ^^^^^^^^
-                     同一个文件！并行执行 → ToolCall 1 的修改被 ToolCall 2 覆盖
-```
+<Diagram file="/assets/diagrams/ch05-diagram-29236ec094f5.svg" caption="但并行不是无脑 Promise.all" id="ch05-diagram-29236ec094f5" layout="preserve" />
 
 所以 Pi 需要一种机制来判断"哪些工具能并行，哪些必须串行"。
 
@@ -348,27 +307,7 @@ return executeToolCallsParallel(...);
 
 当判定可以并行时，Pi 不是简单地 `Promise.all` 跑完就完——它把执行分成了三个阶段：
 
-```
-阶段 1 - 准备（顺序执行）：
-  ToolCall 1: emit_start → prepareArguments → validate → beforeToolCall
-  ToolCall 2: emit_start → prepareArguments → validate → beforeToolCall
-  ToolCall 3: emit_start → prepareArguments → validate → beforeToolCall
-  // 准备阶段必须顺序，因为 beforeToolCall 可能有副作用（如修改全局状态）
-
-阶段 2 - 执行（并行）：
-  ToolCall 1: execute ────────────────┐
-  ToolCall 2: execute ───────────────┤ Promise.all
-  ToolCall 3: execute ───────────────┘
-  // 只有 tool.execute() 并行
-
-阶段 3 - 事件发送（有序）：
-  ToolCall 2: emit_end    ← 先完成的先发 tool_execution_end
-  ToolCall 1: emit_end
-  ToolCall 3: emit_end
-  ToolCall 1: emit_result ← 但 ToolResultMessage 按调用顺序发
-  ToolCall 2: emit_result
-  ToolCall 3: emit_result
-```
+<Diagram file="/assets/diagrams/ch05-diagram-9a8a8afe30e0.svg" caption="并行执行的三阶段设计" id="ch05-diagram-9a8a8afe30e0" layout="preserve" />
 
 为什么这么设计？因为**准备阶段可能有副作用**（beforeToolCall 可能修改共享状态），必须顺序执行。而**结果消息的顺序模型依赖调用顺序**（模型先要求 read 再要求 grep，消息就得按这个顺序排列），所以 ToolResultMessage 必须有序。只有 `tool.execute()` 这一步真正并行。
 
@@ -451,22 +390,7 @@ async function executePreparedToolCall(prepared, signal, emit) {
 
 下面这个对比能让你看清"异常被翻译成消息"的本质：
 
-```
-工具抛出的原始异常（catch 之前）：        编码后的 ToolResultMessage（catch 之后）：
-Error: ENOENT: no such file or dir       {
-  → 一路穿透管道                            role: "toolResult",
-  → 打断 Agent Loop                         toolCallId: "call_abc",
-  → 事件序列不完整，UI 卡死                  toolName: "read",
-                                            content: [{
-                                              type: "text",
-                                              text: "ENOENT: no such file or dir"
-                                            }],
-                                            isError: true   ← 唯一标记
-                                          }
-                                          → 追加到对话历史
-                                          → 下一轮发给模型
-                                          → 模型看到后自己决定怎么办
-```
+<Diagram file="/assets/diagrams/ch05-diagram-9b18e54fd012.svg" caption="异常 → 消息：编码前后对比" id="ch05-diagram-9b18e54fd012" layout="preserve" />
 
 异常和消息的区别不在于"内容是什么"——两者描述的是同一件事——而在于**接收者是谁**。异常的接收者是调用栈（外层框架），它会打断循环；消息的接收者是模型，它会消化错误然后继续。Pi 选择了把异常翻译成消息，让"工具出错"成为模型可见的、可处理的正常信息流。
 
@@ -497,15 +421,7 @@ Error: ENOENT: no such file or dir       {
 
 **绝对不行。** 错误消息的内容直接决定模型能不能纠错。比较下面两种情况：
 
-```
-模糊错误（不可取）：                      具体 error.message（推荐）：
-{                                        {
-  content: [{ text: "Read failed" }]       content: [{
-  isError: true                              text: "Offset 200 is beyond end of file (100 lines total)"
-}                                          }]
-                                           isError: true
-                                         }
-```
+<Diagram file="/assets/diagrams/ch05-diagram-494c63c0517c.svg" caption="关键细节：错误描述越具体，模型纠错能力越强" id="ch05-diagram-494c63c0517c" layout="preserve" />
 
 模型看到 "Read failed"，只能盲目重试或放弃；看到 "Offset 200 is beyond end of file (100 lines total)"，能立刻明白"哦，文件只有 100 行，我 offset 给错了"，下次直接给 `offset: 50` 就成了。**具体的错误描述等于给模型一份"怎么改才对"的提示**。
 
@@ -553,16 +469,7 @@ throw new Error(`Could not edit file: ${path}. ${errorMessage}.`);
 
 这就是 Pi 的真实设计：**两层错误处理，分层负责**。
 
-```
-第一层（工具内部，主动）：识别已知错误类型，包装成具体可读的描述
-└── Read/Edit/Bash 都是这样——Bash 甚至把"已输出的内容"附在错误里
-└── 目的：给模型提供"为什么失败、怎么改才对"的具体线索
-
-第二层（框架兜底，被动）：executePreparedToolCall 的 catch
-└── 只在工具没识别出来时生效
-└── 不创造新的错误描述，只把 error.message 原样透传给模型
-└── 目的：保证任何异常都不会穿透到 Agent Loop
-```
+<Diagram file="/assets/diagrams/ch05-diagram-ef972b31aa90.svg" caption="Pi 的真实做法：两层错误处理，分层负责" id="ch05-diagram-ef972b31aa90" layout="preserve" />
 
 `executePreparedToolCall` 里的兜底 catch 用的就是工具自己抛的 `error.message`：
 
@@ -658,15 +565,7 @@ execute: async (toolCallId, params, signal, onUpdate, ctx) => {
 
 **关键区别：**
 
-```
-直接调 fs（硬编码）：               通过 Operations 接口（可替换）：
-┌──────────────────────┐            ┌──────────────────────┐
-│ Read 工具             │            │ Read 工具             │
-│ fs.readFile(path)    │            │ ops.readFile(path)   │
-│ 只能读本地文件        │            │ 本地 / SSH / Mock     │
-│ 测试必须创建真实文件   │            │ 注入什么就调什么      │
-└──────────────────────┘            └──────────────────────┘
-```
+<Diagram file="/assets/diagrams/ch05-diagram-86c163ba1f84.svg" caption="解法：工具不直接调系统 API，而是调接口" id="ch05-diagram-86c163ba1f84" layout="preserve" />
 
 Operations 在**工具创建时**被闭包捕获。后续每次执行都用同一套实现。不同环境注入不同的 Operations 实现，工具代码一行不用改：
 
@@ -731,21 +630,7 @@ Read 工具不需要写文件，所以 `ReadOperations` 没有 `writeFile`。Gre
 
 现在你有完整答案了：
 
-```
-模型输出 ToolCall { name: "read", arguments: { path: "src/main.ts" } }
-    │
-    ├── 第 1 步：prepareArguments 处理模型怪癖
-    ├── 第 2 步：validateToolArguments 做 Schema 验证
-    ├── 第 3 步：beforeToolCall 检查权限
-    ├── 第 4 步：tool.execute 通过 Operations 接口读文件
-    │              └── ops.readFile() → 不直接调 fs
-    └── 第 5 步：afterToolCall 做结果后处理
-    │
-    ▼
-ToolResultMessage { content: 文件内容, isError: false }
-    │
-    ▼ 追加到对话历史，下一轮发给模型
-```
+<Diagram file="/assets/diagrams/ch05-diagram-6224f7d27967.svg" caption="七、收尾" id="ch05-diagram-6224f7d27967" layout="preserve" />
 
 工具不是简单的函数调用，而是一条受控管道。参数验证挡住垃圾数据，钩子拦截住危险操作，Operations 抽象让同一份代码既能本地跑也能远程跑。所有工具错误——从参数验证失败到 execute 抛出的未知异常——都被翻译成一条 `isError: true` 的 ToolResultMessage 发给模型，让模型自己决定下一步，循环永远不会因为工具出错而崩。
 

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="916" height="282" viewBox="0 0 916 282" role="img" aria-labelledby="pr02-diagram-d6c1c14a53e5-title pr02-diagram-d6c1c14a53e5-description">
+<title id="pr02-diagram-d6c1c14a53e5-title">2.4 创建会话：createAgentSession 内部做了什么</title>
+<desc id="pr02-diagram-d6c1c14a53e5-description">createAgentSession() 内部：
+1. 加载 ModelRuntime（读 auth.json / models.json，合并内置 Provider）
+2. 初始化 SettingsManager（读 ~/.pi/agent/settings.json，含压缩策略、retry 等）
+3. 初始化 SessionManager（默认把会话持久化到 ~/.pi/agent/sessions/&lt;encoded-cwd&gt;/）
+4. 加载 DefaultResourceLoader（发现 skills / extensions / AGENTS.md）
+5. 创建 Agent 实例，默认启用四个内置工具：read / bash / edit / write</desc>
+<rect x="1" y="1" width="914" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.4 创建会话：createAgentSession 内部做了什么</text>
+<path d="M28,58 H888" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="3" data-column="0" data-glyph="├" d="M33,179 L33,164 M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="4" data-column="0" data-glyph="├" d="M33,209 L33,194 M33,209 L38,209 M33,209 L33,224"/>
+<path data-row="4" data-column="1" data-glyph="─" d="M43,209 L48,209 M43,209 L38,209"/>
+<path data-row="4" data-column="2" data-glyph="─" d="M53,209 L58,209 M53,209 L48,209"/>
+<path data-row="5" data-column="0" data-glyph="└" d="M33,239 L38,239 M33,239 L33,224"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">createAgentSession() 内部：</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="690" lengthAdjust="spacingAndGlyphs" style="white-space:pre">1. 加载 ModelRuntime（读 auth.json / models.json，合并内置 Provider）</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="790" lengthAdjust="spacingAndGlyphs" style="white-space:pre">2. 初始化 SettingsManager（读 ~/.pi/agent/settings.json，含压缩策略、retry 等）</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="820" lengthAdjust="spacingAndGlyphs" style="white-space:pre">3. 初始化 SessionManager（默认把会话持久化到 ~/.pi/agent/sessions/&lt;encoded-cwd&gt;/）</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="690" lengthAdjust="spacingAndGlyphs" style="white-space:pre">4. 加载 DefaultResourceLoader（发现 skills / extensions / AGENTS.md）</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="680" lengthAdjust="spacingAndGlyphs" style="white-space:pre">5. 创建 Agent 实例，默认启用四个内置工具：read / bash / edit / write</text>
+</g>
+</svg>

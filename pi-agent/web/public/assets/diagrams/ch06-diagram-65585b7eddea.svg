@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="946" height="1182" viewBox="0 0 946 1182" role="img" aria-labelledby="ch06-diagram-65585b7eddea-title ch06-diagram-65585b7eddea-description">
+<title id="ch06-diagram-65585b7eddea-title">八、完整数据流：从用户操作到 LLM 看到的消息</title>
+<desc id="ch06-diagram-65585b7eddea-description">用户在终端输入 !ls -la
+[1] 创建消息
+BashExecutionMessage { role: &quot;bashExecution&quot;, command: &quot;ls -la&quot;, output: &quot;...&quot;, ... }
+[2] 存入 context.messages: AgentMessage[]
+[...原有消息, 新的 BashExecutionMessage]
+[3] Agent Loop 准备调用 LLM（第3章讲过的内层循环）
+[4] transformContext（可选）
+输入/输出都是 AgentMessage[]
+裁剪、注入、压缩（第8章详讲 transformContext、第9章详讲 Compaction）
+[5] convertToLlm（必须）
+AgentMessage[]
+Message[]
+BashExecutionMessage
+UserMessage
+excludeFromContext
+过滤掉
+[6] LLM 收到
+llmContext.messages = [
+...之前的消息,
+{ role: &quot;user&quot;, content: &quot;Ran `ls -la`\n```\n...\n```&quot; }
+]
+[7] LLM 回复
+产生新的 AssistantMessage
+可能触发工具调用
+ToolResultMessage（第5章的五步管道）
+回到 [2]，继续循环</desc>
+<rect x="1" y="1" width="944" height="1180" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">八、完整数据流：从用户操作到 LLM 看到的消息</text>
+<path d="M28,58 H918" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="8" data-glyph="│" d="M113,119 L113,104 M113,119 L113,134"/>
+<path data-row="2" data-column="8" data-glyph="▼" d="M113,134 V164 M109,158 L113,164 L117,158"/>
+<path data-row="5" data-column="8" data-glyph="│" d="M113,239 L113,224 M113,239 L113,254"/>
+<path data-row="6" data-column="8" data-glyph="▼" d="M113,254 V284 M109,278 L113,284 L117,278"/>
+<path data-row="9" data-column="8" data-glyph="│" d="M113,359 L113,344 M113,359 L113,374"/>
+<path data-row="10" data-column="8" data-glyph="▼" d="M113,374 V404 M109,398 L113,404 L117,398"/>
+<path data-row="12" data-column="8" data-glyph="│" d="M113,449 L113,434 M113,449 L113,464"/>
+<path data-row="13" data-column="8" data-glyph="▼" d="M113,464 V494 M109,488 L113,494 L117,488"/>
+<path data-row="17" data-column="8" data-glyph="│" d="M113,599 L113,584 M113,599 L113,614"/>
+<path data-row="18" data-column="8" data-glyph="▼" d="M113,614 V644 M109,638 L113,644 L117,638"/>
+<path data-row="20" data-column="19" data-glyph="→" d="M218,689 H228 M224,685 L228,689 L224,693"/>
+<path data-row="21" data-column="25" data-glyph="→" d="M278,719 H288 M284,715 L288,719 L284,723"/>
+<path data-row="22" data-column="23" data-glyph="→" d="M258,749 H268 M264,745 L268,749 L264,753"/>
+<path data-row="23" data-column="8" data-glyph="│" d="M113,779 L113,764 M113,779 L113,794"/>
+<path data-row="24" data-column="8" data-glyph="▼" d="M113,794 V824 M109,818 L113,824 L117,818"/>
+<path data-row="30" data-column="8" data-glyph="│" d="M113,989 L113,974 M113,989 L113,1004"/>
+<path data-row="31" data-column="8" data-glyph="▼" d="M113,1004 V1034 M109,1028 L113,1034 L117,1028"/>
+<path data-row="33" data-column="4" data-glyph="→" d="M68,1079 H78 M74,1075 L78,1079 L74,1083"/>
+<path data-row="34" data-column="4" data-glyph="→" d="M68,1109 H78 M74,1105 L78,1109 L74,1113"/>
+<path data-row="34" data-column="23" data-glyph="→" d="M258,1109 H268 M264,1105 L268,1109 L264,1113"/>
+<path data-row="35" data-column="4" data-glyph="→" d="M68,1139 H78 M74,1135 L78,1139 L74,1143"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户在终端输入 !ls -la</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[1] 创建消息</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="850" lengthAdjust="spacingAndGlyphs" style="white-space:pre">BashExecutionMessage { role: &quot;bashExecution&quot;, command: &quot;ls -la&quot;, output: &quot;...&quot;, ... }</text>
+<text data-row="7" data-column="0" x="28" y="299" textLength="410" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[2] 存入 context.messages: AgentMessage[]</text>
+<text data-row="8" data-column="4" x="68" y="329" textLength="400" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[...原有消息, 新的 BashExecutionMessage]</text>
+<text data-row="11" data-column="0" x="28" y="419" textLength="500" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[3] Agent Loop 准备调用 LLM（第3章讲过的内层循环）</text>
+<text data-row="14" data-column="0" x="28" y="509" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[4] transformContext（可选）</text>
+<text data-row="15" data-column="4" x="68" y="539" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">输入/输出都是 AgentMessage[]</text>
+<text data-row="16" data-column="4" x="68" y="569" textLength="680" lengthAdjust="spacingAndGlyphs" style="white-space:pre">裁剪、注入、压缩（第8章详讲 transformContext、第9章详讲 Compaction）</text>
+<text data-row="19" data-column="0" x="28" y="659" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[5] convertToLlm（必须）</text>
+<text data-row="20" data-column="4" x="68" y="689" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">AgentMessage[]</text>
+<text data-row="20" data-column="21" x="238" y="689" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Message[]</text>
+<text data-row="21" data-column="4" x="68" y="719" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">BashExecutionMessage</text>
+<text data-row="21" data-column="27" x="298" y="719" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">UserMessage</text>
+<text data-row="22" data-column="4" x="68" y="749" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">excludeFromContext</text>
+<text data-row="22" data-column="25" x="278" y="749" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">过滤掉</text>
+<text data-row="25" data-column="0" x="28" y="839" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[6] LLM 收到</text>
+<text data-row="26" data-column="4" x="68" y="869" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">llmContext.messages = [</text>
+<text data-row="27" data-column="8" x="108" y="899" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...之前的消息,</text>
+<text data-row="28" data-column="8" x="108" y="929" textLength="560" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ role: &quot;user&quot;, content: &quot;Ran `ls -la`\n```\n...\n```&quot; }</text>
+<text data-row="29" data-column="4" x="68" y="959" textLength="10" lengthAdjust="spacingAndGlyphs" style="white-space:pre">]</text>
+<text data-row="32" data-column="0" x="28" y="1049" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[7] LLM 回复</text>
+<text data-row="33" data-column="6" x="88" y="1079" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">产生新的 AssistantMessage</text>
+<text data-row="34" data-column="6" x="88" y="1109" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">可能触发工具调用</text>
+<text data-row="34" data-column="25" x="278" y="1109" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ToolResultMessage（第5章的五步管道）</text>
+<text data-row="35" data-column="6" x="88" y="1139" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">回到 [2]，继续循环</text>
+</g>
+</svg>

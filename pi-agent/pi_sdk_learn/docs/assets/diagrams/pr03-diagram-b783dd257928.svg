@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="636" height="222" viewBox="0 0 636 222" role="img" aria-labelledby="pr03-diagram-b783dd257928-title pr03-diagram-b783dd257928-description">
+<title id="pr03-diagram-b783dd257928-title">4.1 用 models.json 接 OpenAI 兼容服务</title>
+<desc id="pr03-diagram-b783dd257928-description">完整端点:      http://localhost:11434/v1/chat/completions
+baseUrl 应为:  http://localhost:11434/v1
+SDK 自动拼接 /chat/completions</desc>
+<rect x="1" y="1" width="634" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">4.1 用 models.json 接 OpenAI 兼容服务</text>
+<path d="M28,58 H608" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="39" data-glyph="↑" d="M423,134 V164 M419,140 L423,134 L427,140"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="570" lengthAdjust="spacingAndGlyphs" style="white-space:pre">完整端点:      http://localhost:11434/v1/chat/completions</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="400" lengthAdjust="spacingAndGlyphs" style="white-space:pre">baseUrl 应为:  http://localhost:11434/v1</text>
+<text data-row="3" data-column="28" x="308" y="179" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">SDK 自动拼接 /chat/completions</text>
+</g>
+</svg>

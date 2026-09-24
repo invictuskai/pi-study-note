@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="576" height="612" viewBox="0 0 576 612" role="img" aria-labelledby="ch09-diagram-f37213de4d78-title ch09-diagram-f37213de4d78-description">
+<title id="ch09-diagram-f37213de4d78-title">摘要生成：一次 LLM 调用</title>
+<desc id="ch09-diagram-f37213de4d78-description">原始消息（AgentMessage[]）
+序列化
+&quot;[User]: 帮我修 auth.ts
+[Assistant tool calls]: read(path=\&quot;auth.ts\&quot;)
+[Tool result]: export function authenticate() {...}
+[Assistant]: 找到问题了，缺少 salt...&quot;
+LLM 调用（用摘要 prompt）
+结构化摘要
+## Goal
+Fix authentication bug in auth.ts
+## Progress
+### Done
+- [x] Read auth.ts, identified missing salt
+...</desc>
+<rect x="1" y="1" width="574" height="610" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">摘要生成：一次 LLM 调用</text>
+<path d="M28,58 H548" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="4" data-glyph="│" d="M73,119 L73,104 M73,119 L73,134"/>
+<path data-row="2" data-column="4" data-glyph="▼" d="M73,134 V164 M69,158 L73,164 L77,158"/>
+<path data-row="7" data-column="4" data-glyph="│" d="M73,299 L73,284 M73,299 L73,314"/>
+<path data-row="8" data-column="4" data-glyph="▼" d="M73,314 V344 M69,338 L73,344 L77,338"/>
+<path data-row="9" data-column="4" data-glyph="│" d="M73,359 L73,344 M73,359 L73,374"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">原始消息（AgentMessage[]）</text>
+<text data-row="2" data-column="6" x="88" y="149" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">序列化</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">&quot;[User]: 帮我修 auth.ts</text>
+<text data-row="4" data-column="1" x="38" y="209" textLength="460" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[Assistant tool calls]: read(path=\&quot;auth.ts\&quot;)</text>
+<text data-row="5" data-column="1" x="38" y="239" textLength="510" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[Tool result]: export function authenticate() {...}</text>
+<text data-row="6" data-column="1" x="38" y="269" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[Assistant]: 找到问题了，缺少 salt...&quot;</text>
+<text data-row="8" data-column="6" x="88" y="329" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 调用（用摘要 prompt）</text>
+<text data-row="10" data-column="0" x="28" y="389" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">结构化摘要</text>
+<text data-row="11" data-column="4" x="68" y="419" textLength="70" lengthAdjust="spacingAndGlyphs" style="white-space:pre">## Goal</text>
+<text data-row="12" data-column="4" x="68" y="449" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Fix authentication bug in auth.ts</text>
+<text data-row="13" data-column="4" x="68" y="479" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">## Progress</text>
+<text data-row="14" data-column="4" x="68" y="509" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">### Done</text>
+<text data-row="15" data-column="4" x="68" y="539" textLength="430" lengthAdjust="spacingAndGlyphs" style="white-space:pre">- [x] Read auth.ts, identified missing salt</text>
+<text data-row="16" data-column="4" x="68" y="569" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...</text>
+</g>
+</svg>

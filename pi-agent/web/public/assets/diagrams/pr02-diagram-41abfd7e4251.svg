@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="536" height="372" viewBox="0 0 536 372" role="img" aria-labelledby="pr02-diagram-41abfd7e4251-title pr02-diagram-41abfd7e4251-description">
+<title id="pr02-diagram-41abfd7e4251-title">2.6 发问：prompt</title>
+<desc id="pr02-diagram-41abfd7e4251-description">prompt(&quot;当前目录有哪些文件？&quot;)
+[第 1 轮] LLM 思考
+决定调 bash 工具（执行 ls）
+工具返回文件列表
+[第 2 轮] LLM 根据工具结果生成最终回复
+prompt() resolve</desc>
+<rect x="1" y="1" width="534" height="370" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.6 发问：prompt</text>
+<path d="M28,58 H508" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="2" data-glyph="↓" d="M53,104 V134 M49,128 L53,134 L57,128"/>
+<path data-row="2" data-column="19" data-glyph="→" d="M218,149 H228 M224,145 L228,149 L224,153"/>
+<path data-row="3" data-column="2" data-glyph="↓" d="M53,164 V194 M49,188 L53,194 L57,188"/>
+<path data-row="5" data-column="2" data-glyph="↓" d="M53,224 V254 M49,248 L53,254 L57,248"/>
+<path data-row="7" data-column="2" data-glyph="↓" d="M53,284 V314 M49,308 L53,314 L57,308"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prompt(&quot;当前目录有哪些文件？&quot;)</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[第 1 轮] LLM 思考</text>
+<text data-row="2" data-column="21" x="238" y="149" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">决定调 bash 工具（执行 ls）</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">工具返回文件列表</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[第 2 轮] LLM 根据工具结果生成最终回复</text>
+<text data-row="8" data-column="0" x="28" y="329" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prompt() resolve</text>
+</g>
+</svg>

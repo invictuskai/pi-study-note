@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726" height="402" viewBox="0 0 726 402" role="img" aria-labelledby="pr02-diagram-fb81747c068b-title pr02-diagram-fb81747c068b-description">
+<title id="pr02-diagram-fb81747c068b-title">一张图定位：后面每章在动哪里</title>
+<desc id="pr02-diagram-fb81747c068b-description">Session      prompt/subscribe/dispose         （第4~6章都不动这里）
+Runtime      ModelRuntime
+第3章 接模型
+ResourceLoader(系统提示词/...)
+第4章 配人设
+SessionManager / SettingsManager（进阶，本教程不展开）
+ExtensionRuntime   pi.on 钩子
+第6章 挂事件钩子
+pi.registerTool
+第5章 注册业务工具
+Tool         内置 / customTools / 扩展注册
+第5章 定义工具</desc>
+<rect x="1" y="1" width="724" height="400" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">一张图定位：后面每章在动哪里</text>
+<path d="M28,58 H698" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="3" data-glyph="│" d="M63,119 L63,104 M63,119 L63,134"/>
+<path data-row="2" data-column="28" data-glyph="─" d="M313,149 L318,149 M313,149 L308,149"/>
+<path data-row="2" data-column="29" data-glyph="─" d="M323,149 L328,149 M323,149 L318,149"/>
+<path data-row="2" data-column="30" data-glyph="─" d="M333,149 L338,149 M333,149 L328,149"/>
+<path data-row="2" data-column="31" data-glyph="─" d="M343,149 L348,149 M343,149 L338,149"/>
+<path data-row="2" data-column="32" data-glyph="─" d="M353,149 L358,149 M353,149 L348,149"/>
+<path data-row="2" data-column="33" data-glyph="─" d="M363,149 L368,149 M363,149 L358,149"/>
+<path data-row="2" data-column="34" data-glyph="─" d="M373,149 L378,149 M373,149 L368,149"/>
+<path data-row="2" data-column="35" data-glyph="─" d="M383,149 L388,149 M383,149 L378,149"/>
+<path data-row="2" data-column="36" data-glyph="─" d="M393,149 L398,149 M393,149 L388,149"/>
+<path data-row="2" data-column="37" data-glyph="─" d="M403,149 L408,149 M403,149 L398,149"/>
+<path data-row="2" data-column="38" data-glyph="─" d="M413,149 L418,149 M413,149 L408,149"/>
+<path data-row="2" data-column="39" data-glyph="─" d="M423,149 L428,149 M423,149 L418,149"/>
+<path data-row="2" data-column="40" data-glyph="─" d="M433,149 L438,149 M433,149 L428,149"/>
+<path data-row="2" data-column="41" data-glyph="─" d="M443,149 L448,149 M443,149 L438,149"/>
+<path data-row="2" data-column="42" data-glyph="─" d="M453,149 L458,149 M453,149 L448,149"/>
+<path data-row="2" data-column="43" data-glyph="─" d="M463,149 L468,149 M463,149 L458,149"/>
+<path data-row="3" data-column="44" data-glyph="─" d="M473,179 L478,179 M473,179 L468,179"/>
+<path data-row="3" data-column="45" data-glyph="─" d="M483,179 L488,179 M483,179 L478,179"/>
+<path data-row="5" data-column="17" data-glyph="│" d="M203,239 L203,224 M203,239 L203,254"/>
+<path data-row="6" data-column="30" data-glyph="─" d="M333,269 L338,269 M333,269 L328,269"/>
+<path data-row="6" data-column="31" data-glyph="─" d="M343,269 L348,269 M343,269 L338,269"/>
+<path data-row="6" data-column="32" data-glyph="─" d="M353,269 L358,269 M353,269 L348,269"/>
+<path data-row="6" data-column="33" data-glyph="─" d="M363,269 L368,269 M363,269 L358,269"/>
+<path data-row="6" data-column="34" data-glyph="─" d="M373,269 L378,269 M373,269 L368,269"/>
+<path data-row="6" data-column="35" data-glyph="─" d="M383,269 L388,269 M383,269 L378,269"/>
+<path data-row="6" data-column="36" data-glyph="─" d="M393,269 L398,269 M393,269 L388,269"/>
+<path data-row="6" data-column="37" data-glyph="─" d="M403,269 L408,269 M403,269 L398,269"/>
+<path data-row="6" data-column="38" data-glyph="─" d="M413,269 L418,269 M413,269 L408,269"/>
+<path data-row="6" data-column="39" data-glyph="─" d="M423,269 L428,269 M423,269 L418,269"/>
+<path data-row="6" data-column="40" data-glyph="─" d="M433,269 L438,269 M433,269 L428,269"/>
+<path data-row="6" data-column="41" data-glyph="─" d="M443,269 L448,269 M443,269 L438,269"/>
+<path data-row="6" data-column="42" data-glyph="─" d="M453,269 L458,269 M453,269 L448,269"/>
+<path data-row="6" data-column="43" data-glyph="─" d="M463,269 L468,269 M463,269 L458,269"/>
+<path data-row="7" data-column="35" data-glyph="─" d="M383,299 L388,299 M383,299 L378,299"/>
+<path data-row="7" data-column="36" data-glyph="─" d="M393,299 L398,299 M393,299 L388,299"/>
+<path data-row="7" data-column="37" data-glyph="─" d="M403,299 L408,299 M403,299 L398,299"/>
+<path data-row="7" data-column="38" data-glyph="─" d="M413,299 L418,299 M413,299 L408,299"/>
+<path data-row="7" data-column="39" data-glyph="─" d="M423,299 L428,299 M423,299 L418,299"/>
+<path data-row="7" data-column="40" data-glyph="─" d="M433,299 L438,299 M433,299 L428,299"/>
+<path data-row="7" data-column="41" data-glyph="─" d="M443,299 L448,299 M443,299 L438,299"/>
+<path data-row="7" data-column="42" data-glyph="─" d="M453,299 L458,299 M453,299 L448,299"/>
+<path data-row="7" data-column="43" data-glyph="─" d="M463,299 L468,299 M463,299 L458,299"/>
+<path data-row="8" data-column="17" data-glyph="│" d="M203,329 L203,314 M203,329 L203,344"/>
+<path data-row="9" data-column="43" data-glyph="─" d="M463,359 L468,359 M463,359 L458,359"/>
+<path data-row="9" data-column="44" data-glyph="─" d="M473,359 L478,359 M473,359 L468,359"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="670" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Session      prompt/subscribe/dispose         （第4~6章都不动这里）</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Runtime      ModelRuntime</text>
+<text data-row="2" data-column="45" x="478" y="149" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第3章 接模型</text>
+<text data-row="3" data-column="13" x="158" y="179" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ResourceLoader(系统提示词/...)</text>
+<text data-row="3" data-column="47" x="498" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第4章 配人设</text>
+<text data-row="4" data-column="13" x="158" y="209" textLength="540" lengthAdjust="spacingAndGlyphs" style="white-space:pre">SessionManager / SettingsManager（进阶，本教程不展开）</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">ExtensionRuntime   pi.on 钩子</text>
+<text data-row="6" data-column="45" x="478" y="269" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第6章 挂事件钩子</text>
+<text data-row="7" data-column="19" x="218" y="299" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">pi.registerTool</text>
+<text data-row="7" data-column="45" x="478" y="299" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第5章 注册业务工具</text>
+<text data-row="9" data-column="0" x="28" y="359" textLength="420" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Tool         内置 / customTools / 扩展注册</text>
+<text data-row="9" data-column="46" x="488" y="359" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第5章 定义工具</text>
+</g>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="826" height="762" viewBox="0 0 826 762" role="img" aria-labelledby="ch09-diagram-54632617987e-title ch09-diagram-54632617987e-description">
+<title id="ch09-diagram-54632617987e-title">七、完整链路回顾</title>
+<desc id="ch09-diagram-54632617987e-description">① 触发判断
+shouldCompact()
+contextTokens(185K) &gt; contextWindow(200K) - reserve(16K)
+红灯亮起，开始压缩
+② 找切割点
+向后遍历
+累积 token 到 keepRecent(20K)
+找最近的有效切割点
+排除 ToolResult 后的位置
+保证消息对完整
+③ 分割消息
+切割点之前
+messagesToSummarize（被压缩）
+切割点之后
+kept（保留）
+④ 生成摘要
+序列化消息为文本
+调 LLM 填写 6 section 结构化摘要
+传入 previousSummary 做增量更新
+合并文件跟踪列表
+⑤ 存储结果
+CompactionEntry 追加到 Session Tree
+⑥ 下次运行时
+buildSessionContext()
+用 CompactionSummaryMessage 替换旧消息
+convertToLlm
+摘要翻译成 UserMessage 发给 LLM</desc>
+<rect x="1" y="1" width="824" height="760" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">七、完整链路回顾</text>
+<path d="M28,58 H798" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="19" data-glyph="→" d="M218,119 H228 M224,115 L228,119 L224,123"/>
+<path data-row="5" data-column="12" data-glyph="→" d="M148,239 H158 M154,235 L158,239 L154,243"/>
+<path data-row="5" data-column="44" data-glyph="→" d="M468,239 H478 M474,235 L478,239 L474,243"/>
+<path data-row="6" data-column="28" data-glyph="→" d="M308,269 H318 M314,265 L318,269 L314,273"/>
+<path data-row="9" data-column="14" data-glyph="→" d="M168,359 H178 M174,355 L178,359 L174,363"/>
+<path data-row="10" data-column="14" data-glyph="→" d="M168,389 H178 M174,385 L178,389 L174,393"/>
+<path data-row="13" data-column="20" data-glyph="→" d="M228,479 H238 M234,475 L238,479 L234,483"/>
+<path data-row="14" data-column="35" data-glyph="→" d="M378,509 H388 M384,505 L388,509 L384,513"/>
+<path data-row="20" data-column="25" data-glyph="→" d="M278,689 H288 M284,685 L288,689 L284,693"/>
+<path data-row="21" data-column="16" data-glyph="→" d="M188,719 H198 M194,715 L198,719 L194,723"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">① 触发判断</text>
+<text data-row="1" data-column="3" x="58" y="119" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">shouldCompact()</text>
+<text data-row="1" data-column="21" x="238" y="119" textLength="560" lengthAdjust="spacingAndGlyphs" style="white-space:pre">contextTokens(185K) &gt; contextWindow(200K) - reserve(16K)</text>
+<text data-row="2" data-column="3" x="58" y="149" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">红灯亮起，开始压缩</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">② 找切割点</text>
+<text data-row="5" data-column="3" x="58" y="239" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">向后遍历</text>
+<text data-row="5" data-column="14" x="168" y="239" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">累积 token 到 keepRecent(20K)</text>
+<text data-row="5" data-column="46" x="488" y="239" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">找最近的有效切割点</text>
+<text data-row="6" data-column="3" x="58" y="269" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">排除 ToolResult 后的位置</text>
+<text data-row="6" data-column="30" x="328" y="269" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">保证消息对完整</text>
+<text data-row="8" data-column="0" x="28" y="329" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">③ 分割消息</text>
+<text data-row="9" data-column="3" x="58" y="359" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">切割点之前</text>
+<text data-row="9" data-column="16" x="188" y="359" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">messagesToSummarize（被压缩）</text>
+<text data-row="10" data-column="3" x="58" y="389" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">切割点之后</text>
+<text data-row="10" data-column="16" x="188" y="389" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">kept（保留）</text>
+<text data-row="12" data-column="0" x="28" y="449" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">④ 生成摘要</text>
+<text data-row="13" data-column="3" x="58" y="479" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">序列化消息为文本</text>
+<text data-row="13" data-column="22" x="248" y="479" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调 LLM 填写 6 section 结构化摘要</text>
+<text data-row="14" data-column="3" x="58" y="509" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">传入 previousSummary 做增量更新</text>
+<text data-row="14" data-column="37" x="398" y="509" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">合并文件跟踪列表</text>
+<text data-row="16" data-column="0" x="28" y="569" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">⑤ 存储结果</text>
+<text data-row="17" data-column="3" x="58" y="599" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CompactionEntry 追加到 Session Tree</text>
+<text data-row="19" data-column="0" x="28" y="659" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">⑥ 下次运行时</text>
+<text data-row="20" data-column="3" x="58" y="689" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">buildSessionContext()</text>
+<text data-row="20" data-column="27" x="298" y="689" textLength="380" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用 CompactionSummaryMessage 替换旧消息</text>
+<text data-row="21" data-column="3" x="58" y="719" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">convertToLlm</text>
+<text data-row="21" data-column="18" x="208" y="719" textLength="310" lengthAdjust="spacingAndGlyphs" style="white-space:pre">摘要翻译成 UserMessage 发给 LLM</text>
+</g>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1036" height="372" viewBox="0 0 1036 372" role="img" aria-labelledby="ch10-diagram-354fd5d3b107-title ch10-diagram-354fd5d3b107-description">
+<title id="ch10-diagram-354fd5d3b107-title">分支摘要：BranchSummaryEntry——回退时的可选项</title>
+<desc id="ch10-diagram-354fd5d3b107-description">e2 (user)
+e3 (assistant: read auth.ts)
+e4 (toolResult)
+e5 (assistant: &quot;问题在 23 行&quot;)
+e_BranchSummary (BranchSummaryEntry: &quot;之前试过 read auth.ts，发现 salt 编码问题但未解决根因&quot;)
+e6 (user: &quot;先看 hash 函数&quot;)
+...</desc>
+<rect x="1" y="1" width="1034" height="370" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">分支摘要：BranchSummaryEntry——回退时的可选项</text>
+<path d="M28,58 H1008" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="1" data-glyph="├" d="M43,119 L43,104 M43,119 L48,119 M43,119 L43,134"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="2" data-column="1" data-glyph="│" d="M43,149 L43,134 M43,149 L43,164"/>
+<path data-row="2" data-column="6" data-glyph="└" d="M93,149 L98,149 M93,149 L93,134"/>
+<path data-row="2" data-column="7" data-glyph="─" d="M103,149 L108,149 M103,149 L98,149"/>
+<path data-row="2" data-column="8" data-glyph="─" d="M113,149 L118,149 M113,149 L108,149"/>
+<path data-row="3" data-column="1" data-glyph="│" d="M43,179 L43,164 M43,179 L43,194"/>
+<path data-row="3" data-column="11" data-glyph="└" d="M143,179 L148,179 M143,179 L143,164"/>
+<path data-row="3" data-column="12" data-glyph="─" d="M153,179 L158,179 M153,179 L148,179"/>
+<path data-row="3" data-column="13" data-glyph="─" d="M163,179 L168,179 M163,179 L158,179"/>
+<path data-row="4" data-column="1" data-glyph="│" d="M43,209 L43,194 M43,209 L43,224"/>
+<path data-row="5" data-column="1" data-glyph="├" d="M43,239 L43,224 M43,239 L48,239 M43,239 L43,254"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="5" data-column="3" data-glyph="─" d="M63,239 L68,239 M63,239 L58,239"/>
+<path data-row="6" data-column="1" data-glyph="│" d="M43,269 L43,254 M43,269 L43,284"/>
+<path data-row="7" data-column="1" data-glyph="└" d="M43,299 L48,299 M43,299 L43,284"/>
+<path data-row="7" data-column="2" data-glyph="─" d="M53,299 L58,299 M53,299 L48,299"/>
+<path data-row="7" data-column="3" data-glyph="─" d="M63,299 L68,299 M63,299 L58,299"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (user)</text>
+<text data-row="1" data-column="5" x="78" y="119" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e3 (assistant: read auth.ts)</text>
+<text data-row="2" data-column="10" x="128" y="149" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e4 (toolResult)</text>
+<text data-row="3" data-column="15" x="178" y="179" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e5 (assistant: &quot;问题在 23 行&quot;)</text>
+<text data-row="5" data-column="5" x="78" y="239" textLength="930" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e_BranchSummary (BranchSummaryEntry: &quot;之前试过 read auth.ts，发现 salt 编码问题但未解决根因&quot;)</text>
+<text data-row="7" data-column="5" x="78" y="299" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e6 (user: &quot;先看 hash 函数&quot;)</text>
+<text data-row="8" data-column="6" x="88" y="329" textLength="30" lengthAdjust="spacingAndGlyphs" style="white-space:pre">...</text>
+</g>
+</svg>

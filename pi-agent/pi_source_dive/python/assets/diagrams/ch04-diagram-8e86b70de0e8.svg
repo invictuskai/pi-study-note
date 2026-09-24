@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="776" height="132" viewBox="0 0 776 132" role="img" aria-labelledby="ch04-diagram-8e86b70de0e8-title ch04-diagram-8e86b70de0e8-description">
+<title id="ch04-diagram-8e86b70de0e8-title">五步骨架是概念模型，不是每个文件的固定结构</title>
+<desc id="ch04-diagram-8e86b70de0e8-description">准备认证和客户端
+构建供应商请求
+发送请求
+转换流式响应
+发终止事件</desc>
+<rect x="1" y="1" width="774" height="130" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">五步骨架是概念模型，不是每个文件的固定结构</text>
+<path d="M28,58 H748" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="17" data-glyph="→" d="M198,89 H208 M204,85 L208,89 L204,93"/>
+<path data-row="0" data-column="34" data-glyph="→" d="M368,89 H378 M374,85 L378,89 L374,93"/>
+<path data-row="0" data-column="45" data-glyph="→" d="M478,89 H488 M484,85 L488,89 L484,93"/>
+<path data-row="0" data-column="60" data-glyph="→" d="M628,89 H638 M634,85 L638,89 L634,93"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">准备认证和客户端</text>
+<text data-row="0" data-column="19" x="218" y="89" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">构建供应商请求</text>
+<text data-row="0" data-column="36" x="388" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">发送请求</text>
+<text data-row="0" data-column="47" x="498" y="89" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">转换流式响应</text>
+<text data-row="0" data-column="62" x="648" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">发终止事件</text>
+</g>
+</svg>

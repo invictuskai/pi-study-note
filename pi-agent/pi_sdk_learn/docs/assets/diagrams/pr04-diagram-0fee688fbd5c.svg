@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="656" height="252" viewBox="0 0 656 252" role="img" aria-labelledby="pr04-diagram-0fee688fbd5c-title pr04-diagram-0fee688fbd5c-description">
+<title id="pr04-diagram-0fee688fbd5c-title">二、先认识：pi-agent 的系统提示词注入机制</title>
+<desc id="pr04-diagram-0fee688fbd5c-description">最终提示词 = ① 基础人设
+模型的「角色设定」
++ ② 追加规则
+在人设后追加的几段规则
++ ③ 项目上下文
+从 AGENTS.md / CLAUDE.md 读
++ ④ 技能描述
+从 .pi/skills/*/SKILL.md 读
++ ⑤ 工作目录
+SDK 固定追加的一行</desc>
+<rect x="1" y="1" width="654" height="250" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">二、先认识：pi-agent 的系统提示词注入机制</text>
+<path d="M28,58 H628" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="31" data-glyph="←" d="M338,89 H348 M342,85 L338,89 L342,93"/>
+<path data-row="1" data-column="31" data-glyph="←" d="M338,119 H348 M342,115 L338,119 L342,123"/>
+<path data-row="2" data-column="31" data-glyph="←" d="M338,149 H348 M342,145 L338,149 L342,153"/>
+<path data-row="3" data-column="31" data-glyph="←" d="M338,179 H348 M342,175 L338,179 L342,183"/>
+<path data-row="4" data-column="31" data-glyph="←" d="M338,209 H348 M342,205 L338,209 L342,213"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="230" lengthAdjust="spacingAndGlyphs" style="white-space:pre">最终提示词 = ① 基础人设</text>
+<text data-row="0" data-column="33" x="358" y="89" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">模型的「角色设定」</text>
+<text data-row="1" data-column="11" x="138" y="119" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">+ ② 追加规则</text>
+<text data-row="1" data-column="33" x="358" y="119" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">在人设后追加的几段规则</text>
+<text data-row="2" data-column="11" x="138" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">+ ③ 项目上下文</text>
+<text data-row="2" data-column="33" x="358" y="149" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">从 AGENTS.md / CLAUDE.md 读</text>
+<text data-row="3" data-column="11" x="138" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">+ ④ 技能描述</text>
+<text data-row="3" data-column="33" x="358" y="179" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">从 .pi/skills/*/SKILL.md 读</text>
+<text data-row="4" data-column="11" x="138" y="209" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">+ ⑤ 工作目录</text>
+<text data-row="4" data-column="33" x="358" y="209" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">SDK 固定追加的一行</text>
+</g>
+</svg>

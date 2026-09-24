@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="556" height="462" viewBox="0 0 556 462" role="img" aria-labelledby="ch10-diagram-b70a7eca0ff3-title ch10-diagram-b70a7eca0ff3-description">
+<title id="ch10-diagram-b70a7eca0ff3-title">第 8 步：新分支继续长</title>
+<desc id="ch10-diagram-b70a7eca0ff3-description">e1 (model_change)
+e2 (user: &quot;salt 验证为什么失败?&quot;)
+e3 (assistant: read auth.ts)
+e4 (toolResult)
+e5 (assistant: &quot;问题在 23 行&quot;)
+e6 (user: &quot;先看 hash 函数&quot;)
+e7 (assistant: grep hash)
+e8 (toolResult: grep 结果)
+e9 (assistant: 新分析)
+leafId</desc>
+<rect x="1" y="1" width="554" height="460" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第 8 步：新分支继续长</text>
+<path d="M28,58 H528" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="1" data-glyph="└" d="M43,119 L48,119 M43,119 L43,104"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="2" data-column="6" data-glyph="├" d="M93,149 L93,134 M93,149 L98,149 M93,149 L93,164"/>
+<path data-row="2" data-column="7" data-glyph="─" d="M103,149 L108,149 M103,149 L98,149"/>
+<path data-row="2" data-column="8" data-glyph="─" d="M113,149 L118,149 M113,149 L108,149"/>
+<path data-row="3" data-column="6" data-glyph="│" d="M93,179 L93,164 M93,179 L93,194"/>
+<path data-row="3" data-column="11" data-glyph="└" d="M143,179 L148,179 M143,179 L143,164"/>
+<path data-row="3" data-column="12" data-glyph="─" d="M153,179 L158,179 M153,179 L148,179"/>
+<path data-row="3" data-column="13" data-glyph="─" d="M163,179 L168,179 M163,179 L158,179"/>
+<path data-row="4" data-column="6" data-glyph="│" d="M93,209 L93,194 M93,209 L93,224"/>
+<path data-row="4" data-column="16" data-glyph="└" d="M193,209 L198,209 M193,209 L193,194"/>
+<path data-row="4" data-column="17" data-glyph="─" d="M203,209 L208,209 M203,209 L198,209"/>
+<path data-row="4" data-column="18" data-glyph="─" d="M213,209 L218,209 M213,209 L208,209"/>
+<path data-row="5" data-column="6" data-glyph="│" d="M93,239 L93,224 M93,239 L93,254"/>
+<path data-row="6" data-column="6" data-glyph="└" d="M93,269 L98,269 M93,269 L93,254"/>
+<path data-row="6" data-column="7" data-glyph="─" d="M103,269 L108,269 M103,269 L98,269"/>
+<path data-row="6" data-column="8" data-glyph="─" d="M113,269 L118,269 M113,269 L108,269"/>
+<path data-row="7" data-column="11" data-glyph="└" d="M143,299 L148,299 M143,299 L143,284"/>
+<path data-row="7" data-column="12" data-glyph="─" d="M153,299 L158,299 M153,299 L148,299"/>
+<path data-row="7" data-column="13" data-glyph="─" d="M163,299 L168,299 M163,299 L158,299"/>
+<path data-row="8" data-column="16" data-glyph="└" d="M193,329 L198,329 M193,329 L193,314"/>
+<path data-row="8" data-column="17" data-glyph="─" d="M203,329 L208,329 M203,329 L198,329"/>
+<path data-row="8" data-column="18" data-glyph="─" d="M213,329 L218,329 M213,329 L208,329"/>
+<path data-row="9" data-column="21" data-glyph="└" d="M243,359 L248,359 M243,359 L243,344"/>
+<path data-row="9" data-column="22" data-glyph="─" d="M253,359 L258,359 M253,359 L248,359"/>
+<path data-row="9" data-column="23" data-glyph="─" d="M263,359 L268,359 M263,359 L258,359"/>
+<path data-row="10" data-column="27" data-glyph="↑" d="M303,374 V404 M299,380 L303,374 L307,380"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (model_change)</text>
+<text data-row="1" data-column="5" x="78" y="119" textLength="330" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (user: &quot;salt 验证为什么失败?&quot;)</text>
+<text data-row="2" data-column="10" x="128" y="149" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e3 (assistant: read auth.ts)</text>
+<text data-row="3" data-column="15" x="178" y="179" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e4 (toolResult)</text>
+<text data-row="4" data-column="20" x="228" y="209" textLength="300" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e5 (assistant: &quot;问题在 23 行&quot;)</text>
+<text data-row="6" data-column="10" x="128" y="269" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e6 (user: &quot;先看 hash 函数&quot;)</text>
+<text data-row="7" data-column="15" x="178" y="299" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e7 (assistant: grep hash)</text>
+<text data-row="8" data-column="20" x="228" y="329" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e8 (toolResult: grep 结果)</text>
+<text data-row="9" data-column="25" x="278" y="359" textLength="220" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e9 (assistant: 新分析)</text>
+<text data-row="11" data-column="25" x="278" y="419" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leafId</text>
+</g>
+</svg>

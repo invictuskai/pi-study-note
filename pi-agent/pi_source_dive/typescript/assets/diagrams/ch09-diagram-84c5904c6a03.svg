@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="836" height="612" viewBox="0 0 836 612" role="img" aria-labelledby="ch09-diagram-84c5904c6a03-title ch09-diagram-84c5904c6a03-description">
+<title id="ch09-diagram-84c5904c6a03-title">一个关键时序：压缩发生在两轮对话之间</title>
+<desc id="ch09-diagram-84c5904c6a03-description">用户问
+Agent 回答
+(Agent 这一轮结束，发 agent_end 事件)
+检查 token：超阈值了吗？
+没超
+等下一轮       超了
+立刻压缩
+找切割点
+生成摘要
+把 CompactionEntry 写进 Session Tree
+下一轮用户开始问时：
+buildSessionContext() 从 Session Tree 重建上下文
+CompactionSummaryMessage 替代旧消息
+LLM 看到的是&quot;摘要 + 近期消息&quot;</desc>
+<rect x="1" y="1" width="834" height="610" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">一个关键时序：压缩发生在两轮对话之间</text>
+<path d="M28,58 H808" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="7" data-glyph="→" d="M98,89 H108 M104,85 L108,89 L104,93"/>
+<path data-row="0" data-column="20" data-glyph="→" d="M228,89 H238 M234,85 L238,89 L234,93"/>
+<path data-row="1" data-column="30" data-glyph="│" d="M333,119 L333,104 M333,119 L333,134"/>
+<path data-row="2" data-column="30" data-glyph="▼" d="M333,134 V164 M329,158 L333,164 L337,158"/>
+<path data-row="4" data-column="30" data-glyph="│" d="M333,209 L333,194 M333,209 L333,224"/>
+<path data-row="5" data-column="19" data-glyph="┌" d="M223,239 L228,239 M223,239 L223,254"/>
+<path data-row="5" data-column="20" data-glyph="─" d="M233,239 L238,239 M233,239 L228,239"/>
+<path data-row="5" data-column="21" data-glyph="─" d="M243,239 L248,239 M243,239 L238,239"/>
+<path data-row="5" data-column="22" data-glyph="─" d="M253,239 L258,239 M253,239 L248,239"/>
+<path data-row="5" data-column="23" data-glyph="─" d="M263,239 L268,239 M263,239 L258,239"/>
+<path data-row="5" data-column="24" data-glyph="─" d="M273,239 L278,239 M273,239 L268,239"/>
+<path data-row="5" data-column="25" data-glyph="─" d="M283,239 L288,239 M283,239 L278,239"/>
+<path data-row="5" data-column="26" data-glyph="─" d="M293,239 L298,239 M293,239 L288,239"/>
+<path data-row="5" data-column="27" data-glyph="─" d="M303,239 L308,239 M303,239 L298,239"/>
+<path data-row="5" data-column="28" data-glyph="─" d="M313,239 L318,239 M313,239 L308,239"/>
+<path data-row="5" data-column="29" data-glyph="─" d="M323,239 L328,239 M323,239 L318,239"/>
+<path data-row="5" data-column="30" data-glyph="┴" d="M333,239 L338,239 M333,239 L328,239 M333,239 L333,224"/>
+<path data-row="5" data-column="31" data-glyph="─" d="M343,239 L348,239 M343,239 L338,239"/>
+<path data-row="5" data-column="32" data-glyph="─" d="M353,239 L358,239 M353,239 L348,239"/>
+<path data-row="5" data-column="33" data-glyph="─" d="M363,239 L368,239 M363,239 L358,239"/>
+<path data-row="5" data-column="34" data-glyph="─" d="M373,239 L378,239 M373,239 L368,239"/>
+<path data-row="5" data-column="35" data-glyph="─" d="M383,239 L388,239 M383,239 L378,239"/>
+<path data-row="5" data-column="36" data-glyph="─" d="M393,239 L398,239 M393,239 L388,239"/>
+<path data-row="5" data-column="37" data-glyph="─" d="M403,239 L408,239 M403,239 L398,239"/>
+<path data-row="5" data-column="38" data-glyph="─" d="M413,239 L418,239 M413,239 L408,239"/>
+<path data-row="5" data-column="39" data-glyph="─" d="M423,239 L428,239 M423,239 L418,239"/>
+<path data-row="5" data-column="40" data-glyph="─" d="M433,239 L438,239 M433,239 L428,239"/>
+<path data-row="5" data-column="41" data-glyph="┐" d="M443,239 L438,239 M443,239 L443,254"/>
+<path data-row="6" data-column="19" data-glyph="▼" d="M223,254 V284 M219,278 L223,284 L227,278"/>
+<path data-row="6" data-column="41" data-glyph="▼" d="M443,254 V284 M439,278 L443,284 L447,278"/>
+<path data-row="7" data-column="21" data-glyph="→" d="M238,299 H248 M244,295 L248,299 L244,303"/>
+<path data-row="7" data-column="43" data-glyph="→" d="M458,299 H468 M464,295 L468,299 L464,303"/>
+<path data-row="8" data-column="39" data-glyph="├" d="M443,329 L443,314 M443,329 L428,329 M443,329 L443,344"/>
+<path data-row="8" data-column="40" data-glyph="─" d="M433,329 L438,329 M433,329 L428,329"/>
+<path data-row="9" data-column="39" data-glyph="├" d="M443,359 L443,344 M443,359 L428,359 M443,359 L443,374"/>
+<path data-row="9" data-column="40" data-glyph="─" d="M433,359 L438,359 M433,359 L428,359"/>
+<path data-row="10" data-column="39" data-glyph="└" d="M443,389 L428,389 M443,389 L443,374"/>
+<path data-row="10" data-column="40" data-glyph="─" d="M433,389 L438,389 M433,389 L428,389"/>
+<path data-row="11" data-column="46" data-glyph="│" d="M493,419 L493,404 M493,419 L493,434"/>
+<path data-row="12" data-column="46" data-glyph="▼" d="M493,434 V464 M489,458 L493,464 L497,458"/>
+<path data-row="15" data-column="30" data-glyph="→" d="M328,539 H338 M334,535 L338,539 L334,543"/>
+<path data-row="16" data-column="30" data-glyph="→" d="M328,569 H338 M334,565 L338,569 L334,573"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户问</text>
+<text data-row="0" data-column="9" x="118" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 回答</text>
+<text data-row="0" data-column="22" x="248" y="89" textLength="370" lengthAdjust="spacingAndGlyphs" style="white-space:pre">(Agent 这一轮结束，发 agent_end 事件)</text>
+<text data-row="3" data-column="21" x="238" y="179" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">检查 token：超阈值了吗？</text>
+<text data-row="7" data-column="16" x="188" y="299" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">没超</text>
+<text data-row="7" data-column="23" x="258" y="299" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">等下一轮       超了</text>
+<text data-row="7" data-column="45" x="478" y="299" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">立刻压缩</text>
+<text data-row="8" data-column="42" x="448" y="329" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">找切割点</text>
+<text data-row="9" data-column="42" x="448" y="359" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">生成摘要</text>
+<text data-row="10" data-column="42" x="448" y="389" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">把 CompactionEntry 写进 Session Tree</text>
+<text data-row="13" data-column="30" x="328" y="479" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">下一轮用户开始问时：</text>
+<text data-row="14" data-column="30" x="328" y="509" textLength="480" lengthAdjust="spacingAndGlyphs" style="white-space:pre">buildSessionContext() 从 Session Tree 重建上下文</text>
+<text data-row="15" data-column="32" x="348" y="539" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CompactionSummaryMessage 替代旧消息</text>
+<text data-row="16" data-column="32" x="348" y="569" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LLM 看到的是&quot;摘要 + 近期消息&quot;</text>
+</g>
+</svg>

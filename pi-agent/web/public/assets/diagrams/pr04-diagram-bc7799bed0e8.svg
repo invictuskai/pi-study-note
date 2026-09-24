@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="556" height="252" viewBox="0 0 556 252" role="img" aria-labelledby="pr04-diagram-bc7799bed0e8-title pr04-diagram-bc7799bed0e8-description">
+<title id="pr04-diagram-bc7799bed0e8-title">4.1 静态部分：本地文件</title>
+<desc id="pr04-diagram-bc7799bed0e8-description">prompts/
+analyst/
+persona.md
+人设（你是谁）
+rules.md
+业务规则（怎么干活）
+output-format.md
+输出格式（怎么回答）</desc>
+<rect x="1" y="1" width="554" height="250" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">4.1 静态部分：本地文件</text>
+<path d="M28,58 H528" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="└" d="M33,119 L38,119 M33,119 L33,104"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="2" data-column="4" data-glyph="├" d="M73,149 L73,134 M73,149 L78,149 M73,149 L73,164"/>
+<path data-row="2" data-column="5" data-glyph="─" d="M83,149 L88,149 M83,149 L78,149"/>
+<path data-row="2" data-column="6" data-glyph="─" d="M93,149 L98,149 M93,149 L88,149"/>
+<path data-row="2" data-column="28" data-glyph="←" d="M308,149 H318 M312,145 L308,149 L312,153"/>
+<path data-row="3" data-column="4" data-glyph="├" d="M73,179 L73,164 M73,179 L78,179 M73,179 L73,194"/>
+<path data-row="3" data-column="5" data-glyph="─" d="M83,179 L88,179 M83,179 L78,179"/>
+<path data-row="3" data-column="6" data-glyph="─" d="M93,179 L98,179 M93,179 L88,179"/>
+<path data-row="3" data-column="28" data-glyph="←" d="M308,179 H318 M312,175 L308,179 L312,183"/>
+<path data-row="4" data-column="4" data-glyph="└" d="M73,209 L78,209 M73,209 L73,194"/>
+<path data-row="4" data-column="5" data-glyph="─" d="M83,209 L88,209 M83,209 L78,209"/>
+<path data-row="4" data-column="6" data-glyph="─" d="M93,209 L98,209 M93,209 L88,209"/>
+<path data-row="4" data-column="28" data-glyph="←" d="M308,209 H318 M312,205 L308,209 L312,213"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prompts/</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">analyst/</text>
+<text data-row="2" data-column="8" x="108" y="149" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">persona.md</text>
+<text data-row="2" data-column="30" x="328" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">人设（你是谁）</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">rules.md</text>
+<text data-row="3" data-column="30" x="328" y="179" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">业务规则（怎么干活）</text>
+<text data-row="4" data-column="8" x="108" y="209" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">output-format.md</text>
+<text data-row="4" data-column="30" x="328" y="209" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">输出格式（怎么回答）</text>
+</g>
+</svg>

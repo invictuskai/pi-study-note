@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="626" height="312" viewBox="0 0 626 312" role="img" aria-labelledby="ch03-diagram-a4bb2dd21907-title ch03-diagram-a4bb2dd21907-description">
+<title id="ch03-diagram-a4bb2dd21907-title">Turn（一个轮次）</title>
+<desc id="ch03-diagram-a4bb2dd21907-description">进入下一轮（如果此前有已完成轮次）：
+prepareNextTurn
+必要时补取 steering
+turn_start
+注入准备好的消息和排队消息
+prepareRequest
+transformContext
+convertToLlm
+调模型
+处理错误或工具调用
+finishTurn
+turn_end
+决定结束，或者检查下一轮输入</desc>
+<rect x="1" y="1" width="624" height="310" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">Turn（一个轮次）</text>
+<path d="M28,58 H598" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="18" data-glyph="→" d="M208,119 H218 M214,115 L218,119 L214,123"/>
+<path data-row="1" data-column="40" data-glyph="→" d="M428,119 H438 M434,115 L438,119 L434,123"/>
+<path data-row="3" data-column="15" data-glyph="→" d="M178,179 H188 M184,175 L188,179 L184,183"/>
+<path data-row="3" data-column="34" data-glyph="→" d="M368,179 H378 M374,175 L378,179 L374,183"/>
+<path data-row="3" data-column="49" data-glyph="→" d="M518,179 H528 M524,175 L528,179 L524,183"/>
+<path data-row="5" data-column="11" data-glyph="→" d="M138,239 H148 M144,235 L148,239 L144,243"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="360" lengthAdjust="spacingAndGlyphs" style="white-space:pre">进入下一轮（如果此前有已完成轮次）：</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prepareNextTurn</text>
+<text data-row="1" data-column="20" x="228" y="119" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">必要时补取 steering</text>
+<text data-row="1" data-column="42" x="448" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_start</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">注入准备好的消息和排队消息</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">prepareRequest</text>
+<text data-row="3" data-column="17" x="198" y="179" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">transformContext</text>
+<text data-row="3" data-column="36" x="388" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">convertToLlm</text>
+<text data-row="3" data-column="51" x="538" y="179" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">处理错误或工具调用</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">finishTurn</text>
+<text data-row="5" data-column="13" x="158" y="239" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="6" data-column="0" x="28" y="269" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">决定结束，或者检查下一轮输入</text>
+</g>
+</svg>

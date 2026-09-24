@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="676" height="132" viewBox="0 0 676 132" role="img" aria-labelledby="ch03-diagram-8b86b64fbc73-title ch03-diagram-8b86b64fbc73-description">
+<title id="ch03-diagram-8b86b64fbc73-title">模式 2：Workflow —— &quot;模型，你先做第一步，我检查一下，再做第二步&quot;</title>
+<desc id="ch03-diagram-8b86b64fbc73-description">调模型分析
+代码检查
+调模型生成草稿
+代码检查
+调模型润色</desc>
+<rect x="1" y="1" width="674" height="130" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">模式 2：Workflow —— &quot;模型，你先做第一步，我检查一下，再做第二步&quot;</text>
+<path d="M28,58 H648" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="11" data-glyph="→" d="M138,89 H148 M144,85 L148,89 L144,93"/>
+<path data-row="0" data-column="22" data-glyph="→" d="M248,89 H258 M254,85 L258,89 L254,93"/>
+<path data-row="0" data-column="39" data-glyph="→" d="M418,89 H428 M424,85 L428,89 L424,93"/>
+<path data-row="0" data-column="50" data-glyph="→" d="M528,89 H538 M534,85 L538,89 L534,93"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型分析</text>
+<text data-row="0" data-column="13" x="158" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">代码检查</text>
+<text data-row="0" data-column="24" x="268" y="89" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型生成草稿</text>
+<text data-row="0" data-column="41" x="438" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">代码检查</text>
+<text data-row="0" data-column="52" x="548" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型润色</text>
+</g>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="466" height="282" viewBox="0 0 466 282" role="img" aria-labelledby="ch04-diagram-9ba36efddda4-title ch04-diagram-9ba36efddda4-description">
+<title id="ch04-diagram-9ba36efddda4-title">第二层：Provider 组合目录、认证和协议实现</title>
+<desc id="ch04-diagram-9ba36efddda4-description">Provider
+id / name / baseUrl
+auth                       认证策略
+getModels()                已知模型目录
+stream / streamSimple      请求行为
+可选动态目录、延后请求等能力</desc>
+<rect x="1" y="1" width="464" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第二层：Provider 组合目录、认证和协议实现</text>
+<path d="M28,58 H438" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Provider</text>
+<text data-row="1" data-column="2" x="48" y="119" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">id / name / baseUrl</text>
+<text data-row="2" data-column="2" x="48" y="149" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">auth                       认证策略</text>
+<text data-row="3" data-column="2" x="48" y="179" textLength="390" lengthAdjust="spacingAndGlyphs" style="white-space:pre">getModels()                已知模型目录</text>
+<text data-row="4" data-column="2" x="48" y="209" textLength="350" lengthAdjust="spacingAndGlyphs" style="white-space:pre">stream / streamSimple      请求行为</text>
+<text data-row="5" data-column="2" x="48" y="239" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">可选动态目录、延后请求等能力</text>
+</g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="526" height="822" viewBox="0 0 526 822" role="img" aria-labelledby="ch08-diagram-ed94c98f69e1-title ch08-diagram-ed94c98f69e1-description">
+<title id="ch08-diagram-ed94c98f69e1-title">问题：分支跳转后，旧分支的内容怎么处理？</title>
+<desc id="ch08-diagram-ed94c98f69e1-description">对话树：
+root
+[探索方案 A]
+[A 的实现]
+leaf_1
+用户当前在这里
+用户：从 root 重新分叉探索方案 B
+root
+[探索方案 A]
+这部分还在，但被&quot;放弃&quot;了
+[A 的实现]
+leaf_1（旧叶子）
+用户切换到：
+root
+[探索方案 B]
+新分支
+leaf_2
+用户现在在这里</desc>
+<rect x="1" y="1" width="524" height="820" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">问题：分支跳转后，旧分支的内容怎么处理？</text>
+<path d="M28,58 H498" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="2" data-column="9" data-glyph="│" d="M123,149 L123,134 M123,149 L123,164"/>
+<path data-row="4" data-column="9" data-glyph="│" d="M123,209 L123,194 M123,209 L123,224"/>
+<path data-row="6" data-column="9" data-glyph="│" d="M123,269 L123,254 M123,269 L123,284"/>
+<path data-row="7" data-column="15" data-glyph="←" d="M178,299 H188 M182,295 L178,299 L182,303"/>
+<path data-row="11" data-column="9" data-glyph="│" d="M123,419 L123,404 M123,419 L123,434"/>
+<path data-row="12" data-column="21" data-glyph="←" d="M238,449 H248 M242,445 L238,449 L242,453"/>
+<path data-row="13" data-column="9" data-glyph="│" d="M123,479 L123,464 M123,479 L123,494"/>
+<path data-row="15" data-column="9" data-glyph="│" d="M123,539 L123,524 M123,539 L123,554"/>
+<path data-row="20" data-column="9" data-glyph="│" d="M123,689 L123,674 M123,689 L123,704"/>
+<path data-row="21" data-column="21" data-glyph="←" d="M238,719 H248 M242,715 L238,719 L242,723"/>
+<path data-row="22" data-column="9" data-glyph="│" d="M123,749 L123,734 M123,749 L123,764"/>
+<path data-row="23" data-column="15" data-glyph="←" d="M178,779 H188 M182,775 L178,779 L182,783"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">对话树：</text>
+<text data-row="1" data-column="8" x="108" y="119" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">root</text>
+<text data-row="3" data-column="7" x="98" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[探索方案 A]</text>
+<text data-row="5" data-column="7" x="98" y="239" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[A 的实现]</text>
+<text data-row="7" data-column="8" x="108" y="299" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leaf_1</text>
+<text data-row="7" data-column="17" x="198" y="299" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户当前在这里</text>
+<text data-row="9" data-column="0" x="28" y="359" textLength="320" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户：从 root 重新分叉探索方案 B</text>
+<text data-row="10" data-column="8" x="108" y="389" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">root</text>
+<text data-row="12" data-column="7" x="98" y="449" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[探索方案 A]</text>
+<text data-row="12" data-column="23" x="258" y="449" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">这部分还在，但被&quot;放弃&quot;了</text>
+<text data-row="14" data-column="7" x="98" y="509" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[A 的实现]</text>
+<text data-row="16" data-column="8" x="108" y="569" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leaf_1（旧叶子）</text>
+<text data-row="18" data-column="0" x="28" y="629" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户切换到：</text>
+<text data-row="19" data-column="8" x="108" y="659" textLength="40" lengthAdjust="spacingAndGlyphs" style="white-space:pre">root</text>
+<text data-row="21" data-column="7" x="98" y="719" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[探索方案 B]</text>
+<text data-row="21" data-column="23" x="258" y="719" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">新分支</text>
+<text data-row="23" data-column="8" x="108" y="779" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leaf_2</text>
+<text data-row="23" data-column="17" x="198" y="779" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户现在在这里</text>
+</g>
+</svg>

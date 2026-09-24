@@ -1,0 +1,207 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="696" height="732" viewBox="0 0 696 732" role="img" aria-labelledby="ch07-diagram-1628cfa71c51-title ch07-diagram-1628cfa71c51-description">
+<title id="ch07-diagram-1628cfa71c51-title">2.1 事件源：10 种 AgentEvent</title>
+<desc id="ch07-diagram-1628cfa71c51-description">Agent 运行
+agent_start
+Agent 开始
+Turn 1（第3章讲过：一次模型调用 + 它触发的工具执行）
+turn_start
+Turn 开始
+Message（LLM 的响应）
+message_start
+message_update ×N
+流式增量（逐 token 更新）
+message_end
+Tool Execution（工具执行）
+tool_execution_start
+tool_execution_update ×N  工具进度（如 Bash 的输出）
+tool_execution_end
+turn_end
+Turn 结束
+Turn 2 ...
+agent_end
+Agent 结束</desc>
+<rect x="1" y="1" width="694" height="730" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">2.1 事件源：10 种 AgentEvent</text>
+<path d="M28,58 H668" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="├" d="M33,119 L33,104 M33,119 L38,119 M33,119 L33,134"/>
+<path data-row="1" data-column="1" data-glyph="─" d="M43,119 L48,119 M43,119 L38,119"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="16" data-glyph="─" d="M193,119 L198,119 M193,119 L188,119"/>
+<path data-row="1" data-column="17" data-glyph="─" d="M203,119 L208,119 M203,119 L198,119"/>
+<path data-row="1" data-column="18" data-glyph="─" d="M213,119 L218,119 M213,119 L208,119"/>
+<path data-row="1" data-column="19" data-glyph="─" d="M223,119 L228,119 M223,119 L218,119"/>
+<path data-row="1" data-column="20" data-glyph="─" d="M233,119 L238,119 M233,119 L228,119"/>
+<path data-row="1" data-column="21" data-glyph="─" d="M243,119 L248,119 M243,119 L238,119"/>
+<path data-row="1" data-column="22" data-glyph="─" d="M253,119 L258,119 M253,119 L248,119"/>
+<path data-row="1" data-column="23" data-glyph="─" d="M263,119 L268,119 M263,119 L258,119"/>
+<path data-row="1" data-column="24" data-glyph="─" d="M273,119 L278,119 M273,119 L268,119"/>
+<path data-row="1" data-column="25" data-glyph="─" d="M283,119 L288,119 M283,119 L278,119"/>
+<path data-row="1" data-column="26" data-glyph="─" d="M293,119 L298,119 M293,119 L288,119"/>
+<path data-row="1" data-column="27" data-glyph="─" d="M303,119 L308,119 M303,119 L298,119"/>
+<path data-row="1" data-column="28" data-glyph="─" d="M313,119 L318,119 M313,119 L308,119"/>
+<path data-row="1" data-column="29" data-glyph="─" d="M323,119 L328,119 M323,119 L318,119"/>
+<path data-row="1" data-column="30" data-glyph="─" d="M333,119 L338,119 M333,119 L328,119"/>
+<path data-row="1" data-column="31" data-glyph="─" d="M343,119 L348,119 M343,119 L338,119"/>
+<path data-row="1" data-column="32" data-glyph="─" d="M353,119 L358,119 M353,119 L348,119"/>
+<path data-row="1" data-column="33" data-glyph="─" d="M363,119 L368,119 M363,119 L358,119"/>
+<path data-row="1" data-column="34" data-glyph="─" d="M373,119 L378,119 M373,119 L368,119"/>
+<path data-row="1" data-column="35" data-glyph="─" d="M383,119 L388,119 M383,119 L378,119"/>
+<path data-row="1" data-column="36" data-glyph="─" d="M393,119 L398,119 M393,119 L388,119"/>
+<path data-row="2" data-column="0" data-glyph="│" d="M33,149 L33,134 M33,149 L33,164"/>
+<path data-row="3" data-column="0" data-glyph="├" d="M33,179 L33,164 M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="4" data-column="4" data-glyph="├" d="M73,209 L73,194 M73,209 L78,209 M73,209 L73,224"/>
+<path data-row="4" data-column="5" data-glyph="─" d="M83,209 L88,209 M83,209 L78,209"/>
+<path data-row="4" data-column="6" data-glyph="─" d="M93,209 L98,209 M93,209 L88,209"/>
+<path data-row="4" data-column="19" data-glyph="─" d="M223,209 L228,209 M223,209 L218,209"/>
+<path data-row="4" data-column="20" data-glyph="─" d="M233,209 L238,209 M233,209 L228,209"/>
+<path data-row="4" data-column="21" data-glyph="─" d="M243,209 L248,209 M243,209 L238,209"/>
+<path data-row="4" data-column="22" data-glyph="─" d="M253,209 L258,209 M253,209 L248,209"/>
+<path data-row="4" data-column="23" data-glyph="─" d="M263,209 L268,209 M263,209 L258,209"/>
+<path data-row="4" data-column="24" data-glyph="─" d="M273,209 L278,209 M273,209 L268,209"/>
+<path data-row="4" data-column="25" data-glyph="─" d="M283,209 L288,209 M283,209 L278,209"/>
+<path data-row="4" data-column="26" data-glyph="─" d="M293,209 L298,209 M293,209 L288,209"/>
+<path data-row="4" data-column="27" data-glyph="─" d="M303,209 L308,209 M303,209 L298,209"/>
+<path data-row="4" data-column="28" data-glyph="─" d="M313,209 L318,209 M313,209 L308,209"/>
+<path data-row="4" data-column="29" data-glyph="─" d="M323,209 L328,209 M323,209 L318,209"/>
+<path data-row="4" data-column="30" data-glyph="─" d="M333,209 L338,209 M333,209 L328,209"/>
+<path data-row="4" data-column="31" data-glyph="─" d="M343,209 L348,209 M343,209 L338,209"/>
+<path data-row="4" data-column="32" data-glyph="─" d="M353,209 L358,209 M353,209 L348,209"/>
+<path data-row="4" data-column="33" data-glyph="─" d="M363,209 L368,209 M363,209 L358,209"/>
+<path data-row="4" data-column="34" data-glyph="─" d="M373,209 L378,209 M373,209 L368,209"/>
+<path data-row="4" data-column="35" data-glyph="─" d="M383,209 L388,209 M383,209 L378,209"/>
+<path data-row="4" data-column="36" data-glyph="─" d="M393,209 L398,209 M393,209 L388,209"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="5" data-column="4" data-glyph="│" d="M73,239 L73,224 M73,239 L73,254"/>
+<path data-row="6" data-column="0" data-glyph="│" d="M33,269 L33,254 M33,269 L33,284"/>
+<path data-row="6" data-column="4" data-glyph="├" d="M73,269 L73,254 M73,269 L78,269 M73,269 L73,284"/>
+<path data-row="6" data-column="5" data-glyph="─" d="M83,269 L88,269 M83,269 L78,269"/>
+<path data-row="6" data-column="6" data-glyph="─" d="M93,269 L98,269 M93,269 L88,269"/>
+<path data-row="7" data-column="0" data-glyph="│" d="M33,299 L33,284 M33,299 L33,314"/>
+<path data-row="7" data-column="4" data-glyph="│" d="M73,299 L73,284 M73,299 L73,314"/>
+<path data-row="7" data-column="8" data-glyph="├" d="M113,299 L113,284 M113,299 L118,299 M113,299 L113,314"/>
+<path data-row="7" data-column="9" data-glyph="─" d="M123,299 L128,299 M123,299 L118,299"/>
+<path data-row="7" data-column="10" data-glyph="─" d="M133,299 L138,299 M133,299 L128,299"/>
+<path data-row="8" data-column="0" data-glyph="│" d="M33,329 L33,314 M33,329 L33,344"/>
+<path data-row="8" data-column="4" data-glyph="│" d="M73,329 L73,314 M73,329 L73,344"/>
+<path data-row="8" data-column="8" data-glyph="├" d="M113,329 L113,314 M113,329 L118,329 M113,329 L113,344"/>
+<path data-row="8" data-column="9" data-glyph="─" d="M123,329 L128,329 M123,329 L118,329"/>
+<path data-row="8" data-column="10" data-glyph="─" d="M133,329 L138,329 M133,329 L128,329"/>
+<path data-row="8" data-column="30" data-glyph="─" d="M333,329 L338,329 M333,329 L328,329"/>
+<path data-row="8" data-column="31" data-glyph="─" d="M343,329 L348,329 M343,329 L338,329"/>
+<path data-row="8" data-column="32" data-glyph="─" d="M353,329 L358,329 M353,329 L348,329"/>
+<path data-row="8" data-column="33" data-glyph="─" d="M363,329 L368,329 M363,329 L358,329"/>
+<path data-row="8" data-column="34" data-glyph="─" d="M373,329 L378,329 M373,329 L368,329"/>
+<path data-row="8" data-column="35" data-glyph="─" d="M383,329 L388,329 M383,329 L378,329"/>
+<path data-row="9" data-column="0" data-glyph="│" d="M33,359 L33,344 M33,359 L33,374"/>
+<path data-row="9" data-column="4" data-glyph="│" d="M73,359 L73,344 M73,359 L73,374"/>
+<path data-row="9" data-column="8" data-glyph="└" d="M113,359 L118,359 M113,359 L113,344"/>
+<path data-row="9" data-column="9" data-glyph="─" d="M123,359 L128,359 M123,359 L118,359"/>
+<path data-row="9" data-column="10" data-glyph="─" d="M133,359 L138,359 M133,359 L128,359"/>
+<path data-row="10" data-column="0" data-glyph="│" d="M33,389 L33,374 M33,389 L33,404"/>
+<path data-row="10" data-column="4" data-glyph="│" d="M73,389 L73,374 M73,389 L73,404"/>
+<path data-row="11" data-column="0" data-glyph="│" d="M33,419 L33,404 M33,419 L33,434"/>
+<path data-row="11" data-column="4" data-glyph="├" d="M73,419 L73,404 M73,419 L78,419 M73,419 L73,434"/>
+<path data-row="11" data-column="5" data-glyph="─" d="M83,419 L88,419 M83,419 L78,419"/>
+<path data-row="11" data-column="6" data-glyph="─" d="M93,419 L98,419 M93,419 L88,419"/>
+<path data-row="12" data-column="0" data-glyph="│" d="M33,449 L33,434 M33,449 L33,464"/>
+<path data-row="12" data-column="4" data-glyph="│" d="M73,449 L73,434 M73,449 L73,464"/>
+<path data-row="12" data-column="8" data-glyph="├" d="M113,449 L113,434 M113,449 L118,449 M113,449 L113,464"/>
+<path data-row="12" data-column="9" data-glyph="─" d="M123,449 L128,449 M123,449 L118,449"/>
+<path data-row="12" data-column="10" data-glyph="─" d="M133,449 L138,449 M133,449 L128,449"/>
+<path data-row="13" data-column="0" data-glyph="│" d="M33,479 L33,464 M33,479 L33,494"/>
+<path data-row="13" data-column="4" data-glyph="│" d="M73,479 L73,464 M73,479 L73,494"/>
+<path data-row="13" data-column="8" data-glyph="├" d="M113,479 L113,464 M113,479 L118,479 M113,479 L113,494"/>
+<path data-row="13" data-column="9" data-glyph="─" d="M123,479 L128,479 M123,479 L118,479"/>
+<path data-row="13" data-column="10" data-glyph="─" d="M133,479 L138,479 M133,479 L128,479"/>
+<path data-row="14" data-column="0" data-glyph="│" d="M33,509 L33,494 M33,509 L33,524"/>
+<path data-row="14" data-column="4" data-glyph="│" d="M73,509 L73,494 M73,509 L73,524"/>
+<path data-row="14" data-column="8" data-glyph="└" d="M113,509 L118,509 M113,509 L113,494"/>
+<path data-row="14" data-column="9" data-glyph="─" d="M123,509 L128,509 M123,509 L118,509"/>
+<path data-row="14" data-column="10" data-glyph="─" d="M133,509 L138,509 M133,509 L128,509"/>
+<path data-row="15" data-column="0" data-glyph="│" d="M33,539 L33,524 M33,539 L33,554"/>
+<path data-row="15" data-column="4" data-glyph="│" d="M73,539 L73,524 M73,539 L73,554"/>
+<path data-row="16" data-column="0" data-glyph="│" d="M33,569 L33,554 M33,569 L33,584"/>
+<path data-row="16" data-column="4" data-glyph="└" d="M73,569 L78,569 M73,569 L73,554"/>
+<path data-row="16" data-column="5" data-glyph="─" d="M83,569 L88,569 M83,569 L78,569"/>
+<path data-row="16" data-column="6" data-glyph="─" d="M93,569 L98,569 M93,569 L88,569"/>
+<path data-row="16" data-column="17" data-glyph="─" d="M203,569 L208,569 M203,569 L198,569"/>
+<path data-row="16" data-column="18" data-glyph="─" d="M213,569 L218,569 M213,569 L208,569"/>
+<path data-row="16" data-column="19" data-glyph="─" d="M223,569 L228,569 M223,569 L218,569"/>
+<path data-row="16" data-column="20" data-glyph="─" d="M233,569 L238,569 M233,569 L228,569"/>
+<path data-row="16" data-column="21" data-glyph="─" d="M243,569 L248,569 M243,569 L238,569"/>
+<path data-row="16" data-column="22" data-glyph="─" d="M253,569 L258,569 M253,569 L248,569"/>
+<path data-row="16" data-column="23" data-glyph="─" d="M263,569 L268,569 M263,569 L258,569"/>
+<path data-row="16" data-column="24" data-glyph="─" d="M273,569 L278,569 M273,569 L268,569"/>
+<path data-row="16" data-column="25" data-glyph="─" d="M283,569 L288,569 M283,569 L278,569"/>
+<path data-row="16" data-column="26" data-glyph="─" d="M293,569 L298,569 M293,569 L288,569"/>
+<path data-row="16" data-column="27" data-glyph="─" d="M303,569 L308,569 M303,569 L298,569"/>
+<path data-row="16" data-column="28" data-glyph="─" d="M313,569 L318,569 M313,569 L308,569"/>
+<path data-row="16" data-column="29" data-glyph="─" d="M323,569 L328,569 M323,569 L318,569"/>
+<path data-row="16" data-column="30" data-glyph="─" d="M333,569 L338,569 M333,569 L328,569"/>
+<path data-row="16" data-column="31" data-glyph="─" d="M343,569 L348,569 M343,569 L338,569"/>
+<path data-row="16" data-column="32" data-glyph="─" d="M353,569 L358,569 M353,569 L348,569"/>
+<path data-row="16" data-column="33" data-glyph="─" d="M363,569 L368,569 M363,569 L358,569"/>
+<path data-row="16" data-column="34" data-glyph="─" d="M373,569 L378,569 M373,569 L368,569"/>
+<path data-row="16" data-column="35" data-glyph="─" d="M383,569 L388,569 M383,569 L378,569"/>
+<path data-row="16" data-column="36" data-glyph="─" d="M393,569 L398,569 M393,569 L388,569"/>
+<path data-row="17" data-column="0" data-glyph="│" d="M33,599 L33,584 M33,599 L33,614"/>
+<path data-row="18" data-column="0" data-glyph="├" d="M33,629 L33,614 M33,629 L38,629 M33,629 L33,644"/>
+<path data-row="18" data-column="1" data-glyph="─" d="M43,629 L48,629 M43,629 L38,629"/>
+<path data-row="18" data-column="2" data-glyph="─" d="M53,629 L58,629 M53,629 L48,629"/>
+<path data-row="19" data-column="0" data-glyph="│" d="M33,659 L33,644 M33,659 L33,674"/>
+<path data-row="20" data-column="0" data-glyph="└" d="M33,689 L38,689 M33,689 L33,674"/>
+<path data-row="20" data-column="1" data-glyph="─" d="M43,689 L48,689 M43,689 L38,689"/>
+<path data-row="20" data-column="2" data-glyph="─" d="M53,689 L58,689 M53,689 L48,689"/>
+<path data-row="20" data-column="14" data-glyph="─" d="M173,689 L178,689 M173,689 L168,689"/>
+<path data-row="20" data-column="15" data-glyph="─" d="M183,689 L188,689 M183,689 L178,689"/>
+<path data-row="20" data-column="16" data-glyph="─" d="M193,689 L198,689 M193,689 L188,689"/>
+<path data-row="20" data-column="17" data-glyph="─" d="M203,689 L208,689 M203,689 L198,689"/>
+<path data-row="20" data-column="18" data-glyph="─" d="M213,689 L218,689 M213,689 L208,689"/>
+<path data-row="20" data-column="19" data-glyph="─" d="M223,689 L228,689 M223,689 L218,689"/>
+<path data-row="20" data-column="20" data-glyph="─" d="M233,689 L238,689 M233,689 L228,689"/>
+<path data-row="20" data-column="21" data-glyph="─" d="M243,689 L248,689 M243,689 L238,689"/>
+<path data-row="20" data-column="22" data-glyph="─" d="M253,689 L258,689 M253,689 L248,689"/>
+<path data-row="20" data-column="23" data-glyph="─" d="M263,689 L268,689 M263,689 L258,689"/>
+<path data-row="20" data-column="24" data-glyph="─" d="M273,689 L278,689 M273,689 L268,689"/>
+<path data-row="20" data-column="25" data-glyph="─" d="M283,689 L288,689 M283,689 L278,689"/>
+<path data-row="20" data-column="26" data-glyph="─" d="M293,689 L298,689 M293,689 L288,689"/>
+<path data-row="20" data-column="27" data-glyph="─" d="M303,689 L308,689 M303,689 L298,689"/>
+<path data-row="20" data-column="28" data-glyph="─" d="M313,689 L318,689 M313,689 L308,689"/>
+<path data-row="20" data-column="29" data-glyph="─" d="M323,689 L328,689 M323,689 L318,689"/>
+<path data-row="20" data-column="30" data-glyph="─" d="M333,689 L338,689 M333,689 L328,689"/>
+<path data-row="20" data-column="31" data-glyph="─" d="M343,689 L348,689 M343,689 L338,689"/>
+<path data-row="20" data-column="32" data-glyph="─" d="M353,689 L358,689 M353,689 L348,689"/>
+<path data-row="20" data-column="33" data-glyph="─" d="M363,689 L368,689 M363,689 L358,689"/>
+<path data-row="20" data-column="34" data-glyph="─" d="M373,689 L378,689 M373,689 L368,689"/>
+<path data-row="20" data-column="35" data-glyph="─" d="M383,689 L388,689 M383,689 L378,689"/>
+<path data-row="20" data-column="36" data-glyph="─" d="M393,689 L398,689 M393,689 L388,689"/>
+<path data-row="20" data-column="37" data-glyph="─" d="M403,689 L408,689 M403,689 L398,689"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 运行</text>
+<text data-row="1" data-column="4" x="68" y="119" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent_start</text>
+<text data-row="1" data-column="38" x="408" y="119" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 开始</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="520" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 1（第3章讲过：一次模型调用 + 它触发的工具执行）</text>
+<text data-row="4" data-column="8" x="108" y="209" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_start</text>
+<text data-row="4" data-column="38" x="408" y="209" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 开始</text>
+<text data-row="6" data-column="8" x="108" y="269" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Message（LLM 的响应）</text>
+<text data-row="7" data-column="12" x="148" y="299" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">message_start</text>
+<text data-row="8" data-column="12" x="148" y="329" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">message_update ×N</text>
+<text data-row="8" data-column="37" x="398" y="329" textLength="250" lengthAdjust="spacingAndGlyphs" style="white-space:pre">流式增量（逐 token 更新）</text>
+<text data-row="9" data-column="12" x="148" y="359" textLength="110" lengthAdjust="spacingAndGlyphs" style="white-space:pre">message_end</text>
+<text data-row="11" data-column="8" x="108" y="419" textLength="260" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Tool Execution（工具执行）</text>
+<text data-row="12" data-column="12" x="148" y="449" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tool_execution_start</text>
+<text data-row="13" data-column="12" x="148" y="479" textLength="520" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tool_execution_update ×N  工具进度（如 Bash 的输出）</text>
+<text data-row="14" data-column="12" x="148" y="509" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">tool_execution_end</text>
+<text data-row="16" data-column="8" x="108" y="569" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">turn_end</text>
+<text data-row="16" data-column="38" x="408" y="569" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 结束</text>
+<text data-row="18" data-column="4" x="68" y="629" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Turn 2 ...</text>
+<text data-row="20" data-column="4" x="68" y="689" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">agent_end</text>
+<text data-row="20" data-column="39" x="418" y="689" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Agent 结束</text>
+</g>
+</svg>

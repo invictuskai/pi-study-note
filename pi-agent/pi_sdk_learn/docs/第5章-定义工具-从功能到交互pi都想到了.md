@@ -226,14 +226,7 @@ async execute(_id, params) {
 
 那如果 LLM 传错了呢？比如该传数字的，给你传个字符串 `"abc"`，会怎样？
 
-```mermaid
-flowchart TD
-    A["LLM 传错参数<br/>column = 123（应为字符串）"] --> B["框架用你的 Schema 校验"]
-    B --> C{"合法？"}
-    C -->|不合法| D["把错误返回给 LLM<br/>不调用你的 execute"]
-    D -.重试.-> A
-    C -->|合法| E["调用你的 execute"]
-```
+![params：LLM 传来的参数，框架已经帮你校验过了](assets/diagrams/pr05-diagram-ba0c56a095e6.svg)
 
 可以看到：你的 execute 根本不会被调用。
 
@@ -256,13 +249,7 @@ flowchart TD
 
 先想清楚一个场景：用户在前端点了「停止」按钮，这个"停止"是怎么一路传到你工具的请求里、把它掐断的？链路是这样：
 
-```
-用户点「停止」（前端）
-  → session.abort()
-  → 框架触发一个取消信号
-  → 作为第三个参数传进 execute(signal)
-  → 你把它透传给 fetch / mysql2，请求立刻断
-```
+![signal：框架给的取消信号](assets/diagrams/pr05-diagram-700cc35f014b.svg)
 
 `signal` 做的就是这件事：通知你"这次调用该中断了"。怎么用？你的工具要发外部请求，把它透传给请求库就行：
 
@@ -326,12 +313,7 @@ async execute(_id, params, _signal, onUpdate) {
 
 它会发出一个 `tool_execution_update` 事件，跟你前面用 `session.subscribe(...)` 订阅的那套事件，是同一个机制：
 
-```
-你的工具调 onUpdate({ content: [{ type: "text", text: "已处理 50%..." }], details: {} })
-  → 框架发出 tool_execution_update 事件
-  → 谁订阅了 session 的事件流，谁就能拿到这段进度文本
-  → 前端拿到后渲染成「正在处理...已处理 50%...」
-```
+![onUpdate：给用户报进度](assets/diagrams/pr05-diagram-5c5d3e00a3b9.svg)
 
 至于「前端怎么订阅事件流、怎么渲染」，那是**第 7 章（流式输出与 SSE）**的内容。
 
@@ -368,12 +350,7 @@ execute 这 5 个参数，常用程度差别很大。记不住正常，用到的
 
 你在 execute 里**抛出异常**（`throw new Error(...)`），pi-agent 会自动捕获，把它当成一条带 `isError: true` 的结果发给 LLM。**你的程序绝不会因为工具报了个错就整个崩掉。**
 
-```
-execute 里 throw new Error("连接超时")
-  → 框架捕获，转成结果：{ content: "连接超时", isError: true }
-  → 当作正常的工具结果发给 LLM
-  → LLM 看到「连接超时」，决定下一步怎么办
-```
+![首先：框架兜底，不会崩](assets/diagrams/pr05-diagram-2bc0b5e60978.svg)
 
 这是底线：你什么都不做，工具也不会让整个 Agent 崩掉。
 

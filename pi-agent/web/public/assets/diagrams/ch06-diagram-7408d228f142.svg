@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="976" height="822" viewBox="0 0 976 822" role="img" aria-labelledby="ch06-diagram-7408d228f142-title ch06-diagram-7408d228f142-description">
+<title id="ch06-diagram-7408d228f142-title">一个完整的对话示例</title>
+<desc id="ch06-diagram-7408d228f142-description">messages 数组：
+[0] UserMessage
+role: &quot;user&quot;
+content: &quot;帮我看看 auth.ts&quot;
+[1] AssistantMessage
+role: &quot;assistant&quot;
+content: [
+{ type: &quot;text&quot;, text: &quot;让我帮你看看这个文件&quot; },
+{ type: &quot;toolCall&quot;, id: &quot;tc_001&quot;, name: &quot;read&quot;, arguments: { path: &quot;auth.ts&quot; } }
+]
+stopReason: &quot;toolUse&quot;
+第3章讲过：调了工具，循环继续
+[2] ToolResultMessage
+role: &quot;toolResult&quot;
+toolCallId: &quot;tc_001&quot;
+和上面的 id 对应
+content: [{ type: &quot;text&quot;, text: &quot;import { auth } from &apos;...&apos; ...&quot; }]
+isError: false
+第5章讲过：正常结果
+[3] AssistantMessage
+role: &quot;assistant&quot;
+content: [{ type: &quot;text&quot;, text: &quot;auth.ts 是一个认证模块...&quot; }]
+stopReason: &quot;stop&quot;
+没调工具，循环结束</desc>
+<rect x="1" y="1" width="974" height="820" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">一个完整的对话示例</text>
+<path d="M28,58 H948" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="│" d="M33,119 L33,104 M33,119 L33,134"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="3" data-column="0" data-glyph="│" d="M33,179 L33,164 M33,179 L33,194"/>
+<path data-row="4" data-column="0" data-glyph="│" d="M33,209 L33,194 M33,209 L33,224"/>
+<path data-row="5" data-column="0" data-glyph="│" d="M33,239 L33,224 M33,239 L33,254"/>
+<path data-row="6" data-column="0" data-glyph="├" d="M33,269 L33,254 M33,269 L38,269 M33,269 L33,284"/>
+<path data-row="6" data-column="1" data-glyph="─" d="M43,269 L48,269 M43,269 L38,269"/>
+<path data-row="6" data-column="2" data-glyph="─" d="M53,269 L58,269 M53,269 L48,269"/>
+<path data-row="7" data-column="0" data-glyph="│" d="M33,299 L33,284 M33,299 L33,314"/>
+<path data-row="8" data-column="0" data-glyph="│" d="M33,329 L33,314 M33,329 L33,344"/>
+<path data-row="9" data-column="0" data-glyph="│" d="M33,359 L33,344 M33,359 L33,374"/>
+<path data-row="10" data-column="0" data-glyph="│" d="M33,389 L33,374 M33,389 L33,404"/>
+<path data-row="11" data-column="0" data-glyph="│" d="M33,419 L33,404 M33,419 L33,434"/>
+<path data-row="12" data-column="0" data-glyph="│" d="M33,449 L33,434 M33,449 L33,464"/>
+<path data-row="12" data-column="34" data-glyph="←" d="M368,449 H378 M372,445 L368,449 L372,453"/>
+<path data-row="13" data-column="0" data-glyph="│" d="M33,479 L33,464 M33,479 L33,494"/>
+<path data-row="14" data-column="0" data-glyph="├" d="M33,509 L33,494 M33,509 L38,509 M33,509 L33,524"/>
+<path data-row="14" data-column="1" data-glyph="─" d="M43,509 L48,509 M43,509 L38,509"/>
+<path data-row="14" data-column="2" data-glyph="─" d="M53,509 L58,509 M53,509 L48,509"/>
+<path data-row="15" data-column="0" data-glyph="│" d="M33,539 L33,524 M33,539 L33,554"/>
+<path data-row="16" data-column="0" data-glyph="│" d="M33,569 L33,554 M33,569 L33,584"/>
+<path data-row="16" data-column="34" data-glyph="←" d="M368,569 H378 M372,565 L368,569 L372,573"/>
+<path data-row="17" data-column="0" data-glyph="│" d="M33,599 L33,584 M33,599 L33,614"/>
+<path data-row="18" data-column="0" data-glyph="│" d="M33,629 L33,614 M33,629 L33,644"/>
+<path data-row="18" data-column="34" data-glyph="←" d="M368,629 H378 M372,625 L368,629 L372,633"/>
+<path data-row="19" data-column="0" data-glyph="│" d="M33,659 L33,644 M33,659 L33,674"/>
+<path data-row="20" data-column="0" data-glyph="└" d="M33,689 L38,689 M33,689 L33,674"/>
+<path data-row="20" data-column="1" data-glyph="─" d="M43,689 L48,689 M43,689 L38,689"/>
+<path data-row="20" data-column="2" data-glyph="─" d="M53,689 L58,689 M53,689 L48,689"/>
+<path data-row="23" data-column="34" data-glyph="←" d="M368,779 H378 M372,775 L368,779 L372,783"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">messages 数组：</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[0] UserMessage</text>
+<text data-row="3" data-column="8" x="108" y="179" textLength="120" lengthAdjust="spacingAndGlyphs" style="white-space:pre">role: &quot;user&quot;</text>
+<text data-row="4" data-column="8" x="108" y="209" textLength="270" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: &quot;帮我看看 auth.ts&quot;</text>
+<text data-row="6" data-column="4" x="68" y="269" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[1] AssistantMessage</text>
+<text data-row="7" data-column="8" x="108" y="299" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">role: &quot;assistant&quot;</text>
+<text data-row="8" data-column="8" x="108" y="329" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: [</text>
+<text data-row="9" data-column="12" x="148" y="359" textLength="470" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ type: &quot;text&quot;, text: &quot;让我帮你看看这个文件&quot; },</text>
+<text data-row="10" data-column="12" x="148" y="389" textLength="800" lengthAdjust="spacingAndGlyphs" style="white-space:pre">{ type: &quot;toolCall&quot;, id: &quot;tc_001&quot;, name: &quot;read&quot;, arguments: { path: &quot;auth.ts&quot; } }</text>
+<text data-row="11" data-column="8" x="108" y="419" textLength="10" lengthAdjust="spacingAndGlyphs" style="white-space:pre">]</text>
+<text data-row="12" data-column="8" x="108" y="449" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">stopReason: &quot;toolUse&quot;</text>
+<text data-row="12" data-column="36" x="388" y="449" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第3章讲过：调了工具，循环继续</text>
+<text data-row="14" data-column="4" x="68" y="509" textLength="210" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[2] ToolResultMessage</text>
+<text data-row="15" data-column="8" x="108" y="539" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">role: &quot;toolResult&quot;</text>
+<text data-row="16" data-column="8" x="108" y="569" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">toolCallId: &quot;tc_001&quot;</text>
+<text data-row="16" data-column="36" x="388" y="569" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">和上面的 id 对应</text>
+<text data-row="17" data-column="8" x="108" y="599" textLength="670" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: [{ type: &quot;text&quot;, text: &quot;import { auth } from &apos;...&apos; ...&quot; }]</text>
+<text data-row="18" data-column="8" x="108" y="629" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">isError: false</text>
+<text data-row="18" data-column="36" x="388" y="629" textLength="190" lengthAdjust="spacingAndGlyphs" style="white-space:pre">第5章讲过：正常结果</text>
+<text data-row="20" data-column="4" x="68" y="689" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">[3] AssistantMessage</text>
+<text data-row="21" data-column="8" x="108" y="719" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">role: &quot;assistant&quot;</text>
+<text data-row="22" data-column="8" x="108" y="749" textLength="620" lengthAdjust="spacingAndGlyphs" style="white-space:pre">content: [{ type: &quot;text&quot;, text: &quot;auth.ts 是一个认证模块...&quot; }]</text>
+<text data-row="23" data-column="8" x="108" y="779" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">stopReason: &quot;stop&quot;</text>
+<text data-row="23" data-column="36" x="388" y="779" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">没调工具，循环结束</text>
+</g>
+</svg>

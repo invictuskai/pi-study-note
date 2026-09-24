@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="566" height="282" viewBox="0 0 566 282" role="img" aria-labelledby="ch06-diagram-b91a34024371-title ch06-diagram-b91a34024371-description">
+<title id="ch06-diagram-b91a34024371-title">三、矛盾：Agent 里的消息不止三种</title>
+<desc id="ch06-diagram-b91a34024371-description">coding-agent 的自定义消息类型
+BashExecutionMessage
+Bash 命令执行记录
+CustomMessage
+扩展注入的通用消息
+BranchSummaryMessage
+分支切换时的摘要
+CompactionSummaryMessage
+上下文压缩后的摘要</desc>
+<rect x="1" y="1" width="564" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">三、矛盾：Agent 里的消息不止三种</text>
+<path d="M28,58 H538" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="0" data-glyph="│" d="M33,119 L33,104 M33,119 L33,134"/>
+<path data-row="2" data-column="0" data-glyph="├" d="M33,149 L33,134 M33,149 L38,149 M33,149 L33,164"/>
+<path data-row="2" data-column="1" data-glyph="─" d="M43,149 L48,149 M43,149 L38,149"/>
+<path data-row="2" data-column="2" data-glyph="─" d="M53,149 L58,149 M53,149 L48,149"/>
+<path data-row="2" data-column="31" data-glyph="←" d="M338,149 H348 M342,145 L338,149 L342,153"/>
+<path data-row="3" data-column="0" data-glyph="├" d="M33,179 L33,164 M33,179 L38,179 M33,179 L33,194"/>
+<path data-row="3" data-column="1" data-glyph="─" d="M43,179 L48,179 M43,179 L38,179"/>
+<path data-row="3" data-column="2" data-glyph="─" d="M53,179 L58,179 M53,179 L48,179"/>
+<path data-row="3" data-column="31" data-glyph="←" d="M338,179 H348 M342,175 L338,179 L342,183"/>
+<path data-row="4" data-column="0" data-glyph="├" d="M33,209 L33,194 M33,209 L38,209 M33,209 L33,224"/>
+<path data-row="4" data-column="1" data-glyph="─" d="M43,209 L48,209 M43,209 L38,209"/>
+<path data-row="4" data-column="2" data-glyph="─" d="M53,209 L58,209 M53,209 L48,209"/>
+<path data-row="4" data-column="31" data-glyph="←" d="M338,209 H348 M342,205 L338,209 L342,213"/>
+<path data-row="5" data-column="0" data-glyph="└" d="M33,239 L38,239 M33,239 L33,224"/>
+<path data-row="5" data-column="1" data-glyph="─" d="M43,239 L48,239 M43,239 L38,239"/>
+<path data-row="5" data-column="2" data-glyph="─" d="M53,239 L58,239 M53,239 L48,239"/>
+<path data-row="5" data-column="31" data-glyph="←" d="M338,239 H348 M342,235 L338,239 L342,243"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="290" lengthAdjust="spacingAndGlyphs" style="white-space:pre">coding-agent 的自定义消息类型</text>
+<text data-row="2" data-column="4" x="68" y="149" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">BashExecutionMessage</text>
+<text data-row="2" data-column="33" x="358" y="149" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Bash 命令执行记录</text>
+<text data-row="3" data-column="4" x="68" y="179" textLength="130" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CustomMessage</text>
+<text data-row="3" data-column="33" x="358" y="179" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">扩展注入的通用消息</text>
+<text data-row="4" data-column="4" x="68" y="209" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">BranchSummaryMessage</text>
+<text data-row="4" data-column="33" x="358" y="209" textLength="160" lengthAdjust="spacingAndGlyphs" style="white-space:pre">分支切换时的摘要</text>
+<text data-row="5" data-column="4" x="68" y="239" textLength="240" lengthAdjust="spacingAndGlyphs" style="white-space:pre">CompactionSummaryMessage</text>
+<text data-row="5" data-column="33" x="358" y="239" textLength="180" lengthAdjust="spacingAndGlyphs" style="white-space:pre">上下文压缩后的摘要</text>
+</g>
+</svg>

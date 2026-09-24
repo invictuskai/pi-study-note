@@ -39,9 +39,7 @@ import Diagram from '../../components/Diagram.astro';
 
 ### 模式 1：直接调用 —— "模型，回答我"
 
-```text
-用户输入 → 构建提示词 → 调模型一次 → 展示结果
-```
+<Diagram file="/assets/diagrams/ch03-diagram-d47dd89d0526.svg" caption="模式 1：直接调用 —— &quot;模型，回答我&quot;" id="ch03-diagram-d47dd89d0526" layout="preserve" />
 
 例如翻译或摘要。下面是通用伪代码，不是 pi SDK 的函数签名：
 
@@ -58,19 +56,13 @@ print(response.content)
 
 ### 模式 2：Workflow —— "模型，你先做第一步，我检查一下，再做第二步"
 
-```text
-调模型分析 → 代码检查 → 调模型生成草稿 → 代码检查 → 调模型润色
-```
+<Diagram file="/assets/diagrams/ch03-diagram-8b86b64fbc73.svg" caption="模式 2：Workflow —— &quot;模型，你先做第一步，我检查一下，再做第二步&quot;" id="ch03-diagram-8b86b64fbc73" layout="preserve" />
 
 步骤及分支由应用代码预先编排。每一步模型只负责其中一部分，代码决定进入哪一步。
 
 ### 模式 3：Agent Loop —— "模型，你自己决定怎么做"
 
-```text
-调模型 → 请求 read → 程序读文件 → 将结果加入历史
-再调模型 → 请求 edit → 程序修改文件 → 将结果加入历史
-再调模型 → 输出解释，无工具请求 → 检查其他续跑条件 → 结束
-```
+<Diagram file="/assets/diagrams/ch03-diagram-faae1b02c2a1.svg" caption="模式 3：Agent Loop —— &quot;模型，你自己决定怎么做&quot;" id="ch03-diagram-faae1b02c2a1" layout="preserve" />
 
 模型选择要请求的工具及参数，程序负责验证、执行和调度。**“我接下来会读文件”只是一句话；只有结构化的 `toolCall` 才进入工具执行路径。**
 
@@ -88,13 +80,7 @@ Agent 也可以有验收逻辑、预算限制和预设子流程。这些机制�
 
 本章用 Trace 指 `agent_start` 到 `agent_end` 的事件范围，不把它当成一个名为 `Trace` 的核心类型。一轮运行包含一个或多个 Turn。
 
-```text
-agent_start
-  turn_start → 模型请求 read → 执行 read → finishTurn → turn_end
-  turn_start → 模型请求 edit → 执行 edit → finishTurn → turn_end
-  turn_start → 模型输出解释 → finishTurn → turn_end
-agent_end
-```
+<Diagram file="/assets/diagrams/ch03-diagram-115d7522dbd0.svg" caption="Trace（本章指一次完整运行）" id="ch03-diagram-115d7522dbd0" layout="preserve" />
 
 `agent_end` 表示不再产生本次循环的后续事件。使用 `Agent` 类时，订阅者仍可能正在处理这个事件；`prompt()` / `waitForIdle()` 要等这些异步订阅者完成后才结束等待。
 
@@ -104,15 +90,7 @@ agent_end
 
 一条 assistant 消息请求了 read、grep、find，这一批工具属于同一个 Turn。拿着结果再调用模型，才是下一 Turn。
 
-```text
-进入下一轮（如果此前有已完成轮次）：
-  prepareNextTurn → 必要时补取 steering → turn_start
-注入准备好的消息和排队消息
-prepareRequest → transformContext → convertToLlm → 调模型
-处理错误或工具调用
-finishTurn → turn_end
-决定结束，或者检查下一轮输入
-```
+<Diagram file="/assets/diagrams/ch03-diagram-a4bb2dd21907.svg" caption="Turn（一个轮次）" id="ch03-diagram-a4bb2dd21907" layout="preserve" />
 
 首轮 `turn_start` 由 `runAgentLoop` / `runAgentLoopContinue` 发出。后续轮次通过 `lastCompletedTurn` 判断；该变量跨外层循环保留，所以 follow-up 重启内层时也会产生新的 `turn_start`。当前实现不是每次外层循环重新设置 `firstTurn`。
 
@@ -124,22 +102,7 @@ finishTurn → turn_end
 
 用户说“帮我读一下 src/main.ts”，没有额外回调决定或排队输入时：
 
-```text
-Turn 1：
-  模型输出 content: [{ type: "toolCall", name: "read", ... }]
-  程序执行 read，追加 toolResult
-  工具结果没有 terminate: true → hasMoreToolCalls = true
-  finishTurn → turn_end
-
-Turn 2：
-  模型看到文件内容，输出解释，没有 toolCall
-  hasMoreToolCalls = false
-  finishTurn → turn_end
-  没有 steering → 退出内层
-  没有 follow-up，也没有显式 continue → 退出外层
-
-agent_end
-```
+<Diagram file="/assets/diagrams/ch03-diagram-060bb5c17c0a.svg" caption="流程全景" id="ch03-diagram-060bb5c17c0a" layout="preserve" />
 
 `hasMoreToolCalls` 的名字容易误导。它不表示已经知道下一轮还会有工具，也不是“还有工具没执行”。它表示：**本轮工具处理是否要求再调用一次模型。**
 
@@ -448,14 +411,7 @@ return await execute_tool_calls_parallel(...)
 
 任一目标工具声明 `executionMode: "sequential"`，整批就采用串行。否则默认并行。
 
-```text
-串行：A 预检 → 执行 → after hook → 工具结束及结果消息 → B ...
-
-并行：
-  1. 按调用顺序预检；拦截/校验失败的项当场生成结束结果
-  2. 允许执行的项并发执行、运行 after hook、发送 tool_execution_end
-  3. 等待本批处理完成，按原始调用顺序发送 toolResult 消息
-```
+<Diagram file="/assets/diagrams/ch03-diagram-f73513965ed1.svg" caption="4.6 executeToolCalls()：并行与串行" id="ch03-diagram-f73513965ed1" layout="preserve" />
 
 预检顺序执行是当前实现的选择，不意味着权限校验在原理上不能并行。**B 被拦截不自动拦截 C**；只有取消信号等另行控制后续处理。并发部分也不仅是 `tool.execute`，其 after hook 和结束通知同样属于各自异步任务。
 

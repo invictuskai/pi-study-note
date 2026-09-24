@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="506" height="132" viewBox="0 0 506 132" role="img" aria-labelledby="ch03-diagram-d47dd89d0526-title ch03-diagram-d47dd89d0526-description">
+<title id="ch03-diagram-d47dd89d0526-title">模式 1：直接调用 —— &quot;模型，回答我&quot;</title>
+<desc id="ch03-diagram-d47dd89d0526-description">用户输入
+构建提示词
+调模型一次
+展示结果</desc>
+<rect x="1" y="1" width="504" height="130" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">模式 1：直接调用 —— &quot;模型，回答我&quot;</text>
+<path d="M28,58 H478" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="9" data-glyph="→" d="M118,89 H128 M124,85 L128,89 L124,93"/>
+<path data-row="0" data-column="22" data-glyph="→" d="M248,89 H258 M254,85 L258,89 L254,93"/>
+<path data-row="0" data-column="35" data-glyph="→" d="M378,89 H388 M384,85 L388,89 L384,93"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">用户输入</text>
+<text data-row="0" data-column="11" x="138" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">构建提示词</text>
+<text data-row="0" data-column="24" x="268" y="89" textLength="100" lengthAdjust="spacingAndGlyphs" style="white-space:pre">调模型一次</text>
+<text data-row="0" data-column="37" x="398" y="89" textLength="80" lengthAdjust="spacingAndGlyphs" style="white-space:pre">展示结果</text>
+</g>
+</svg>

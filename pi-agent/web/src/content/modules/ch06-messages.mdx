@@ -53,13 +53,7 @@ UserMessage、AssistantMessage、ToolResultMessage——这三个名字反复出
 
 它只有三个成员：
 
-```
-Message 联合类型（LLM 标准格式）
-│
-├── UserMessage        ← 用户说的话 / 发的图片
-├── AssistantMessage   ← LLM 的回复（含思考、工具调用）
-└── ToolResultMessage  ← 工具执行后的结果
-```
+<Diagram file="/assets/diagrams/ch06-diagram-6c4a38a26c5d.svg" caption="二、第一层：LLM 认识的消息只有三种" id="ch06-diagram-6c4a38a26c5d" layout="preserve" />
 
 ### 每种消息的具体数据结构
 
@@ -93,18 +87,7 @@ content 可以是一个纯字符串，也可以是一个内容块数组。这意
 
 这里最值得关注的是 content 字段——它不是字符串，而是一个**内容块数组**，可以包含三种东西：
 
-```
-AssistantMessage 的 content 内容块
-│
-├── TextContent       ← 普通文本
-│     { type: "text", text: "..." }
-│
-├── ThinkingContent   ← 思考过程（第3章讲过，模型"在想"但不直接告诉用户的部分）
-│     { type: "thinking", thinking: "..." }
-│
-└── ToolCall          ← 工具调用（第5章讲过，触发五步管道的入口）
-      { type: "toolCall", id: "...", name: "read", arguments: { path: "..." } }
-```
+<Diagram file="/assets/diagrams/ch06-diagram-960b28862504.svg" caption="每种消息的具体数据结构" id="ch06-diagram-960b28862504" layout="preserve" />
 
 **一条助手消息可能同时包含文本和工具调用。** 比如 LLM 一边说"让我帮你看看这个文件"，一边发出一个 Read 工具调用——这两个内容会放在同一个 AssistantMessage 的 content 数组里。第 3 章讲的"模型回复中包含 ToolCall"就是这个结构。
 
@@ -130,32 +113,7 @@ ToolResultMessage 通过 `toolCallId` 字段和 AssistantMessage 里的 ToolCall
 
 把这三种消息串起来，一个典型的对话片段长这样：
 
-```
-messages 数组：
-│
-├── [0] UserMessage
-│       role: "user"
-│       content: "帮我看看 auth.ts"
-│
-├── [1] AssistantMessage
-│       role: "assistant"
-│       content: [
-│           { type: "text", text: "让我帮你看看这个文件" },
-│           { type: "toolCall", id: "tc_001", name: "read", arguments: { path: "auth.ts" } }
-│       ]
-│       stopReason: "toolUse"     ← 第3章讲过：调了工具，循环继续
-│
-├── [2] ToolResultMessage
-│       role: "toolResult"
-│       toolCallId: "tc_001"      ← 和上面的 id 对应
-│       content: [{ type: "text", text: "import { auth } from '...' ..." }]
-│       isError: false            ← 第5章讲过：正常结果
-│
-└── [3] AssistantMessage
-        role: "assistant"
-        content: [{ type: "text", text: "auth.ts 是一个认证模块..." }]
-        stopReason: "stop"        ← 没调工具，循环结束
-```
+<Diagram file="/assets/diagrams/ch06-diagram-7408d228f142.svg" caption="一个完整的对话示例" id="ch06-diagram-7408d228f142" layout="preserve" />
 
 这就是 LLM 能理解的世界——用户说了什么、AI 回了什么、工具返回了什么，就这么三种。
 
@@ -180,14 +138,7 @@ Pi 的设计是**两边都不妥协**：**以结构化的形式存进 `context.m
 
 以 pi 自带的 coding-agent 为例，它在 [packages/coding-agent/src/core/messages.ts](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/src/core/messages.ts) 里定义了 4 种自定义消息：
 
-```
-coding-agent 的自定义消息类型
-│
-├── BashExecutionMessage       ← Bash 命令执行记录
-├── CustomMessage              ← 扩展注入的通用消息
-├── BranchSummaryMessage       ← 分支切换时的摘要
-└── CompactionSummaryMessage   ← 上下文压缩后的摘要
-```
+<Diagram file="/assets/diagrams/ch06-diagram-b91a34024371.svg" caption="三、矛盾：Agent 里的消息不止三种" id="ch06-diagram-b91a34024371" layout="preserve" />
 
 每种都有自己的结构化字段。以 BashExecutionMessage 为例：
 
@@ -239,22 +190,7 @@ export type AgentMessage = Message | CustomAgentMessages[keyof CustomAgentMessag
 
 用一张图看最清楚：
 
-```
-AgentMessage（Agent 内部使用的消息格式）
-│
-├── Message（可直接发送给 LLM 的标准消息）
-│   │
-│   ├── UserMessage          ← role: "user"
-│   ├── AssistantMessage     ← role: "assistant"
-│   └── ToolResultMessage    ← role: "toolResult"
-│
-└── CustomAgentMessages（仅 Agent 内部使用的扩展消息）
-    │
-    ├── BashExecutionMessage      ← role: "bashExecution"
-    ├── CustomMessage             ← role: "custom"
-    ├── BranchSummaryMessage      ← role: "branchSummary"
-    └── CompactionSummaryMessage  ← role: "compactionSummary"
-```
+<Diagram file="/assets/diagrams/ch06-diagram-e9a9c109cd8a.svg" caption="AgentMessage 联合类型" id="ch06-diagram-e9a9c109cd8a" layout="preserve" />
 
 Agent 内部的 `context.messages` 数组里放的是 `AgentMessage[]`——它可以混合存放标准和自定义消息。一条消息到底是标准还是自定义的，看 `role` 字段就能判断。
 
@@ -304,23 +240,7 @@ declare module "@earendil-works/pi-agent-core" {
 
 在 `streamAssistantResponse` 函数里（第 3 章讲过的"调用模型"那一步），翻译发生的时机非常精确：
 
-```
-每次 LLM 调用前的消息处理管道：
-
-context.messages: AgentMessage[]        ← Agent 内部的消息（最多 7 种类型）
-        │
-        ▼
-[1] transformContext (可选)             ← AgentMessage[] → AgentMessage[]
-        │                                  裁剪旧消息、注入外部上下文
-        ▼
-[2] convertToLlm (必须)                 ← AgentMessage[] → Message[]
-        │                                  自定义消息翻译成标准格式
-        ▼
-llmContext.messages: Message[]          ← LLM 看到的消息（只有 3 种类型）
-        │
-        ▼
-streamFunction(model, llmContext, ...)  ← 调用 LLM（第4章讲过）
-```
+<Diagram file="/assets/diagrams/ch06-diagram-49fe5c5db31e.svg" caption="翻译发生在什么时候？" id="ch06-diagram-49fe5c5db31e" layout="preserve" />
 
 注意顺序：**先 transformContext（同层变换），再 convertToLlm（跨层翻译）。** 为什么分两步？后面会讲。
 
@@ -442,44 +362,7 @@ case "bashExecution":
 
 把全章内容串起来，一条消息从诞生到被 LLM 看到的完整路径：
 
-```
-用户在终端输入 !ls -la
-        │
-        ▼
-[1] 创建消息
-    BashExecutionMessage { role: "bashExecution", command: "ls -la", output: "...", ... }
-        │
-        ▼
-[2] 存入 context.messages: AgentMessage[]
-    [...原有消息, 新的 BashExecutionMessage]
-        │
-        ▼
-[3] Agent Loop 准备调用 LLM（第3章讲过的内层循环）
-        │
-        ▼
-[4] transformContext（可选）
-    输入/输出都是 AgentMessage[]
-    裁剪、注入、压缩（第8章详讲 transformContext、第9章详讲 Compaction）
-        │
-        ▼
-[5] convertToLlm（必须）
-    AgentMessage[] → Message[]
-    BashExecutionMessage → UserMessage
-    excludeFromContext → 过滤掉
-        │
-        ▼
-[6] LLM 收到
-    llmContext.messages = [
-        ...之前的消息,
-        { role: "user", content: "Ran `ls -la`\n```\n...\n```" }
-    ]
-        │
-        ▼
-[7] LLM 回复
-    → 产生新的 AssistantMessage
-    → 可能触发工具调用 → ToolResultMessage（第5章的五步管道）
-    → 回到 [2]，继续循环
-```
+<Diagram file="/assets/diagrams/ch06-diagram-65585b7eddea.svg" caption="八、完整数据流：从用户操作到 LLM 看到的消息" id="ch06-diagram-65585b7eddea" layout="preserve" />
 
 **核心规律**：Agent 内部用 7 种消息类型自由表达，但到了 LLM 边界，所有自定义消息都被翻译回 3 种标准格式。这个"内富外严"的设计让 Agent 拥有无限扩展能力，同时永远不破坏 LLM 兼容性。
 

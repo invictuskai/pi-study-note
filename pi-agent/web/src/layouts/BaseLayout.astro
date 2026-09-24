@@ -39,6 +39,14 @@ const { title, description = 'Pi Agent 源码精读笔记' } = Astro.props;
 </head>
 <body>
   <slot />
+  <footer class="site-footer">
+    <a href="https://github.com/invictuskai/pi-study-note" target="_blank" rel="noopener noreferrer">源码与许可证</a>
+  </footer>
   <script is:inline src={withBase('/js/diagram-linker.js')} defer></script>
 </body>
 </html>
+
+<style>
+  .site-footer { padding: var(--space-6); text-align: center; font-size: var(--fs-small); border-top: 1px solid var(--rule); }
+  .site-footer a { color: var(--soft); }
+</style>

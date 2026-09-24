@@ -27,17 +27,7 @@ import Diagram from '../../components/Diagram.astro';
 
 假设你第一次克隆了 Pi 的代码库，在终端里敲下 `ls`，你会看到这样的目录结构：
 
-```
-repo/
-├── packages/
-│   ├── ai/              ← @earendil-works/pi-ai
-│   ├── agent/           ← @earendil-works/pi-agent-core
-│   ├── coding-agent/    ← @earendil-works/pi-coding-agent
-│   ├── orchestrator/    ← @earendil-works/pi-orchestrator（实验性，多 Agent 编排）
-│   └── tui/             ← @earendil-works/pi-tui
-├── package.json         ← 根配置，npm workspaces
-└── tsconfig.json
-```
+<Diagram file="/assets/diagrams/ch02-diagram-1d6927c8311d.svg" caption="1. 你打开了一个 Agent 代码库" id="ch02-diagram-1d6927c8311d" layout="preserve" />
 
 五个包，整整齐齐排成一排。
 
@@ -184,15 +174,7 @@ if __name__ == "__main__":
 
 一个简单的入口，背后是一整条启动链路：
 
-```
-你输入: pi "帮我改个 bug"
-│
-├── cli.ts          ← 解析命令行参数
-│   └── main.ts     ← 创建会话、选择运行模式（交互/打印/RPC）
-│       └── AgentSession    ← 组装工具、加载扩展
-│           └── Agent       ← 管理状态、跑循环
-│               └── agentLoop()  ← 核心循环开始
-```
+<Diagram file="/assets/diagrams/ch02-diagram-cdc10e8e6f5f.svg" caption="2.3 pi-coding-agent：管&quot;具体业务&quot;" id="ch02-diagram-cdc10e8e6f5f" layout="preserve" />
 
 ### 2.4 pi-tui：管"显示"
 
@@ -223,23 +205,7 @@ if __name__ == "__main__":
 
 读完上面那一段，你脑子里可能已经有了一个画面：
 
-```
-┌─────────────────────────────────────────────┐
-│  pi-coding-agent：我知道怎么写代码            │  ← 最懂业务
-│  （工具、扩展、CLI、会话持久化）               │
-├─────────────────────────────────────────────┤
-│  pi-agent-core：我知道怎么跑 Agent            │  ← 只懂框架
-│  （循环、状态、事件、压缩）                    │
-├─────────────────────────────────────────────┤
-│  pi-ai：我知道怎么调模型                      │  ← 只懂模型
-│  （统一 API、流式调用、30+ 提供商适配）        │
-└─────────────────────────────────────────────┘
-
-旁边还有一个独立的 UI 包：
-┌──────────┐
-│  pi-tui  │  ← 只管显示
-└──────────┘
-```
+<Diagram file="/assets/diagrams/ch02-diagram-96c51715dff0.svg" caption="3. 看完五个包，你大概有了直觉" id="ch02-diagram-96c51715dff0" layout="preserve" />
 
 很直觉的分层：底层调模型，中间跑循环，顶层做业务。对吧？
 
@@ -316,18 +282,7 @@ pi-agent-core 的类型定义里，大量基础类型都是从 pi-ai 导入的�
 
 用一张图表示：
 
-```
-pi-ai（底层）
-  ↑         ↑
-  │         │
-  │    pi-agent-core（中间层）
-  │         ↑
-  │         │
-  └─── pi-coding-agent（顶层）
-            ↑
-            │
-       pi-orchestrator（实验性外围编排层，可选）
-```
+<Diagram file="/assets/diagrams/ch02-diagram-2e8745f16976.svg" caption="那分层的规则到底是什么？" id="ch02-diagram-2e8745f16976" layout="preserve" />
 
 所有箭头都朝上。**底层永远不知道上层的存在**——pi-ai 的代码里没有任何一个 import 指向 pi-agent-core 或 pi-coding-agent；orchestrator 也不会反向渗透到 coding-agent 内部。这就是分层的真正规则：**不是限制引用层级，而是控制依赖方向必须单向向上。**
 
@@ -504,34 +459,7 @@ class Extension:
 
 把三层类型变化放到一起看：
 
-```
-Before（pi-ai 层）：Tool 只知道"长什么样"
-────────────────────────────────────────────
-interface Tool<TSchema> {
-    name: string
-    description: string
-    parameters: TSchema
-}
-
-         ↓ agent-core 扩展
-
-After（pi-agent-core 层）：AgentTool 知道"怎么执行"
-────────────────────────────────────────────
-interface AgentTool<TSchema> extends Tool<TSchema> {
-    label: string                              ← 新增
-    execute: (...) => Promise<AgentToolResult> ← 新增
-    executionMode?: "sequential" | "parallel"  ← 新增
-}
-
-         ↓ coding-agent 扩展
-
-After（pi-coding-agent 层）：ToolDefinition 加上"怎么显示"
-────────────────────────────────────────────
-interface ToolDefinition {
-    // 继承 AgentTool 的全部字段
-    // + 渲染器、权限控制等业务属性
-}
-```
+<Diagram file="/assets/diagrams/ch02-diagram-f6c847a19be4.svg" caption="类型扩展的 Before → After 对照" id="ch02-diagram-f6c847a19be4" layout="preserve" />
 
 每一层只关心自己该关心的事，通过继承或组合在上层类型的基础上扩展。底层类型从不修改——pi-ai 的 `Tool` 接口里没有 `execute` 字段，因为 LLM 不需要知道工具怎么执行。
 

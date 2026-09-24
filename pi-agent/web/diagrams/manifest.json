@@ -1,0 +1,1990 @@
+{
+  "version": 1,
+  "baseline": "0edcb5b88d7c0b8e40be8cd292ea39d684f797d7",
+  "coverage": [
+    {
+      "file": "ch01-overview.mdx",
+      "converted": 1,
+      "retainedFences": 6
+    },
+    {
+      "file": "ch01-overview.python.mdx",
+      "converted": 1,
+      "retainedFences": 6
+    },
+    {
+      "file": "ch02-three-layer-arch.mdx",
+      "converted": 5,
+      "retainedFences": 11
+    },
+    {
+      "file": "ch02-three-layer-arch.python.mdx",
+      "converted": 5,
+      "retainedFences": 11
+    },
+    {
+      "file": "ch03-agent-loop.mdx",
+      "converted": 7,
+      "retainedFences": 18
+    },
+    {
+      "file": "ch03-agent-loop.python.mdx",
+      "converted": 7,
+      "retainedFences": 18
+    },
+    {
+      "file": "ch04-model-call.mdx",
+      "converted": 6,
+      "retainedFences": 7
+    },
+    {
+      "file": "ch04-model-call.python.mdx",
+      "converted": 6,
+      "retainedFences": 7
+    },
+    {
+      "file": "ch05-tools.mdx",
+      "converted": 10,
+      "retainedFences": 19
+    },
+    {
+      "file": "ch05-tools.python.mdx",
+      "converted": 10,
+      "retainedFences": 19
+    },
+    {
+      "file": "ch06-messages.mdx",
+      "converted": 7,
+      "retainedFences": 10
+    },
+    {
+      "file": "ch06-messages.python.mdx",
+      "converted": 7,
+      "retainedFences": 10
+    },
+    {
+      "file": "ch07-event-driven.mdx",
+      "converted": 3,
+      "retainedFences": 16
+    },
+    {
+      "file": "ch07-event-driven.python.mdx",
+      "converted": 3,
+      "retainedFences": 16
+    },
+    {
+      "file": "ch08-context-engineering.mdx",
+      "converted": 8,
+      "retainedFences": 8
+    },
+    {
+      "file": "ch08-context-engineering.python.mdx",
+      "converted": 8,
+      "retainedFences": 8
+    },
+    {
+      "file": "ch09-compaction.mdx",
+      "converted": 11,
+      "retainedFences": 9
+    },
+    {
+      "file": "ch09-compaction.python.mdx",
+      "converted": 11,
+      "retainedFences": 9
+    },
+    {
+      "file": "ch10-session.mdx",
+      "converted": 12,
+      "retainedFences": 18
+    },
+    {
+      "file": "ch10-session.python.mdx",
+      "converted": 12,
+      "retainedFences": 18
+    },
+    {
+      "file": "pr01-env-setup.mdx",
+      "converted": 0,
+      "retainedFences": 40
+    },
+    {
+      "file": "pr02-architecture.mdx",
+      "converted": 5,
+      "retainedFences": 10
+    },
+    {
+      "file": "pr03-model-config.mdx",
+      "converted": 1,
+      "retainedFences": 8
+    },
+    {
+      "file": "pr04-system-prompt.mdx",
+      "converted": 2,
+      "retainedFences": 7
+    },
+    {
+      "file": "pr05-tools.mdx",
+      "converted": 4,
+      "retainedFences": 11
+    },
+    {
+      "file": "pr06-events.mdx",
+      "converted": 2,
+      "retainedFences": 10
+    },
+    {
+      "file": "pr07-deploy.mdx",
+      "converted": 2,
+      "retainedFences": 6
+    }
+  ],
+  "retained": [
+    {
+      "file": "ch03-agent-loop.mdx",
+      "sourceSha256": "3f7d40c22ab8c77d1e606f07a7f25c594270f481f86384a74080fe4e5615fb1c",
+      "reason": "调度伪代码，不是字符图"
+    },
+    {
+      "file": "ch03-agent-loop.python.mdx",
+      "sourceSha256": "3f7d40c22ab8c77d1e606f07a7f25c594270f481f86384a74080fe4e5615fb1c",
+      "reason": "调度伪代码，不是字符图"
+    },
+    {
+      "file": "ch05-tools.mdx",
+      "sourceSha256": "1a0e26ccab24abd39e5d35770063bb5180145cc295bb0d53ebbb6be7a47e1f54",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "ch05-tools.python.mdx",
+      "sourceSha256": "9088d22765c26c5a23857eeac9b043f5d0156369c2e1a66bd863f2d98f3a93f7",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "ch07-event-driven.mdx",
+      "sourceSha256": "de6cc68fc5415f718c5412ee8f731dbff7ec67823676794e5ce711a4350084f0",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "ch07-event-driven.python.mdx",
+      "sourceSha256": "90c220098fb01e187751696f2f1876c3690d01636434ed9b2484fcaa87dac260",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "ch09-compaction.mdx",
+      "sourceSha256": "2afbef4fb91e9eab31ea38e0e6bb4a71d7c5f4bc37466ca94bd5141918441bdf",
+      "reason": "可复制的摘要模板"
+    },
+    {
+      "file": "ch09-compaction.python.mdx",
+      "sourceSha256": "2afbef4fb91e9eab31ea38e0e6bb4a71d7c5f4bc37466ca94bd5141918441bdf",
+      "reason": "可复制的摘要模板"
+    },
+    {
+      "file": "ch10-session.mdx",
+      "sourceSha256": "cf97daf2f6640469e92a4f03a332fc7a3fcc68ffb0a259f535397d925a52025b",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "ch10-session.mdx",
+      "sourceSha256": "c4ed44505dcb12a5298ebf7819ac519bc46034ad3e839e2a135eda6745589c38",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "ch10-session.mdx",
+      "sourceSha256": "aaa0c4f776572ac4172fe34507ccbd5edfc6059438b5529f552b0fb20594de4a",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "ch10-session.python.mdx",
+      "sourceSha256": "cf97daf2f6640469e92a4f03a332fc7a3fcc68ffb0a259f535397d925a52025b",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "ch10-session.python.mdx",
+      "sourceSha256": "c4ed44505dcb12a5298ebf7819ac519bc46034ad3e839e2a135eda6745589c38",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "ch10-session.python.mdx",
+      "sourceSha256": "aaa0c4f776572ac4172fe34507ccbd5edfc6059438b5529f552b0fb20594de4a",
+      "reason": "消息数据或操作步骤示例，不是字符图"
+    },
+    {
+      "file": "pr03-model-config.mdx",
+      "sourceSha256": "20eee4d7cf3d2a6f88021d1ddaa15333ceeefcfcfee27d18d106edaec81f82de",
+      "reason": "HTTP 请求示例，不是字符图"
+    },
+    {
+      "file": "pr05-tools.mdx",
+      "sourceSha256": "14eb40191afa687758acd6bbe8ee9c0c57a44fc2b3a6f2d3980a7dab2b357b34",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "pr06-events.mdx",
+      "sourceSha256": "f33a2414d208a5ba13517fc20fc37942d53f628ea8c390a5dc6723839f830d68",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    },
+    {
+      "file": "pr06-events.mdx",
+      "sourceSha256": "61b59d4ea3173479a4db938521e587fa718b63b0a6b8ccc8ecd7d5e472286bd2",
+      "reason": "代码字符串或代码注释，保留可复制代码"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "ch01-diagram-c04ad053fc05",
+      "caption": "四个核心包，各司其职",
+      "kind": "grid",
+      "sourceSha256": "c04ad053fc059b39c66f11ced41c9b2b1e4aa0803ff66ae15e973b2461360eac",
+      "source": "┌──────────────────────────────────────────┐\n│          pi-coding-agent                 │  ← 完整 CLI 产品 + SDK\n│  系统提示词 · 内置工具 · 会话管理 · 扩展  │\n├──────────────────────────────────────────┤\n│  pi-tui              │  pi-agent-core    │  ← 终端 UI + Agent 引擎\n│  差分渲染 · 组件系统  │  AgentLoop · 工具 │\n│                      │  系统 · 事件流    │\n├──────────────────────┴───────────────────┤\n│              pi-ai                       │  ← 多供应商 LLM 抽象\n│  统一 API · 上下文交接 · 流式 · Token 追踪│\n└──────────────────────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch01-overview.mdx",
+          "markdown": "pi_source_dive/typescript/第1章-开篇-Pi-Agent框架总览.md",
+          "originalFence": 1,
+          "caption": "四个核心包，各司其职"
+        },
+        {
+          "mdx": "ch01-overview.python.mdx",
+          "markdown": "pi_source_dive/python/第1章-开篇-Pi-Agent框架总览.md",
+          "originalFence": 1,
+          "caption": "四个核心包，各司其职"
+        }
+      ]
+    },
+    {
+      "id": "ch02-diagram-1d6927c8311d",
+      "caption": "1. 你打开了一个 Agent 代码库",
+      "kind": "grid",
+      "sourceSha256": "1d6927c8311d3fddc32af54047f09ff53dfe1ae71e283d2da425d786493c014f",
+      "source": "repo/\n├── packages/\n│   ├── ai/              ← @earendil-works/pi-ai\n│   ├── agent/           ← @earendil-works/pi-agent-core\n│   ├── coding-agent/    ← @earendil-works/pi-coding-agent\n│   ├── orchestrator/    ← @earendil-works/pi-orchestrator（实验性，多 Agent 编排）\n│   └── tui/             ← @earendil-works/pi-tui\n├── package.json         ← 根配置，npm workspaces\n└── tsconfig.json",
+      "occurrences": [
+        {
+          "mdx": "ch02-three-layer-arch.mdx",
+          "markdown": "pi_source_dive/typescript/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 1,
+          "caption": "1. 你打开了一个 Agent 代码库"
+        },
+        {
+          "mdx": "ch02-three-layer-arch.python.mdx",
+          "markdown": "pi_source_dive/python/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 1,
+          "caption": "1. 你打开了一个 Agent 代码库"
+        }
+      ]
+    },
+    {
+      "id": "ch02-diagram-cdc10e8e6f5f",
+      "caption": "2.3 pi-coding-agent：管\"具体业务\"",
+      "kind": "grid",
+      "sourceSha256": "cdc10e8e6f5fb2fecca531a47fb98af7143077399ecc5d9c1c330e0017062899",
+      "source": "你输入: pi \"帮我改个 bug\"\n│\n├── cli.ts          ← 解析命令行参数\n│   └── main.ts     ← 创建会话、选择运行模式（交互/打印/RPC）\n│       └── AgentSession    ← 组装工具、加载扩展\n│           └── Agent       ← 管理状态、跑循环\n│               └── agentLoop()  ← 核心循环开始",
+      "occurrences": [
+        {
+          "mdx": "ch02-three-layer-arch.mdx",
+          "markdown": "pi_source_dive/typescript/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 5,
+          "caption": "2.3 pi-coding-agent：管\"具体业务\""
+        },
+        {
+          "mdx": "ch02-three-layer-arch.python.mdx",
+          "markdown": "pi_source_dive/python/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 5,
+          "caption": "2.3 pi-coding-agent：管\"具体业务\""
+        }
+      ]
+    },
+    {
+      "id": "ch02-diagram-96c51715dff0",
+      "caption": "3. 看完五个包，你大概有了直觉",
+      "kind": "grid",
+      "sourceSha256": "96c51715dff0982c6f8a71a28118c6b49c1ad6435b72f099807193e3e1ec6c75",
+      "source": "┌─────────────────────────────────────────────┐\n│  pi-coding-agent：我知道怎么写代码            │  ← 最懂业务\n│  （工具、扩展、CLI、会话持久化）               │\n├─────────────────────────────────────────────┤\n│  pi-agent-core：我知道怎么跑 Agent            │  ← 只懂框架\n│  （循环、状态、事件、压缩）                    │\n├─────────────────────────────────────────────┤\n│  pi-ai：我知道怎么调模型                      │  ← 只懂模型\n│  （统一 API、流式调用、30+ 提供商适配）        │\n└─────────────────────────────────────────────┘\n\n旁边还有一个独立的 UI 包：\n┌──────────┐\n│  pi-tui  │  ← 只管显示\n└──────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch02-three-layer-arch.mdx",
+          "markdown": "pi_source_dive/typescript/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 6,
+          "caption": "3. 看完五个包，你大概有了直觉"
+        },
+        {
+          "mdx": "ch02-three-layer-arch.python.mdx",
+          "markdown": "pi_source_dive/python/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 6,
+          "caption": "3. 看完五个包，你大概有了直觉"
+        }
+      ]
+    },
+    {
+      "id": "ch02-diagram-2e8745f16976",
+      "caption": "那分层的规则到底是什么？",
+      "kind": "grid",
+      "sourceSha256": "2e8745f16976be2b446c24141f8f639c5e00a197303f66deafa39faf13fcfd2f",
+      "source": "pi-ai（底层）\n  ↑         ↑\n  │         │\n  │    pi-agent-core（中间层）\n  │         ↑\n  │         │\n  └─── pi-coding-agent（顶层）\n            ↑\n            │\n       pi-orchestrator（实验性外围编排层，可选）",
+      "occurrences": [
+        {
+          "mdx": "ch02-three-layer-arch.mdx",
+          "markdown": "pi_source_dive/typescript/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 9,
+          "caption": "那分层的规则到底是什么？"
+        },
+        {
+          "mdx": "ch02-three-layer-arch.python.mdx",
+          "markdown": "pi_source_dive/python/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 9,
+          "caption": "那分层的规则到底是什么？"
+        }
+      ]
+    },
+    {
+      "id": "ch02-diagram-f6c847a19be4",
+      "caption": "类型扩展的 Before → After 对照",
+      "kind": "grid",
+      "sourceSha256": "f6c847a19be4fe8de4daf3b8911ec1c3bbb7cdcc61ebc2e81e4851390d7332a9",
+      "source": "Before（pi-ai 层）：Tool 只知道\"长什么样\"\n────────────────────────────────────────────\ninterface Tool<TSchema> {\n    name: string\n    description: string\n    parameters: TSchema\n}\n\n         ↓ agent-core 扩展\n\nAfter（pi-agent-core 层）：AgentTool 知道\"怎么执行\"\n────────────────────────────────────────────\ninterface AgentTool<TSchema> extends Tool<TSchema> {\n    label: string                              ← 新增\n    execute: (...) => Promise<AgentToolResult> ← 新增\n    executionMode?: \"sequential\" | \"parallel\"  ← 新增\n}\n\n         ↓ coding-agent 扩展\n\nAfter（pi-coding-agent 层）：ToolDefinition 加上\"怎么显示\"\n────────────────────────────────────────────\ninterface ToolDefinition {\n    // 继承 AgentTool 的全部字段\n    // + 渲染器、权限控制等业务属性\n}",
+      "occurrences": [
+        {
+          "mdx": "ch02-three-layer-arch.mdx",
+          "markdown": "pi_source_dive/typescript/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 13,
+          "caption": "类型扩展的 Before → After 对照"
+        },
+        {
+          "mdx": "ch02-three-layer-arch.python.mdx",
+          "markdown": "pi_source_dive/python/第2章-三层架构-Pi-Agent项目的骨骼.md",
+          "originalFence": 13,
+          "caption": "类型扩展的 Before → After 对照"
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-d47dd89d0526",
+      "caption": "模式 1：直接调用 —— \"模型，回答我\"",
+      "kind": "grid",
+      "sourceSha256": "d47dd89d0526f22a5bf70432cfa88a382e027560db86f74eaed8ef3a2d6c4915",
+      "source": "用户输入 → 构建提示词 → 调模型一次 → 展示结果",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 1,
+          "caption": "模式 1：直接调用 —— \"模型，回答我\""
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 1,
+          "caption": "模式 1：直接调用 —— \"模型，回答我\""
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-8b86b64fbc73",
+      "caption": "模式 2：Workflow —— \"模型，你先做第一步，我检查一下，再做第二步\"",
+      "kind": "grid",
+      "sourceSha256": "8b86b64fbc73d04342a6e7ec92c61318246d8b67d696eb6847759c810ea56d39",
+      "source": "调模型分析 → 代码检查 → 调模型生成草稿 → 代码检查 → 调模型润色",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 3,
+          "caption": "模式 2：Workflow —— \"模型，你先做第一步，我检查一下，再做第二步\""
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 3,
+          "caption": "模式 2：Workflow —— \"模型，你先做第一步，我检查一下，再做第二步\""
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-faae1b02c2a1",
+      "caption": "模式 3：Agent Loop —— \"模型，你自己决定怎么做\"",
+      "kind": "grid",
+      "sourceSha256": "faae1b02c2a1f73bab85f696c9ec0b08af5ce5cc6885c8a4b915512451039b9f",
+      "source": "调模型 → 请求 read → 程序读文件 → 将结果加入历史\n再调模型 → 请求 edit → 程序修改文件 → 将结果加入历史\n再调模型 → 输出解释，无工具请求 → 检查其他续跑条件 → 结束",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 4,
+          "caption": "模式 3：Agent Loop —— \"模型，你自己决定怎么做\""
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 4,
+          "caption": "模式 3：Agent Loop —— \"模型，你自己决定怎么做\""
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-115d7522dbd0",
+      "caption": "Trace（本章指一次完整运行）",
+      "kind": "grid",
+      "sourceSha256": "115d7522dbd0d2d34b643bd52689deb712538cc9387a18afe2560bcef54c8f92",
+      "source": "agent_start\n  turn_start → 模型请求 read → 执行 read → finishTurn → turn_end\n  turn_start → 模型请求 edit → 执行 edit → finishTurn → turn_end\n  turn_start → 模型输出解释 → finishTurn → turn_end\nagent_end",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 5,
+          "caption": "Trace（本章指一次完整运行）"
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 5,
+          "caption": "Trace（本章指一次完整运行）"
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-a4bb2dd21907",
+      "caption": "Turn（一个轮次）",
+      "kind": "grid",
+      "sourceSha256": "a4bb2dd21907803de72b41f435c579f14caad064f95a85b2ee92e91d7a75b2ee",
+      "source": "进入下一轮（如果此前有已完成轮次）：\n  prepareNextTurn → 必要时补取 steering → turn_start\n注入准备好的消息和排队消息\nprepareRequest → transformContext → convertToLlm → 调模型\n处理错误或工具调用\nfinishTurn → turn_end\n决定结束，或者检查下一轮输入",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 6,
+          "caption": "Turn（一个轮次）"
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 6,
+          "caption": "Turn（一个轮次）"
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-060bb5c17c0a",
+      "caption": "流程全景",
+      "kind": "grid",
+      "sourceSha256": "060bb5c17c0a084f4f978968e7c903faff55edcf76af72b75d8db707f96c171d",
+      "source": "Turn 1：\n  模型输出 content: [{ type: \"toolCall\", name: \"read\", ... }]\n  程序执行 read，追加 toolResult\n  工具结果没有 terminate: true → hasMoreToolCalls = true\n  finishTurn → turn_end\n\nTurn 2：\n  模型看到文件内容，输出解释，没有 toolCall\n  hasMoreToolCalls = false\n  finishTurn → turn_end\n  没有 steering → 退出内层\n  没有 follow-up，也没有显式 continue → 退出外层\n\nagent_end",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 7,
+          "caption": "流程全景"
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 7,
+          "caption": "流程全景"
+        }
+      ]
+    },
+    {
+      "id": "ch03-diagram-f73513965ed1",
+      "caption": "4.6 executeToolCalls()：并行与串行",
+      "kind": "grid",
+      "sourceSha256": "f73513965ed11229ffa653d4f82a021e6156ae77f613e63391082237e8355dea",
+      "source": "串行：A 预检 → 执行 → after hook → 工具结束及结果消息 → B ...\n\n并行：\n  1. 按调用顺序预检；拦截/校验失败的项当场生成结束结果\n  2. 允许执行的项并发执行、运行 after hook、发送 tool_execution_end\n  3. 等待本批处理完成，按原始调用顺序发送 toolResult 消息",
+      "occurrences": [
+        {
+          "mdx": "ch03-agent-loop.mdx",
+          "markdown": "pi_source_dive/typescript/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 22,
+          "caption": "4.6 executeToolCalls()：并行与串行"
+        },
+        {
+          "mdx": "ch03-agent-loop.python.mdx",
+          "markdown": "pi_source_dive/python/第3章-Agent-Loop-让模型转动起来的引擎.md",
+          "originalFence": 22,
+          "caption": "4.6 executeToolCalls()：并行与串行"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-628c35341988",
+      "caption": "第一层：Models 集合负责找到供应商并应用认证",
+      "kind": "grid",
+      "sourceSha256": "628c35341988433c745a3a0c2a3c8e416c67a8503696a1c2d41bc9c79b37c936",
+      "source": "models.streamSimple(model, context, options)\n  → normalizeContext(context)\n  → lazyStream 返回事件流，异步准备请求\n  → 按 model.provider 找到 Provider\n  → applyAuth：解析认证、合并 headers/env/请求选项\n  → provider.streamSimple(requestModel, transcript, requestOptions)",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 3,
+          "caption": "第一层：Models 集合负责找到供应商并应用认证"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 3,
+          "caption": "第一层：Models 集合负责找到供应商并应用认证"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-9ba36efddda4",
+      "caption": "第二层：Provider 组合目录、认证和协议实现",
+      "kind": "grid",
+      "sourceSha256": "9ba36efddda4bbd47c6b200007801a2eb76f3f8fbea367bd67ebacbb74e5a971",
+      "source": "Provider\n  id / name / baseUrl\n  auth                       认证策略\n  getModels()                已知模型目录\n  stream / streamSimple      请求行为\n  可选动态目录、延后请求等能力",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 4,
+          "caption": "第二层：Provider 组合目录、认证和协议实现"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 4,
+          "caption": "第二层：Provider 组合目录、认证和协议实现"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-1fda0ef3ed05",
+      "caption": "三、统一事件协议：12 种事件，但不是每个事件都有 partial",
+      "kind": "grid",
+      "sourceSha256": "1fda0ef3ed05bffc84d581160d3b1a2d062bc6679ecbb8c8f86dd373ae4c3a3e",
+      "source": "start\ntext_start → text_delta* → text_end\nthinking_start → thinking_delta* → thinking_end\ntoolcall_start → toolcall_delta* → toolcall_end\ndone(reason: stop / length / toolUse / deferred)\n或 error(reason: error / aborted)",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 6,
+          "caption": "三、统一事件协议：12 种事件，但不是每个事件都有 partial"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 6,
+          "caption": "三、统一事件协议：12 种事件，但不是每个事件都有 partial"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-8e86b70de0e8",
+      "caption": "五步骨架是概念模型，不是每个文件的固定结构",
+      "kind": "grid",
+      "sourceSha256": "8e86b70de0e889b2d56fbc7f9728b078bc0f4a55b49343d32df5b2c86e09d570",
+      "source": "准备认证和客户端 → 构建供应商请求 → 发送请求 → 转换流式响应 → 发终止事件",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 9,
+          "caption": "五步骨架是概念模型，不是每个文件的固定结构"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 9,
+          "caption": "五步骨架是概念模型，不是每个文件的固定结构"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-0389cfef84d5",
+      "caption": "五步骨架是概念模型，不是每个文件的固定结构",
+      "kind": "grid",
+      "sourceSha256": "0389cfef84d5556838d69aa17ae04c109b26903f574beddb250e76608208af52",
+      "source": "content_block_start(text)     → text_start\ncontent_block_delta(text)     → text_delta\ncontent_block_start(tool_use) → toolcall_start\ninput_json_delta             → toolcall_delta\ncontent_block_stop           → 对应的 *_end\nmessage_delta                → 更新 usage / rawStopReason / stopReason\n响应流完整结束并验证状态        → done，失败则 error",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 10,
+          "caption": "五步骨架是概念模型，不是每个文件的固定结构"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 10,
+          "caption": "五步骨架是概念模型，不是每个文件的固定结构"
+        }
+      ]
+    },
+    {
+      "id": "ch04-diagram-e3bcc8a8ad41",
+      "caption": "六、回到那一行代码",
+      "kind": "grid",
+      "sourceSha256": "e3bcc8a8ad41caad5611ff00857cb57bab761582a3408a2eab5835d61523020a",
+      "source": "Agent 的 streamFn（通常绑定 models.streamSimple）\n  → Models：规范化上下文、按 provider 查找、解析认证\n  → Provider：选择自己的 API 实现\n  → API：统一 reasoning 映射、协议转换、请求与流式解析\n  → AssistantMessageEventStream\n  → Loop：根据最终消息、工具和队列决定下一步",
+      "occurrences": [
+        {
+          "mdx": "ch04-model-call.mdx",
+          "markdown": "pi_source_dive/typescript/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 13,
+          "caption": "六、回到那一行代码"
+        },
+        {
+          "mdx": "ch04-model-call.python.mdx",
+          "markdown": "pi_source_dive/python/第4章-模型调用-一行代码驾驭多个模型.md",
+          "originalFence": 13,
+          "caption": "六、回到那一行代码"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-b831829f0271",
+      "caption": "第三层：ToolDefinition——产品层再加东西",
+      "kind": "grid",
+      "sourceSha256": "b831829f0271abe5489ae193a19bea39b32ebbb7de4b2dd7c0cc286052bcd5dd",
+      "source": "AgentTool.execute:     (toolCallId, params, signal, onUpdate) => ...\nToolDefinition.execute: (toolCallId, params, signal, onUpdate, ctx) => ...\n                                                                   ^^^\n                                                    多了 ExtensionContext（会话上下文）",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 4,
+          "caption": "第三层：ToolDefinition——产品层再加东西"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 4,
+          "caption": "第三层：ToolDefinition——产品层再加东西"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-df27f1c27dec",
+      "caption": "Pi 的答案：五步管道",
+      "kind": "grid",
+      "sourceSha256": "df27f1c27decd84c60478f939a8ef347a3e144b1579b1de857a3721783a5fb06",
+      "source": "LLM 输出 ToolCall\n    │\n    ▼\n┌──────────────────────────────────────────────────┐\n│ 第 1 步：prepareArguments（参数预处理）           │\n│   处理 LLM 的参数怪癖                            │\n│   如：把字符串化的数组解析回真正的数组             │\n├──────────────────────────────────────────────────┤\n│ 第 2 步：validateToolArguments（Schema 验证）     │\n│   用 TypeBox Schema 做运行时类型检查              │\n│   如：path 是 string，不是 number                │\n├──────────────────────────────────────────────────┤\n│ 第 3 步：beforeToolCall（前置钩子）              │\n│   产品层的权限拦截，可以阻止执行                   │\n│   返回 { block: true, reason: \"危险命令\"}         │\n├──────────────────────────────────────────────────┤\n│ 第 4 步：tool.execute（实际执行）                 │\n│   调用工具的 execute 函数                         │\n│   支持 onUpdate 流式进度回调                      │\n├──────────────────────────────────────────────────┤\n│ 第 5 步：afterToolCall（后置钩子）               │\n│   产品层的结果后处理，可以修改返回值               │\n│   可以替换 content、details、isError              │\n└──────────────────────────────────────────────────┘\n    │\n    ▼\nToolResultMessage",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 6,
+          "caption": "Pi 的答案：五步管道"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 6,
+          "caption": "Pi 的答案：五步管道"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-d257d3799655",
+      "caption": "第 2 步：validateToolArguments——Schema 验证",
+      "kind": "grid",
+      "sourceSha256": "d257d37996554626e50f8d7a3591eb91b26711b2e7167454f9249d504753fc0a",
+      "source": "Before：{ path: 12345 }\nAfter： 验证失败 → 报错 → 不执行工具",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 8,
+          "caption": "第 2 步：validateToolArguments——Schema 验证"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 8,
+          "caption": "第 2 步：validateToolArguments——Schema 验证"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-29236ec094f5",
+      "caption": "但并行不是无脑 Promise.all",
+      "kind": "grid",
+      "sourceSha256": "29236ec094f507b36d757e5c6d16bd86aefbb07b53fbd6f346e745d9aa42889b",
+      "source": "ToolCall 1: edit { path: \"app.ts\", oldText: \"v1\", newText: \"v2\" }\nToolCall 2: edit { path: \"app.ts\", oldText: \"v3\", newText: \"v4\" }\n                     ^^^^^^^^\n                     同一个文件！并行执行 → ToolCall 1 的修改被 ToolCall 2 覆盖",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 12,
+          "caption": "但并行不是无脑 Promise.all"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 12,
+          "caption": "但并行不是无脑 Promise.all"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-9a8a8afe30e0",
+      "caption": "并行执行的三阶段设计",
+      "kind": "grid",
+      "sourceSha256": "9a8a8afe30e065ca6f26c58b112c7769acc5b87c81643e498638c7db8f45de85",
+      "source": "阶段 1 - 准备（顺序执行）：\n  ToolCall 1: emit_start → prepareArguments → validate → beforeToolCall\n  ToolCall 2: emit_start → prepareArguments → validate → beforeToolCall\n  ToolCall 3: emit_start → prepareArguments → validate → beforeToolCall\n  // 准备阶段必须顺序，因为 beforeToolCall 可能有副作用（如修改全局状态）\n\n阶段 2 - 执行（并行）：\n  ToolCall 1: execute ────────────────┐\n  ToolCall 2: execute ───────────────┤ Promise.all\n  ToolCall 3: execute ───────────────┘\n  // 只有 tool.execute() 并行\n\n阶段 3 - 事件发送（有序）：\n  ToolCall 2: emit_end    ← 先完成的先发 tool_execution_end\n  ToolCall 1: emit_end\n  ToolCall 3: emit_end\n  ToolCall 1: emit_result ← 但 ToolResultMessage 按调用顺序发\n  ToolCall 2: emit_result\n  ToolCall 3: emit_result",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 14,
+          "caption": "并行执行的三阶段设计"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-9b18e54fd012",
+      "caption": "异常 → 消息：编码前后对比",
+      "kind": "grid",
+      "sourceSha256": "9b18e54fd0123a991400305e6e30c5dc9e700d35dd60ac574838f664fe2fc008",
+      "source": "工具抛出的原始异常（catch 之前）：        编码后的 ToolResultMessage（catch 之后）：\nError: ENOENT: no such file or dir       {\n  → 一路穿透管道                            role: \"toolResult\",\n  → 打断 Agent Loop                         toolCallId: \"call_abc\",\n  → 事件序列不完整，UI 卡死                  toolName: \"read\",\n                                            content: [{\n                                              type: \"text\",\n                                              text: \"ENOENT: no such file or dir\"\n                                            }],\n                                            isError: true   ← 唯一标记\n                                          }\n                                          → 追加到对话历史\n                                          → 下一轮发给模型\n                                          → 模型看到后自己决定怎么办",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 16,
+          "caption": "异常 → 消息：编码前后对比"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-494c63c0517c",
+      "caption": "关键细节：错误描述越具体，模型纠错能力越强",
+      "kind": "grid",
+      "sourceSha256": "494c63c0517caaa69d2e8813ad380b018a59e99239a4e1f86d978328c5161c46",
+      "source": "模糊错误（不可取）：                      具体 error.message（推荐）：\n{                                        {\n  content: [{ text: \"Read failed\" }]       content: [{\n  isError: true                              text: \"Offset 200 is beyond end of file (100 lines total)\"\n}                                          }]\n                                           isError: true\n                                         }",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 17,
+          "caption": "关键细节：错误描述越具体，模型纠错能力越强"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-ef972b31aa90",
+      "caption": "Pi 的真实做法：两层错误处理，分层负责",
+      "kind": "grid",
+      "sourceSha256": "ef972b31aa904206f84902bf24fb859978de98ceeffdcea3ab9df9cc5428881b",
+      "source": "第一层（工具内部，主动）：识别已知错误类型，包装成具体可读的描述\n└── Read/Edit/Bash 都是这样——Bash 甚至把\"已输出的内容\"附在错误里\n└── 目的：给模型提供\"为什么失败、怎么改才对\"的具体线索\n\n第二层（框架兜底，被动）：executePreparedToolCall 的 catch\n└── 只在工具没识别出来时生效\n└── 不创造新的错误描述，只把 error.message 原样透传给模型\n└── 目的：保证任何异常都不会穿透到 Agent Loop",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 21,
+          "caption": "Pi 的真实做法：两层错误处理，分层负责"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-86c163ba1f84",
+      "caption": "解法：工具不直接调系统 API，而是调接口",
+      "kind": "grid",
+      "sourceSha256": "86c163ba1f845e7846a2609205653e3dbd855f8b27301ad732035173d397e571",
+      "source": "直接调 fs（硬编码）：               通过 Operations 接口（可替换）：\n┌──────────────────────┐            ┌──────────────────────┐\n│ Read 工具             │            │ Read 工具             │\n│ fs.readFile(path)    │            │ ops.readFile(path)   │\n│ 只能读本地文件        │            │ 本地 / SSH / Mock     │\n│ 测试必须创建真实文件   │            │ 注入什么就调什么      │\n└──────────────────────┘            └──────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 27,
+          "caption": "解法：工具不直接调系统 API，而是调接口"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 27,
+          "caption": "解法：工具不直接调系统 API，而是调接口"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-6224f7d27967",
+      "caption": "七、收尾",
+      "kind": "grid",
+      "sourceSha256": "6224f7d27967df5f5593aed236c0b174cb6a3c7317f2c735e22f9319c08d9a2b",
+      "source": "模型输出 ToolCall { name: \"read\", arguments: { path: \"src/main.ts\" } }\n    │\n    ├── 第 1 步：prepareArguments 处理模型怪癖\n    ├── 第 2 步：validateToolArguments 做 Schema 验证\n    ├── 第 3 步：beforeToolCall 检查权限\n    ├── 第 4 步：tool.execute 通过 Operations 接口读文件\n    │              └── ops.readFile() → 不直接调 fs\n    └── 第 5 步：afterToolCall 做结果后处理\n    │\n    ▼\nToolResultMessage { content: 文件内容, isError: false }\n    │\n    ▼ 追加到对话历史，下一轮发给模型",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.mdx",
+          "markdown": "pi_source_dive/typescript/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 29,
+          "caption": "七、收尾"
+        },
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 29,
+          "caption": "七、收尾"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-b931c0a7a735",
+      "caption": "并行执行的三阶段设计",
+      "kind": "grid",
+      "sourceSha256": "b931c0a7a735133144b1633ec2e91555e42cab5e8a65760f951438b69bd3b367",
+      "source": "阶段 1 - 准备（顺序执行）：\n  ToolCall 1: emit_start → prepareArguments → validate → beforeToolCall\n  ToolCall 2: emit_start → prepareArguments → validate → beforeToolCall\n  ToolCall 3: emit_start → prepareArguments → validate → beforeToolCall\n  // 准备阶段必须顺序，因为 beforeToolCall 可能有副作用（如修改全局状态）\n\n阶段 2 - 执行（并行）：\n  ToolCall 1: execute ────────────────┐\n  ToolCall 2: execute ───────────────┤ asyncio.gather  ← Python 等价\n  ToolCall 3: execute ───────────────┘\n  // 只有 tool.execute() 并行\n\n阶段 3 - 事件发送（有序）：\n  ToolCall 2: emit_end    ← 先完成的先发 tool_execution_end\n  ToolCall 1: emit_end\n  ToolCall 3: emit_end\n  ToolCall 1: emit_result ← 但 ToolResultMessage 按调用顺序发\n  ToolCall 2: emit_result\n  ToolCall 3: emit_result",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 14,
+          "caption": "并行执行的三阶段设计"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-9f124f0b47fd",
+      "caption": "异常 → 消息：编码前后对比",
+      "kind": "grid",
+      "sourceSha256": "9f124f0b47fd7bed2dc211c388bbeb8511ba1b2454c9f16fd0837a337cd2aacc",
+      "source": "工具抛出的原始异常（except 之前）：       编码后的 ToolResultMessage（except 之后）：\nFileNotFoundError: [Errno 2] No such     {\n  → 一路穿透管道                            role: \"toolResult\",\n  → 打断 Agent Loop                         toolCallId: \"call_abc\",\n  → 事件序列不完整，UI 卡死                  toolName: \"read\",\n                                            content: [{\n                                              type: \"text\",\n                                              text: \"[Errno 2] No such file or directory\"\n                                            }],\n                                            isError: True   ← 唯一标记\n                                          }\n                                          → 追加到对话历史\n                                          → 下一轮发给模型\n                                          → 模型看到后自己决定怎么办",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 16,
+          "caption": "异常 → 消息：编码前后对比"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-3a5c3564bca4",
+      "caption": "关键细节：错误描述越具体，模型纠错能力越强",
+      "kind": "grid",
+      "sourceSha256": "3a5c3564bca4dc1ef327e743494c9a4a8c652c3cdd4ccc525a3df05f3f9b456b",
+      "source": "模糊错误（不可取）：                      具体 error 文本（推荐）：\n{                                        {\n  content: [{ text: \"Read failed\" }]       content: [{\n  isError: True                              text: \"Offset 200 is beyond end of file (100 lines total)\"\n}                                          }]\n                                           isError: True\n                                         }",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 17,
+          "caption": "关键细节：错误描述越具体，模型纠错能力越强"
+        }
+      ]
+    },
+    {
+      "id": "ch05-diagram-6da60485053d",
+      "caption": "Pi 的真实做法：两层错误处理，分层负责",
+      "kind": "grid",
+      "sourceSha256": "6da60485053d758d1169d5ef68bc9be6f81a1804d08c645b37682a4d6fe412f7",
+      "source": "第一层（工具内部，主动）：识别已知错误类型，包装成具体可读的描述\n└── Read/Edit/Bash 都是这样——Bash 甚至把\"已输出的内容\"附在错误里\n└── 目的：给模型提供\"为什么失败、怎么改才对\"的具体线索\n\n第二层（框架兜底，被动）：executePreparedToolCall 的 except\n└── 只在工具没识别出来时生效\n└── 不创造新的错误描述，只把 str(error) 原样透传给模型\n└── 目的：保证任何异常都不会穿透到 Agent Loop",
+      "occurrences": [
+        {
+          "mdx": "ch05-tools.python.mdx",
+          "markdown": "pi_source_dive/python/第5章-工具系统-Agent的手脚是怎么被管住的.md",
+          "originalFence": 21,
+          "caption": "Pi 的真实做法：两层错误处理，分层负责"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-6c4a38a26c5d",
+      "caption": "二、第一层：LLM 认识的消息只有三种",
+      "kind": "grid",
+      "sourceSha256": "6c4a38a26c5d61e3c211c66463f6defce4d0b60e64706f9461c23eeedb72761d",
+      "source": "Message 联合类型（LLM 标准格式）\n│\n├── UserMessage        ← 用户说的话 / 发的图片\n├── AssistantMessage   ← LLM 的回复（含思考、工具调用）\n└── ToolResultMessage  ← 工具执行后的结果",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 1,
+          "caption": "二、第一层：LLM 认识的消息只有三种"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 1,
+          "caption": "二、第一层：LLM 认识的消息只有三种"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-960b28862504",
+      "caption": "每种消息的具体数据结构",
+      "kind": "grid",
+      "sourceSha256": "960b2886250490cff60b734d42f40b67f3c4e49b63ad2f4a5e8173fe3dad793a",
+      "source": "AssistantMessage 的 content 内容块\n│\n├── TextContent       ← 普通文本\n│     { type: \"text\", text: \"...\" }\n│\n├── ThinkingContent   ← 思考过程（第3章讲过，模型\"在想\"但不直接告诉用户的部分）\n│     { type: \"thinking\", thinking: \"...\" }\n│\n└── ToolCall          ← 工具调用（第5章讲过，触发五步管道的入口）\n      { type: \"toolCall\", id: \"...\", name: \"read\", arguments: { path: \"...\" } }",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 4,
+          "caption": "每种消息的具体数据结构"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 4,
+          "caption": "每种消息的具体数据结构"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-7408d228f142",
+      "caption": "一个完整的对话示例",
+      "kind": "grid",
+      "sourceSha256": "7408d228f142310b27e105f355d1df9bfcbb6d0fc4eae973f62fd066995c2482",
+      "source": "messages 数组：\n│\n├── [0] UserMessage\n│       role: \"user\"\n│       content: \"帮我看看 auth.ts\"\n│\n├── [1] AssistantMessage\n│       role: \"assistant\"\n│       content: [\n│           { type: \"text\", text: \"让我帮你看看这个文件\" },\n│           { type: \"toolCall\", id: \"tc_001\", name: \"read\", arguments: { path: \"auth.ts\" } }\n│       ]\n│       stopReason: \"toolUse\"     ← 第3章讲过：调了工具，循环继续\n│\n├── [2] ToolResultMessage\n│       role: \"toolResult\"\n│       toolCallId: \"tc_001\"      ← 和上面的 id 对应\n│       content: [{ type: \"text\", text: \"import { auth } from '...' ...\" }]\n│       isError: false            ← 第5章讲过：正常结果\n│\n└── [3] AssistantMessage\n        role: \"assistant\"\n        content: [{ type: \"text\", text: \"auth.ts 是一个认证模块...\" }]\n        stopReason: \"stop\"        ← 没调工具，循环结束",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 6,
+          "caption": "一个完整的对话示例"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 6,
+          "caption": "一个完整的对话示例"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-b91a34024371",
+      "caption": "三、矛盾：Agent 里的消息不止三种",
+      "kind": "grid",
+      "sourceSha256": "b91a34024371f49a57bf5bc5b36233ea64cdacfecae8bc433a394f9ade2923e2",
+      "source": "coding-agent 的自定义消息类型\n│\n├── BashExecutionMessage       ← Bash 命令执行记录\n├── CustomMessage              ← 扩展注入的通用消息\n├── BranchSummaryMessage       ← 分支切换时的摘要\n└── CompactionSummaryMessage   ← 上下文压缩后的摘要",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 7,
+          "caption": "三、矛盾：Agent 里的消息不止三种"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 7,
+          "caption": "三、矛盾：Agent 里的消息不止三种"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-e9a9c109cd8a",
+      "caption": "AgentMessage 联合类型",
+      "kind": "grid",
+      "sourceSha256": "e9a9c109cd8a44344fda564de57ce6dd03648c752a9b4edee7b9ff8e93b27ec3",
+      "source": "AgentMessage（Agent 内部使用的消息格式）\n│\n├── Message（可直接发送给 LLM 的标准消息）\n│   │\n│   ├── UserMessage          ← role: \"user\"\n│   ├── AssistantMessage     ← role: \"assistant\"\n│   └── ToolResultMessage    ← role: \"toolResult\"\n│\n└── CustomAgentMessages（仅 Agent 内部使用的扩展消息）\n    │\n    ├── BashExecutionMessage      ← role: \"bashExecution\"\n    ├── CustomMessage             ← role: \"custom\"\n    ├── BranchSummaryMessage      ← role: \"branchSummary\"\n    └── CompactionSummaryMessage  ← role: \"compactionSummary\"",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 10,
+          "caption": "AgentMessage 联合类型"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 10,
+          "caption": "AgentMessage 联合类型"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-49fe5c5db31e",
+      "caption": "翻译发生在什么时候？",
+      "kind": "grid",
+      "sourceSha256": "49fe5c5db31e7d62aa7c87fc8def4cf6e503852e2acaaa2d7d83a832f29c02fd",
+      "source": "每次 LLM 调用前的消息处理管道：\n\ncontext.messages: AgentMessage[]        ← Agent 内部的消息（最多 7 种类型）\n        │\n        ▼\n[1] transformContext (可选)             ← AgentMessage[] → AgentMessage[]\n        │                                  裁剪旧消息、注入外部上下文\n        ▼\n[2] convertToLlm (必须)                 ← AgentMessage[] → Message[]\n        │                                  自定义消息翻译成标准格式\n        ▼\nllmContext.messages: Message[]          ← LLM 看到的消息（只有 3 种类型）\n        │\n        ▼\nstreamFunction(model, llmContext, ...)  ← 调用 LLM（第4章讲过）",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 13,
+          "caption": "翻译发生在什么时候？"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 13,
+          "caption": "翻译发生在什么时候？"
+        }
+      ]
+    },
+    {
+      "id": "ch06-diagram-65585b7eddea",
+      "caption": "八、完整数据流：从用户操作到 LLM 看到的消息",
+      "kind": "grid",
+      "sourceSha256": "65585b7eddeaeb6bb90fc3353d6f3505db4494149ed9ffdfb5d884cfed27ae9f",
+      "source": "用户在终端输入 !ls -la\n        │\n        ▼\n[1] 创建消息\n    BashExecutionMessage { role: \"bashExecution\", command: \"ls -la\", output: \"...\", ... }\n        │\n        ▼\n[2] 存入 context.messages: AgentMessage[]\n    [...原有消息, 新的 BashExecutionMessage]\n        │\n        ▼\n[3] Agent Loop 准备调用 LLM（第3章讲过的内层循环）\n        │\n        ▼\n[4] transformContext（可选）\n    输入/输出都是 AgentMessage[]\n    裁剪、注入、压缩（第8章详讲 transformContext、第9章详讲 Compaction）\n        │\n        ▼\n[5] convertToLlm（必须）\n    AgentMessage[] → Message[]\n    BashExecutionMessage → UserMessage\n    excludeFromContext → 过滤掉\n        │\n        ▼\n[6] LLM 收到\n    llmContext.messages = [\n        ...之前的消息,\n        { role: \"user\", content: \"Ran `ls -la`\\n```\\n...\\n```\" }\n    ]\n        │\n        ▼\n[7] LLM 回复\n    → 产生新的 AssistantMessage\n    → 可能触发工具调用 → ToolResultMessage（第5章的五步管道）\n    → 回到 [2]，继续循环",
+      "occurrences": [
+        {
+          "mdx": "ch06-messages.mdx",
+          "markdown": "pi_source_dive/typescript/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 17,
+          "caption": "八、完整数据流：从用户操作到 LLM 看到的消息"
+        },
+        {
+          "mdx": "ch06-messages.python.mdx",
+          "markdown": "pi_source_dive/python/第6章-消息系统-Agent的记忆如何组织与传递.md",
+          "originalFence": 17,
+          "caption": "八、完整数据流：从用户操作到 LLM 看到的消息"
+        }
+      ]
+    },
+    {
+      "id": "ch07-diagram-4ec5139e135f",
+      "caption": "发布-订阅 vs 直接调用",
+      "kind": "grid",
+      "sourceSha256": "4ec5139e135ffdc4ddc56da86245c9ca3324de862db5f9aef74ba4789c2684ce",
+      "source": "直接调用（打电话）：\n  Agent ──调用──→ 终端渲染\n       ──调用──→ 文件存储\n       ──调用──→ 日志记录\n  Agent 需要知道所有消费者的存在，每加一个新功能就要改 Agent\n\n发布-订阅（广播）：\n  Agent ──emit事件──→ 📡 事件总线\n                          ├──→ 终端渲染（订阅了）\n                          ├──→ 文件存储（订阅了）\n                          ├──→ 日志记录（订阅了）\n                          └──→ （新功能只需订阅，Agent 不需要知道）",
+      "occurrences": [
+        {
+          "mdx": "ch07-event-driven.mdx",
+          "markdown": "pi_source_dive/typescript/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 2,
+          "caption": "发布-订阅 vs 直接调用"
+        },
+        {
+          "mdx": "ch07-event-driven.python.mdx",
+          "markdown": "pi_source_dive/python/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 2,
+          "caption": "发布-订阅 vs 直接调用"
+        }
+      ]
+    },
+    {
+      "id": "ch07-diagram-1628cfa71c51",
+      "caption": "2.1 事件源：10 种 AgentEvent",
+      "kind": "grid",
+      "sourceSha256": "1628cfa71c518a3af4690cefbe06ed419448cf3fb3157b90e8b6f4f3dd1a95a4",
+      "source": "Agent 运行\n├── agent_start ───────────────────── Agent 开始\n│\n├── Turn 1（第3章讲过：一次模型调用 + 它触发的工具执行）\n│   ├── turn_start ────────────────── Turn 开始\n│   │\n│   ├── Message（LLM 的响应）\n│   │   ├── message_start\n│   │   ├── message_update ×N ────── 流式增量（逐 token 更新）\n│   │   └── message_end\n│   │\n│   ├── Tool Execution（工具执行）\n│   │   ├── tool_execution_start\n│   │   ├── tool_execution_update ×N  工具进度（如 Bash 的输出）\n│   │   └── tool_execution_end\n│   │\n│   └── turn_end ──────────────────── Turn 结束\n│\n├── Turn 2 ...\n│\n└── agent_end ──────────────────────── Agent 结束",
+      "occurrences": [
+        {
+          "mdx": "ch07-event-driven.mdx",
+          "markdown": "pi_source_dive/typescript/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 4,
+          "caption": "2.1 事件源：10 种 AgentEvent"
+        },
+        {
+          "mdx": "ch07-event-driven.python.mdx",
+          "markdown": "pi_source_dive/python/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 4,
+          "caption": "2.1 事件源：10 种 AgentEvent"
+        }
+      ]
+    },
+    {
+      "id": "ch07-diagram-97c1f6191079",
+      "caption": "2.2 两条管道：subscribe 与扩展 pi.on",
+      "kind": "grid",
+      "sourceSha256": "97c1f6191079296f9a0114762327bd36e1340e68655e9400f2ffb3235a0dbe55",
+      "source": "LLM 决定调一个工具\n   │\n   ▼  管道 B：tool_call（执行前）\n   │   扩展可以 return { block: true } 拦掉它；一旦 block，下面都不发生\n   │   注意：tool_call 不是 2.1 那 10 种之一，是 SDK 在执行前主动触发的扩展独占事件\n   │\n   ▼  （没被拦）tool.execute() 开跑\n   │\n   ▼  管道 A + B 都收到：tool_execution_start（已开跑，拦不住了）\n   │   这是 2.1 那 10 种之一，由 Agent 内核发出，两条管道都收\n   │\n   ▼  tool_execution_end",
+      "occurrences": [
+        {
+          "mdx": "ch07-event-driven.mdx",
+          "markdown": "pi_source_dive/typescript/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 7,
+          "caption": "2.2 两条管道：subscribe 与扩展 pi.on"
+        }
+      ]
+    },
+    {
+      "id": "ch07-diagram-38d80411eab6",
+      "caption": "2.2 两条管道：subscribe 与扩展 pi.on",
+      "kind": "grid",
+      "sourceSha256": "38d80411eab6140b549d1363fb07fd8c47a319d9b769ba06e86a2246be304a9c",
+      "source": "LLM 决定调一个工具\n   │\n   ▼  管道 B：tool_call（执行前）\n   │   扩展可以 return {\"block\": True} 拦掉它；一旦 block，下面都不发生\n   │   注意：tool_call 不是 2.1 那 10 种之一，是 SDK 在执行前主动触发的扩展独占事件\n   │\n   ▼  （没被拦）tool.execute() 开跑\n   │\n   ▼  管道 A + B 都收到：tool_execution_start（已开跑，拦不住了）\n   │   这是 2.1 那 10 种之一，由 Agent 内核发出，两条管道都收\n   │\n   ▼  tool_execution_end",
+      "occurrences": [
+        {
+          "mdx": "ch07-event-driven.python.mdx",
+          "markdown": "pi_source_dive/python/第7章-事件驱动-Agent的神经系统.md",
+          "originalFence": 7,
+          "caption": "2.2 两条管道：subscribe 与扩展 pi.on"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-e5e44387b76b",
+      "caption": "一、问题：窗口是固定的，对话是增长的",
+      "kind": "grid",
+      "sourceSha256": "e5e44387b76b26f1105f0f2ec757df06b23e9d59bb7ad202e6f9bc2050db5690",
+      "source": "一次会话送进 LLM 的内容\n├── 系统提示词（工具说明、guidelines、pi 文档路径）\n├── 项目上下文文件（CLAUDE.md / AGENTS.md，可能多层嵌套）\n├── Skills 列表（每个 skill 一段描述）\n├── 工具定义（每个工具的 JSON schema）\n├── 对话历史（每一轮 user / assistant / toolResult）\n│   ├── 用户输入\n│   ├── LLM 回复（含 thinking、toolCall）\n│   └── 工具结果（read 文件、bash 输出、grep 命中……）\n└── 当前轮的新输入",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 1,
+          "caption": "一、问题：窗口是固定的，对话是增长的"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 1,
+          "caption": "一、问题：窗口是固定的，对话是增长的"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-2507d3c2445b",
+      "caption": "二、地图：两层防护",
+      "kind": "grid",
+      "sourceSha256": "2507d3c2445bb0f42a155a800b7d47cf9e90d39a50201b94a53e23dceb536327",
+      "source": "┌──────────────────────────────────────────────────────────────┐\n│                       输入侧（送进 LLM 之前）                 │\n│  ① 工具输出截断 — bash/read/grep 结果按行/字节裁剪            │\n│  ② 系统提示词组装 — 多层 CLAUDE.md 向上递归 + Skills 懒加载   │\n└──────────────────────────────────────────────────────────────┘\n                              │\n                              ▼\n┌──────────────────────────────────────────────────────────────┐\n│                  历史侧（长对话管理）                         │\n│  ③ Compaction —— 阈值触发，把旧消息变成结构化摘要             │\n│  ④ 分支摘要     —— 切换会话树分支时，给\"被放弃的分支\"做摘要   │\n└──────────────────────────────────────────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 2,
+          "caption": "二、地图：两层防护"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 2,
+          "caption": "二、地图：两层防护"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-0d27341fb4b8",
+      "caption": "多级上下文文件：从当前目录向上递归",
+      "kind": "grid",
+      "sourceSha256": "0d27341fb4b80e39df36f14e2d2cde934833c76c829ea9fd8a8b5eff5b4a02c9",
+      "source": "/myorg\n├── CLAUDE.md          ← 全组织规范（通用）\n└── teams\n    └── teamA\n        ├── CLAUDE.md  ← 团队 A 规范（细化）\n        └── projects\n            └── app1\n                ├── CLAUDE.md  ← 项目规范（最具体）\n                └── src/       ← cwd 在这里",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 6,
+          "caption": "多级上下文文件：从当前目录向上递归"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 6,
+          "caption": "多级上下文文件：从当前目录向上递归"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-72f11f4d662c",
+      "caption": "多级上下文文件：从当前目录向上递归",
+      "kind": "grid",
+      "sourceSha256": "72f11f4d662c90db0cc09beef0fb6871b465aa98add421300d2c432f1429ba7b",
+      "source": "┌──────────────────────────────────────────────────────┐\n│  系统提示词组装顺序                                   │\n├──────────────────────────────────────────────────────┤\n│  1. agentDir/CLAUDE.md   ← 全局（用户级）            │\n│  2. 祖先目录/CLAUDE.md   ← 从 / 到 cwd 上一层        │\n│  3. cwd/CLAUDE.md        ← 当前项目                  │\n└──────────────────────────────────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 7,
+          "caption": "多级上下文文件：从当前目录向上递归"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 7,
+          "caption": "多级上下文文件：从当前目录向上递归"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-d94d9fdfc601",
+      "caption": "Skills 懒加载：列表进 prompt，内容按需读",
+      "kind": "grid",
+      "sourceSha256": "d94d9fdfc601cb9c63d1cd4c91af08324d962c062e50ac38e6ac515b2a870ddb",
+      "source": "传统方式（推模式）              Pi 的方式（拉模式）\n─────────────────────          ─────────────────────\n系统提示词 ←─ 全文塞进           系统提示词 ←─ 只放清单\n                                  │\n                                  ▼\n                               LLM 看清单，判断需要哪个\n                                  │\n                                  ▼\n                               LLM 主动调 read 工具\n                                  │\n                                  ▼\n                               SKILL.md 全文进入后续上下文",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 9,
+          "caption": "Skills 懒加载：列表进 prompt，内容按需读"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 9,
+          "caption": "Skills 懒加载：列表进 prompt，内容按需读"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-ed94c98f69e1",
+      "caption": "问题：分支跳转后，旧分支的内容怎么处理？",
+      "kind": "grid",
+      "sourceSha256": "ed94c98f69e19fb1db39166885332e2edc94bd51c6993a298861fb73916f2dfe",
+      "source": "对话树：\n        root\n         │\n       [探索方案 A]\n         │\n       [A 的实现]\n         │\n        leaf_1 ← 用户当前在这里\n\n用户：从 root 重新分叉探索方案 B\n        root\n         │\n       [探索方案 A]  ← 这部分还在，但被\"放弃\"了\n         │\n       [A 的实现]\n         │\n        leaf_1（旧叶子）\n\n用户切换到：\n        root\n         │\n       [探索方案 B]  ← 新分支\n         │\n        leaf_2 ← 用户现在在这里",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 12,
+          "caption": "问题：分支跳转后，旧分支的内容怎么处理？"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 12,
+          "caption": "问题：分支跳转后，旧分支的内容怎么处理？"
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-fa9c9d6a97da",
+      "caption": "LCA 算法：找\"分叉点\"",
+      "kind": "grid",
+      "sourceSha256": "fa9c9d6a97da299b2bc9df04176684149707f87e5cb2b7c3b44140c3039a39e2",
+      "source": "旧路径：root → ... → leaf_1\n新路径：root → ... → leaf_2\n\n1. 把两条路径都拿出来\n2. 在新路径上从后往前找，第一个也在旧路径里的节点 = LCA（分叉点）\n3. 从 leaf_1 向上爬到 LCA（不含 LCA），沿途收集的内容\n   就是\"被放弃的分支\"",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 13,
+          "caption": "LCA 算法：找\"分叉点\""
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 13,
+          "caption": "LCA 算法：找\"分叉点\""
+        }
+      ]
+    },
+    {
+      "id": "ch08-diagram-1929c322d433",
+      "caption": "七、全景链路：一次工具调用经过的所有上下文处理",
+      "kind": "grid",
+      "sourceSha256": "1929c322d4336c627518e6b999f85ad8e68b98d58bdf5a55910cc96ef2aa0bfc",
+      "source": "用户输入 \"修复 auth.ts 的 bug\"\n    │\n    ▼\n[1] 系统提示词组装（§四）\n    buildSystemPrompt()\n    ├─ 找 CLAUDE.md（向上递归 + agentDir）\n    ├─ 加载 Skills 清单（懒加载）\n    ├─ 拼接工具列表 + guidelines\n    └─ 末尾加 Current date / cwd\n    │\n    ▼\n[2] 用户消息进入 context.messages（第6章）\n    │\n    ▼\n[3] Agent Loop 开始（第3章五步管道）\n    │\n    ▼\n[4] LLM 返回 toolCall: read(\"auth.ts\")\n    │\n    ▼\n[5] 执行工具 —— read auth.ts\n    │\n    ▼\n[6] 工具输出截断（§三）\n    ├─ truncateHead（read 用 head）\n    │   └─ 2000 行 / 50KB 双限制\n    ├─ UTF-8 边界安全\n    └─ 超限返回 firstLineExceedsLimit 标志\n    │\n    ▼\n[7] 工具结果进入 context.messages（第5章）\n    │\n    ▼\n   ...循环...\n    │\n    ▼\n[8] agent_end 事件触发（第7章）\n    │\n    ▼\n[9] 检查 shouldCompact？（§五 / 第9章）\n    │\n    ├── 否 → 等下一轮\n    │\n    └── 是 → 执行 Compaction\n         ├─ findCutPoint\n         ├─ generateSummary（LLM 调用）\n         ├─ 生成 CompactionSummaryMessage\n         └─ 写入 Session Tree\n\n    用户切换分支？\n         │\n         ▼\n[10] Branch Summarization（§六）\n     ├─ collectEntriesForBranchSummary（LCA）\n     ├─ generateBranchSummary（LLM 调用）\n     └─ 生成 BranchSummaryMessage",
+      "occurrences": [
+        {
+          "mdx": "ch08-context-engineering.mdx",
+          "markdown": "pi_source_dive/typescript/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 16,
+          "caption": "七、全景链路：一次工具调用经过的所有上下文处理"
+        },
+        {
+          "mdx": "ch08-context-engineering.python.mdx",
+          "markdown": "pi_source_dive/python/第8章-上下文工程-让有限窗口装下无限对话.md",
+          "originalFence": 16,
+          "caption": "七、全景链路：一次工具调用经过的所有上下文处理"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-587a9fc3182c",
+      "caption": "一、问题：对话越来越长，窗口装不下了",
+      "kind": "grid",
+      "sourceSha256": "587a9fc3182c22eeba3dae94581ba83514de38335808cc1659a4f83b4a20f9f7",
+      "source": "压缩前（185,000 token）：\n┌── 第1-30轮（135,000 token）──┬── 第31-50轮（50,000 token）──┐\n│  原始消息（大量工具结果）      │  原始消息（最近的上下文）      │\n└──────────────────────────┴──────────────────────────┘\n\n压缩后（约 60,000 token）：\n┌── 摘要（约 10,000 token）──┬── 第31-50轮（50,000 token）──┐\n│  结构化总结（目标、进度、     │  原始消息（完整保留）          │\n│  决策、文件跟踪……）          │                              │\n└────────────────────────┴──────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 1,
+          "caption": "一、问题：对话越来越长，窗口装不下了"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 1,
+          "caption": "一、问题：对话越来越长，窗口装不下了"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-84c5904c6a03",
+      "caption": "一个关键时序：压缩发生在两轮对话之间",
+      "kind": "grid",
+      "sourceSha256": "84c5904c6a03c60d41f2f4993b69e4d26816a84aab129dca4c209a3cc6502720",
+      "source": "用户问 → Agent 回答 → (Agent 这一轮结束，发 agent_end 事件)\n                              │\n                              ▼\n                     检查 token：超阈值了吗？\n                              │\n                   ┌──────────┴──────────┐\n                   ▼                     ▼\n                没超 → 等下一轮       超了 → 立刻压缩\n                                       ├─ 找切割点\n                                       ├─ 生成摘要\n                                       └─ 把 CompactionEntry 写进 Session Tree\n                                              │\n                                              ▼\n                              下一轮用户开始问时：\n                              buildSessionContext() 从 Session Tree 重建上下文\n                              → CompactionSummaryMessage 替代旧消息\n                              → LLM 看到的是\"摘要 + 近期消息\"",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 2,
+          "caption": "一个关键时序：压缩发生在两轮对话之间"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 2,
+          "caption": "一个关键时序：压缩发生在两轮对话之间"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-9f73ae3b2281",
+      "caption": "不是哪里都能切",
+      "kind": "grid",
+      "sourceSha256": "9f73ae3b228182495416e26b3bf2bae0459d0780fcd2a23df165ef1f3b30aaca",
+      "source": "entry:  0     1     2      3       4     5      6       7      8\n       ┌─────┬─────┬──────┬───────┬─────┬──────┬───────┬──────┬─────┐\n       │ hdr │ usr │ ass  │ tool  │ usr │ ass  │ tool  │ ass  │tool │\n       └─────┴─────┴──────┴───────┴─────┴──────┴───────┴──────┴─────┘\n\n有效切割点 = [1(usr), 2(ass), 4(usr), 5(ass), 7(ass)]\n                                                       ↑\n                                          注意：3(tool)、6(tool)、8(tool) 全部被排除",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 5,
+          "caption": "不是哪里都能切"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 5,
+          "caption": "不是哪里都能切"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-c9241dd9bbda",
+      "caption": "切点的语义：保留区的起点",
+      "kind": "grid",
+      "sourceSha256": "c9241dd9bbda118b2c61e1937ad67926798cdb2b6ece2a96c407c7d2d60cb3d4",
+      "source": "例子：切点选 entry 4 (usr)\nentry:  0     1     2      3       4     5      6       7      8\n       hdr   usr   ass   tool    [usr]  ass   tool    ass   tool\n       └──────── 压缩区 ────────┘  └────── 保留区 ──────────────┘\n                                   ↑\n                              切点 = 保留区第一条\n                              user + 后面的 ass + tool 全部保留\n                              → 这个 Turn 完整！",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 6,
+          "caption": "切点的语义：保留区的起点"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 6,
+          "caption": "切点的语义：保留区的起点"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-c28f46f8cca1",
+      "caption": "向后遍历：保护最重要的东西",
+      "kind": "grid",
+      "sourceSha256": "c28f46f8cca112f88074ce0887cc5cc61e96e7e361df2c3bd988c8f96351a85b",
+      "source": "切割点之前的消息 → messagesToSummarize（被压缩）\n切割点之后的消息 → kept（保留）",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 9,
+          "caption": "向后遍历：保护最重要的东西"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 9,
+          "caption": "向后遍历：保护最重要的东西"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-f37213de4d78",
+      "caption": "摘要生成：一次 LLM 调用",
+      "kind": "grid",
+      "sourceSha256": "f37213de4d7844eb048975a4fffe7fe058408393364a0b82d69c5a2767dd9c2e",
+      "source": "原始消息（AgentMessage[]）\n    │\n    ▼ 序列化\n\"[User]: 帮我修 auth.ts\n [Assistant tool calls]: read(path=\\\"auth.ts\\\")\n [Tool result]: export function authenticate() {...}\n [Assistant]: 找到问题了，缺少 salt...\"\n    │\n    ▼ LLM 调用（用摘要 prompt）\n    │\n结构化摘要\n    ## Goal\n    Fix authentication bug in auth.ts\n    ## Progress\n    ### Done\n    - [x] Read auth.ts, identified missing salt\n    ...",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 11,
+          "caption": "摘要生成：一次 LLM 调用"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 11,
+          "caption": "摘要生成：一次 LLM 调用"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-12d5a6527245",
+      "caption": "为什么允许 assistant 切点？",
+      "kind": "grid",
+      "sourceSha256": "12d5a65272457c7a8afed0ff784ddc868e27932c50eb8a10c5a8fb3aed77e132",
+      "source": "entry:  1     2      3      4      5     6      7     8\n       usr   ass   tool   ass   tool   ass   tool   ass\n                                          ↑\n                                    向后累积到这里 token 预算用完",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 15,
+          "caption": "为什么允许 assistant 切点？"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 15,
+          "caption": "为什么允许 assistant 切点？"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-6f41a51a6d95",
+      "caption": "turnPrefix 机制：被切断的 Turn 怎么办？",
+      "kind": "grid",
+      "sourceSha256": "6f41a51a6d95c4e29aac72c6980794f72a4e2a37c476091f698a6562bd06d480",
+      "source": "entry:  1     2      3      4      5      6       7      8     9\n       ┌─────┬──────┬──────┬──────┬──────┬───────┬──────┬─────┬──────┐\n       │ usr │ ass  │ tool │ ass  │ tool │ tool  │ ass  │tool │ ass │\n       └─────┴──────┴──────┴──────┴──────┴───────┴──────┴─────┴──────┘\n         ↑     └────────── turnPrefixMessages ──────────┘  └─ kept ─┘\n       turnStart=1            (entries 2-6)              entries 7-9\n\n       切点在 entry 7（assistant），但 entry 1（user）是它的 Turn 起点\n       → entry 1 在主摘要里压缩\n       → entry 2-6 是\"被切断的 Turn 前缀\"，单独生成 turnPrefix 摘要",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 16,
+          "caption": "turnPrefix 机制：被切断的 Turn 怎么办？"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 16,
+          "caption": "turnPrefix 机制：被切断的 Turn 怎么办？"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-e009cf090248",
+      "caption": "上下文重建",
+      "kind": "grid",
+      "sourceSha256": "e009cf090248811d82ee023e4fd0199e66194ad974d2149bc7d29e9f2fd55c5a",
+      "source": "重建后的上下文：\n├── CompactionSummaryMessage（role: \"compactionSummary\"）\n│     content = 摘要文本\n│     （第6章讲过：convertToLlm 把它翻译成 UserMessage）\n│\n├── 保留的原始消息（entry 30 之后的消息）\n│     ├── UserMessage: \"继续修复\"\n│     ├── AssistantMessage: ...\n│     └── ...\n│\n└── （新的消息会在运行中追加）",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 18,
+          "caption": "上下文重建"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 18,
+          "caption": "上下文重建"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-9be2e4b90702",
+      "caption": "自动压缩的集成",
+      "kind": "grid",
+      "sourceSha256": "9be2e4b90702001f5c863b8c554f93c9550fa750c5da60e6742f67b5b2ebb228",
+      "source": "Agent 运行结束（agent_end 事件）\n    │\n    ▼\n检查 shouldCompact()？\n    │\n    ├── 不需要 → 结束\n    │\n    └── 需要 → 执行压缩\n         ├── findCutPoint → 找切割点\n         ├── 序列化 + LLM 调用 → 生成摘要\n         ├── 追加 CompactionEntry 到 Session Tree\n         └── 下次运行时 buildSessionContext 使用压缩后的上下文",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 19,
+          "caption": "自动压缩的集成"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 19,
+          "caption": "自动压缩的集成"
+        }
+      ]
+    },
+    {
+      "id": "ch09-diagram-54632617987e",
+      "caption": "七、完整链路回顾",
+      "kind": "grid",
+      "sourceSha256": "54632617987e26bc221480623fcc7423fffee3868e86c97f8c542b04f1dd6c8a",
+      "source": "① 触发判断\n   shouldCompact() → contextTokens(185K) > contextWindow(200K) - reserve(16K)\n   红灯亮起，开始压缩\n\n② 找切割点\n   向后遍历 → 累积 token 到 keepRecent(20K) → 找最近的有效切割点\n   排除 ToolResult 后的位置 → 保证消息对完整\n\n③ 分割消息\n   切割点之前 → messagesToSummarize（被压缩）\n   切割点之后 → kept（保留）\n\n④ 生成摘要\n   序列化消息为文本 → 调 LLM 填写 6 section 结构化摘要\n   传入 previousSummary 做增量更新 → 合并文件跟踪列表\n\n⑤ 存储结果\n   CompactionEntry 追加到 Session Tree\n\n⑥ 下次运行时\n   buildSessionContext() → 用 CompactionSummaryMessage 替换旧消息\n   convertToLlm → 摘要翻译成 UserMessage 发给 LLM",
+      "occurrences": [
+        {
+          "mdx": "ch09-compaction.mdx",
+          "markdown": "pi_source_dive/typescript/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 20,
+          "caption": "七、完整链路回顾"
+        },
+        {
+          "mdx": "ch09-compaction.python.mdx",
+          "markdown": "pi_source_dive/python/第9章-上下文压缩-当对话太长怎么办.md",
+          "originalFence": 20,
+          "caption": "七、完整链路回顾"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-5ec901cea0bd",
+      "caption": "第 1 步：切换模型，第一个节点上树",
+      "kind": "grid",
+      "sourceSha256": "5ec901cea0bd563a18e78e6e90652d837a999da3d59ad9f8cc52a66a056497b1",
+      "source": "e1 (model_change)\n↑\nleafId 在这",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 3,
+          "caption": "第 1 步：切换模型，第一个节点上树"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 3,
+          "caption": "第 1 步：切换模型，第一个节点上树"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-6d67d4c4b24c",
+      "caption": "第 2 步：你提问，UserMessage 节点上树",
+      "kind": "grid",
+      "sourceSha256": "6d67d4c4b24c19033e9b88c3a31f09fb08059eac3c92b18185bbcef2276cdf1d",
+      "source": "e1 (model_change)\n └── e2 (user message)\n       ↑\n     leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 5,
+          "caption": "第 2 步：你提问，UserMessage 节点上树"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 5,
+          "caption": "第 2 步：你提问，UserMessage 节点上树"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-f9279a607c56",
+      "caption": "第 3 步：Agent 调 read 工具，AssistantMessage 节点上树",
+      "kind": "grid",
+      "sourceSha256": "f9279a607c56089677a6300cff2a0d4b6ff005ab4aca5f30912bf14280830dac",
+      "source": "e1 (model_change)\n └── e2 (user)\n      └── e3 (assistant + ToolCall)\n            ↑\n          leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 7,
+          "caption": "第 3 步：Agent 调 read 工具，AssistantMessage 节点上树"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 7,
+          "caption": "第 3 步：Agent 调 read 工具，AssistantMessage 节点上树"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-f19b498d087c",
+      "caption": "第 4 步：read 工具返回结果，ToolResult 节点上树",
+      "kind": "grid",
+      "sourceSha256": "f19b498d087cf9bfb6d566fc769b227eb89465742012e0e9a522d95ef957dada",
+      "source": "e1 (model_change)\n └── e2 (user)\n      └── e3 (assistant + ToolCall)\n           └── e4 (toolResult)\n                 ↑\n               leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 9,
+          "caption": "第 4 步：read 工具返回结果，ToolResult 节点上树"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 9,
+          "caption": "第 4 步：read 工具返回结果，ToolResult 节点上树"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-8534ed755b75",
+      "caption": "第 5 步：Agent 给出分析，又一个 AssistantMessage",
+      "kind": "grid",
+      "sourceSha256": "8534ed755b75d2a5c2614c41e00b15ccf1ad8f92c8f92ca8a46327237e938500",
+      "source": "e1 (model_change)\n └── e2 (user: \"salt 验证为什么失败?\")\n      └── e3 (assistant: read auth.ts)\n           └── e4 (toolResult: auth.ts 内容)\n                └── e5 (assistant: \"问题在 23 行\")\n                      ↑\n                    leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 11,
+          "caption": "第 5 步：Agent 给出分析，又一个 AssistantMessage"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 11,
+          "caption": "第 5 步：Agent 给出分析，又一个 AssistantMessage"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-9157ad82109d",
+      "caption": "第 6 步：回退——这是关键转折",
+      "kind": "grid",
+      "sourceSha256": "9157ad82109d148f838da698986593f9f95466ef17ec2c2620a01282ba7ccff6",
+      "source": "e1 (model_change)\n └── e2 (user: \"salt 验证为什么失败?\")\n      ├── e3 (assistant: read auth.ts)        ← 旧分支还在\n      │    └── e4 (toolResult)                     数据完整保留\n      │         └── e5 (assistant: \"问题在 23 行\")\n      │\n      ↑ leafId 现在指回 e2",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 13,
+          "caption": "第 6 步：回退——这是关键转折"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 13,
+          "caption": "第 6 步：回退——这是关键转折"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-a6559b3d365e",
+      "caption": "第 7 步：换思路重新问——新分支自然长出",
+      "kind": "grid",
+      "sourceSha256": "a6559b3d365e4ebe5462f59693c1ba4dbbf50caaebe37bb519ceb370327533a6",
+      "source": "e1 (model_change)\n └── e2 (user: \"salt 验证为什么失败?\")\n      ├── e3 (assistant: read auth.ts)\n      │    └── e4 (toolResult)\n      │         └── e5 (assistant: \"问题在 23 行\")\n      │\n      └── e6 (user: \"先看 hash 函数\")    ← 新分支起点\n            ↑\n          leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 15,
+          "caption": "第 7 步：换思路重新问——新分支自然长出"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 15,
+          "caption": "第 7 步：换思路重新问——新分支自然长出"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-b70a7eca0ff3",
+      "caption": "第 8 步：新分支继续长",
+      "kind": "grid",
+      "sourceSha256": "b70a7eca0ff33685fb89be13fc7f7e49aada067a8fc852fa0a8743c2a4d9cbfd",
+      "source": "e1 (model_change)\n └── e2 (user: \"salt 验证为什么失败?\")\n      ├── e3 (assistant: read auth.ts)\n      │    └── e4 (toolResult)\n      │         └── e5 (assistant: \"问题在 23 行\")\n      │\n      └── e6 (user: \"先看 hash 函数\")\n           └── e7 (assistant: grep hash)\n                └── e8 (toolResult: grep 结果)\n                     └── e9 (assistant: 新分析)\n                           ↑\n                         leafId",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 16,
+          "caption": "第 8 步：新分支继续长"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 16,
+          "caption": "第 8 步：新分支继续长"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-354fd5d3b107",
+      "caption": "分支摘要：BranchSummaryEntry——回退时的可选项",
+      "kind": "grid",
+      "sourceSha256": "354fd5d3b1070d5f70fc6b9116f4bb796ce7ee7c54d8cb0cff18d085c1b047f7",
+      "source": "e2 (user)\n ├── e3 (assistant: read auth.ts)\n │    └── e4 (toolResult)\n │         └── e5 (assistant: \"问题在 23 行\")\n │\n ├── e_BranchSummary (BranchSummaryEntry: \"之前试过 read auth.ts，发现 salt 编码问题但未解决根因\")\n │\n └── e6 (user: \"先看 hash 函数\")\n      ...",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 22,
+          "caption": "分支摘要：BranchSummaryEntry——回退时的可选项"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 22,
+          "caption": "分支摘要：BranchSummaryEntry——回退时的可选项"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-c157a8271893",
+      "caption": "第二步：按类型分派处理",
+      "kind": "grid",
+      "sourceSha256": "c157a8271893d2f1e0bbcaa4518389f1d9b68d548a62b69e3d84bd7c0c5af3ee",
+      "source": "e1 (model_change)   → 更新状态变量 model = \"claude-sonnet-4-6\"，不进 messages\ne2 (user message)   → 推入 messages 数组\ne6 (user message)   → 推入 messages 数组\ne7 (assistant + ToolCall) → 推入 messages 数组\ne8 (toolResult)     → 推入 messages 数组\ne9 (assistant)      → 推入 messages 数组",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 25,
+          "caption": "第二步：按类型分派处理"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 25,
+          "caption": "第二步：按类型分派处理"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-1548dec39949",
+      "caption": "状态变量：覆盖式提取",
+      "kind": "grid",
+      "sourceSha256": "1548dec3994934b618afcf88c7c535568c670516a344b441ae6337ae8116a57f",
+      "source": "e1 (model_change: \"claude-sonnet-4-6\")  → model 变量 = \"claude-sonnet-4-6\"\ne2-e9（没有 model_change）              → model 变量保持不变",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 27,
+          "caption": "状态变量：覆盖式提取"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 27,
+          "caption": "状态变量：覆盖式提取"
+        }
+      ]
+    },
+    {
+      "id": "ch10-diagram-6fb1d2011d49",
+      "caption": "CompactionEntry 的特殊处理：选择性收集",
+      "kind": "grid",
+      "sourceSha256": "6fb1d2011d49677c377584d3618d01d76e3f282a92030d7da28f2f99d931f4fd",
+      "source": "e1 (user)              ← 这之前是早期对话（已被压缩）\ne2 (assistant)         ← 被压缩\ne3 (assistant)         ← 被压缩\ne4 (compaction)        ← 压缩节点，记录了 firstKeptEntryId = \"e3\"\ne5 (user)              ← 压缩后保留的近期消息\ne6 (assistant)",
+      "occurrences": [
+        {
+          "mdx": "ch10-session.mdx",
+          "markdown": "pi_source_dive/typescript/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 28,
+          "caption": "CompactionEntry 的特殊处理：选择性收集"
+        },
+        {
+          "mdx": "ch10-session.python.mdx",
+          "markdown": "pi_source_dive/python/第10章-会话管理-对话的存储恢复与分叉.md",
+          "originalFence": 28,
+          "caption": "CompactionEntry 的特殊处理：选择性收集"
+        }
+      ]
+    },
+    {
+      "id": "pr02-diagram-d6c1c14a53e5",
+      "caption": "2.4 创建会话：createAgentSession 内部做了什么",
+      "kind": "grid",
+      "sourceSha256": "d6c1c14a53e5c6cb9b1614460946bc8d7c847aa8f7a6452151f5a818fbed18dd",
+      "source": "createAgentSession() 内部：\n├── 1. 加载 ModelRuntime（读 auth.json / models.json，合并内置 Provider）\n├── 2. 初始化 SettingsManager（读 ~/.pi/agent/settings.json，含压缩策略、retry 等）\n├── 3. 初始化 SessionManager（默认把会话持久化到 ~/.pi/agent/sessions/<encoded-cwd>/）\n├── 4. 加载 DefaultResourceLoader（发现 skills / extensions / AGENTS.md）\n└── 5. 创建 Agent 实例，默认启用四个内置工具：read / bash / edit / write",
+      "occurrences": [
+        {
+          "mdx": "pr02-architecture.mdx",
+          "markdown": "pi_sdk_learn/docs/第2章-先看全貌-搞懂pi-agent工作机制.md",
+          "originalFence": 7,
+          "caption": "2.4 创建会话：createAgentSession 内部做了什么"
+        }
+      ]
+    },
+    {
+      "id": "pr02-diagram-41abfd7e4251",
+      "caption": "2.6 发问：prompt",
+      "kind": "grid",
+      "sourceSha256": "41abfd7e4251b5a55bc931daae2441b5f2ed59bb9cf8ad85a50cacc5610d16b9",
+      "source": "prompt(\"当前目录有哪些文件？\")\n  ↓\n[第 1 轮] LLM 思考 → 决定调 bash 工具（执行 ls）\n  ↓\n工具返回文件列表\n  ↓\n[第 2 轮] LLM 根据工具结果生成最终回复\n  ↓\nprompt() resolve",
+      "occurrences": [
+        {
+          "mdx": "pr02-architecture.mdx",
+          "markdown": "pi_sdk_learn/docs/第2章-先看全貌-搞懂pi-agent工作机制.md",
+          "originalFence": 10,
+          "caption": "2.6 发问：prompt"
+        }
+      ]
+    },
+    {
+      "id": "pr02-diagram-884defa57f9f",
+      "caption": "三、三层核心抽象：Session / Runtime / Tool",
+      "kind": "grid",
+      "sourceSha256": "884defa57f9f44a5aa1ca907e3cda5bcfc4f5a59a8ed69ef656232d73ece0b00",
+      "source": "┌──────────────────────────────────────────────────┐\n│ Session（会话）                                   │\n│   你和 Agent 的一次对话上下文                      │\n│   API: prompt() / subscribe() / dispose()        │\n└──────────────────────┬───────────────────────────┘\n                       │ 依赖（创建时注入）\n        ┌──────────────▼──────────────┐\n        │ Runtime（运行时）            │\n        │  启动时加载的四个基础设施：   │\n        │   - ModelRuntime  管 LLM/Key │\n        │   - ResourceLoader 加载资源  │\n        │   - SessionManager 管持久化  │\n        │   - SettingsManager 管配置   │\n        └──────────────┬──────────────┘\n                       │ ResourceLoader 加载的扩展，在这里运行\n        ┌──────────────▼──────────────┐\n        │ ExtensionRuntime（扩展运行时）│\n        │   - pi.on(): 挂钩子          │\n        │   - pi.registerTool(): 注册工具│\n        └──────────────┬──────────────┘\n                       │ 工具汇聚到 Agent\n        ┌──────────────▼──────────────┐\n        │ Tool（工具）                 │\n        │   - 内置默认: read/bash/edit/write │\n        │   - customTools: 直接传入    │\n        │   - 扩展注册: pi.registerTool │\n        └─────────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "pr02-architecture.mdx",
+          "markdown": "pi_sdk_learn/docs/第2章-先看全貌-搞懂pi-agent工作机制.md",
+          "originalFence": 12,
+          "caption": "三、三层核心抽象：Session / Runtime / Tool"
+        }
+      ]
+    },
+    {
+      "id": "pr02-diagram-fb81747c068b",
+      "caption": "一张图定位：后面每章在动哪里",
+      "kind": "grid",
+      "sourceSha256": "fb81747c068b205cf5da2592799d95fe6129a71bf0efe9d98205997749caadd4",
+      "source": "Session      prompt/subscribe/dispose         （第4~6章都不动这里）\n   │\nRuntime      ModelRuntime   ──────────────── 第3章 接模型\n             ResourceLoader(系统提示词/...) ── 第4章 配人设\n             SessionManager / SettingsManager（进阶，本教程不展开）\n                 │\nExtensionRuntime   pi.on 钩子 ────────────── 第6章 挂事件钩子\n                   pi.registerTool ───────── 第5章 注册业务工具\n                 │\nTool         内置 / customTools / 扩展注册 ── 第5章 定义工具",
+      "occurrences": [
+        {
+          "mdx": "pr02-architecture.mdx",
+          "markdown": "pi_sdk_learn/docs/第2章-先看全貌-搞懂pi-agent工作机制.md",
+          "originalFence": 13,
+          "caption": "一张图定位：后面每章在动哪里"
+        }
+      ]
+    },
+    {
+      "id": "pr02-diagram-d3a64196f08a",
+      "caption": "四、自己动手：看一眼 Agent 内部",
+      "kind": "grid",
+      "sourceSha256": "d3a64196f08aad9d858e980508968d5b904d2eea9deeb085c5facfa894fa07fb",
+      "source": "📋 [agent_start]\n📋 [turn_start]\n📋 [message_start]\n📋 [message_update]   ← LLM 决定调 bash\n📋 [tool_execution_start]  工具：bash\n📋 [tool_execution_end]    工具：bash (成功)\n📋 [turn_end]\n📋 [turn_start]       ← 第 2 轮\n📋 [message_start]\n\n当前目录下有 package.json、 等文件...\n\n📋 [turn_end]\n📋 [agent_end]",
+      "occurrences": [
+        {
+          "mdx": "pr02-architecture.mdx",
+          "markdown": "pi_sdk_learn/docs/第2章-先看全貌-搞懂pi-agent工作机制.md",
+          "originalFence": 15,
+          "caption": "四、自己动手：看一眼 Agent 内部"
+        }
+      ]
+    },
+    {
+      "id": "pr03-diagram-b783dd257928",
+      "caption": "4.1 用 models.json 接 OpenAI 兼容服务",
+      "kind": "grid",
+      "sourceSha256": "b783dd2579284372ea33c918252a7a117f81327c194f20e5b81c9356872fcb35",
+      "source": "完整端点:      http://localhost:11434/v1/chat/completions\nbaseUrl 应为:  http://localhost:11434/v1\n                                       ↑\n                            SDK 自动拼接 /chat/completions",
+      "occurrences": [
+        {
+          "mdx": "pr03-model-config.mdx",
+          "markdown": "pi_sdk_learn/docs/第3章-模型配置的关键-判断企业内网能否接入.md",
+          "originalFence": 6,
+          "caption": "4.1 用 models.json 接 OpenAI 兼容服务"
+        }
+      ]
+    },
+    {
+      "id": "pr04-diagram-0fee688fbd5c",
+      "caption": "二、先认识：pi-agent 的系统提示词注入机制",
+      "kind": "grid",
+      "sourceSha256": "0fee688fbd5c0eb40b58adeab49bf6a1d305551333139d29e394d659f0ee63a8",
+      "source": "最终提示词 = ① 基础人设        ← 模型的「角色设定」\n           + ② 追加规则        ← 在人设后追加的几段规则\n           + ③ 项目上下文      ← 从 AGENTS.md / CLAUDE.md 读\n           + ④ 技能描述        ← 从 .pi/skills/*/SKILL.md 读\n           + ⑤ 工作目录        ← SDK 固定追加的一行",
+      "occurrences": [
+        {
+          "mdx": "pr04-system-prompt.mdx",
+          "markdown": "pi_sdk_learn/docs/第4章-系统提示词-必须覆盖默认Agent人设.md",
+          "originalFence": 1,
+          "caption": "二、先认识：pi-agent 的系统提示词注入机制"
+        }
+      ]
+    },
+    {
+      "id": "pr04-diagram-bc7799bed0e8",
+      "caption": "4.1 静态部分：本地文件",
+      "kind": "grid",
+      "sourceSha256": "bc7799bed0e8ee5d5cb54f1e45a7a4702f7b4c86a5461a7de623e01133322cd2",
+      "source": "prompts/\n└── analyst/\n    ├── persona.md          ← 人设（你是谁）\n    ├── rules.md            ← 业务规则（怎么干活）\n    └── output-format.md    ← 输出格式（怎么回答）",
+      "occurrences": [
+        {
+          "mdx": "pr04-system-prompt.mdx",
+          "markdown": "pi_sdk_learn/docs/第4章-系统提示词-必须覆盖默认Agent人设.md",
+          "originalFence": 4,
+          "caption": "4.1 静态部分：本地文件"
+        }
+      ]
+    },
+    {
+      "id": "pr05-diagram-ba0c56a095e6",
+      "caption": "params：LLM 传来的参数，框架已经帮你校验过了",
+      "kind": "validation-flow",
+      "sourceSha256": "ba0c56a095e65c9dd0a7c04595f9c289d3d7909395f1fb9fc8b4e8b477d9ab69",
+      "source": "flowchart TD\n    A[\"LLM 传错参数<br/>column = 123（应为字符串）\"] --> B[\"框架用你的 Schema 校验\"]\n    B --> C{\"合法？\"}\n    C -->|不合法| D[\"把错误返回给 LLM<br/>不调用你的 execute\"]\n    D -.重试.-> A\n    C -->|合法| E[\"调用你的 execute\"]",
+      "occurrences": [
+        {
+          "mdx": "pr05-tools.mdx",
+          "markdown": "pi_sdk_learn/docs/第5章-定义工具-从功能到交互pi都想到了.md",
+          "originalFence": 5,
+          "caption": "params：LLM 传来的参数，框架已经帮你校验过了"
+        }
+      ]
+    },
+    {
+      "id": "pr05-diagram-700cc35f014b",
+      "caption": "signal：框架给的取消信号",
+      "kind": "grid",
+      "sourceSha256": "700cc35f014be8ae5f8a48244ddb0c81263ae1f6d19b45f347f7375d4686a479",
+      "source": "用户点「停止」（前端）\n  → session.abort()\n  → 框架触发一个取消信号\n  → 作为第三个参数传进 execute(signal)\n  → 你把它透传给 fetch / mysql2，请求立刻断",
+      "occurrences": [
+        {
+          "mdx": "pr05-tools.mdx",
+          "markdown": "pi_sdk_learn/docs/第5章-定义工具-从功能到交互pi都想到了.md",
+          "originalFence": 6,
+          "caption": "signal：框架给的取消信号"
+        }
+      ]
+    },
+    {
+      "id": "pr05-diagram-5c5d3e00a3b9",
+      "caption": "onUpdate：给用户报进度",
+      "kind": "grid",
+      "sourceSha256": "5c5d3e00a3b9e07d2a4318f8011cb1bf21a1d05721983376afb4f64f925977c9",
+      "source": "你的工具调 onUpdate({ content: [{ type: \"text\", text: \"已处理 50%...\" }], details: {} })\n  → 框架发出 tool_execution_update 事件\n  → 谁订阅了 session 的事件流，谁就能拿到这段进度文本\n  → 前端拿到后渲染成「正在处理...已处理 50%...」",
+      "occurrences": [
+        {
+          "mdx": "pr05-tools.mdx",
+          "markdown": "pi_sdk_learn/docs/第5章-定义工具-从功能到交互pi都想到了.md",
+          "originalFence": 10,
+          "caption": "onUpdate：给用户报进度"
+        }
+      ]
+    },
+    {
+      "id": "pr05-diagram-2bc0b5e60978",
+      "caption": "首先：框架兜底，不会崩",
+      "kind": "grid",
+      "sourceSha256": "2bc0b5e6097891d04f74b2992186b892903a6a4755840866fe9bd548343074a4",
+      "source": "execute 里 throw new Error(\"连接超时\")\n  → 框架捕获，转成结果：{ content: \"连接超时\", isError: true }\n  → 当作正常的工具结果发给 LLM\n  → LLM 看到「连接超时」，决定下一步怎么办",
+      "occurrences": [
+        {
+          "mdx": "pr05-tools.mdx",
+          "markdown": "pi_sdk_learn/docs/第5章-定义工具-从功能到交互pi都想到了.md",
+          "originalFence": 11,
+          "caption": "首先：框架兜底，不会崩"
+        }
+      ]
+    },
+    {
+      "id": "pr06-diagram-1d2db3848299",
+      "caption": "2.1 全景图：从有需求到代码接入的完整过程",
+      "kind": "grid",
+      "sourceSha256": "1d2db384829946a6f2e6c41b82a0669917d36279a4d073ecd96fd1676481cc20",
+      "source": "① 决定盯哪个事件 → ② 写处理函数（读 event 数据、return 干预） → ③ 接进 Agent\n                                                              ├ 接法 A：内联塞进 extensionFactories\n                                                              └ 接法 B：独立文件，import 后塞进 extensionFactories\n                                                                          → 会话带上 resourceLoader",
+      "occurrences": [
+        {
+          "mdx": "pr06-events.mdx",
+          "markdown": "pi_sdk_learn/docs/第6章-事件监听-实现你的个性化需求.md",
+          "originalFence": 4,
+          "caption": "2.1 全景图：从有需求到代码接入的完整过程"
+        }
+      ]
+    },
+    {
+      "id": "pr06-diagram-ef4806bba680",
+      "caption": "3.1 全流程图：一次 session.prompt() 里的事件流",
+      "kind": "grid",
+      "sourceSha256": "ef4806bba6807b464afcced53feab5128a599e65940c9b4854e4021220034cef",
+      "source": "用户调 session.prompt(\"你好\")\n   │\n   ▼  ── 会话层 ──────────────────────────────────────────\n   🟦 input                    收到用户输入（可改写 / 拦截）\n   🟦 before_agent_start       开跑前（可改系统提示词）\n   │\n   ▼  ── 进入 Agent Loop（多轮 ReAct，直到 LLM 不再调工具）──\n   │\n   │  ┌── 第 1 轮 Turn ─────────────────────────────────┐\n   │  │                                                 │\n   │  ├─ turn_start                       每轮开始        │\n   │  │                                                 │\n   │  │   ── 准备发给 LLM ──                             │\n   │  ├─ 🟦 context                       发请求前        │\n   │  │     （可改消息列表）                              │\n   │  ├─ 🟦 before_provider_request       请求体就绪      │\n   │  │     （可改 payload）                              │\n   │  │   ── 📡 HTTP 发出 ──                              │\n   │  ├─ after_provider_response          收到响应（只读）│\n   │  │     （看状态码告警；subscribe 也收不到）          │\n   │  │                                                 │\n   │  │   ── LLM 流式返回 ──                              │\n   │  ├─ message_start                   一条消息开始     │\n   │  ├─ message_update ×N               逐 token 增量   │\n   │  ├─ 🟦 message_end                  一条消息结束     │\n   │  │     （可改最终消息）                              │\n   │  │                                                 │\n   │  │   ── 如果 LLM 决定调工具 ──                       │\n   │  ├─ 🟦 tool_call  ★ 执行前【安检门】                 │\n   │  │     ├ 可 block 拦截                              │\n   │  │     ├ 可改 event.input 参数                      │\n   │  │     └ 一旦 block → 下面 tool_execution_* 不触发  │\n   │  │        │                                         │\n   │  │        ▼  tool.execute() 开跑                     │\n   │  ├─ tool_execution_start            执行开始（只读）│\n   │  ├─ tool_execution_update ×N        执行进度（只读）│\n   │  ├─ tool_execution_end              执行结束（只读）│\n   │  │                                                 │\n   │  ├─ 🟦 tool_result                  执行后           │\n   │  │     （可改返回内容 content / isError）            │\n   │  │                                                 │\n   │  ├─ turn_end                        每轮结束         │\n   │  └─────────────────────────────────────────────────┘\n   │\n   │  ┌── 第 2 轮 Turn（LLM 拿着工具结果继续）───────────┐\n   │  └── ... 同上 ...                                   ┘\n   │\n   ▼  ── Agent Loop 结束 ─────────────────────────────────\n   agent_start / agent_end             一轮问答的始末\n   agent_settled                       彻底跑完的可靠信号（只读）\n   │\n   ▼  ── 会话层收尾 ──────────────────────────────────────\n   session_shutdown                    扩展运行时卸载（quit / reload）",
+      "occurrences": [
+        {
+          "mdx": "pr06-events.mdx",
+          "markdown": "pi_sdk_learn/docs/第6章-事件监听-实现你的个性化需求.md",
+          "originalFence": 5,
+          "caption": "3.1 全流程图：一次 session.prompt() 里的事件流"
+        }
+      ]
+    },
+    {
+      "id": "pr07-diagram-7c2db890ee04",
+      "caption": "一、pi-agent 怎么用起来：四种接入方式",
+      "kind": "grid",
+      "sourceSha256": "7c2db890ee042e5064d908d82ac2a019634dfe99d05685621327a8c69770a94b",
+      "source": "┌─────────────────┐   HTTP/SSE    ┌────────────────────┐   HTTP/SSE    ┌──────────────┐\n│  Java 后端       │──────────────▶│  Agent 服务（Node）  │◀─────────────│  浏览器前端    │\n│  Python 后端     │  POST /chat   │  Express 包一层      │  POST /chat  │  fetch       │\n│  Go 后端 …       │◀──────────────│  createAgentSession  │─────────────▶│              │\n└─────────────────┘  SSE 推事件    └────────────────────┘  SSE 推事件   └──────────────┘",
+      "occurrences": [
+        {
+          "mdx": "pr07-deploy.mdx",
+          "markdown": "pi_sdk_learn/docs/第7章-准备上线-把Agent封装成服务.md",
+          "originalFence": 1,
+          "caption": "一、pi-agent 怎么用起来：四种接入方式"
+        }
+      ]
+    },
+    {
+      "id": "pr07-diagram-25324b3291eb",
+      "caption": "整体流程",
+      "kind": "grid",
+      "sourceSha256": "25324b3291eb6e44775bdcae9ae146984251380b2e11574759bcd2ef250bbb46",
+      "source": "┌─────────────────────────────────────────────────────────────┐\n│  浏览器                                                      │\n│    ┌────────────────────────────────────────────────┐       │\n│    │  对话区：文本气泡（逐字）+ 工具卡片             │       │\n│    └────────────────────────────────────────────────┘       │\n└─────────┬──────────────────────────────────────▲────────────┘\n          │ POST /chat { message }               │ 同一请求的响应体\n          │                                      │ = SSE 事件流\n          ▼                                      │\n┌─────────────────────────────────────────────────┼────────────┐\n│  Node.js + Express                              │            │\n│                                                 │            │\n│   ① session.prompt(msg) ──► Pi Agent 处理       │            │\n│                              │ 不断产生事件      │            │\n│                              ▼                  │            │\n│   ② session.subscribe(event => {                │            │\n│        res.write(translateEvent(event));  ──────┘            │\n│      })                                                       │\n│   ③ finally { res.write(done); res.end(); }                  │\n└───────────────────────────────────────────────────────────────┘",
+      "occurrences": [
+        {
+          "mdx": "pr07-deploy.mdx",
+          "markdown": "pi_sdk_learn/docs/第7章-准备上线-把Agent封装成服务.md",
+          "originalFence": 2,
+          "caption": "整体流程"
+        }
+      ]
+    }
+  ]
+}

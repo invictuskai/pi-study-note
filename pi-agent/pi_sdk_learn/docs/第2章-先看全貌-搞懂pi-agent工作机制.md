@@ -85,7 +85,7 @@ const available = await modelRuntime.getAvailable();
 const model = available.find((m) => m.provider === "zhipu") ?? available[0];
 ```
 
-`getAvailable()` 会过滤出「真正可用」的模型——也就是**对应 Provider 有 API Key** 的那些。如果你只在 `models.json` 里配了智谱的 Key，那 `available` 数组里就只有智谱的模型，OpenAI 那些内置模型会被过滤掉。（PS为什么作者老是拿智谱举例，不是广告，因为自从他在某次视频上展示了智谱的邀请码，此后就一直被送Token，于是各种测试学习就都使用智谱了……）
+`getAvailable()` 会过滤出「真正可用」的模型——也就是**对应 Provider 有 API Key** 的那些。如果你只在 `models.json` 里配了智谱的 Key，那 `available` 数组里就只有智谱的模型，OpenAI 那些内置模型会被过滤掉。
 
 `.find(...)` 这一句是「优先选智谱，没有就用第一个」的兜底写法。`??` 是空值合并运算符——只有 `find` 返回 `undefined` 时，才走 `available[0]`。
 
@@ -114,14 +114,7 @@ const { session } = await createAgentSession({
 
 它内部自动完成了**五件事**，了解这个清单，比死记 API 有用得多：
 
-```
-createAgentSession() 内部：
-├── 1. 加载 ModelRuntime（读 auth.json / models.json，合并内置 Provider）
-├── 2. 初始化 SettingsManager（读 ~/.pi/agent/settings.json，含压缩策略、retry 等）
-├── 3. 初始化 SessionManager（默认把会话持久化到 ~/.pi/agent/sessions/<encoded-cwd>/）
-├── 4. 加载 DefaultResourceLoader（发现 skills / extensions / AGENTS.md）
-└── 5. 创建 Agent 实例，默认启用四个内置工具：read / bash / edit / write
-```
+![2.4 创建会话：createAgentSession 内部做了什么](assets/diagrams/pr02-diagram-d6c1c14a53e5.svg)
 
 注意第 5 点——**默认只启用 `read`、`bash`、`edit`、`write` 四个工具**。`grep`、`find`、`ls` 这些工具 SDK 也内置了，但默认不启用，需要你显式在 `options.tools` 里列出才会加进去（第 5 章会讲怎么管工具）。
 
@@ -162,17 +155,7 @@ await session.prompt("用一句话介绍你自己。");
 
 如果你问的是「当前目录有哪些文件」这种需要调工具的问题，Agent 内部会经历这样的循环：
 
-```
-prompt("当前目录有哪些文件？")
-  ↓
-[第 1 轮] LLM 思考 → 决定调 bash 工具（执行 ls）
-  ↓
-工具返回文件列表
-  ↓
-[第 2 轮] LLM 根据工具结果生成最终回复
-  ↓
-prompt() resolve
-```
+![2.6 发问：prompt](assets/diagrams/pr02-diagram-41abfd7e4251.svg)
 
 这个「思考 → 行动 → 观察」的循环，就叫 **ReAct 循环**。Agent 框架的核心价值，就是替你跑这个循环——你只管写工具和提示词，循环逻辑都由 SDK 处理。
 
@@ -206,35 +189,7 @@ prompt() resolve
 
 Pi Agent 也是这么个结构。先看总图，再逐层展开——**而且会标清楚后面每一章在动哪一层**，这是这张图最实际的用处。
 
-```
-┌──────────────────────────────────────────────────┐
-│ Session（会话）                                   │
-│   你和 Agent 的一次对话上下文                      │
-│   API: prompt() / subscribe() / dispose()        │
-└──────────────────────┬───────────────────────────┘
-                       │ 依赖（创建时注入）
-        ┌──────────────▼──────────────┐
-        │ Runtime（运行时）            │
-        │  启动时加载的四个基础设施：   │
-        │   - ModelRuntime  管 LLM/Key │
-        │   - ResourceLoader 加载资源  │
-        │   - SessionManager 管持久化  │
-        │   - SettingsManager 管配置   │
-        └──────────────┬──────────────┘
-                       │ ResourceLoader 加载的扩展，在这里运行
-        ┌──────────────▼──────────────┐
-        │ ExtensionRuntime（扩展运行时）│
-        │   - pi.on(): 挂钩子          │
-        │   - pi.registerTool(): 注册工具│
-        └──────────────┬──────────────┘
-                       │ 工具汇聚到 Agent
-        ┌──────────────▼──────────────┐
-        │ Tool（工具）                 │
-        │   - 内置默认: read/bash/edit/write │
-        │   - customTools: 直接传入    │
-        │   - 扩展注册: pi.registerTool │
-        └─────────────────────────────┘
-```
+![三、三层核心抽象：Session / Runtime / Tool](assets/diagrams/pr02-diagram-884defa57f9f.svg)
 
 下面逐层展开。
 
@@ -322,18 +277,7 @@ LLM 自己只会「说话」，要读文件、查数据库、调 API，全靠工
 
 把总图简化一下，标上章节——它就是你接下来几章的导航：
 
-```
-Session      prompt/subscribe/dispose         （第4~6章都不动这里）
-   │
-Runtime      ModelRuntime   ──────────────── 第3章 接模型
-             ResourceLoader(系统提示词/...) ── 第4章 配人设
-             SessionManager / SettingsManager（进阶，本教程不展开）
-                 │
-ExtensionRuntime   pi.on 钩子 ────────────── 第6章 挂事件钩子
-                   pi.registerTool ───────── 第5章 注册业务工具
-                 │
-Tool         内置 / customTools / 扩展注册 ── 第5章 定义工具
-```
+![一张图定位：后面每章在动哪里](assets/diagrams/pr02-diagram-fb81747c068b.svg)
 
 一句话记住：**第 3 章动 ModelRuntime，第 4 章动 ResourceLoader 里的系统提示词，第 5 章和第 6 章都靠 ExtensionRuntime（一个注册工具、一个挂钩子），第 7 章把 Session 的 subscribe 接到浏览器。** 后面每翻开一章，先回来对照这张图，你就知道自己要动哪里。
 
@@ -360,22 +304,7 @@ await session.prompt("当前目录有哪些文件？");
 
 问一个需要调工具的问题，你会看到事件层面 ReAct 循环的样子：
 
-```
-📋 [agent_start]
-📋 [turn_start]
-📋 [message_start]
-📋 [message_update]   ← LLM 决定调 bash
-📋 [tool_execution_start]  工具：bash
-📋 [tool_execution_end]    工具：bash (成功)
-📋 [turn_end]
-📋 [turn_start]       ← 第 2 轮
-📋 [message_start]
-
-当前目录下有 package.json、 等文件...
-
-📋 [turn_end]
-📋 [agent_end]
-```
+![四、自己动手：看一眼 Agent 内部](assets/diagrams/pr02-diagram-d3a64196f08a.svg)
 
 这一眼，你就看清了上一节说的"Agent 在 ReAct 循环里自己调工具"——在事件层面长什么样。每种事件具体什么含义、怎么用在 Web 上，第 7 章会逐一展开。
 

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="222" viewBox="0 0 400 222" role="img" aria-labelledby="ch10-diagram-6d67d4c4b24c-title ch10-diagram-6d67d4c4b24c-description">
+<title id="ch10-diagram-6d67d4c4b24c-title">第 2 步：你提问，UserMessage 节点上树</title>
+<desc id="ch10-diagram-6d67d4c4b24c-description">e1 (model_change)
+e2 (user message)
+leafId</desc>
+<rect x="1" y="1" width="398" height="220" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">第 2 步：你提问，UserMessage 节点上树</text>
+<path d="M28,58 H372" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="1" data-column="1" data-glyph="└" d="M43,119 L48,119 M43,119 L43,104"/>
+<path data-row="1" data-column="2" data-glyph="─" d="M53,119 L58,119 M53,119 L48,119"/>
+<path data-row="1" data-column="3" data-glyph="─" d="M63,119 L68,119 M63,119 L58,119"/>
+<path data-row="2" data-column="7" data-glyph="↑" d="M103,134 V164 M99,140 L103,134 L107,140"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (model_change)</text>
+<text data-row="1" data-column="5" x="78" y="119" textLength="170" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (user message)</text>
+<text data-row="3" data-column="5" x="78" y="179" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">leafId</text>
+</g>
+</svg>

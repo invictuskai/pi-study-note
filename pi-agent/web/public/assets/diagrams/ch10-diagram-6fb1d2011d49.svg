@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="706" height="282" viewBox="0 0 706 282" role="img" aria-labelledby="ch10-diagram-6fb1d2011d49-title ch10-diagram-6fb1d2011d49-description">
+<title id="ch10-diagram-6fb1d2011d49-title">CompactionEntry 的特殊处理：选择性收集</title>
+<desc id="ch10-diagram-6fb1d2011d49-description">e1 (user)
+这之前是早期对话（已被压缩）
+e2 (assistant)
+被压缩
+e3 (assistant)
+被压缩
+e4 (compaction)
+压缩节点，记录了 firstKeptEntryId = &quot;e3&quot;
+e5 (user)
+压缩后保留的近期消息
+e6 (assistant)</desc>
+<rect x="1" y="1" width="704" height="280" rx="14" fill="#faf7f2" stroke="#d9d0c4"/>
+<rect x="28" y="24" width="4" height="22" rx="2" fill="#b5523a"/>
+<text x="42" y="41" fill="#43382f" font-family="system-ui, 'Microsoft YaHei', sans-serif" font-size="16" font-weight="600">CompactionEntry 的特殊处理：选择性收集</text>
+<path d="M28,58 H678" stroke="#e4ddd4"/>
+<g class="diagram-connectors" stroke="#a3543e" stroke-width="1.7" stroke-linecap="butt" stroke-linejoin="round" fill="none">
+<path data-row="0" data-column="23" data-glyph="←" d="M258,89 H268 M262,85 L258,89 L262,93"/>
+<path data-row="1" data-column="23" data-glyph="←" d="M258,119 H268 M262,115 L258,119 L262,123"/>
+<path data-row="2" data-column="23" data-glyph="←" d="M258,149 H268 M262,145 L258,149 L262,153"/>
+<path data-row="3" data-column="23" data-glyph="←" d="M258,179 H268 M262,175 L258,179 L262,183"/>
+<path data-row="4" data-column="23" data-glyph="←" d="M258,209 H268 M262,205 L258,209 L262,213"/>
+</g>
+<g class="diagram-labels" font-family="'Cascadia Mono', 'Consolas', 'Microsoft YaHei', monospace" font-size="16" fill="#25201d" dominant-baseline="central" xml:space="preserve">
+<text data-row="0" data-column="0" x="28" y="89" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e1 (user)</text>
+<text data-row="0" data-column="25" x="278" y="89" textLength="280" lengthAdjust="spacingAndGlyphs" style="white-space:pre">这之前是早期对话（已被压缩）</text>
+<text data-row="1" data-column="0" x="28" y="119" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e2 (assistant)</text>
+<text data-row="1" data-column="25" x="278" y="119" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">被压缩</text>
+<text data-row="2" data-column="0" x="28" y="149" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e3 (assistant)</text>
+<text data-row="2" data-column="25" x="278" y="149" textLength="60" lengthAdjust="spacingAndGlyphs" style="white-space:pre">被压缩</text>
+<text data-row="3" data-column="0" x="28" y="179" textLength="150" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e4 (compaction)</text>
+<text data-row="3" data-column="25" x="278" y="179" textLength="400" lengthAdjust="spacingAndGlyphs" style="white-space:pre">压缩节点，记录了 firstKeptEntryId = &quot;e3&quot;</text>
+<text data-row="4" data-column="0" x="28" y="209" textLength="90" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e5 (user)</text>
+<text data-row="4" data-column="25" x="278" y="209" textLength="200" lengthAdjust="spacingAndGlyphs" style="white-space:pre">压缩后保留的近期消息</text>
+<text data-row="5" data-column="0" x="28" y="239" textLength="140" lengthAdjust="spacingAndGlyphs" style="white-space:pre">e6 (assistant)</text>
+</g>
+</svg>
