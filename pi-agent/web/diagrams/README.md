@@ -28,7 +28,8 @@ npm run check:pages
 ```
 
 - `diagrams` 生成网页 public 图片和各 Markdown 目录的图片副本。
-- `check:diagrams` 只检查生成物是否与输入一致，不静默更新文件。
+- `check:diagrams` 只检查生成物是否与输入一致，不静默更新文件；比较时统一 LF/CRLF，兼容 Windows checkout。
+- 图中的单元宽度使用固定字符范围，不依赖宿主的 Extended_Pictographic 属性表，避免 Node 22/24 对 U+2605 的不同判定改变布局。
 - `test/diagrams.test.mjs` 验证文字/连接符可按原行列完整还原、节点及分支、全部引用和未转换块的白名单。
 - 普通代码示例不应为了消除字符匹配而被删除或改写。
 - 新增或修改图示时，先检查含义与层级，再更新输入和 sourceSha256、生成图片、检查网页及下载版引用。
@@ -37,7 +38,7 @@ npm run check:pages
 
 ## 本次验证
 
-- `npm run check`：27 对 MD/MDX 同步、双版本元数据、247 个生成物一致性及 12 个回归测试通过。
+- `npm run check`：27 对 MD/MDX 同步、双版本元数据、247 个生成物一致性及 13 个回归测试通过；Node 22.22.0 与 Node 24.19.0 对全部 91 张图生成相同结果。
 - `npm run build`：30 个静态页面构建通过。
 - `npm run check:pages`：915 个本地链接/资源检查通过。
 - Edge/Playwright：27 篇文章的 206 处 SVG 全部成功内联；91 张新增 SVG 的 XML 解析通过；原作者卡片/二维码/推广说明均未出现在页面。

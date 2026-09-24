@@ -32,7 +32,10 @@ export function displayWidth(value) {
   for (const { segment } of segmenter.segment(value)) {
     if (/^[\p{Mark}\u200d\ufe0f]+$/u.test(segment)) continue;
     if (PORTS[segment] || ARROWS[segment]) { width++; continue; }
-    width += /[\u1100-\u115f\u2329\u232a\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe10-\ufe19\ufe30-\ufe6f\uff01-\uff60\uffe0-\uffe6\p{Extended_Pictographic}]/u.test(segment) ? 2 : 1;
+    // Fixed cells for this diagram corpus: CJK and supplementary pictographs are wide.
+    // Do not use Extended_Pictographic: Unicode 16 counts U+2605 as pictographic,
+    // Unicode 17 does not, which changed the same SVG between Node 22 and Node 24.
+    width += /[\u1100-\u115f\u2329\u232a\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe10-\ufe19\ufe30-\ufe6f\uff01-\uff60\uffe0-\uffe6\u{1f000}-\u{1faff}]/u.test(segment) ? 2 : 1;
   }
   return width;
 }

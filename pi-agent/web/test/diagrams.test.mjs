@@ -17,6 +17,16 @@ test('display cells preserve CJK, emoji and combining characters', () => {
   assert.equal(displayWidth('│→←↓↑'), 5);
 });
 
+test('decorative stars keep one cell across Node Unicode versions', () => {
+  assert.equal(displayWidth('\u2605'), 1);
+  const layout = diagramLayout('A\u2605 → B');
+  assert.equal(layout.connectors[0].column, 3);
+  assert.equal(layout.labels[1].column, 5);
+  const diagram = manifest.diagrams.find(d => d.id === 'pr06-diagram-ef4806bba680');
+  const stored = readFileSync(join(web, 'public/assets/diagrams', `${diagram.id}.svg`), 'utf8').replace(/\r\n?/g, '\n');
+  assert.equal(renderDiagram(diagram), stored);
+});
+
 test('tree branches, indentation and arrows retain their original positions', () => {
   const layout = diagramLayout('root\n├── A\n│   └── 子节点\n└── B → C');
   assert.deepEqual(layout.labels.map(({ row, column, text }) => [row, column, text]), [

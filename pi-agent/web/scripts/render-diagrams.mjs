@@ -22,7 +22,7 @@ for (const diagram of manifest.diagrams) {
   for (const target of targets) {
     if (check) {
       assert.ok(existsSync(target), `Missing diagram: ${target}`);
-      assert.equal(readFileSync(target, 'utf8'), svg, `Stale diagram: ${target}`);
+      assert.equal(readFileSync(target, 'utf8').replace(/\r\n?/g, '\n'), svg, `Stale diagram: ${target}`);
     } else {
       mkdirSync(dirname(target), { recursive: true });
       writeFileSync(target, svg);
