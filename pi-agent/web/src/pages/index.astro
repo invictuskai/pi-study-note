@@ -33,8 +33,11 @@ import ModuleGrid from '../components/home/ModuleGrid.astro';
 }
 @media (max-width: 960px) {
   .dual-tracks-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-8);
   }
+}
+@media (max-width: 640px) {
+  .dual-tracks { padding-inline: var(--space-4); }
 }
 </style>

@@ -167,3 +167,13 @@
     --pad-x:     32px;
   }
 }
+
+@media (max-width: 767px) {
+  :root {
+    --fs-h1: clamp(30px, 8vw, 40px);
+    --fs-h2: 26px;
+    --fs-h3: 20px;
+    --fs-body: 17px;
+    --lh-tight: 1.3;
+  }
+}

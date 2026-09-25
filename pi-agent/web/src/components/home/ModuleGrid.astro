@@ -67,6 +67,8 @@ const badge = meta.badge;
   flex-shrink: 0;
 }
 .series-headtext {
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding-top: var(--space-2);
   /* 两列 headtext 内容行数一致（eyebrow/title/lead/variant），自然等高 */
 }
@@ -132,6 +134,7 @@ const badge = meta.badge;
   .series-list > :global(*) { flex: none; }
 }
 @media (max-width: 640px) {
+  .series { padding-inline: 0; }
   .series-roman { font-size: 40px; }
   .series-title { font-size: 26px; }
 }

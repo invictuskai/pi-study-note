@@ -15,6 +15,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     env:
       ASTRO_TELEMETRY_DISABLED: '1'
     defaults:
@@ -39,6 +40,10 @@ jobs:
         run: npm run build
       - name: Validate generated site links and assets
         run: npm run check:pages
+      - name: Install browser for responsive checks
+        run: node node_modules/playwright/cli.js install --with-deps chromium
+      - name: Verify mobile and tablet layouts
+        run: npm run check:responsive
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3
         with:

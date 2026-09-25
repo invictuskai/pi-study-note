@@ -48,6 +48,20 @@ registry 参数匹配现有锁文件的下载来源，不修改全局 npm 配置
 
 ---
 
+## 手机布局回归检查
+
+```bash
+npm run check:responsive
+```
+
+先执行 `npm run build`。检查器启动本地 preview，使用真实浏览器引擎模拟 320/360/390/430/768px 触屏视口，并检查桌面布局；不调用文章里的模型接口。Windows 默认使用已安装的 Edge，也可以通过 `PLAYWRIGHT_CHANNEL` 指定浏览器通道。Linux/CI 先安装锁定版本 Playwright 对应的 Chromium：
+
+```bash
+node node_modules/playwright/cli.js install --with-deps chromium
+```
+
+GitHub Pages 工作流会在部署前执行这项检查。首页标题在窄屏完整换行、字数另起一行；宽表格只在自身区域滚动；图片按屏宽缩放，点按后提供放大、缩小与适应屏幕按钮。
+
 ## 快速开始
 
 ```bash
@@ -150,6 +164,7 @@ displayOrder: <number>        # 系列内排序（两系列各自从 1 起）
 npm run check              # 文档同步、双版本元数据和 URL 回归测试
 npm run build              # 生产构建（30 页）
 npm run check:pages        # 验证构建产物的子路径与本地链接
+npm run check:responsive   # 浏览器验证手机/平板文字、图片与触屏缩放
 npm run check:counterpart  # 校验源码精读篇 TS/Python frontmatter 一致性
 npm run build:pdf          # 导出源码精读篇 PDF（TS + Python）
 ```

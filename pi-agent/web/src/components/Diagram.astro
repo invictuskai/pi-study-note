@@ -31,11 +31,11 @@ const strategy = darkMode || 'invert';
   role="figure"
   aria-label={caption || undefined}
 >
-  <div class="diagram-viewport" tabindex={layout === 'preserve' ? 0 : undefined} aria-label={layout === 'preserve' ? `${caption || '图示'}，可横向滚动` : undefined}>
+  <div class="diagram-viewport" tabindex={layout === 'preserve' ? 0 : undefined} aria-label={layout === 'preserve' ? `${caption || '图示'}，点击图片可放大查看` : undefined}>
     <img src={withBase(file)} alt={caption || ''} loading="lazy" />
   </div>
   {caption && <figcaption>{caption}</figcaption>}
-  {layout === 'preserve' && <div class="diagram-hint">宽图可横向滚动 · <a class="diagram-original" href={withBase(file)} target="_blank" rel="noopener">查看原图</a></div>}
+  {layout === 'preserve' && <div class="diagram-hint"><span class="diagram-desktop-hint">宽图可横向滚动</span><span class="diagram-mobile-hint">点按图片可放大</span> · <a class="diagram-original" href={withBase(file)} target="_blank" rel="noopener">查看原图</a></div>}
 </figure>
 
 <style>
@@ -66,6 +66,19 @@ const strategy = darkMode || 'invert';
 }
 .diagram-hint { margin-top: var(--space-2); font-size: var(--fs-small); color: var(--soft); }
 .diagram-original { display: inline-block; }
+.diagram-mobile-hint { display: none; }
+@media (max-width: 1023px) {
+  .diagram[data-layout="preserve"] .diagram-viewport :global(img),
+  .diagram[data-layout="preserve"] .diagram-viewport :global(svg) {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+  }
+  .diagram-desktop-hint { display: none; }
+  .diagram-mobile-hint { display: inline; }
+  .diagram:hover img { transform: none; }
+}
 @media print {
   .diagram[data-layout="preserve"] .diagram-viewport :global(img),
   .diagram[data-layout="preserve"] .diagram-viewport :global(svg) { width: 100%; min-width: 0; max-width: 100%; }

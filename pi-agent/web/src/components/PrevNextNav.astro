@@ -72,11 +72,13 @@ const nextPyUrl = pyUrl(next);
 <style>
   .prevnext {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: var(--space-6);
     margin: var(--space-24) 0 var(--space-12);
   }
   .prev-card, .next-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
@@ -106,5 +108,10 @@ const nextPyUrl = pyUrl(next);
   .title {
     color: var(--ink);
     font-weight: 500;
+  }
+  @media (max-width: 767px) {
+    .prevnext { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); margin-top: var(--space-12); }
+    .prev-card, .next-card { padding: var(--space-4); text-align: left; }
+    .placeholder { display: none; }
   }
 </style>

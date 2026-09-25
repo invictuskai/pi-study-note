@@ -1,5 +1,7 @@
 /* src/styles/prose.css */
 .prose {
+  min-width: 0;
+  overflow-wrap: anywhere;
   max-width: var(--read-width);
   margin: 0 auto;
   font-family: var(--font-body);
@@ -63,6 +65,7 @@
   padding: var(--space-4) var(--space-6);
   border-radius: var(--radius-md);
   overflow-x: auto;
+  overflow-wrap: normal;
   font-family: var(--font-mono);
   font-size: var(--fs-code);
   line-height: 1.6;
@@ -91,6 +94,17 @@
   text-align: left;
 }
 .prose th { background: var(--paper-sunken); font-weight: 600; }
+
+@media screen and (max-width: 1023px) {
+  /* Keep columns readable; only the table scrolls, not the entire page. */
+  .prose table { display: block; max-width: 100%; overflow-x: auto; }
+  .prose th, .prose td { min-width: 8rem; }
+}
+@media (max-width: 767px) {
+  .prose blockquote { padding-inline: var(--space-4); }
+  .prose h1 { margin-bottom: var(--space-6); }
+  .prose h2 { margin-top: var(--space-12); padding-top: var(--space-6); }
+}
 
 /* SVG 配图容器 */
 .prose figure {

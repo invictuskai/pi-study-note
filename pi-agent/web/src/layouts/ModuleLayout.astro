@@ -191,7 +191,7 @@ const tsCounterpartUrl = isPython ? getCounterpartUrl(entry) : null;
       grid-template-columns: minmax(0, 1fr);
     }
     .toc-left { display: none; }
-    body.toc-open .toc-left {
+    :global(body.toc-open) .toc-left {
       display: block;
       position: fixed;
       top: var(--topbar-h);
